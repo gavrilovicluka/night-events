@@ -29,10 +29,11 @@ public class Korisnik
     [RegularExpression(@"^[a-zA-Z]+$")]
     public String? Prezime { get; set; }
 
-    [Required]
     public List<KomentarDogadjaj>? KomentariDogadjaji { get; set; }
 
-    [Required]
     public List<KomentarIzvodjac>? KomentariIzvodjaci { get; set; }
 
+    public List<Karta>? Karte { get; set; }
+
+    public List<Rezervacija>? Rezervacije { get; set; }
 }

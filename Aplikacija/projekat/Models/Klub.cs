@@ -20,6 +20,9 @@ public class Klub
     [Range(1,5)]
     public double Ocena { get; set; }
 
-    [Required]
-    public Organizator? Organizator { get; set; }
+    public int Kapacitet { get; set; }
+
+    public List<Organizator>? Organizatori { get; set; }
+
+    public List<Dogadjaj>? Dogadjaji { get; set; }
 }

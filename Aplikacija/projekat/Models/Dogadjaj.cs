@@ -13,17 +13,17 @@ public class Dogadjaj
     
     [Required]
     public DateTime? DatumIVreme { get; set; }
-    
-    [Required]
+
     public Klub? Klub { get; set; }
 
-    [Required]
     public Organizator? Organizator { get; set; }
 
-    [Required]
     public MuzickiIzvodjac? MuzickiIzvodjac { get; set; }
 
-    [Required]
     public List<KomentarDogadjaj>? KomentariDogadjaj { get; set; }
+
+    public List<Rezervacija>? Rezervacije { get; set; }
+
+    public List<Karta>? Karte { get; set; }
 
 }

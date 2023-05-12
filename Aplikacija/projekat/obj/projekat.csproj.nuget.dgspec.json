@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FAKS\\treca\\softversko\\projekat\\projekat.csproj": {}
+    "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj": {}
   },
   "projects": {
-    "D:\\FAKS\\treca\\softversko\\projekat\\projekat.csproj": {
+    "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FAKS\\treca\\softversko\\projekat\\projekat.csproj",
+        "projectUniqueName": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
         "projectName": "projekat",
-        "projectPath": "D:\\FAKS\\treca\\softversko\\projekat\\projekat.csproj",
-        "packagesPath": "C:\\Users\\X\\.nuget\\packages\\",
-        "outputPath": "D:\\FAKS\\treca\\softversko\\projekat\\obj\\",
+        "projectPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\X\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

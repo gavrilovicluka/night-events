@@ -10,9 +10,7 @@ public class KomentarDogadjaj
     [Required]
     public String? Sadrzaj { get; set; }
 
-    [Required]
     public Korisnik? Korisnik { get; set; }
 
-    [Required]
     public Dogadjaj? Dogadjaj { get; set; }
 }

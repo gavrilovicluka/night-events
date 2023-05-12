@@ -10,9 +10,7 @@ public class Karta
     [Required]
     public int Cena { get; set; }
 
-    [Required]
     public Dogadjaj? Dogadjaj { get; set; }
 
-    [Required]
     public Korisnik? Korisnik { get; set; }
 }

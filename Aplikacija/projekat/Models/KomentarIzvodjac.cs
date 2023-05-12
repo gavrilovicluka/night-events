@@ -10,9 +10,7 @@ public class KomentarIzvodjac
     [Required]
     public String? Sadrzaj { get; set; }
 
-    [Required]
     public Korisnik? Korisnik { get; set; }
 
-    [Required]
     public MuzickiIzvodjac? MuzickiIzvodjac { get; set; }
 }
