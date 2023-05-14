@@ -56,5 +56,6 @@ public class MuzickiIzvodjac
     public MuzickiIzvodjac()
     {
         Fleg = 'm';
+        Ocena = 0;
     }
 }
