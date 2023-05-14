@@ -9,6 +9,7 @@ public class Klub
 
     [Required]
     [MaxLength(50)]
+    [RegularExpression(@"^[a-zA-Z0-9]+$")]
     public String? Naziv { get; set; }
 
     [Required]

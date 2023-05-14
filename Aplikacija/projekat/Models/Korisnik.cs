@@ -9,11 +9,14 @@ public class Korisnik
 
     [Required]
     [MaxLength(50)]
+    [RegularExpression(@"^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$")]
     public String? Username { get; set; }
 
     [Required]
-    [MaxLength(30)]
-    public String? Password { get; set; }
+    public byte[]? PasswordHash { get; set; }
+
+    [Required]
+    public byte[]? PasswordSalt { get; set; }
 
     [Required]
     [RegularExpression(@"^([\w.-]+)@([\w-]+)((.(\w){2,3})+)$")]
@@ -29,6 +32,8 @@ public class Korisnik
     [RegularExpression(@"^[a-zA-Z]+$")]
     public String? Prezime { get; set; }
 
+    public char Fleg { get; set; }
+
     public List<KomentarDogadjaj>? KomentariDogadjaji { get; set; }
 
     public List<KomentarIzvodjac>? KomentariIzvodjaci { get; set; }
@@ -36,4 +41,9 @@ public class Korisnik
     public List<Karta>? Karte { get; set; }
 
     public List<Rezervacija>? Rezervacije { get; set; }
+
+    public Korisnik()
+    {
+        Fleg = 'k';
+    }
 }

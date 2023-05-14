@@ -9,11 +9,14 @@ public class Organizator
 
     [Required]
     [MaxLength(50)]
+    [RegularExpression(@"^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$")]
     public String? Username { get; set; }
 
     [Required]
-    [MaxLength(30)]
-    public String? Password { get; set; }
+    public byte[]? PasswordHash { get; set; }
+
+    [Required]
+    public byte[]? PasswordSalt { get; set; }
 
     [Required]
     [RegularExpression(@"^([\w.-]+)@([\w-]+)((.(\w){2,3})+)$")]
@@ -28,8 +31,15 @@ public class Organizator
     [MaxLength(20)]
     [RegularExpression(@"^[a-zA-Z]+$")]
     public String? Prezime { get; set; }
+
+    public char Fleg { get; set; }
     
     public Klub? Klub { get; set; }
 
     public List<Dogadjaj>? Dogadjaji { get; set; }
+
+    public Organizator() 
+    {
+        Fleg = 'o';
+    }
 }
