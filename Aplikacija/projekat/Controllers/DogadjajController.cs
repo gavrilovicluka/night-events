@@ -155,5 +155,52 @@ public class DogadjajController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [Authorize(Roles = "k,o")]
+    [Route("KomentarisiDogadjaj/{idDogadjaja}/{idKorisnika}")]
+    [HttpPut]
+    public async Task<ActionResult> KomentarisiDogadjaj([FromBody] string sadrzaj, int idDogadjaja,int idKorisnika)
+    {
+        try
+        {
+            var dog = await Context.Dogadjaji
+                    .Include(p => p.KomentariDogadjaj!)
+                    .ThenInclude(p => p.Korisnik)
+                    .Where(p => p.ID == idDogadjaja)
+                    .FirstOrDefaultAsync();
+
+            var kor = await Context.Korisnici.FindAsync(idKorisnika);
+
+            if(dog == null)
+            {
+                return BadRequest("Ne postoji dogadjaj");
+            }
+
+            if(dog.KomentariDogadjaj != null)
+            {
+                dog.KomentariDogadjaj.ForEach(p => 
+                {
+                    if(p.Korisnik!.ID == idKorisnika)
+                            throw new Exception("Korisnik je vec ostavio komentar za ovaj dogadjaj!");
+                });
+            }
+
+           var pom = new KomentarDogadjaj
+           {
+                Sadrzaj = sadrzaj,
+                Korisnik = kor,
+                Dogadjaj = dog
+            };
+
+            Context.KomentariDogadjaji.Add(pom);
+
+            await Context.SaveChangesAsync();
+            return Ok(dog.KomentariDogadjaj);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
         
 }
