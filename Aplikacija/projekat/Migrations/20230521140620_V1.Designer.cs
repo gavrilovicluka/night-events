@@ -12,7 +12,7 @@ using Models;
 namespace projekat.Migrations
 {
     [DbContext(typeof(NightEventsContext))]
-    [Migration("20230506011243_V1")]
+    [Migration("20230521140620_V1")]
     partial class V1
     {
         /// <inheritdoc />
@@ -37,15 +37,22 @@ namespace projekat.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Fleg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("PasswordHash")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Prezime")
                         .IsRequired()
@@ -220,15 +227,22 @@ namespace projekat.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Fleg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("PasswordHash")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Prezime")
                         .IsRequired()
@@ -260,6 +274,10 @@ namespace projekat.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Fleg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -273,10 +291,13 @@ namespace projekat.Migrations
                     b.Property<double>("Ocena")
                         .HasColumnType("float");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("PasswordHash")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Prezime")
                         .IsRequired()
@@ -301,27 +322,28 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Organizator", b =>
                 {
                     b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Fleg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int?>("KlubID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("PasswordHash")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Prezime")
                         .IsRequired()
@@ -334,8 +356,6 @@ namespace projekat.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("KlubID");
 
                     b.ToTable("Organizatori");
                 });
@@ -435,8 +455,10 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Organizator", b =>
                 {
                     b.HasOne("Models.Klub", "Klub")
-                        .WithMany("Organizatori")
-                        .HasForeignKey("KlubID");
+                        .WithOne("Organizator")
+                        .HasForeignKey("Models.Organizator", "ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Klub");
                 });
@@ -471,7 +493,7 @@ namespace projekat.Migrations
                 {
                     b.Navigation("Dogadjaji");
 
-                    b.Navigation("Organizatori");
+                    b.Navigation("Organizator");
                 });
 
             modelBuilder.Entity("Models.Korisnik", b =>

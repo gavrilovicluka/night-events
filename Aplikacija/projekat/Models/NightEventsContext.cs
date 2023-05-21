@@ -29,5 +29,15 @@ public class NightEventsContext : DbContext
     {
         
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Klub>()
+            .HasOne(k => k.Organizator)
+            .WithOne(o => o.Klub)
+            .HasForeignKey<Organizator>(o => o.ID);
+    }
   
 }

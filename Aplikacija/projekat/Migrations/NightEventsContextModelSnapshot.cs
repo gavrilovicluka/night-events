@@ -319,10 +319,7 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Organizator", b =>
                 {
                     b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -336,9 +333,6 @@ namespace projekat.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
-
-                    b.Property<int?>("KlubID")
-                        .HasColumnType("int");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -359,8 +353,6 @@ namespace projekat.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("KlubID");
 
                     b.ToTable("Organizatori");
                 });
@@ -460,8 +452,10 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Organizator", b =>
                 {
                     b.HasOne("Models.Klub", "Klub")
-                        .WithMany("Organizatori")
-                        .HasForeignKey("KlubID");
+                        .WithOne("Organizator")
+                        .HasForeignKey("Models.Organizator", "ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Klub");
                 });
@@ -496,7 +490,7 @@ namespace projekat.Migrations
                 {
                     b.Navigation("Dogadjaji");
 
-                    b.Navigation("Organizatori");
+                    b.Navigation("Organizator");
                 });
 
             modelBuilder.Entity("Models.Korisnik", b =>

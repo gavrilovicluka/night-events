@@ -18,10 +18,12 @@ namespace projekat.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
+                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,10 +53,12 @@ namespace projekat.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
+                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,14 +72,16 @@ namespace projekat.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Zanr = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     BrClanova = table.Column<int>(type: "int", nullable: false),
                     ImeIzvodjaca = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Ocena = table.Column<double>(type: "float", nullable: false)
+                    Ocena = table.Column<double>(type: "float", nullable: false),
+                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -86,23 +92,24 @@ namespace projekat.Migrations
                 name: "Organizatori",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ID = table.Column<int>(type: "int", nullable: false),
                     Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    KlubID = table.Column<int>(type: "int", nullable: true)
+                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Organizatori", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Organizatori_Klubovi_KlubID",
-                        column: x => x.KlubID,
+                        name: "FK_Organizatori_Klubovi_ID",
+                        column: x => x.ID,
                         principalTable: "Klubovi",
-                        principalColumn: "ID");
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -282,11 +289,6 @@ namespace projekat.Migrations
                 name: "IX_KomentariIzvodjaci_MuzickiIzvodjacID",
                 table: "KomentariIzvodjaci",
                 column: "MuzickiIzvodjacID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Organizatori_KlubID",
-                table: "Organizatori",
-                column: "KlubID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Rezervacije_DogadjajID",

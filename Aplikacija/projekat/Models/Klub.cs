@@ -23,7 +23,7 @@ public class Klub
 
     public int Kapacitet { get; set; }
 
-    public List<Organizator>? Organizatori { get; set; }
+    public Organizator? Organizator { get; set; }
 
     public List<Dogadjaj>? Dogadjaji { get; set; }
 }
