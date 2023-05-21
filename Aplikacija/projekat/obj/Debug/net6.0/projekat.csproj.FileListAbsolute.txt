@@ -162,3 +162,7 @@ D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6
 D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CopyComplete
 D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
 D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Scrutor.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

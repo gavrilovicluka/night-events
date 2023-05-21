@@ -47,6 +47,8 @@ public class MuzickiIzvodjac
     [Range(1,5)]
     public double Ocena { get; set; }
 
+    public List<TerminiIzvodjaca>? Termini { get; set; }
+
     public char Fleg { get; set; }
 
     public List<Dogadjaj>? Dogadjaji { get; set; }
