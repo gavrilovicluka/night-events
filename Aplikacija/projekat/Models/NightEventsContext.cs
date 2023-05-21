@@ -23,6 +23,7 @@ public class NightEventsContext : DbContext
     public DbSet<Organizator> Organizatori { get; set; }
 
     public DbSet<Rezervacija> Rezervacije { get; set; }
+    public DbSet<TerminiIzvodjaca> TerminiIzvodjaca { get; set; }
 
 
     public NightEventsContext(DbContextOptions options) : base(options)

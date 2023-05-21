@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Models;
 using System.Text.RegularExpressions;
 
@@ -109,4 +111,174 @@ public class MuzickiIzvodjacController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [Authorize(Roles = "m")]
+    [Route("PostaviSlobodanTermin/{idIzvodjaca}")]
+    [HttpPut]
+    public async Task<ActionResult> PostaviSlobodanTermin([FromBody] DateTime datum, int idIzvodjaca)
+    {
+        try
+        {
+            var izvodjac = await Context.MuzickiIzvodjaci.Where(p=>p.ID==idIzvodjaca).FirstOrDefaultAsync();
+
+            if(izvodjac == null)
+            {
+                return BadRequest("Ne postoji dati muzicki izvodjac");
+            }
+
+            if(izvodjac.Termini == null)
+            {
+                izvodjac.Termini = new List<TerminiIzvodjaca>();
+            }
+            
+            var noviTermin = new TerminiIzvodjaca 
+            {
+                MuzickiIzvodjac = izvodjac,
+                Termin = datum
+            };
+
+            Context.TerminiIzvodjaca.Add(noviTermin);
+            izvodjac.Termini.Add(noviTermin);
+
+            await Context.SaveChangesAsync();
+         
+            return(Ok(izvodjac));
+        }
+        catch (Exception e)
+        { 
+            return BadRequest(e.Message);
+        }
+    }
+
+    [Authorize(Roles = "m")]
+    [Route("IzmeniZanr/{idMuz}/{zanr}")]
+    [HttpPut]
+    public async Task<ActionResult> IzmeniZanr(int idMuz, string zanr)
+    {
+        if(string.IsNullOrEmpty(zanr) || zanr.Length > 30)
+        {
+            return BadRequest("Nevalidan unos novog zanra!");
+        }
+
+        try
+        {
+            var k = await Context.MuzickiIzvodjaci.FindAsync(idMuz);
+
+            if(k == null)
+            {
+                return BadRequest("Ne postoji izabrani muzicki izvodjac");
+            }
+
+            if(k.Zanr == zanr)
+            {
+                return BadRequest("Uneli ste isti zanr");
+            }
+
+            k.Zanr = zanr;
+            await Context.SaveChangesAsync();
+            return Ok("Zanr je uspesno izmenjen!");           
+        }
+        catch (Exception e)
+        { 
+            return BadRequest(e.Message);
+        }     
+    }
+
+    [Authorize(Roles = "m")]
+    [Route("IzmeniBrojClanova/{idMuz}/{brClanova}")]
+    [HttpPut]
+    public async Task<ActionResult> IzmeniBrojClanova(int idMuz, int brClanova)
+    {
+        if(brClanova < 0)
+        {
+            return BadRequest("Nevalidan unos broja clanova!");
+        }
+
+        try
+        {
+            var k = await Context.MuzickiIzvodjaci.FindAsync(idMuz);
+
+            if(k == null)
+            {
+                return BadRequest("Ne postoji izabrani muzicki izvodjac");
+            }
+
+            if(k.BrClanova == brClanova)
+            {
+                return BadRequest("Uneli ste isti broj clanova");
+            }
+
+            k.BrClanova = brClanova;
+            await Context.SaveChangesAsync();
+            return Ok("Broj clanova je uspesno izmenjen!");           
+        }
+        catch (Exception e)
+        { 
+            return BadRequest(e.Message);
+        }     
+    }
+
+    [Authorize(Roles = "m")]
+    [Route("IzmeniImeIzvodjaca/{idMuz}/{ime}")]
+    [HttpPut]
+    public async Task<ActionResult> IzmeniImeIzvodjaca(int idMuz, string ime)
+    {
+        if(string.IsNullOrEmpty(ime) || ime.Length > 50)
+        {
+            return BadRequest("Nevalidan unos novog imena!");
+        }
+
+        try
+        {
+            var k = await Context.MuzickiIzvodjaci.FindAsync(idMuz);
+
+            if(k == null)
+            {
+                return BadRequest("Ne postoji izabrani muzicki izvodjac");
+            }
+
+            if(k.ImeIzvodjaca == ime)
+            {
+                return BadRequest("Uneli ste isto ime izvodjaca");
+            }
+
+            k.ImeIzvodjaca = ime;
+            await Context.SaveChangesAsync();
+            return Ok("Ime izvodjaca je uspesno izmenjeno!");           
+        }
+        catch (Exception e)
+        { 
+            return BadRequest(e.Message);
+        }     
+    }
+    
+    [Authorize (Roles = "m")]
+    [Route("VratiMuzickeIzvodjace")]
+    [HttpGet]
+    public async Task<ActionResult> VratiMuzickeIzvodjace()
+    {
+        try
+        {
+            var d = await Context.MuzickiIzvodjaci
+            .Select(m => new
+            {
+                imeIzvodjaca = m.ImeIzvodjaca,
+                zanr = m.Zanr,
+                brojClanova = m.BrClanova,
+                ocena = m.Ocena,
+                termini = m.Termini,
+                dogadjaji = m.Dogadjaji
+
+            })
+            .ToListAsync();
+            return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+   
+
 }

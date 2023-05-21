@@ -36,30 +36,36 @@ public class AuthController : ControllerBase
     // [Authorize]
     public ActionResult Provera()
     {
-        if(User?.Identity?.IsAuthenticated == true)
+        try
         {
-            var userInfos = new List<object>();
-
-            foreach (var identity in User.Identities)
+            if(User?.Identity?.IsAuthenticated == true)
             {
-                var userInfo = new
+                var userInfos = new List<object>();
+
+                foreach (var identity in User.Identities)
                 {
-                    UserName = identity.Name,
-                    Roles = identity.Claims
-                        .Where(c => c.Type == ClaimTypes.Role)
-                        .Select(c => c.Value)
-                };
+                    var userInfo = new
+                    {
+                        UserName = identity.Name,
+                        Roles = identity.Claims
+                            .Where(c => c.Type == ClaimTypes.Role)
+                            .Select(c => c.Value)
+                    };
 
-                userInfos.Add(userInfo);
+                    userInfos.Add(userInfo);
+                }
+
+                return Ok(userInfos);
             }
-
-            return Ok(userInfos);
+            else
+            {
+                return BadRequest();
+            }
         }
-        else
+        catch(Exception e)
         {
-            return BadRequest();
-        }
-            
+            return BadRequest(e.Message);
+        }           
     }
 
     [Authorize]
@@ -313,11 +319,11 @@ public class AuthController : ControllerBase
         return jwt;
     }
 
-    private async Task<ActionResult<string>> CreateTokenMuzIzvodjac(MuzickiIzvodjac muz)
+    private Task<ActionResult<string>> CreateTokenMuzIzvodjac(MuzickiIzvodjac muz)
     {
         if (muz == null || muz.Fleg == ' ' || muz.ID <= 0 || muz.Username == null)
         {
-            return BadRequest("Nedostaju potrebni podaci za generisanje tokena.");
+            return Task.FromResult<ActionResult<string>>(BadRequest("Nedostaju potrebni podaci za generisanje tokena."));
         }
 
         List<Claim> claims = new List<Claim>
@@ -330,7 +336,7 @@ public class AuthController : ControllerBase
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
         if (string.IsNullOrEmpty(tokenValue))
         {
-            return BadRequest("Konfiguracija za kljuc 'AppSettings:Token' nije pravilno postavljena.");
+            return Task.FromResult<ActionResult<string>>(BadRequest("Konfiguracija za kljuc 'AppSettings:Token' nije pravilno postavljena."));
         }
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenValue));
 
@@ -343,12 +349,15 @@ public class AuthController : ControllerBase
             signingCredentials: cred
         );
 
-        var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        var cp = new ClaimsPrincipal(ci);
-        await HttpContext.SignInAsync(cp);
+        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
+        // var cp = new ClaimsPrincipal(ci);
+        // await HttpContext.SignInAsync(cp);
         
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-        return jwt;
+
+
+        return Task.FromResult<ActionResult<string>>(jwt);
+
     }
 
     private bool VerifyPasswordHash(string password, byte[] passwordHash,  byte[] passwordSalt)
