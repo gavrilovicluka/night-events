@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
 using Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 
 namespace projekat.Controllers;
 
@@ -74,7 +76,7 @@ public class OrganizatorController : ControllerBase
             };
             Context.Organizatori.Add(org);
             await Context.SaveChangesAsync();
-            return Ok(org); //PROMENI NAZAD
+            return Ok(org); 
 
                 
         }
@@ -85,25 +87,27 @@ public class OrganizatorController : ControllerBase
 
     }
 
-    [Authorize (Roles = "a")]
+    [Authorize(Roles = "a")]
     [Route("VratiOrganizatore")]
     [HttpGet]
     public async Task<ActionResult> VratiOrganizatore()
     {
         try
         {
-            var d = await Context.Organizatori
-            .Select(m => new
+            var organizatori = await Context.Organizatori.ToListAsync();
+
+            var d = organizatori.Select(m => new
             {
                 ime = m.Ime,
                 prezime = m.Prezime,
                 email = m.Email,
                 username = m.Username,
-                klubId= m.Klub.Id,
+                klubId= m.Klub!.ID
                
 
-            })
-            .ToListAsync();
+            });
+            
+
             return Ok(d);
         }
         catch (Exception e)

@@ -279,28 +279,6 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 	
-	[Authorize]
-    [Route("VratiListuTermina")]
-    [HttpGet]
-    public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)
-    {
-        try
-        {
-            var m = await Context.Termini
-			.Where(m => m.MuzickiIzvodjac!.ID == idIzvodjaca)
-            .Select(m => new
-            {
-                datum = m.datum
-
-            })
-            .ToListAsync();
-            return Ok(m);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
 
     [Authorize(Roles="m,o")]
     [Route("VratiListuTermina/{idIzvodjaca}")]
@@ -313,7 +291,7 @@ public class MuzickiIzvodjacController : ControllerBase
 			.Where(p => p.MuzickiIzvodjac!.ID == idIzvodjaca)
             .Select(m => new
             {
-                datum = m.datum
+                datum = m.Termin
 
             })
             .ToListAsync();
@@ -326,5 +304,4 @@ public class MuzickiIzvodjacController : ControllerBase
     }
 
    
-
 }

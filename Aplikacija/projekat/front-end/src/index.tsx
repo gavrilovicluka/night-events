@@ -10,6 +10,8 @@ import { MainMenu, MainMenuItem } from './components/MainMenu';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { UserRegistrationPage } from './components/UserRegistrationPage';
 import UserLoginPage from './components/UserLoginPage';
+import OrganizatorDashboard from './components/OrganizatorDashboard';
+import ListaIzvodjaca from './components/ListaIzvodjaca';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -23,12 +25,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <MainMenu items = {menuItems}></MainMenu>
+    {/* <MainMenu items = {menuItems}></MainMenu> */}
     <HashRouter>
       <Routes>
-        <Route path='/' element={ <HomePage/> } /> 
+        {/* <Route path='/' element={ <HomePage/> } />  */}
         <Route path='/login' element={ <UserLoginPage/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
+        <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
+        <Route path='/lista-izvodjaca' element={ <ListaIzvodjaca/> } /> 
       </Routes>
     </HashRouter>
   </React.StrictMode>
