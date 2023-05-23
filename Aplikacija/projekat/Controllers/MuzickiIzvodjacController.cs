@@ -278,6 +278,52 @@ public class MuzickiIzvodjacController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+	
+	[Authorize]
+    [Route("VratiListuTermina")]
+    [HttpGet]
+    public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)
+    {
+        try
+        {
+            var m = await Context.Termini
+			.Where(m => m.MuzickiIzvodjac!.ID == idIzvodjaca)
+            .Select(m => new
+            {
+                datum = m.datum
+
+            })
+            .ToListAsync();
+            return Ok(m);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [Authorize(Roles="m,o")]
+    [Route("VratiListuTermina/{idIzvodjaca}")]
+    [HttpGet]
+    public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)
+    {
+        try
+        {
+            var d = await Context.TerminiIzvodjaca
+			.Where(p => p.MuzickiIzvodjac!.ID == idIzvodjaca)
+            .Select(m => new
+            {
+                datum = m.datum
+
+            })
+            .ToListAsync();
+            return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 
    
 
