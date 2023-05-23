@@ -84,5 +84,32 @@ public class OrganizatorController : ControllerBase
         }
 
     }
+
+    [Authorize (Roles = "a")]
+    [Route("VratiOrganizatore")]
+    [HttpGet]
+    public async Task<ActionResult> VratiOrganizatore()
+    {
+        try
+        {
+            var d = await Context.Organizatori
+            .Select(m => new
+            {
+                ime = m.Ime,
+                prezime = m.Prezime,
+                email = m.Email,
+                username = m.Username,
+                klubId= m.Klub.Id,
+               
+
+            })
+            .ToListAsync();
+            return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
     
 }
