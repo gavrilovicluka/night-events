@@ -12,6 +12,7 @@ import { UserRegistrationPage } from './components/UserRegistrationPage';
 import UserLoginPage from './components/UserLoginPage';
 import OrganizatorDashboard from './components/OrganizatorDashboard';
 import ListaIzvodjaca from './components/ListaIzvodjaca';
+import MuzickiIzvodjacDashboard from './components/MuzickiIzvodjacDashboard';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -32,6 +33,7 @@ root.render(
         <Route path='/login' element={ <UserLoginPage/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
+        <Route path='/muzickiIzvodjacDashboard' element={ <MuzickiIzvodjacDashboard/> } /> 
         <Route path='/lista-izvodjaca' element={ <ListaIzvodjaca/> } /> 
       </Routes>
     </HashRouter>
