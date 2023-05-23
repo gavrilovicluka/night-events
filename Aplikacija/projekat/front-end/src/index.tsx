@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import HomePage from './components/HomePage/HomePage';
+import HomePage from './components/HomePage';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import { MainMenu, MainMenuItem } from './components/MainMenu/MainMenu';
+import { MainMenu, MainMenuItem } from './components/MainMenu';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import { UserRegistrationPage } from './components/UserRegistrationPage/UserRegistrationPage';
+import { UserRegistrationPage } from './components/UserRegistrationPage';
+import UserLoginPage from './components/UserLoginPage';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -26,7 +27,7 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path='/' element={ <HomePage/> } /> 
-        <Route path='/login' element={ <HomePage/> } /> 
+        <Route path='/login' element={ <UserLoginPage/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
       </Routes>
     </HashRouter>

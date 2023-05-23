@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Card, Form, Button, Col, Alert} from 'react-bootstrap';
+import {Container, Card, Form, Button, Col} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';

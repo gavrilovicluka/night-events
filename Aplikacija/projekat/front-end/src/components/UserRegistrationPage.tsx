@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
 //import { validationSchema } from '../User/user.registration.dto';
 import axios from 'axios';
-import { validationSchema } from '../../dtos/User/user.registration.dto';
+import { validationSchema } from '../dtos/User/user.registration.dto';
 
 export {};
 
