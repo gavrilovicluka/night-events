@@ -10,4 +10,5 @@ export default class MuzickiIzvodjacType {
     ocena?: number;
     termini?: TerminType;
     dogadjaji?: DogadjajType;
+    status?:string;
 }
