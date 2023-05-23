@@ -18,23 +18,36 @@ public class RezervacijaController : ControllerBase
     }
 
     [Authorize(Roles = "k")]
-    [Route("RezervisiMesto{idDogadjaja}/{idKorisnika}/{brojStola}")]
+    [Route("RezervisiMesto{idDogadjaja}/{idKorisnika}/{idStola}")]
     [HttpPost]
-    public async Task<ActionResult> RezervisiMesto(int idDogadjaja, int idKorisnika, int brojStola)
+    public async Task<ActionResult> RezervisiMesto(int idDogadjaja, int idKorisnika, int idStola)
     {
         try
         {
             var dogadjaj = await Context.Dogadjaji.Include(p=>p.Klub).Where(p=>p.ID==idDogadjaja).FirstOrDefaultAsync();
-            var k = await Context.Korisnici.FindAsync(idKorisnika);
-
             if(dogadjaj == null)
             {
                 return BadRequest("Ne postoji dati dogadjaj");
+            }           
+            if(dogadjaj.BrojRezervacija == dogadjaj.Klub.BrojStolova)
+            {
+                return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }
-            
+
+            var k = await Context.Korisnici.FindAsync(idKorisnika);
             if(k == null) 
             {
                 return BadRequest("Ne postoji korisnik");
+            }
+
+            var sto = await Context.Stolovi.FindAsync(idStola);
+            if(sto == null) 
+            {
+                return BadRequest("Ne postoji sto");
+            }
+            else if(sto.Status == StatusStola.Zauzet)
+            {
+                return BadRequest("Izabrani sto je zauzet");
             }
 
             var provera = await Context.Rezervacije
@@ -50,10 +63,11 @@ public class RezervacijaController : ControllerBase
             
             var rez = new Rezervacija
             {
-                BrStola = brojStola,
+                Sto = sto,
                 Korisnik = k,
-                Dogadjaj = dogadjaj
+                Dogadjaj = dogadjaj,               
             };
+            rez.Dogadjaj.BrojRezervacija++;
 
             Context.Rezervacije.Add(rez);
             await Context.SaveChangesAsync();
@@ -101,7 +115,7 @@ public class RezervacijaController : ControllerBase
             .Where(p => p.ID == idRezervacije)
             .Select(m => new
             {
-                brojStola = m.BrStola,
+                sto = m.Sto,
                 idKorisnika = m.Korisnik,
                 usernameKorisnika = m.Korisnik!.Username,
                 idDogadjaja = m.Dogadjaj!.ID,
@@ -154,7 +168,7 @@ public class RezervacijaController : ControllerBase
             .Select(m => new
             {
                 idRezervacije = m.ID,
-                brojStola = m.BrStola,
+                sto = m.Sto,
                 idKorisnika = m.Korisnik,
                 usernameKorisnika = m.Korisnik!.Username
             })
@@ -179,7 +193,7 @@ public class RezervacijaController : ControllerBase
             .Select(m => new
             {
                 idRezervacije = m.ID,
-                brojStola = m.BrStola,
+                sto = m.Sto,
                 idDogadjaja = m.Dogadjaj!.ID,
                 nazivDogadjaja = m.Dogadjaj.Naziv
             })

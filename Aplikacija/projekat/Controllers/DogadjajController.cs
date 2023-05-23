@@ -87,7 +87,7 @@ public class DogadjajController : ControllerBase
                 id = m.ID,
                 naziv = m.Naziv,
                 nazivKluba = m.Klub!.Naziv,
-                idKluba = m.Klub.ID,
+                idKluba = m.Klub.ID,               
             })
             .ToListAsync();
             return Ok(d);

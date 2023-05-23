@@ -1,4 +1,6 @@
 import DogadjajType from "./DogadjajType";
+import OcenaMuzickiIzvodjacType from "./OcenaMuzickiIzvodjacType";
+import { StatusNalogaType } from "./StatusNalogaType";
 import TerminType from "./TerminType";
 
 export default class MuzickiIzvodjacType {
@@ -7,8 +9,8 @@ export default class MuzickiIzvodjacType {
     imeIzvodjaca?: string;
     zanr?: number;
     brojClanova?: number;
-    ocena?: number;
-    termini?: TerminType;
-    dogadjaji?: DogadjajType;
-    status?:string;
+    ocene?: OcenaMuzickiIzvodjacType[] | null;
+    termini?: TerminType[] | null;
+    dogadjaji?: DogadjajType[] | null;
+    status?: StatusNalogaType;
 }

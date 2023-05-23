@@ -33,6 +33,7 @@ public class Organizator
     public String? Prezime { get; set; }
 
     public char Fleg { get; set; }
+    public StatusNaloga Status { get; set; }
     
     public Klub? Klub { get; set; }
 
@@ -41,5 +42,6 @@ public class Organizator
     public Organizator() 
     {
         Fleg = 'o';
+        Status = StatusNaloga.NaCekanju;
     }
 }

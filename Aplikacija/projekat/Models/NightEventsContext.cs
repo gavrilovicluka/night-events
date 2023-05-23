@@ -24,6 +24,10 @@ public class NightEventsContext : DbContext
 
     public DbSet<Rezervacija> Rezervacije { get; set; }
     public DbSet<TerminiIzvodjaca> TerminiIzvodjaca { get; set; }
+    public DbSet<OcenaKlub> OceneKlubova { get; set; }
+    public DbSet<OcenaMuzickiIzvodjac> OceneIzvodjaca { get; set; }
+    
+    public DbSet<Sto> Stolovi { get; set; }
 
 
     public NightEventsContext(DbContextOptions options) : base(options)
@@ -39,6 +43,18 @@ public class NightEventsContext : DbContext
             .HasOne(k => k.Organizator)
             .WithOne(o => o.Klub)
             .HasForeignKey<Organizator>(o => o.ID);
+
+        modelBuilder.Entity<Organizator>()
+            .Property(s => s.Status)
+            .HasConversion<string>();
+
+        modelBuilder.Entity<MuzickiIzvodjac>()
+            .Property(s => s.Status)
+            .HasConversion<string>();
+
+        modelBuilder.Entity<Sto>()
+            .Property(s => s.Status)
+            .HasConversion<string>();
     }
   
 }

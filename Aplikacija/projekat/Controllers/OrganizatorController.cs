@@ -102,9 +102,8 @@ public class OrganizatorController : ControllerBase
                 prezime = m.Prezime,
                 email = m.Email,
                 username = m.Username,
-                klubId= m.Klub!.ID
-               
-
+                klubId= m.Klub!.ID,
+                status = m.Status
             });
             
 

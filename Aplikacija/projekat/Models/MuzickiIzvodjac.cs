@@ -23,16 +23,6 @@ public class MuzickiIzvodjac
     public String? Email { get; set; }
 
     [Required]
-    [MaxLength(20)]
-    [RegularExpression(@"^[a-zA-Z]+$")]
-    public String? Ime { get; set; }
-
-    [Required]
-    [MaxLength(20)]
-    [RegularExpression(@"^[a-zA-Z]+$")]
-    public String? Prezime { get; set; }
-
-    [Required]
     [MaxLength(30)]
     public String? Zanr { get; set; }
     
@@ -41,15 +31,13 @@ public class MuzickiIzvodjac
 
     [Required]
     [MaxLength(50)]
-    public String? ImeIzvodjaca { get; set; }
-
-    [Required]
-    [Range(1,5)]
-    public double Ocena { get; set; }
+    public String? ImeIzvodjaca { get; set; } 
+    public List<OcenaMuzickiIzvodjac>? Ocene { get; set; }
 
     public List<TerminiIzvodjaca>? Termini { get; set; }
 
     public char Fleg { get; set; }
+    public StatusNaloga Status { get; set; }
 
     public List<Dogadjaj>? Dogadjaji { get; set; }
 
@@ -58,6 +46,6 @@ public class MuzickiIzvodjac
     public MuzickiIzvodjac()
     {
         Fleg = 'm';
-        Ocena = 0;
+        Status = StatusNaloga.NaCekanju;
     }
 }

@@ -27,16 +27,6 @@ public class MuzickiIzvodjacController : ControllerBase
             return BadRequest("Nevalidno korisnicko ime!");
         }
 
-        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Ime) || muzickiIzvodjacDto.Ime.Length > 20)
-        {
-            return BadRequest("Nevalidan unos imena!");
-        }
-
-        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Prezime) || muzickiIzvodjacDto.Prezime.Length > 20)
-        {
-            return BadRequest("Nevalidan unos prezimena!");
-        }
-
         if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Email))
         {
             return BadRequest("Unesi email!");
@@ -90,9 +80,7 @@ public class MuzickiIzvodjacController : ControllerBase
             
             MuzickiIzvodjac muzIzv = new MuzickiIzvodjac
             {
-                Username = muzickiIzvodjacDto.Username,
-                Ime = muzickiIzvodjacDto.Ime,
-                Prezime = muzickiIzvodjacDto.Prezime,
+                Username = muzickiIzvodjacDto.Username,           
                 Email = muzickiIzvodjacDto.Email,               
                 PasswordHash = PasswordHash,
                 PasswordSalt = PasswordSalt,   
@@ -252,7 +240,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
     
-    [Authorize (Roles = "m")]
+    [Authorize (Roles = "a,o")]
     [Route("VratiMuzickeIzvodjace")]
     [HttpGet]
     public async Task<ActionResult> VratiMuzickeIzvodjace()
@@ -262,12 +250,15 @@ public class MuzickiIzvodjacController : ControllerBase
             var d = await Context.MuzickiIzvodjaci
             .Select(m => new
             {
+                id = m.ID,
+                username = m.Username,
                 imeIzvodjaca = m.ImeIzvodjaca,
                 zanr = m.Zanr,
                 brojClanova = m.BrClanova,
-                ocena = m.Ocena,
+                ocene = m.Ocene,
                 termini = m.Termini,
-                dogadjaji = m.Dogadjaji
+                dogadjaji = m.Dogadjaji,
+                status = m.Status
 
             })
             .ToListAsync();

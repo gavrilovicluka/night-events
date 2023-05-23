@@ -25,6 +25,14 @@ public class Dogadjaj
 
     public List<Rezervacija>? Rezervacije { get; set; }
 
+    public int BrojRezervacija { get; set; }
+
     public List<Karta>? Karte { get; set; }
+
+    public Dogadjaj()
+    {
+        BrojRezervacija = 0;
+        Rezervacije = new List<Rezervacija>(Klub.BrojStolova);
+    }
 
 }

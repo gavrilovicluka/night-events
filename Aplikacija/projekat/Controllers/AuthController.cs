@@ -164,6 +164,11 @@ public class AuthController : ControllerBase
                 if(!VerifyPasswordHash(usrDto.Password, org.PasswordHash, org.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
+                if(org.Status == StatusNaloga.NaCekanju)
+                    return BadRequest("Nalog ceka na odobrenje administratora");
+                else if(org.Status == StatusNaloga.Odbijen)
+                    return BadRequest("Nalog je odbijen od strane administratora");
+
                 var token3 = CreateTokenOrganizator(org);
                     
                 return Ok(new
@@ -182,6 +187,11 @@ public class AuthController : ControllerBase
             {
                 if(!VerifyPasswordHash(usrDto.Password, muz.PasswordHash, muz.PasswordSalt))
                     return BadRequest("Pogresna sifra");
+
+                if(muz.Status == StatusNaloga.NaCekanju)
+                    return BadRequest("Nalog ceka na odobrenje administratora");
+                else if(muz.Status == StatusNaloga.Odbijen)
+                    return BadRequest("Nalog je odbijen od strane administratora");
 
                 var token4 = CreateTokenMuzIzvodjac(muz);
                     

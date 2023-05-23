@@ -261,3 +261,7 @@ C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\
 C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
 C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\public\manifest.json
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\tsconfig.json
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package-lock.json
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package.json

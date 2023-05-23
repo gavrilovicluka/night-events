@@ -16,20 +16,23 @@ public class KlubController : ControllerBase
     }
 
     [Authorize(Roles = "a")]
-    [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{kapacitet}")]
+    [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{brojStolova}")]
     [HttpPost]
-    public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int kapacitet)
+    public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolova)
     {
         try
         {
             var organizator = await Context.Organizatori.FindAsync(idOrganizatora);
+            if(organizator == null)
+            {
+                return BadRequest("Ne postoji organizator");
+            }
 
             var klub = new Klub
             {               
                 Naziv=naziv,
                 Lokacija = lokacija,
-                Ocena = 0.0,
-                Kapacitet = kapacitet,
+                BrojStolova = brojStolova,
                 Organizator = organizator,
                 Dogadjaji = null
 
@@ -58,11 +61,12 @@ public class KlubController : ControllerBase
             {
                 naziv = m.Naziv,
                 lokacija = m.Lokacija,
-                ocena = m.Ocena,
-                kapacitet = m.Kapacitet,
+                ocene = m.Ocene,
+                brojStolova = m.BrojStolova,
                 idOrganizatora = m.Organizator!.ID,
                 usernameOrganizatora = m.Organizator.Username,
-                dogadjaji = m.Dogadjaji
+                dogadjaji = m.Dogadjaji,
+                stolovi = m.Stolovi
 
             })
             .ToListAsync();
