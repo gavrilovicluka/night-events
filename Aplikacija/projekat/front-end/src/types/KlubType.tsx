@@ -10,5 +10,4 @@ export default class KlubType {
     idOrganizatora?: number | null;
     usernameOrganizatora?: string | null;
     dogadjaji?: DogadjajType[] | null;
-    target: any;
 }

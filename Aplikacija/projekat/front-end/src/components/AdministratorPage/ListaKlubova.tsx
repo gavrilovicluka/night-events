@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import KlubType from "../../types/KlubType";
 import AdministratorHeader from "./AdministratorHeader";
@@ -17,7 +17,7 @@ export default function ListaKlubova() {
           brojStolova: ''
         });
       
-        const handleChange = (e:KlubType) => {
+        const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
            setKlubData({ ...klubData, [e.target.name]: e.target.value });
          };
       

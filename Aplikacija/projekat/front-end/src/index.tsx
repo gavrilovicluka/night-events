@@ -20,6 +20,7 @@ import ListaOrganizatora from './components/AdministratorPage/ListaOrganizatora'
 import ListaIzvodjacaAdminPage from './components/AdministratorPage/ListaIzvodjacaAdminPage';
 import ListaTermina from './components/MuzickiIzvodjacPage/ListaTermina';
 import ListaDogadjaja from './components/OrganizatorPage/ListaDogadjaja';
+import DodajDogadjaj from './components/OrganizatorPage/DodajDogadjaj';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -42,7 +43,7 @@ root.render(
 
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
         <Route path='/organizatorDashboard/mojiDogadjaji' element={ <ListaDogadjaja /> } /> 
-        {/* <Route path='/organizatorDashboard/dodajDogadjaj' element={ <DodajDogadjaj /> } />  */}
+        <Route path='/organizatorDashboard/dodajDogadjaj' element={ <DodajDogadjaj /> } />
         <Route path='/organizatorDashboard/pregledIzvodjaca' element={ <ListaIzvodjaca/> } /> 
 
         <Route path='/muzickiIzvodjacDashboard' element={ <MuzickiIzvodjacDashboard/> } />        
