@@ -18,14 +18,14 @@ export default function ListaIzvodjaca() {
     const [selectedIzvodjac, setSelectedIzvodjac] = useState<number | null>(null);
     const [dostupniDogadjaji, setDostupniDogadjaji] = useState<Array<DogadjajType>>([]);
 
-    const token = localStorage.getItem('jwtToken');
-    let klubId = '';   
-    if (token) {
-        const decodedToken = jwt.decode(token) as DecodedTokenOrganizator;
-        if (decodedToken && decodedToken.idKluba) {
-            klubId = decodedToken.idKluba;
-        }
-    }
+    // const token = localStorage.getItem('jwtToken');
+    // let klubId = '';   
+    // if (token) {
+    //     const decodedToken = jwt.decode(token) as DecodedTokenOrganizator;
+    //     if (decodedToken && decodedToken.idKluba) {
+    //         klubId = decodedToken.idKluba;
+    //     }
+    // }
     //treba da se stavi u backend da token sadrzi id kluba za organizatora
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export default function ListaIzvodjaca() {
     }, []);
 
     useEffect(() => {
-        getDostupniDogadjaji(parseInt(klubId));
+        //getDostupniDogadjaji(parseInt(klubId));
     }, []);
 
     const getDostupniDogadjaji = async (klubId: number) => {
