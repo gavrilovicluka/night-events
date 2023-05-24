@@ -10,5 +10,5 @@ public class OcenaMuzickiIzvodjac
     [Range(1,5)]
     public int Ocena { get; set; }
 
-    public MuzickiIzvodjac MuzickiIzvodjac { get; set; }
+    public MuzickiIzvodjac? MuzickiIzvodjac { get; set; }
 }

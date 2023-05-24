@@ -10,5 +10,5 @@ public class OcenaKlub
     [Range(1,5)]
     public int Ocena { get; set; }
 
-    public Klub Klub { get; set; }
+    public Klub? Klub { get; set; }
 }

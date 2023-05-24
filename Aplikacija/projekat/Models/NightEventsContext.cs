@@ -44,6 +44,12 @@ public class NightEventsContext : DbContext
             .WithOne(o => o.Klub)
             .HasForeignKey<Organizator>(o => o.ID);
 
+        modelBuilder.Entity<Sto>()
+            .HasOne(k => k.Rezervacija)
+            .WithOne(o => o.Sto)
+            .HasForeignKey<Rezervacija>(o => o.ID)
+            .OnDelete(DeleteBehavior.NoAction);
+            
         modelBuilder.Entity<Organizator>()
             .Property(s => s.Status)
             .HasConversion<string>();
@@ -56,10 +62,7 @@ public class NightEventsContext : DbContext
             .Property(s => s.Status)
             .HasConversion<string>();
 
-        modelBuilder.Entity<Dogadjaj>()
-            .HasMany(d => d.Rezervacije)
-            .WithOne(r => r.Dogadjaj)
-            .OnDelete(DeleteBehavior.Cascade);
+
     }
   
 }

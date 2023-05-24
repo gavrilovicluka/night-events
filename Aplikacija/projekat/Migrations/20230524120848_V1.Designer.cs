@@ -12,8 +12,8 @@ using Models;
 namespace projekat.Migrations
 {
     [DbContext(typeof(NightEventsContext))]
-    [Migration("20230523232830_V3")]
-    partial class V3
+    [Migration("20230524120848_V1")]
+    partial class V1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -95,16 +95,11 @@ namespace projekat.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("OrganizatorID")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
 
                     b.HasIndex("KlubID");
 
                     b.HasIndex("MuzickiIzvodjacID");
-
-                    b.HasIndex("OrganizatorID");
 
                     b.ToTable("Dogadjaji");
                 });
@@ -318,7 +313,7 @@ namespace projekat.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("KlubID")
+                    b.Property<int?>("KlubID")
                         .HasColumnType("int");
 
                     b.Property<int>("Ocena")
@@ -339,7 +334,7 @@ namespace projekat.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("MuzickiIzvodjacID")
+                    b.Property<int?>("MuzickiIzvodjacID")
                         .HasColumnType("int");
 
                     b.Property<int>("Ocena")
@@ -400,18 +395,15 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Rezervacija", b =>
                 {
                     b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    b.Property<DateTime>("Datum")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("DogadjajID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("KorisnikID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StoID")
+                    b.Property<int>("KorisnikID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -419,8 +411,6 @@ namespace projekat.Migrations
                     b.HasIndex("DogadjajID");
 
                     b.HasIndex("KorisnikID");
-
-                    b.HasIndex("StoID");
 
                     b.ToTable("Rezervacije");
                 });
@@ -433,7 +423,7 @@ namespace projekat.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("KlubID")
+                    b.Property<int>("DogadjajID")
                         .HasColumnType("int");
 
                     b.Property<string>("Status")
@@ -442,7 +432,7 @@ namespace projekat.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("KlubID");
+                    b.HasIndex("DogadjajID");
 
                     b.ToTable("Stolovi");
                 });
@@ -478,15 +468,9 @@ namespace projekat.Migrations
                         .WithMany("Dogadjaji")
                         .HasForeignKey("MuzickiIzvodjacID");
 
-                    b.HasOne("Models.Organizator", "Organizator")
-                        .WithMany("Dogadjaji")
-                        .HasForeignKey("OrganizatorID");
-
                     b.Navigation("Klub");
 
                     b.Navigation("MuzickiIzvodjac");
-
-                    b.Navigation("Organizator");
                 });
 
             modelBuilder.Entity("Models.Karta", b =>
@@ -538,9 +522,7 @@ namespace projekat.Migrations
                 {
                     b.HasOne("Models.Klub", "Klub")
                         .WithMany("Ocene")
-                        .HasForeignKey("KlubID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("KlubID");
 
                     b.Navigation("Klub");
                 });
@@ -549,9 +531,7 @@ namespace projekat.Migrations
                 {
                     b.HasOne("Models.MuzickiIzvodjac", "MuzickiIzvodjac")
                         .WithMany("Ocene")
-                        .HasForeignKey("MuzickiIzvodjacID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MuzickiIzvodjacID");
 
                     b.Navigation("MuzickiIzvodjac");
                 });
@@ -575,13 +555,15 @@ namespace projekat.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Models.Sto", "Sto")
+                        .WithOne("Rezervacija")
+                        .HasForeignKey("Models.Rezervacija", "ID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("Models.Korisnik", "Korisnik")
                         .WithMany("Rezervacije")
-                        .HasForeignKey("KorisnikID");
-
-                    b.HasOne("Models.Sto", "Sto")
-                        .WithMany()
-                        .HasForeignKey("StoID")
+                        .HasForeignKey("KorisnikID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -594,13 +576,13 @@ namespace projekat.Migrations
 
             modelBuilder.Entity("Models.Sto", b =>
                 {
-                    b.HasOne("Models.Klub", "Klub")
+                    b.HasOne("Models.Dogadjaj", "Dogadjaj")
                         .WithMany("Stolovi")
-                        .HasForeignKey("KlubID")
+                        .HasForeignKey("DogadjajID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Klub");
+                    b.Navigation("Dogadjaj");
                 });
 
             modelBuilder.Entity("Models.TerminiIzvodjaca", b =>
@@ -621,6 +603,8 @@ namespace projekat.Migrations
                     b.Navigation("KomentariDogadjaj");
 
                     b.Navigation("Rezervacije");
+
+                    b.Navigation("Stolovi");
                 });
 
             modelBuilder.Entity("Models.Klub", b =>
@@ -630,8 +614,6 @@ namespace projekat.Migrations
                     b.Navigation("Ocene");
 
                     b.Navigation("Organizator");
-
-                    b.Navigation("Stolovi");
                 });
 
             modelBuilder.Entity("Models.Korisnik", b =>
@@ -656,9 +638,9 @@ namespace projekat.Migrations
                     b.Navigation("Termini");
                 });
 
-            modelBuilder.Entity("Models.Organizator", b =>
+            modelBuilder.Entity("Models.Sto", b =>
                 {
-                    b.Navigation("Dogadjaji");
+                    b.Navigation("Rezervacija");
                 });
 #pragma warning restore 612, 618
         }

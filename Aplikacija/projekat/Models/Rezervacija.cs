@@ -13,6 +13,7 @@ public class Rezervacija
     [Required]
     public Sto? Sto { get; set; }
 
+    [Required]
     public Korisnik? Korisnik { get; set; }
 
     [Required]
