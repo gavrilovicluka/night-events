@@ -53,9 +53,9 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
                   Upravljanje
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem link>Organizatori</MDBDropdownItem>
+                  <MDBDropdownItem link >Organizatori</MDBDropdownItem>
                   <MDBDropdownItem link>Muzicki Izvodjaci</MDBDropdownItem>
-                  <MDBDropdownItem link>Klubovi</MDBDropdownItem>
+                  <MDBDropdownItem link href='/klubovi'>Klubovi</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
