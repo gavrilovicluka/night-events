@@ -29,7 +29,7 @@ public class RezervacijaController : ControllerBase
             {
                 return BadRequest("Ne postoji dati dogadjaj");
             }           
-            if(dogadjaj.BrojRezervacija == dogadjaj.Klub.BrojStolova)
+            if(dogadjaj.BrojRezervacija == dogadjaj.Klub!.BrojStolova)
             {
                 return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }
@@ -65,7 +65,8 @@ public class RezervacijaController : ControllerBase
             {
                 Sto = sto,
                 Korisnik = k,
-                Dogadjaj = dogadjaj,               
+                Dogadjaj = dogadjaj,  
+                Datum = DateTime.Now             
             };
             rez.Dogadjaj.BrojRezervacija++;
 
@@ -119,6 +120,7 @@ public class RezervacijaController : ControllerBase
                 idKorisnika = m.Korisnik,
                 usernameKorisnika = m.Korisnik!.Username,
                 idDogadjaja = m.Dogadjaj!.ID,
+                datum = m.Datum
             })
             .ToListAsync();
             return Ok(r);
@@ -170,7 +172,8 @@ public class RezervacijaController : ControllerBase
                 idRezervacije = m.ID,
                 sto = m.Sto,
                 idKorisnika = m.Korisnik,
-                usernameKorisnika = m.Korisnik!.Username
+                usernameKorisnika = m.Korisnik!.Username,
+                datum = m.Datum
             })
             .ToListAsync();
             return Ok(d);
@@ -195,7 +198,8 @@ public class RezervacijaController : ControllerBase
                 idRezervacije = m.ID,
                 sto = m.Sto,
                 idDogadjaja = m.Dogadjaj!.ID,
-                nazivDogadjaja = m.Dogadjaj.Naziv
+                nazivDogadjaja = m.Dogadjaj.Naziv,
+                datum = m.Datum
             })
             .ToListAsync();
             return Ok(d);

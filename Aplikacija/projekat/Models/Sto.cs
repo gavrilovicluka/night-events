@@ -10,7 +10,9 @@ public class Sto
     public StatusStola Status { get; set; }
 
     [Required]
-    public Klub? Klub { get; set; }
+    public Dogadjaj? Dogadjaj { get; set; }
+
+    public Rezervacija? Rezervacija { get; set; }
 
     public Sto()
     {

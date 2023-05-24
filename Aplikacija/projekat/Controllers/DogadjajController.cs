@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace projekat.Controllers;
 
@@ -16,22 +17,29 @@ public class DogadjajController : ControllerBase
     }
 
     [Authorize(Roles = "o")]
-    [Route("DodajDogadjaj/{idOrganizatora}/{idIzvodjaca}/{idKluba}/{naziv}/{datumIVreme}")]
+    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}/{datumIVreme}")]
     [HttpPost]
-    public async Task<ActionResult> DodajDogadjaj(int idOrganizatora, int idIzvodjaca, int idKluba, String naziv, DateTime datumIVreme)
+    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, DateTime datumIVreme)
     {
         try
         {
-            var organizator = await Context.Organizatori.FindAsync(idOrganizatora);
             var klub = await Context.Klubovi.FindAsync(idKluba);
+            if(klub == null)
+            {
+                return BadRequest("Klub ne postoji");
+            }
+
             var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+            if(izvodjac == null)
+            {
+                return BadRequest("Muzicki izvodjac ne postoji");
+            }
 
             var dogadjaj = new Dogadjaj
             {               
                 Naziv=naziv,
                 DatumIVreme = datumIVreme,
                 Klub = klub,
-                Organizator = organizator,
                 MuzickiIzvodjac = izvodjac,
                 KomentariDogadjaj = null,
                 Rezervacije = null,
@@ -48,30 +56,6 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize]
-    [Route("VratiDogadjajeOrganizatora/{idOrg}")]
-    [HttpGet]
-    public async Task<ActionResult> VratiDogadjajeOrganizatora(int idOrg)
-    {
-        try
-        {
-            var d = await Context.Dogadjaji
-            .Where(p => p.Organizator!.ID == idOrg)
-            .Select(m => new
-            {
-                id = m.ID,
-                naziv = m.Naziv,
-                usernameOrganizatora = m.Organizator!.Username,
-                idOrganizatora = m.Organizator.ID,
-            })
-            .ToListAsync();
-            return Ok(d);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
 
     [Authorize]
     [Route("VratiDogadjajeKluba/{idKluba}")]
@@ -80,6 +64,12 @@ public class DogadjajController : ControllerBase
     {
         try
         {
+            var klub = await Context.Klubovi.FindAsync(idKluba);
+            if(klub == null)
+            {
+                return BadRequest("Klub ne postoji");
+            }
+
             var d = await Context.Dogadjaji
             .Where(p => p.Klub!.ID == idKluba)
             .Select(m => new
@@ -90,6 +80,12 @@ public class DogadjajController : ControllerBase
                 idKluba = m.Klub.ID,               
             })
             .ToListAsync();
+
+            if(d == null)
+            {
+                return BadRequest("Ne postoje dogadjaji za dati klub");
+            }
+
             return Ok(d);
         }
         catch (Exception e)
@@ -101,17 +97,31 @@ public class DogadjajController : ControllerBase
     [Authorize(Roles = "o, a")]
     [Route("IzbrisiDogadjaj/{id}")]
     [HttpDelete]
-    public async Task<ActionResult> IzbrisiDogadjaj(int id){
+    public async Task<ActionResult> IzbrisiDogadjaj(int id)
+    {
         try
         {
-            var d = await Context.Dogadjaji
-                    .Include(p=>p.Rezervacije)
-                    .Include(p=>p.KomentariDogadjaj)
-                    .Include(p=>p.Karte)
-                    .Where(p => p.ID == id)
-                    .FirstOrDefaultAsync();
+            int korisnikId;
+            bool fleg = int.TryParse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value, out korisnikId);
 
-           
+            if(!fleg)
+            {
+                return BadRequest("Doslo je do greske");
+            }
+            
+            var d = await Context.Dogadjaji.FindAsync(id);
+
+            if (d == null)
+            {
+                return BadRequest("Izabrani događaj ne postoji");
+            }
+
+            if (User.IsInRole("o") && d.Klub!.Organizator!.ID != korisnikId)
+            {
+                return Forbid(); // Korisnik nije autorizovan za brisanje događaja
+            }
+            
+
             if (d != null)
             {
                 Context.Dogadjaji.Remove(d);
@@ -142,9 +152,7 @@ public class DogadjajController : ControllerBase
                 naziv = m.Naziv,
                 datumIVreme = m.DatumIVreme,
                 idKluba = m.Klub!.ID,
-                nazivKluba = m.Klub.Naziv,
-                idOrganizatora = m.Organizator!.ID,
-                usernameOrganizatora = m.Organizator.Username
+                nazivKluba = m.Klub.Naziv
 
             })
             .ToListAsync();

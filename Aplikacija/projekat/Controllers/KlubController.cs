@@ -33,6 +33,7 @@ public class KlubController : ControllerBase
                 Naziv=naziv,
                 Lokacija = lokacija,
                 BrojStolova = brojStolova,
+                Ocene = null,
                 Organizator = organizator,
                 Dogadjaji = null
 
@@ -65,8 +66,7 @@ public class KlubController : ControllerBase
                 brojStolova = m.BrojStolova,
                 idOrganizatora = m.Organizator!.ID,
                 usernameOrganizatora = m.Organizator.Username,
-                dogadjaji = m.Dogadjaji,
-                stolovi = m.Stolovi
+                dogadjaji = m.Dogadjaji
 
             })
             .ToListAsync();

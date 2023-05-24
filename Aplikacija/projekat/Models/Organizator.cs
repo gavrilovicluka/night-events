@@ -37,8 +37,6 @@ public class Organizator
     
     public Klub? Klub { get; set; }
 
-    public List<Dogadjaj>? Dogadjaji { get; set; }
-
     public Organizator() 
     {
         Fleg = 'o';

@@ -55,6 +55,11 @@ public class NightEventsContext : DbContext
         modelBuilder.Entity<Sto>()
             .Property(s => s.Status)
             .HasConversion<string>();
+
+        modelBuilder.Entity<Dogadjaj>()
+            .HasMany(d => d.Rezervacije)
+            .WithOne(r => r.Dogadjaj)
+            .OnDelete(DeleteBehavior.Cascade);
     }
   
 }

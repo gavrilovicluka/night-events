@@ -8,7 +8,10 @@ public class Rezervacija
     public int ID { get; set; }
 
     [Required]
-    public Sto Sto { get; set; }
+    public DateTime Datum { get; set; }
+
+    [Required]
+    public Sto? Sto { get; set; }
 
     public Korisnik? Korisnik { get; set; }
 
