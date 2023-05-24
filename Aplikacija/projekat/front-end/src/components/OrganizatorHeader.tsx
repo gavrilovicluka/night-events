@@ -48,7 +48,7 @@ export default function OrganizatorHeader() {
                     <MDBNavbarLink href='#'>Pregled dogadjaja</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='#'>Dodaj dogadjaj</MDBNavbarLink>
+                    <MDBNavbarLink href='/dodajDogadjaj'>Dodaj dogadjaj</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                     <MDBNavbarLink href='/lista-izvodjaca'>Pregled izvodjaca</MDBNavbarLink>

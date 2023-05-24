@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import MuzickiIzvodjacType from "../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import OrganizatorHeader from "./OrganizatorHeader";
+import DogadjajType from "../types/DogadjajType";
 
 
-export default function ListaIzvodjaca() {
+export default function ListaDogadjaja() {
 
 
-    const [izvodjaci, setIzvodjaci] = useState<Array<MuzickiIzvodjacType>>([]);
+    const [dogadjaji, setDogadjaji] = useState<Array<DogadjajType>>([]);
 
     useEffect(() => {
         getData();
@@ -15,12 +16,13 @@ export default function ListaIzvodjaca() {
 
     const getData = () => {
 
-        axios.get("https://localhost:7037/MuzickiIzvodjac/VratiMuzickeIzvodjace")
-            .then((response: AxiosResponse<MuzickiIzvodjacType[]>) => {
+        // treba da se vrate dogadjaji iz kluba organizatora(dobija se iz tokena prijavljenog organizatora)
+        axios.get("https://localhost:7037/Dogadjaj/VratiDogadjaje")
+            .then((response: AxiosResponse<DogadjajType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;
                     console.log(data);
-                    setIzvodjaci(data);
+                    setDogadjaji(data);
                   } else {
                     console.log("Došlo je do greške prilikom dobavljanja podataka.");
                   }
@@ -32,24 +34,19 @@ export default function ListaIzvodjaca() {
 
     return (
         <><OrganizatorHeader />
-        <div>
-            <table>
+        <div className="d-flex justify-content-center">
+            <table className="text-center">
                 <thead>
                     <tr>
-                        <th>Ime izvodjaca</th>
-                        <th>Zanr</th>
-                        <th>Broj clanova</th>
-                        <th>Ocena</th>
-                        <th>Termini</th>
-                        <th>Dogadjaji</th>
+                        <th>Naziv</th>
+                        <th>Datum i vreme</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {izvodjaci.map((izvodjac, index) => (
+                    {dogadjaji.map((dogadjaj, index) => (
                         <tr key={index}>
-                            <td>{izvodjac.imeIzvodjaca}</td>
-                            <td>{izvodjac.zanr}</td>
-                            <td>{izvodjac.brojClanova}</td>
+                            <td>{dogadjaj.naziv}</td>
+                            <td>{dogadjaj.datumIVreme?.toLocaleDateString()}</td>
                             
                         </tr>
                     ))}
