@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
-import KlubType from "../types/KlubType";
+import KlubType from "../../types/KlubType";
 import AdministratorHeader from "./AdministratorHeader";
 import { Col, Container } from "react-bootstrap";
 

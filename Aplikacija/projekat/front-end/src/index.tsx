@@ -10,12 +10,12 @@ import { MainMenu, MainMenuItem } from './components/MainMenu';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { UserRegistrationPage } from './components/UserRegistrationPage';
 import UserLoginPage from './components/UserLoginPage';
-import OrganizatorDashboard from './components/OrganizatorDashboard';
-import ListaIzvodjaca from './components/ListaIzvodjaca';
-import MuzickiIzvodjacDashboard from './components/MuzickiIzvodjacDashboard';
-import AdministratorDashboard from './components/AdministratorDashboard';
-import DodajTerminIzvodjac from './components/DodajTerminIzvodjac';
-import ListaKlubova from './components/ListaKlubova';
+import OrganizatorDashboard from './components/OrganizatorPage/OrganizatorDashboard';
+import ListaIzvodjaca from './components/OrganizatorPage/ListaIzvodjaca';
+import MuzickiIzvodjacDashboard from './components/MuzickiIzvodjacPage/MuzickiIzvodjacDashboard';
+import AdministratorDashboard from './components/AdministratorPage/AdministratorDashboard';
+import DodajTerminIzvodjac from './components/MuzickiIzvodjacPage/DodajTerminIzvodjac';
+import ListaKlubova from './components/AdministratorPage/ListaKlubova';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),

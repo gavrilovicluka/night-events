@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import AdministratorHeader from "./AdministratorHeader";
-import OrganizatorType from "../types/OrganizatorType";
+import OrganizatorType from "../../types/OrganizatorType";
 
 
 

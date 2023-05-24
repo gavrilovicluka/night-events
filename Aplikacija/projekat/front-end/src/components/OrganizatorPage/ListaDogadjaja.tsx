@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import MuzickiIzvodjacType from "../types/MuzickiIzvodjacType";
+import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import OrganizatorHeader from "./OrganizatorHeader";
-import DogadjajType from "../types/DogadjajType";
+import DogadjajType from "../../types/DogadjajType";
 
 
 export default function ListaDogadjaja() {

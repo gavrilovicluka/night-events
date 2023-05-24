@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
-import MuzickiIzvodjacType from "../types/MuzickiIzvodjacType";
+import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import AdministratorHeader from "./AdministratorHeader";
 
 

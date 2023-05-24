@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import MuzickiIzvodjacType from "../types/MuzickiIzvodjacType";
+import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
-import TerminType from "../types/TerminType";
+import TerminType from "../../types/TerminType";
 
 
 export default function ListaTermina() {
