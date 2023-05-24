@@ -13,6 +13,7 @@ import UserLoginPage from './components/UserLoginPage';
 import OrganizatorDashboard from './components/OrganizatorDashboard';
 import ListaIzvodjaca from './components/ListaIzvodjaca';
 import MuzickiIzvodjacDashboard from './components/MuzickiIzvodjacDashboard';
+import AdministratorDashboard from './components/AdministratorDashboard';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -29,12 +30,13 @@ root.render(
     {/* <MainMenu items = {menuItems}></MainMenu> */}
     <HashRouter>
       <Routes>
-        {/* <Route path='/' element={ <HomePage/> } />  */}
+        <Route path='/' element={ <HomePage/> } /> 
         <Route path='/login' element={ <UserLoginPage/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
         <Route path='/muzickiIzvodjacDashboard' element={ <MuzickiIzvodjacDashboard/> } /> 
         <Route path='/lista-izvodjaca' element={ <ListaIzvodjaca/> } /> 
+        <Route path='/administratorDashboard' element={ <AdministratorDashboard/> } />
       </Routes>
     </HashRouter>
   </React.StrictMode>

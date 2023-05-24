@@ -22,7 +22,7 @@ export default function OrganizatorHeader() {
     const logout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
         localStorage.removeItem("username");
-        navigate("/");
+        navigate("/login");
     }
     
     return (
@@ -30,7 +30,7 @@ export default function OrganizatorHeader() {
         
         <MDBNavbar expand='lg' dark bgColor='dark'>
             <MDBContainer fluid>
-            <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
+            <MDBNavbarBrand>NightEvents</MDBNavbarBrand>
             <MDBNavbarToggler
                 type='button'
                 data-target='#navbarColor02'
@@ -43,11 +43,7 @@ export default function OrganizatorHeader() {
             </MDBNavbarToggler>
             <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
                 <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
-                <MDBNavbarItem className='active'>
-                    <MDBNavbarLink aria-current='page' href='#'>
-                    Home
-                    </MDBNavbarLink>
-                </MDBNavbarItem>
+                
                 <MDBNavbarItem>
                     <MDBNavbarLink href='#'>Pregled dogadjaja</MDBNavbarLink>
                 </MDBNavbarItem>
@@ -59,7 +55,7 @@ export default function OrganizatorHeader() {
                 </MDBNavbarItem>
 
                 </MDBNavbarNav>
-                    <MDBNavbarNav className='ms-auto'>
+                    <MDBNavbarNav className='justify-content-end'>
                         <MDBNavbarItem>
                             <MDBNavbarLink href='/login' onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Logout</MDBNavbarLink>
                     </MDBNavbarItem>

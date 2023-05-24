@@ -22,7 +22,7 @@ export default function MuzickiIzvodjacHeader() {
     const logout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
         localStorage.removeItem("username");
-        navigate("/");
+        navigate("/login");
     }
     
     return (

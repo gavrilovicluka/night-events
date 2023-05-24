@@ -53,7 +53,7 @@ export default function ListaKlubova() {
                             <td>{klub.id}</td>
                             <td>{klub.naziv}</td>
                             <td>{klub.lokacija}</td>
-                            <td>{klub.ocena}</td>
+                            
                             <td>{klub.kapacitet}</td>
                             <td>{klub.idOrganizatora}</td>
                             <td>{klub.usernameOrganizatora}</td>

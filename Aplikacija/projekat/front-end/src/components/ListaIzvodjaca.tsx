@@ -50,7 +50,7 @@ export default function ListaIzvodjaca() {
                             <td>{izvodjac.imeIzvodjaca}</td>
                             <td>{izvodjac.zanr}</td>
                             <td>{izvodjac.brojClanova}</td>
-                            <td>{izvodjac.ocena}</td>
+                            
                         </tr>
                     ))}
                 </tbody>
