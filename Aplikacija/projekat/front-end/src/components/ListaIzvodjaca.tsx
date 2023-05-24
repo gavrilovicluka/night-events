@@ -101,7 +101,7 @@ export default function ListaIzvodjaca() {
                   }
                 })
                 .catch((error) => {
-                  console.log("Došlo je do greške prilikom slanja zahtjeva:", error);
+                  console.log("Došlo je do greške prilikom slanja zahteva:", error);
                 });
     }
 

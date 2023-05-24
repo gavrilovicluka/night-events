@@ -44,10 +44,10 @@ export default function MuzickiIzvodjacHeader() {
             <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
                 <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='#'>Moji dogadjaji</MDBNavbarLink>
+                    <MDBNavbarLink href='/muzickiIzvodjac/${idIzvodjaca}/mojiDogadjaji'>Moji dogadjaji</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='#'>Dodaj termin</MDBNavbarLink>
+                    <MDBNavbarLink href='/muzickiIzvodjac/${idIzvodjaca}/dodajTermin'>Dodaj termin</MDBNavbarLink>
                 </MDBNavbarItem>
                 
 
