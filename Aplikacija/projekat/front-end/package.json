@@ -17,6 +17,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "formik": "^2.2.9",
+    "jsonwebtoken": "^9.0.0",
     "mdb-react-ui-kit": "^6.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.2"
   }
 }

@@ -64,11 +64,14 @@ export default class UserLoginPage extends React.Component {
         axios.post("https://localhost:7037/Auth/PrijaviSe", data)
              .then(response => {
                 console.log(response);
+                const token = response.data.token;
+                localStorage.setItem('jwtToken', token);
                 this.setLogginState(true);
              })
              .catch(error => {
                 console.log(error);
              })
+     
     }
     
 
