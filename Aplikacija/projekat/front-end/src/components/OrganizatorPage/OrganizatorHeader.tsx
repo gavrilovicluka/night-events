@@ -45,13 +45,13 @@ export default function OrganizatorHeader() {
                 <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
                 
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='#'>Pregled dogadjaja</MDBNavbarLink>
+                    <MDBNavbarLink href='/organizatorDashboard/mojiDogadjaji'>Moji dogadjaji</MDBNavbarLink> {/* treba da se prosledi i id organizatora iz tokena */}
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='/dodajDogadjaj'>Dodaj dogadjaj</MDBNavbarLink>
+                    <MDBNavbarLink href='/organizatorDashboard/dodajDogadjaj'>Dodaj dogadjaj</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='/ogranizator/:idOrganizatora/pregledIzvodjaca'>Pregled izvodjaca</MDBNavbarLink>
+                    <MDBNavbarLink href={`/organizatorDashboard/pregledIzvodjaca`}>Pregled izvodjaca</MDBNavbarLink> { /* {`/organizatorDashboard/${idOrganizatora}/pregledIzvodjaca`} */ }
                 </MDBNavbarItem>
 
                 </MDBNavbarNav>

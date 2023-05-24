@@ -16,6 +16,10 @@ import MuzickiIzvodjacDashboard from './components/MuzickiIzvodjacPage/MuzickiIz
 import AdministratorDashboard from './components/AdministratorPage/AdministratorDashboard';
 import DodajTerminIzvodjac from './components/MuzickiIzvodjacPage/DodajTerminIzvodjac';
 import ListaKlubova from './components/AdministratorPage/ListaKlubova';
+import ListaOrganizatora from './components/AdministratorPage/ListaOrganizatora';
+import ListaIzvodjacaAdminPage from './components/AdministratorPage/ListaIzvodjacaAdminPage';
+import ListaTermina from './components/MuzickiIzvodjacPage/ListaTermina';
+import ListaDogadjaja from './components/OrganizatorPage/ListaDogadjaja';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -35,12 +39,20 @@ root.render(
         <Route path='/' element={ <HomePage/> } /> 
         <Route path='/login' element={ <UserLoginPage/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
+
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
-        <Route path='/muzickiIzvodjacDashboard' element={ <MuzickiIzvodjacDashboard/> } /> 
-        <Route path='/lista-izvodjaca' element={ <ListaIzvodjaca/> } /> 
-        <Route path='/dodaj-termin' element={ <DodajTerminIzvodjac/> } /> 
+        <Route path='/organizatorDashboard/mojiDogadjaji' element={ <ListaDogadjaja /> } /> 
+        {/* <Route path='/organizatorDashboard/dodajDogadjaj' element={ <DodajDogadjaj /> } />  */}
+        <Route path='/organizatorDashboard/pregledIzvodjaca' element={ <ListaIzvodjaca/> } /> 
+
+        <Route path='/muzickiIzvodjacDashboard' element={ <MuzickiIzvodjacDashboard/> } />        
+        <Route path='/muzickiIzvodjacDashboard/mojiTermini' element={ <ListaTermina/> } /> 
+        <Route path='/muzickiIzvodjacDashboard/dodajTermin' element={ <DodajTerminIzvodjac/> } /> 
+        
         <Route path='/administratorDashboard' element={ <AdministratorDashboard/> } />
-        <Route path='/klubovi' element={ <ListaKlubova/> } />
+        <Route path='/administratorDashboard/klubovi' element={ <ListaKlubova/> } />
+        <Route path='/administratorDashboard/ogranizatori' element={ <ListaOrganizatora/> } />
+        <Route path='/administratorDashboard/muzickiIzvodjaci' element={ <ListaIzvodjacaAdminPage/> } />
     
       </Routes>
     </HashRouter>

@@ -3,6 +3,7 @@ import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import OrganizatorHeader from "./OrganizatorHeader";
 import DogadjajType from "../../types/DogadjajType";
+import { ApiConfig } from "../../config/api.config";
 
 
 export default function ListaDogadjaja() {
@@ -17,7 +18,7 @@ export default function ListaDogadjaja() {
     const getData = () => {
 
         // treba da se vrate dogadjaji iz kluba organizatora(dobija se iz tokena prijavljenog organizatora)
-        axios.get("https://localhost:7037/Dogadjaj/VratiDogadjaje")
+        axios.get(ApiConfig.BASE_URL + "/Dogadjaj/VratiDogadjaje")
             .then((response: AxiosResponse<DogadjajType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;
@@ -46,8 +47,7 @@ export default function ListaDogadjaja() {
                     {dogadjaji.map((dogadjaj, index) => (
                         <tr key={index}>
                             <td>{dogadjaj.naziv}</td>
-                            <td>{dogadjaj.datumIVreme?.toLocaleDateString()}</td>
-                            
+                            <td>{dogadjaj.datumIVreme?.toLocaleDateString()}</td>                          
                         </tr>
                     ))}
                 </tbody>

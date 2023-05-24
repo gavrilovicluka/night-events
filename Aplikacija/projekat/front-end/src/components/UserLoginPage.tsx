@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import axios from 'axios';
 import { Navigate} from 'react-router-dom';
+import { ApiConfig } from '../config/api.config';
 
 interface UserLoginState {
  
@@ -61,7 +62,7 @@ export default class UserLoginPage extends React.Component {
 
         };
 
-        axios.post("https://localhost:7037/Auth/PrijaviSe", data)
+        axios.post(ApiConfig.BASE_URL + "/Auth/PrijaviSe", data)
              .then(response => {
                 console.log(response);
                 const token = response.data.token;

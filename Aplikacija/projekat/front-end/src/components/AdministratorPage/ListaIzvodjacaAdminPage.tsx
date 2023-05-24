@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import AdministratorHeader from "./AdministratorHeader";
+import { ApiConfig } from "../../config/api.config";
 
 
 
@@ -16,7 +17,7 @@ export default function ListaIzvodjacaAdminPage() {
 
     const getData = () => {
 
-        axios.get("https://localhost:7037/MuzickiIzvodjac/VratiMuzickeIzvodjace")
+        axios.get(ApiConfig.BASE_URL + "/MuzickiIzvodjac/VratiMuzickeIzvodjace")
             .then((response: AxiosResponse<MuzickiIzvodjacType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;

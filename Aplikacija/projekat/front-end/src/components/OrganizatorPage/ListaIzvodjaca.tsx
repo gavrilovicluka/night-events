@@ -6,6 +6,8 @@ import {  Modal } from "react-bootstrap";
 import jwt from 'jsonwebtoken';
 import DogadjajType from "../../types/DogadjajType";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
+import DodajTerminIzvodjac from "../MuzickiIzvodjacPage/DodajTerminIzvodjac";
+import { ApiConfig } from "../../config/api.config";
 
 
 
@@ -38,7 +40,7 @@ export default function ListaIzvodjaca() {
 
     const getDostupniDogadjaji = async (klubId: number) => {
         try {
-            const response = await axios.get(`https://localhost:7037/Dogadjaj/VratiDogadjajeKluba/${klubId}`);
+            const response = await axios.get(ApiConfig.BASE_URL + `/Dogadjaj/VratiDogadjajeKluba/${klubId}`);
             if (response.status === 200) {
             const data = response.data;
             setDostupniDogadjaji(data);
@@ -62,7 +64,7 @@ export default function ListaIzvodjaca() {
     const confirmAngazuj = () => {
         if (selectedDogadjaj) {
           
-          axios.post(`https://localhost:7037/AngazujIzvodjaca/${selectedIzvodjac}/${selectedDogadjaj}`)
+          axios.post(ApiConfig.BASE_URL + `/AngazujIzvodjaca/${selectedIzvodjac}/${selectedDogadjaj}`)
             .then((response: AxiosResponse) => {
               if (response.status === 200) {             
                 console.log("Izvođač je uspešno angažovan.");

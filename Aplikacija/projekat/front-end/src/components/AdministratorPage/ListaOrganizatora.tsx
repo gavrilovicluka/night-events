@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import AdministratorHeader from "./AdministratorHeader";
 import OrganizatorType from "../../types/OrganizatorType";
+import { ApiConfig } from "../../config/api.config";
 
 
 
@@ -16,7 +17,7 @@ export default function ListaOrganizatora() {
 
     const getData = () => {
 
-        axios.get("https://localhost:7037/Organizator/VratiOrganizatore")
+        axios.get(ApiConfig.BASE_URL + "/Organizator/VratiOrganizatore")
             .then((response: AxiosResponse<OrganizatorType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;

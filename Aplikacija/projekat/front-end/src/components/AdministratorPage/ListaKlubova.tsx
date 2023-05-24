@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import KlubType from "../../types/KlubType";
 import AdministratorHeader from "./AdministratorHeader";
 import { Col, Container } from "react-bootstrap";
+import { ApiConfig } from "../../config/api.config";
 
 
 
@@ -23,7 +24,7 @@ export default function ListaKlubova() {
          const handleSubmit = (e:any) => {
           e.preventDefault();
       
-           axios.post(`https://localhost:7037/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolova}`)
+           axios.post(ApiConfig.BASE_URL + `/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolova}`)
              .then((response) => {
                console.log(response.data);
              })
@@ -41,7 +42,7 @@ export default function ListaKlubova() {
 
     const getData = () => {
 
-        axios.get("https://localhost:7037/Klub/VratiKlubove")
+        axios.get(ApiConfig.BASE_URL + "/Klub/VratiKlubove")
             .then((response: AxiosResponse<KlubType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;
@@ -62,7 +63,7 @@ export default function ListaKlubova() {
 
          
         <Container>
-                <Col md= { {span : 6, offset: 6}}></Col>
+        <Col md= { {span : 6, offset: 6}}></Col>
 
         <form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
           <div className="form-group row">
@@ -97,8 +98,8 @@ export default function ListaKlubova() {
         </form>
         </Container>
          
-         <Container>
-         <Col md= { {span : 6, offset: 6}}></Col>
+        <Container>
+        <Col md= { {span : 6, offset: 6}}></Col>
 
        <div className="d-flex justify-content-center">
         <h2 style={{ textAlign: 'center' }}>Lista Klubova</h2>

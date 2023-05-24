@@ -3,6 +3,8 @@ import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import TerminType from "../../types/TerminType";
+import DodajTerminIzvodjac from "./DodajTerminIzvodjac";
+import { ApiConfig } from "../../config/api.config";
 
 
 export default function ListaTermina() {
@@ -19,7 +21,7 @@ export default function ListaTermina() {
     // const getData = () => {
 
     //     axios
-    //         .get(`https://localhost:7037/MuzickiIzvodjac/VratiListuTermina/${idMuzIzvodjaca}`)
+    //         .get(ApiConfig.BASE_URL + `/MuzickiIzvodjac/VratiListuTermina/${idMuzIzvodjaca}`)
     //         .then((response: AxiosResponse<TerminType[]>) => {
     //             if (response.status === 200) {
     //                 const data = response.data;
@@ -41,15 +43,12 @@ export default function ListaTermina() {
                 <thead>
                     <tr>
                         <th>Termin</th>
-
                     </tr>
                 </thead>
                 <tbody>
                     {termini2.map((termin, index) => (
                         <tr key={index}>
                             <td>{termin.datumIVreme?.toLocaleDateString()}</td>
-
-
                         </tr>
                     ))}
                 </tbody>

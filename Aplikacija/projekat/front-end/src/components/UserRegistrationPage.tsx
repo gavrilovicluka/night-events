@@ -69,7 +69,7 @@ export class UserRegistrationPage extends React.Component {
             }}
             validationSchema={validationSchema}
             onSubmit={values => {
-                // Ovde možete izvršiti akciju sa vrednostima forme nakon uspešne validacije
+                
                 console.log(values);
             }}>
             <Container>
