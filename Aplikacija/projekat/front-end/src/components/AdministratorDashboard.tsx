@@ -4,5 +4,6 @@ export default function AdministratorDashboard() {
 
     return(
         <AdministratorHeader />
+        
     )
 }

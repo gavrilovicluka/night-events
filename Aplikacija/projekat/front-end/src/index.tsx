@@ -15,6 +15,7 @@ import ListaIzvodjaca from './components/ListaIzvodjaca';
 import MuzickiIzvodjacDashboard from './components/MuzickiIzvodjacDashboard';
 import AdministratorDashboard from './components/AdministratorDashboard';
 import DodajTerminIzvodjac from './components/DodajTerminIzvodjac';
+import ListaKlubova from './components/ListaKlubova';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -39,6 +40,8 @@ root.render(
         <Route path='/lista-izvodjaca' element={ <ListaIzvodjaca/> } /> 
         <Route path='/dodaj-termin' element={ <DodajTerminIzvodjac/> } /> 
         <Route path='/administratorDashboard' element={ <AdministratorDashboard/> } />
+        <Route path='/klubovi' element={ <ListaKlubova/> } />
+    
       </Routes>
     </HashRouter>
   </React.StrictMode>
