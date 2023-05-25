@@ -19,7 +19,7 @@ public class Dogadjaj
 
     public MuzickiIzvodjac? MuzickiIzvodjac { get; set; }
 
-    public List<Sto> Stolovi { get; set; }    
+    public List<Sto>? Stolovi { get; set; }    
 
     public List<KomentarDogadjaj>? KomentariDogadjaj { get; set; }
 
@@ -32,13 +32,7 @@ public class Dogadjaj
     public Dogadjaj()
     {
         BrojRezervacija = 0;
-        Stolovi = new List<Sto>(Klub!.BrojStolova);
-
-        for(int i=0; i<Klub!.BrojStolova; i++)
-        {
-            Sto s = new Sto();
-            Stolovi.Add(s);
-        }
+        
     }
 
 }

@@ -39,6 +39,9 @@ public class KlubController : ControllerBase
 
             };
             Context.Klubovi.Add(klub);
+            organizator.Klub = klub;
+            Context.Organizatori.Update(organizator);
+
             await Context.SaveChangesAsync();
 
             return Ok(klub);

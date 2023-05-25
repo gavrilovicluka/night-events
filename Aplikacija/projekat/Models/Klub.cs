@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Models;
 
@@ -24,6 +25,7 @@ public class Klub
 
     public Organizator? Organizator { get; set; }
 
+    [JsonIgnore]
     public List<Dogadjaj>? Dogadjaji { get; set; }
     
 }

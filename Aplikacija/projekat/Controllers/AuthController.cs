@@ -127,6 +127,11 @@ public class AuthController : ControllerBase
                     return BadRequest("Pogresna sifra");
 
                 var token1 = CreateTokenAdmin(adm);
+
+                if(token1 == null)
+                {
+                    return BadRequest("Neuspesno generisanje tokena");
+                }
                     
                 return Ok(new
                 {
@@ -146,6 +151,11 @@ public class AuthController : ControllerBase
                     return BadRequest("Pogresna sifra");
 
                 var token2 = CreateTokenKorisnik(kor);
+
+                if(token2 == null)
+                {
+                    return BadRequest("Neuspesno generisanje tokena");
+                }
                     
                 return Ok(new
                 {
@@ -164,12 +174,17 @@ public class AuthController : ControllerBase
                 if(!VerifyPasswordHash(usrDto.Password, org.PasswordHash, org.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
-                if(org.Status == StatusNaloga.NaCekanju)
-                    return BadRequest("Nalog ceka na odobrenje administratora");
-                else if(org.Status == StatusNaloga.Odbijen)
-                    return BadRequest("Nalog je odbijen od strane administratora");
+                // if(org.Status == StatusNaloga.NaCekanju)
+                //     return BadRequest("Nalog ceka na odobrenje administratora");
+                // else if(org.Status == StatusNaloga.Odbijen)
+                //     return BadRequest("Nalog je odbijen od strane administratora");
 
                 var token3 = CreateTokenOrganizator(org);
+
+                if(token3 == null)
+                {
+                    return BadRequest("Neuspesno generisanje tokena");
+                }
                     
                 return Ok(new
                 {
@@ -188,12 +203,17 @@ public class AuthController : ControllerBase
                 if(!VerifyPasswordHash(usrDto.Password, muz.PasswordHash, muz.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
-                if(muz.Status == StatusNaloga.NaCekanju)
-                    return BadRequest("Nalog ceka na odobrenje administratora");
-                else if(muz.Status == StatusNaloga.Odbijen)
-                    return BadRequest("Nalog je odbijen od strane administratora");
+                // if(muz.Status == StatusNaloga.NaCekanju)
+                //     return BadRequest("Nalog ceka na odobrenje administratora");
+                // else if(muz.Status == StatusNaloga.Odbijen)
+                //     return BadRequest("Nalog je odbijen od strane administratora");
 
                 var token4 = CreateTokenMuzIzvodjac(muz);
+
+                if(token4 == null)
+                {
+                    return BadRequest("Neuspesno generisanje tokena");
+                }
                     
                 return Ok(new
                 {
@@ -214,11 +234,11 @@ public class AuthController : ControllerBase
         }
     }
 
-    private async Task<ActionResult<string>> CreateTokenAdmin(Administrator adm)
+    private string CreateTokenAdmin(Administrator adm)
     {
         if (adm == null || adm.Fleg == ' ' || adm.ID <= 0 || adm.Username == null)
         {
-            return BadRequest("Nedostaju potrebni podaci za generisanje tokena.");
+            return null!;
         }
 
         List<Claim> claims = new List<Claim>
@@ -232,7 +252,7 @@ public class AuthController : ControllerBase
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
         if (string.IsNullOrEmpty(tokenValue))
         {
-            return BadRequest("Konfiguracija za kljuc 'AppSettings:Token' nije pravilno postavljena.");
+            return null!;
         }
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenValue));
 
@@ -245,19 +265,21 @@ public class AuthController : ControllerBase
             signingCredentials: cred
         );
 
-        var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        var cp = new ClaimsPrincipal(ci);
-        await HttpContext.SignInAsync(cp);
+        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
+        // var cp = new ClaimsPrincipal(ci);
+        // await HttpContext.SignInAsync(cp);
 
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
         return jwt;
+   
     }
 
-    private async Task<ActionResult<string>> CreateTokenKorisnik(Korisnik kor)
+    private string CreateTokenKorisnik(Korisnik kor)
     {
         if (kor == null || kor.Fleg == ' ' || kor.ID <= 0 || kor.Username == null)
         {
-            return BadRequest("Nedostaju potrebni podaci za generisanje tokena.");
+            return null!;
         }
 
         List<Claim> claims = new List<Claim>
@@ -270,7 +292,7 @@ public class AuthController : ControllerBase
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
         if (string.IsNullOrEmpty(tokenValue))
         {
-            return BadRequest("Konfiguracija za kljuc 'AppSettings:Token' nije pravilno postavljena.");
+            return null!;
         }
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenValue));
 
@@ -283,32 +305,33 @@ public class AuthController : ControllerBase
             signingCredentials: cred
         );
 
-        var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        var cp = new ClaimsPrincipal(ci);
-        await HttpContext.SignInAsync(cp);
+        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
+        // var cp = new ClaimsPrincipal(ci);
+        // await HttpContext.SignInAsync(cp);
         
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
         return jwt;
     }
 
-    private async Task<ActionResult<string>> CreateTokenOrganizator(Organizator org)
+    private string CreateTokenOrganizator(Organizator org)
     {
         if (org == null || org.Fleg == ' ' || org.ID <= 0 || org.Username == null)
         {
-            return BadRequest("Nedostaju potrebni podaci za generisanje tokena.");
+            return null!;
         }
-
+        const string KlubID = "KlubID";
         List<Claim> claims = new List<Claim>
         {
             new Claim(ClaimTypes.Role , org.Fleg.ToString()),
             new Claim(ClaimTypes.NameIdentifier, org.ID.ToString()),
-            new Claim(ClaimTypes.Name, org.Username)
+            new Claim(ClaimTypes.Name, org.Username),
+            new Claim(KlubID, org.Klub!.ID.ToString()),
         };
 
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
         if (string.IsNullOrEmpty(tokenValue))
         {
-            return BadRequest("Konfiguracija za kljuc 'AppSettings:Token' nije pravilno postavljena.");
+            return null!;
         }
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenValue));
 
@@ -321,19 +344,19 @@ public class AuthController : ControllerBase
             signingCredentials: cred
         );
 
-        var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        var cp = new ClaimsPrincipal(ci);
-        await HttpContext.SignInAsync(cp);
+        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
+        // var cp = new ClaimsPrincipal(ci);
+        // await HttpContext.SignInAsync(cp);
         
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
         return jwt;
     }
 
-    private Task<ActionResult<string>> CreateTokenMuzIzvodjac(MuzickiIzvodjac muz)
+    private string CreateTokenMuzIzvodjac(MuzickiIzvodjac muz)
     {
         if (muz == null || muz.Fleg == ' ' || muz.ID <= 0 || muz.Username == null)
         {
-            return Task.FromResult<ActionResult<string>>(BadRequest("Nedostaju potrebni podaci za generisanje tokena."));
+            return null!;
         }
 
         List<Claim> claims = new List<Claim>
@@ -346,7 +369,7 @@ public class AuthController : ControllerBase
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
         if (string.IsNullOrEmpty(tokenValue))
         {
-            return Task.FromResult<ActionResult<string>>(BadRequest("Konfiguracija za kljuc 'AppSettings:Token' nije pravilno postavljena."));
+            return null!;
         }
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenValue));
 
@@ -366,7 +389,7 @@ public class AuthController : ControllerBase
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
 
-        return Task.FromResult<ActionResult<string>>(jwt);
+        return jwt;
 
     }
 

@@ -137,7 +137,6 @@ app.UseCors("CORS");
 app.UseAuthorization();
 
 app.UseAuthentication();
-app.MapControllers();
 
 app.UseEndpoints(endpoints =>
 {

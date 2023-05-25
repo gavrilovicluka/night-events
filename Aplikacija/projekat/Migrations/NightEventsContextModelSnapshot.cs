@@ -130,10 +130,7 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Klub", b =>
                 {
                     b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<int>("BrojStolova")
                         .HasColumnType("int");
@@ -347,7 +344,10 @@ namespace projekat.Migrations
             modelBuilder.Entity("Models.Organizator", b =>
                 {
                     b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -485,6 +485,17 @@ namespace projekat.Migrations
                     b.Navigation("Korisnik");
                 });
 
+            modelBuilder.Entity("Models.Klub", b =>
+                {
+                    b.HasOne("Models.Organizator", "Organizator")
+                        .WithOne("Klub")
+                        .HasForeignKey("Models.Klub", "ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organizator");
+                });
+
             modelBuilder.Entity("Models.KomentarDogadjaj", b =>
                 {
                     b.HasOne("Models.Dogadjaj", "Dogadjaj")
@@ -531,17 +542,6 @@ namespace projekat.Migrations
                         .HasForeignKey("MuzickiIzvodjacID");
 
                     b.Navigation("MuzickiIzvodjac");
-                });
-
-            modelBuilder.Entity("Models.Organizator", b =>
-                {
-                    b.HasOne("Models.Klub", "Klub")
-                        .WithOne("Organizator")
-                        .HasForeignKey("Models.Organizator", "ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Klub");
                 });
 
             modelBuilder.Entity("Models.Rezervacija", b =>
@@ -609,8 +609,6 @@ namespace projekat.Migrations
                     b.Navigation("Dogadjaji");
 
                     b.Navigation("Ocene");
-
-                    b.Navigation("Organizator");
                 });
 
             modelBuilder.Entity("Models.Korisnik", b =>
@@ -633,6 +631,11 @@ namespace projekat.Migrations
                     b.Navigation("Ocene");
 
                     b.Navigation("Termini");
+                });
+
+            modelBuilder.Entity("Models.Organizator", b =>
+                {
+                    b.Navigation("Klub");
                 });
 
             modelBuilder.Entity("Models.Sto", b =>

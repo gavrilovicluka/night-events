@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Models;
 
@@ -39,6 +40,7 @@ public class MuzickiIzvodjac
     public char Fleg { get; set; }
     public StatusNaloga Status { get; set; }
 
+    [JsonIgnore]
     public List<Dogadjaj>? Dogadjaji { get; set; }
 
     public List<KomentarIzvodjac>? KomentariIzvodjac { get; set; }

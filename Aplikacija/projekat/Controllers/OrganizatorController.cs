@@ -94,7 +94,7 @@ public class OrganizatorController : ControllerBase
     {
         try
         {
-            var organizatori = await Context.Organizatori.ToListAsync();
+            var organizatori = await Context.Organizatori.Include(o => o.Klub).ToListAsync();
 
             var d = organizatori.Select(m => new
             {
@@ -102,7 +102,7 @@ public class OrganizatorController : ControllerBase
                 prezime = m.Prezime,
                 email = m.Email,
                 username = m.Username,
-                klubId= m.Klub!.ID,
+                klubId= m.Klub != null ? m.Klub.ID : -1,
                 status = m.Status
             });
             

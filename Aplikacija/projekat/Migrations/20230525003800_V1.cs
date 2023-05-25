@@ -31,21 +31,6 @@ namespace projekat.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Klubovi",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Lokacija = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    BrojStolova = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Klubovi", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Korisnici",
                 columns: table => new
                 {
@@ -86,29 +71,11 @@ namespace projekat.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OceneKlubova",
+                name: "Organizatori",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Ocena = table.Column<int>(type: "int", nullable: false),
-                    KlubID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_OceneKlubova", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_OceneKlubova_Klubovi_KlubID",
-                        column: x => x.KlubID,
-                        principalTable: "Klubovi",
-                        principalColumn: "ID");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Organizatori",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false),
                     Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
@@ -121,39 +88,6 @@ namespace projekat.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Organizatori", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_Organizatori_Klubovi_ID",
-                        column: x => x.ID,
-                        principalTable: "Klubovi",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Dogadjaji",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DatumIVreme = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    KlubID = table.Column<int>(type: "int", nullable: true),
-                    MuzickiIzvodjacID = table.Column<int>(type: "int", nullable: true),
-                    BrojRezervacija = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Dogadjaji", x => x.ID);
-                    table.ForeignKey(
-                        name: "FK_Dogadjaji_Klubovi_KlubID",
-                        column: x => x.KlubID,
-                        principalTable: "Klubovi",
-                        principalColumn: "ID");
-                    table.ForeignKey(
-                        name: "FK_Dogadjaji_MuzickiIzvodjaci_MuzickiIzvodjacID",
-                        column: x => x.MuzickiIzvodjacID,
-                        principalTable: "MuzickiIzvodjaci",
-                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -218,6 +152,72 @@ namespace projekat.Migrations
                         principalTable: "MuzickiIzvodjaci",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Klubovi",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false),
+                    Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Lokacija = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    BrojStolova = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Klubovi", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Klubovi_Organizatori_ID",
+                        column: x => x.ID,
+                        principalTable: "Organizatori",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Dogadjaji",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    DatumIVreme = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    KlubID = table.Column<int>(type: "int", nullable: true),
+                    MuzickiIzvodjacID = table.Column<int>(type: "int", nullable: true),
+                    BrojRezervacija = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dogadjaji", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Dogadjaji_Klubovi_KlubID",
+                        column: x => x.KlubID,
+                        principalTable: "Klubovi",
+                        principalColumn: "ID");
+                    table.ForeignKey(
+                        name: "FK_Dogadjaji_MuzickiIzvodjaci_MuzickiIzvodjacID",
+                        column: x => x.MuzickiIzvodjacID,
+                        principalTable: "MuzickiIzvodjaci",
+                        principalColumn: "ID");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OceneKlubova",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Ocena = table.Column<int>(type: "int", nullable: false),
+                    KlubID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OceneKlubova", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_OceneKlubova_Klubovi_KlubID",
+                        column: x => x.KlubID,
+                        principalTable: "Klubovi",
+                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -414,9 +414,6 @@ namespace projekat.Migrations
                 name: "OceneKlubova");
 
             migrationBuilder.DropTable(
-                name: "Organizatori");
-
-            migrationBuilder.DropTable(
                 name: "Rezervacije");
 
             migrationBuilder.DropTable(
@@ -436,6 +433,9 @@ namespace projekat.Migrations
 
             migrationBuilder.DropTable(
                 name: "MuzickiIzvodjaci");
+
+            migrationBuilder.DropTable(
+                name: "Organizatori");
         }
     }
 }

@@ -39,10 +39,11 @@ public class NightEventsContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Klub>()
-            .HasOne(k => k.Organizator)
-            .WithOne(o => o.Klub)
-            .HasForeignKey<Organizator>(o => o.ID);
+        modelBuilder.Entity<Organizator>()
+            .HasOne(e => e.Klub)
+            .WithOne(e => e.Organizator)
+            .HasForeignKey<Klub>(k => k.ID);
+
 
         modelBuilder.Entity<Sto>()
             .HasOne(k => k.Rezervacija)

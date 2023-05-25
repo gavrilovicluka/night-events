@@ -45,6 +45,14 @@ public class DogadjajController : ControllerBase
                 Rezervacije = null,
                 Karte = null
             };
+            dogadjaj.Stolovi = new List<Sto>(klub.BrojStolova);
+
+            for(int i=0; i<klub.BrojStolova; i++)
+            {
+                Sto s = new Sto();
+                dogadjaj.Stolovi.Add(s);
+            }
+
             Context.Dogadjaji.Add(dogadjaj);
             await Context.SaveChangesAsync();
 
@@ -101,13 +109,13 @@ public class DogadjajController : ControllerBase
     {
         try
         {
-            int korisnikId;
-            bool fleg = int.TryParse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value, out korisnikId);
+            // int korisnikId;
+            // bool fleg = int.TryParse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value, out korisnikId);
 
-            if(!fleg)
-            {
-                return BadRequest("Doslo je do greske");
-            }
+            // if(!fleg)
+            // {
+            //     return BadRequest("Doslo je do greske");
+            // }
             
             var d = await Context.Dogadjaji.FindAsync(id);
 
@@ -116,10 +124,10 @@ public class DogadjajController : ControllerBase
                 return BadRequest("Izabrani događaj ne postoji");
             }
 
-            if (User.IsInRole("o") && d.Klub!.Organizator!.ID != korisnikId)
-            {
-                return Forbid(); // Korisnik nije autorizovan za brisanje događaja
-            }
+            // if (User.IsInRole("o") && d.Klub!.Organizator!.ID != korisnikId)
+            // {
+            //     return Forbid(); // Korisnik nije autorizovan za brisanje događaja
+            // }
             
 
             if (d != null)

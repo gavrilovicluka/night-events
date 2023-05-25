@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Models;
 
@@ -10,6 +11,7 @@ public class Sto
     public StatusStola Status { get; set; }
 
     [Required]
+    [JsonIgnore]
     public Dogadjaj? Dogadjaj { get; set; }
 
     public Rezervacija? Rezervacija { get; set; }
