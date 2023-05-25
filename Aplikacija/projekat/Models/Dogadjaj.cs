@@ -13,7 +13,10 @@ public class Dogadjaj
     public String? Naziv { get; set; }
     
     [Required]
-    public DateTime? DatumIVreme { get; set; }
+    public DateTime? Datum { get; set; }
+
+    [Required]
+    public String Vreme { get; set; }
 
     public Klub? Klub { get; set; }
 

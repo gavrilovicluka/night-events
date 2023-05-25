@@ -20,6 +20,8 @@ public class Klub
 
     [Required]
     public int BrojStolova { get; set; }
+
+    public String? SlikaKluba { get; set; }
     
     public List<OcenaKlub>? Ocene { get; set; }
 

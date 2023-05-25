@@ -87,7 +87,7 @@ public class OrganizatorController : ControllerBase
 
     }
 
-    [Authorize(Roles = "a")]
+    [Authorize(Roles = "Admin")]
     [Route("VratiOrganizatore")]
     [HttpGet]
     public async Task<ActionResult> VratiOrganizatore()

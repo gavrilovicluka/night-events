@@ -32,7 +32,7 @@ public class Korisnik
     [RegularExpression(@"^[a-zA-Z]+$")]
     public String? Prezime { get; set; }
 
-    public char Fleg { get; set; }
+    public String Role { get; set; }
 
     public List<KomentarDogadjaj>? KomentariDogadjaji { get; set; }
 
@@ -44,6 +44,6 @@ public class Korisnik
 
     public Korisnik()
     {
-        Fleg = 'k';
+        Role = "Korisnik";
     }
 }

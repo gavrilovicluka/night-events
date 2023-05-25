@@ -16,10 +16,10 @@ public class DogadjajController : ControllerBase
         Context = context;
     }
 
-    [Authorize(Roles = "o")]
+    [Authorize(Roles = "Organizator")]
     [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}/{datumIVreme}")]
     [HttpPost]
-    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, DateTime datumIVreme)
+    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, DateTime datum, [FromBody] String vreme)
     {
         try
         {
@@ -38,7 +38,8 @@ public class DogadjajController : ControllerBase
             var dogadjaj = new Dogadjaj
             {               
                 Naziv=naziv,
-                DatumIVreme = datumIVreme,
+                Datum = datum,
+                Vreme = vreme,
                 Klub = klub,
                 MuzickiIzvodjac = izvodjac,
                 KomentariDogadjaj = null,
@@ -102,7 +103,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "o, a")]
+    [Authorize(Roles = "Organizator, Admin")]
     [Route("IzbrisiDogadjaj/{id}")]
     [HttpDelete]
     public async Task<ActionResult> IzbrisiDogadjaj(int id)
@@ -158,7 +159,8 @@ public class DogadjajController : ControllerBase
             .Select(m => new
             {
                 naziv = m.Naziv,
-                datumIVreme = m.DatumIVreme,
+                datum = m.Datum,
+                vreme = m.Vreme,
                 idKluba = m.Klub!.ID,
                 nazivKluba = m.Klub.Naziv
 
@@ -172,7 +174,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "k,o")]
+    [Authorize(Roles = "Korisnik, Organizator")]
     [Route("KomentarisiDogadjaj/{idDogadjaja}/{idKorisnika}")]
     [HttpPut]
     public async Task<ActionResult> KomentarisiDogadjaj([FromBody] string sadrzaj, int idDogadjaja,int idKorisnika)

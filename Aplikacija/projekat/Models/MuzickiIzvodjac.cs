@@ -37,7 +37,7 @@ public class MuzickiIzvodjac
 
     public List<TerminiIzvodjaca>? Termini { get; set; }
 
-    public char Fleg { get; set; }
+    public String Role { get; set; }
     public StatusNaloga Status { get; set; }
 
     [JsonIgnore]
@@ -47,7 +47,7 @@ public class MuzickiIzvodjac
 
     public MuzickiIzvodjac()
     {
-        Fleg = 'm';
+        Role = "Muzicar";
         Status = StatusNaloga.NaCekanju;
     }
 }

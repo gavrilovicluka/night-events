@@ -100,7 +100,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "m")]
+    [Authorize(Roles = "Muzicar")]
     [Route("PostaviSlobodanTermin/{idIzvodjaca}")]
     [HttpPut]
     public async Task<ActionResult> PostaviSlobodanTermin([FromBody] DateTime datum, int idIzvodjaca)
@@ -138,7 +138,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "m")]
+    [Authorize(Roles = "Muzicar")]
     [Route("IzmeniZanr/{idMuz}/{zanr}")]
     [HttpPut]
     public async Task<ActionResult> IzmeniZanr(int idMuz, string zanr)
@@ -172,7 +172,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
 
-    [Authorize(Roles = "m")]
+    [Authorize(Roles = "Muzicar")]
     [Route("IzmeniBrojClanova/{idMuz}/{brClanova}")]
     [HttpPut]
     public async Task<ActionResult> IzmeniBrojClanova(int idMuz, int brClanova)
@@ -206,7 +206,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
 
-    [Authorize(Roles = "m")]
+    [Authorize(Roles = "Muzicar")]
     [Route("IzmeniImeIzvodjaca/{idMuz}/{ime}")]
     [HttpPut]
     public async Task<ActionResult> IzmeniImeIzvodjaca(int idMuz, string ime)
@@ -240,7 +240,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
     
-    [Authorize (Roles = "a,o")]
+    //[Authorize (Roles = "Admin, Organizator")]
     [Route("VratiMuzickeIzvodjace")]
     [HttpGet]
     public async Task<ActionResult> VratiMuzickeIzvodjace()
@@ -271,7 +271,7 @@ public class MuzickiIzvodjacController : ControllerBase
     }
 	
 
-    [Authorize(Roles="m,o")]
+    [Authorize(Roles="Muzicar, Organizator")]
     [Route("VratiListuTermina/{idIzvodjaca}")]
     [HttpGet]
     public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)

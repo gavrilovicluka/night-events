@@ -32,10 +32,10 @@ public class Administrator
     [RegularExpression(@"^[a-zA-Z]+$")]
     public String? Prezime { get; set; }
 
-    public char Fleg { get; set; }
+    public String Role { get; set; }
 
     public Administrator()
     {
-        Fleg = 'a';
+        Role = "Admin";
     }
 }

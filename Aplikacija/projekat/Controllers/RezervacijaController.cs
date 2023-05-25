@@ -17,7 +17,7 @@ public class RezervacijaController : ControllerBase
         Context = context;
     }
 
-    [Authorize(Roles = "k")]
+    [Authorize(Roles = "Korisnik")]
     [Route("RezervisiMesto{idDogadjaja}/{idKorisnika}/{idStola}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiMesto(int idDogadjaja, int idKorisnika, int idStola)
@@ -131,7 +131,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "o, k")]
+    [Authorize(Roles = "Organizator, Korisnik")]
     [Route("IzbrisiRezervaciju/{idRez}")]
     [HttpDelete]
     public async Task<ActionResult> IzbrisiRezervacija(int idRez){
@@ -158,7 +158,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "o")]
+    [Authorize(Roles = "Organizator")]
     [Route("VratiRezervacijeZaDogadjaj/{idDogadjaja}")]
     [HttpGet]
     public async Task<ActionResult> VratiRezervacije(int idDogadjaja)
@@ -184,7 +184,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "o")]
+    [Authorize(Roles = "Organizator")]
     [Route("VratiRezervacijeKorisnika/{idKorisnika}")]
     [HttpGet]
     public async Task<ActionResult> VratiRezervacijeKorisnika(int idKorisnika)

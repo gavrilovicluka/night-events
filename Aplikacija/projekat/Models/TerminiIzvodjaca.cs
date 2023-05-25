@@ -12,4 +12,6 @@ public class TerminiIzvodjaca
 
     public DateTime Termin { get; set; }
 
+    public bool Rezervisan { get; set; }
+
 }

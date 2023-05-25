@@ -138,7 +138,7 @@ public class AuthController : ControllerBase
                     token = token1,
                     id = adm.ID,
                     username = adm.Username,
-                    fleg = adm.Fleg
+                    role = adm.Role
                 });
             }
 
@@ -162,7 +162,7 @@ public class AuthController : ControllerBase
                     token = token2,
                     id = kor.ID,
                     username = kor.Username,
-                    fleg = kor.Fleg
+                    role = kor.Role
                 });
             }
 
@@ -191,7 +191,7 @@ public class AuthController : ControllerBase
                     token = token3,
                     id = org.ID,
                     username = org.Username,
-                    fleg = org.Fleg
+                    role = org.Role
                 });
             }
 
@@ -220,7 +220,7 @@ public class AuthController : ControllerBase
                     token = token4,
                     id = muz.ID,
                     username = muz.Username,
-                    fleg = muz.Fleg
+                    role = muz.Role
                 });
             }
             else
@@ -236,14 +236,14 @@ public class AuthController : ControllerBase
 
     private string CreateTokenAdmin(Administrator adm)
     {
-        if (adm == null || adm.Fleg == ' ' || adm.ID <= 0 || adm.Username == null)
+        if (adm == null || adm.Role == null || adm.ID <= 0 || adm.Username == null)
         {
             return null!;
         }
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , adm.Fleg.ToString()),
+            new Claim(ClaimTypes.Role , adm.Role),
             new Claim(ClaimTypes.NameIdentifier, adm.ID.ToString()),
             new Claim(ClaimTypes.Name, adm.Username)
 
@@ -261,7 +261,7 @@ public class AuthController : ControllerBase
         var token = new JwtSecurityToken
         (
             claims: claims,
-            expires: DateTime.Now.AddHours(8),
+            expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
         );
 
@@ -277,14 +277,14 @@ public class AuthController : ControllerBase
 
     private string CreateTokenKorisnik(Korisnik kor)
     {
-        if (kor == null || kor.Fleg == ' ' || kor.ID <= 0 || kor.Username == null)
+        if (kor == null || kor.Role == null || kor.ID <= 0 || kor.Username == null)
         {
             return null!;
         }
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , kor.Fleg.ToString()),
+            new Claim(ClaimTypes.Role , kor.Role),
             new Claim(ClaimTypes.NameIdentifier, kor.ID.ToString()),
             new Claim(ClaimTypes.Name, kor.Username)
         };
@@ -301,7 +301,7 @@ public class AuthController : ControllerBase
         var token = new JwtSecurityToken
         (
             claims: claims,
-            expires: DateTime.Now.AddHours(8),
+            expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
         );
 
@@ -315,17 +315,17 @@ public class AuthController : ControllerBase
 
     private string CreateTokenOrganizator(Organizator org)
     {
-        if (org == null || org.Fleg == ' ' || org.ID <= 0 || org.Username == null)
+        if (org == null || org.Role == null || org.ID <= 0 || org.Username == null)
         {
             return null!;
         }
-        const string KlubID = "KlubID";
+
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , org.Fleg.ToString()),
+            new Claim(ClaimTypes.Role , org.Role),
             new Claim(ClaimTypes.NameIdentifier, org.ID.ToString()),
             new Claim(ClaimTypes.Name, org.Username),
-            new Claim(KlubID, org.Klub!.ID.ToString()),
+            new Claim("KlubID", (org.Klub != null) ? org.Klub!.ID.ToString() : " "),
         };
 
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
@@ -340,7 +340,7 @@ public class AuthController : ControllerBase
         var token = new JwtSecurityToken
         (
             claims: claims,
-            expires: DateTime.Now.AddHours(8),
+            expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
         );
 
@@ -354,14 +354,14 @@ public class AuthController : ControllerBase
 
     private string CreateTokenMuzIzvodjac(MuzickiIzvodjac muz)
     {
-        if (muz == null || muz.Fleg == ' ' || muz.ID <= 0 || muz.Username == null)
+        if (muz == null || muz.Role == null || muz.ID <= 0 || muz.Username == null)
         {
             return null!;
         }
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , muz.Fleg.ToString()),
+            new Claim("roles" , muz.Role),
             new Claim(ClaimTypes.NameIdentifier, muz.ID.ToString()),
             new Claim(ClaimTypes.Name, muz.Username)
         };
@@ -373,7 +373,7 @@ public class AuthController : ControllerBase
         }
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenValue));
 
-        var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
 
         var token = new JwtSecurityToken
         (

@@ -33,7 +33,7 @@ public class Organizator
     [RegularExpression(@"^[a-zA-Z]+$")]
     public String? Prezime { get; set; }
 
-    public char Fleg { get; set; }
+    public String Role { get; set; }
     public StatusNaloga Status { get; set; }
     
     [JsonIgnore]
@@ -41,7 +41,7 @@ public class Organizator
 
     public Organizator() 
     {
-        Fleg = 'o';
+        Role = "Organizator";
         Status = StatusNaloga.NaCekanju;
     }
 }
