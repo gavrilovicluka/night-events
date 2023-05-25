@@ -16,7 +16,7 @@ public class Dogadjaj
     public DateTime? Datum { get; set; }
 
     [Required]
-    public String Vreme { get; set; }
+    public String? Vreme { get; set; }
 
     public Klub? Klub { get; set; }
 
