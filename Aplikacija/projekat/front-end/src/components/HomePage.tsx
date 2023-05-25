@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import HomePageNavbar from './HomePageNavbar';
 import HomePageOneEvent from './HomePageOneEvent';
+import DogadjajType from '../types/DogadjajType';
 
 function HomePage() {
 
@@ -71,7 +72,7 @@ function HomePage() {
               </select>
               </div>
               <div className="col-6 col-sm-6 col-md-3 mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-              <input type="text" id="place_name " name="place_name" placeholder="Ime mesta..."  className="form-control bg-dark text-light" />
+              <input type="text" id="place_name " name="place_name" placeholder="Ime kluba..."  className="form-control bg-dark text-light" />
               </div>
               <div className="col-6 col-sm-6 col-md-3 mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
               <select id="type_id" name="type_id"  className="form-control bg-dark text-light"><option value="">Sva muzika</option><option value="1">Narodna / Pop / Folk</option><option value="2">Kafanska / Starogradska</option><option value="3">Hip Hop / Rap / Trap / RnB</option><option value="4">House / Electro / Techno</option><option value="11">Pop</option><option value="7">Rock / Punk</option><option value="8">Jazz</option><option value="9">Metal</option><option value="10">Latino</option><option value="undefined">Nedefinisano</option></select>
@@ -83,7 +84,7 @@ function HomePage() {
             </div>
             {/* <!-- Content Row--> */}
             <div className="row gx-4 gx-lg-5">
-              <HomePageOneEvent />
+              <HomePageOneEvent dogadjaj={new DogadjajType} />
                 <div className="col-md-4 mb-5">
                     <div className="card h-100">
                         <div className="card-body">

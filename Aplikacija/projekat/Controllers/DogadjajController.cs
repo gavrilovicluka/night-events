@@ -17,7 +17,7 @@ public class DogadjajController : ControllerBase
     }
 
     [Authorize(Roles = "Organizator")]
-    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}/{datumIVreme}")]
+    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}/{datum}")]
     [HttpPost]
     public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, DateTime datum, [FromBody] String vreme)
     {
@@ -220,5 +220,42 @@ public class DogadjajController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    
+    [Route("VratiDogadjajeDatuma")]
+    [HttpGet]
+    public async Task<ActionResult> VratiDogadjajeDatuma([FromBody] DateTime datum)
+    {
+        try
+        {
+            
+
+            var d = await Context.Dogadjaji
+            .Where(p => p.Datum == datum)
+            .Include(p => p.Klub)
+            .Select(m => new
+            {
+                naziv = m.Naziv,
+                datum = m.Datum,
+                vreme = m.Vreme,
+                klub = m.Klub
+                
+            })
+            .ToListAsync();
+
+            if(d == null)
+            {
+                return BadRequest("Ne postoje dogadjaji za izabrani datum");
+            }
+
+            return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+		
         
 }
