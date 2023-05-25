@@ -92,7 +92,7 @@ export default function ListaIzvodjaca() {
 
     const getData = () => {
 
-        axios.get("https://localhost:7037/MuzickiIzvodjac/VratiMuzickeIzvodjace")
+        axios.get(ApiConfig.BASE_URL + "/MuzickiIzvodjac/VratiMuzickeIzvodjace")
             .then((response: AxiosResponse<MuzickiIzvodjacType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;

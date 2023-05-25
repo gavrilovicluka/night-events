@@ -5,15 +5,23 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import HomePageNavbar from './HomePageNavbar';
 import HomePageOneEvent from './HomePageOneEvent';
 import DogadjajType from '../types/DogadjajType';
+import axios from 'axios';
+import { ApiConfig } from '../config/api.config';
+import { format } from 'date-fns';
 
 function HomePage() {
 
   const [selectedDate, setSelectedDate] = useState('');
   const [dateOptions, setDateOptions] = useState<Array<{ value: string; label: string; }>>([]);
+  const [eventsList, setEventsList] = useState<Array<DogadjajType>>([]);
+  const [selectedDateForAPI, setSelectedDateForAPI] = useState<Date>(new Date());
+  const [dateOptionsForAPI, setDateOptionsforAPI] = useState<Array<Date>>([]);
+
 
   useEffect(() => {
     const today = new Date();
     const options: Array<{ value: string; label: string; }> = [];
+    const optionsForAPI: Array<Date> = [];
 
     for (let i = 0; i < 3; i++) {
       const date = new Date(today);
@@ -22,11 +30,17 @@ function HomePage() {
       const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
       const displayDate = `${getDayOfWeek(date)}, ${date.getDate()} ${getMonthName(date)}`;
 
+      optionsForAPI.push(date);
       options.push({ value: formattedDate, label: displayDate });
     }
 
+    setDateOptionsforAPI(optionsForAPI);
+    setSelectedDateForAPI(optionsForAPI[0]);
+
     setDateOptions(options);
     setSelectedDate(options[0].value);
+
+    //getEventsData(selectedDateForAPI);
   }, []);
 
   const getDayOfWeek = (date: Date) => {
@@ -39,6 +53,31 @@ function HomePage() {
     return months[date.getMonth()];
   };
 
+  useEffect(() => {
+    getEventsData();
+  }, [])
+
+  const getEventsData = () => {
+
+      //const formattedDate = format(date, 'yyyy-MM-dd');
+      //const formattedDate = date.toISOString().split('T')[0];
+      const dat = {
+        datum: new Date("2023-05-25").toISOString()
+      }
+      
+      axios.get(ApiConfig.BASE_URL + "/Dogadjaj/VratiDogadjajeDatuma", {
+        params: {datum: "2023-05-26" },
+      })
+            .then((response) => {
+              if (response.status === 200) {             
+                console.log("Dogadjaji su uspesno vraceni.");
+                //window.location.reload();
+              }
+            })
+            .catch((error) => {
+              console.log('Greska prilikom preuzimanja dogadjaja:', error);
+            });         
+  }
 
   return (
     <>
@@ -84,6 +123,7 @@ function HomePage() {
             </div>
             {/* <!-- Content Row--> */}
             <div className="row gx-4 gx-lg-5">
+              <HomePageOneEvent dogadjaj={new DogadjajType} />
               <HomePageOneEvent dogadjaj={new DogadjajType} />
                 <div className="col-md-4 mb-5">
                     <div className="card h-100">

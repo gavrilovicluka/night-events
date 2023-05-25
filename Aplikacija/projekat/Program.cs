@@ -39,11 +39,10 @@ builder.Services.AddCors(options =>
             "http://192.168.99.1:8080",
             "http://192.168.0.14:8080",
 
-
-            "http://127.0.0.1:8080",
-            "https://127.0.0.1:8080",
-            "http://localhost:8080",
-            "https://localhost:8080"
+            "http://127.0.0.1:4000",
+            "https://127.0.0.1:4000",
+            "http://localhost:4000",
+            "https://localhost:4000",
             
         })
         .AllowAnyHeader()

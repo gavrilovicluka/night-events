@@ -11,7 +11,7 @@ import { ApiConfig } from '../config/api.config';
 
 interface UserLoginState {
  
-    email: string;
+    username: string;
     password: string;
     isLoggedIn: boolean;
 
@@ -25,7 +25,7 @@ export default class UserLoginPage extends React.Component {
         super(props);
 
         this.state = {
-            email: '',
+            username: '',
             password: '',
             isLoggedIn: false,
         }
@@ -57,7 +57,7 @@ export default class UserLoginPage extends React.Component {
     private doLogin() 
     {
         const data = {
-            email: this.state.email,
+            username: this.state.username,
             password: this.state.password,
 
         };
@@ -95,9 +95,9 @@ export default class UserLoginPage extends React.Component {
                         <Card.Text>
                             <Form>
                                 <Form.Group>
-                                    <Form.Label htmlFor="email">E-mail:</Form.Label>
-                                    <Form.Control type="email" id="email"
-                                                    value={ this.state.email}
+                                    <Form.Label htmlFor="username">Username:</Form.Label>
+                                    <Form.Control type="text" id="username"
+                                                    value={ this.state.username}
                                                     onChange={ event => this.formInputChanged(event as any)}/>
                                 </Form.Group>
                                 <Form.Group>

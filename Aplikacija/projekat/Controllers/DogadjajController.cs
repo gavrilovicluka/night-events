@@ -224,7 +224,7 @@ public class DogadjajController : ControllerBase
     
     [Route("VratiDogadjajeDatuma")]
     [HttpGet]
-    public async Task<ActionResult> VratiDogadjajeDatuma([FromBody] DateTime datum)
+    public async Task<ActionResult> VratiDogadjajeDatuma(DateTime datum)
     {
         try
         {
