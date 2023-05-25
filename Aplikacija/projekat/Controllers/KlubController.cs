@@ -18,7 +18,7 @@ public class KlubController : ControllerBase
     [Authorize(Roles = "a")]
     [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{brojStolova}")]
     [HttpPost]
-    public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolova)
+   public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolova, [FromBody] string SlikaKluba)
     {
         try
         {
@@ -35,7 +35,8 @@ public class KlubController : ControllerBase
                 BrojStolova = brojStolova,
                 Ocene = null,
                 Organizator = organizator,
-                Dogadjaji = null
+                Dogadjaji = null,
+				slikaKluba=SlikaKluba
 
             };
             Context.Klubovi.Add(klub);

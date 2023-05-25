@@ -16,6 +16,22 @@ export default function ListaKlubova() {
           lokacija: '',
           brojStolova: ''
         });
+        const [image, setImage] = useState('');
+		
+      // function handleImage(e:ChangeEvent<HTMLInputElement>) {
+      //   console.log(e.target.files)
+      //   setImage(e.target.files[0])
+      //   }
+      function handleImage(e: ChangeEvent<HTMLInputElement>) {
+        if (e.target.files && e.target.files.length > 0) {
+          const selectedFile = e.target.files[0];
+          const imageUrl = URL.createObjectURL(selectedFile);
+          console.log(imageUrl);
+          setImage(imageUrl);
+        }
+      }
+
+
       
         const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
            setKlubData({ ...klubData, [e.target.name]: e.target.value });
@@ -23,8 +39,11 @@ export default function ListaKlubova() {
       
          const handleSubmit = (e:any) => {
           e.preventDefault();
+          const formData= new FormData()
+     formData.append('image', image);
+          e.preventDefault();
       
-           axios.post(ApiConfig.BASE_URL + `/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolova}`)
+           axios.post(ApiConfig.BASE_URL + `/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolova}`, formData)
              .then((response) => {
                console.log(response.data);
              })
@@ -91,8 +110,14 @@ export default function ListaKlubova() {
             </div>
           </div>
           <div className="form-group row">
+          <label htmlFor="slika" className="col-sm-2 col-form-label">Slika kluba</label>
+          <div className="col-sm-10">
+            <input type="file" className="form-control-file" id="slika" name="slika" onChange={handleImage} />
+          </div>
+        </div>
+          <div className="form-group row">
           <div className="col-sm-10 offset-sm-2 d-flex justify-content-center">
-              <button type="submit" className="btn btn-primary">Dodaj klub</button>
+              <button type="submit" className="btn btn-primary" onChange={handleSubmit}>Dodaj klub</button>
             </div>
           </div>
         </form>
