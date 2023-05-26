@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import OrganizatorHeader from "./OrganizatorHeader";
-import {  Modal } from "react-bootstrap";
+import {  Button, Form, Modal, Table } from "react-bootstrap";
 import jwt from 'jsonwebtoken';
 import DogadjajType from "../../types/DogadjajType";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
@@ -112,19 +112,19 @@ export default function ListaIzvodjaca() {
         <Modal isOpen={showModal} onRequestClose={() => setShowModal(false)}>
 
             <h2>Izaberite dogadjaj</h2>
-            <select value={selectedDogadjaj !== null ? selectedDogadjaj.toString() : ""} onChange={handleDogadjajChange}>
-                <option value="">Izaberite događaj</option>
-                {dostupniDogadjaji.map((dogadjaj) => (
-                <option key={dogadjaj.id} value={dogadjaj.id}>
-                    {dogadjaj.naziv}
-                </option>
-                ))}
-            </select>
-            <button onClick={confirmAngazuj}>Potvrdi</button>
+      <Form.Select value={selectedDogadjaj !== null ? selectedDogadjaj.toString() : ""} onChange={handleDogadjajChange}>
+        <option value="">Izaberite događaj</option>
+        {dostupniDogadjaji.map((dogadjaj) => (
+          <option key={dogadjaj.id} value={dogadjaj.id}>
+            {dogadjaj.naziv}
+          </option>
+        ))}
+      </Form.Select>
+      <Button onClick={confirmAngazuj}>Potvrdi</Button>
         </Modal>
 
         <div className="d-flex justify-content-center">
-            <table className="text-center">
+            <Table className="text-center">
                 <thead>
                     <tr>
                         <th>Ime izvodjaca</th>
@@ -145,7 +145,7 @@ export default function ListaIzvodjaca() {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </Table>
         </div></>
     );
               

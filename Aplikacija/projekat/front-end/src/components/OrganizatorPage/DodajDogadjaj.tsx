@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import OrganizatorHeader from "./OrganizatorHeader";
-import { Col, Container } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from "axios";
 import DogadjajType from "../../types/DogadjajType";
 import { ApiConfig } from "../../config/api.config";
@@ -40,9 +40,35 @@ export default function DodajDogadjaj() {
 
          
         <Container>
-                <Col md= { {span : 6, offset: 6}}></Col>
+          <Col md= { {span : 6, offset: 6}}></Col>
 
-        <form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
+          <Form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
+      <Form.Group as={Row} controlId="idOrganizatora">
+        <Form.Label column sm={2}>ID organizatora</Form.Label>
+        <Col sm={10}>
+          <Form.Control type="text" name="idOrganizatora" value={dogadjajData.id} onChange={handleChange} />
+        </Col>
+      </Form.Group>
+      <Form.Group as={Row} controlId="naziv">
+        <Form.Label column sm={2}>Naziv dogadjaja</Form.Label>
+        <Col sm={10}>
+          <Form.Control type="text" name="naziv" value={dogadjajData.naziv} onChange={handleChange} />
+        </Col>
+      </Form.Group>
+      <Form.Group as={Row} controlId="datumIVreme">
+        <Form.Label column sm={2}>Datum i vreme odrzavanja</Form.Label>
+        <Col sm={10}>
+          <Form.Control type="text" name="datumIVreme" value={dogadjajData.datumIVreme} onChange={handleChange} />
+        </Col>
+      </Form.Group>
+      <Form.Group as={Row}>
+        <Col sm={10} offset={{ sm: 2 }} className="d-flex justify-content-center">
+          <Button type="submit" variant="primary">Dodaj dogadjaj</Button>
+        </Col>
+      </Form.Group>
+    </Form>
+
+        {/* <form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
           <div className="form-group row">
             <label htmlFor="idOrganizatora" className="col-sm-2 col-form-label">ID organizatora</label>
             <div className="col-sm-10">
@@ -67,7 +93,7 @@ export default function DodajDogadjaj() {
               <button type="submit" className="btn btn-primary">Dodaj dogadjaj</button>
             </div>
           </div>
-        </form>
+        </form> */}
         </Container>
       </>
 

@@ -4,6 +4,7 @@ import axios, { AxiosResponse } from "axios";
 import OrganizatorHeader from "./OrganizatorHeader";
 import DogadjajType from "../../types/DogadjajType";
 import { ApiConfig } from "../../config/api.config";
+import { Table } from "react-bootstrap";
 
 
 export default function ListaDogadjaja() {
@@ -36,7 +37,7 @@ export default function ListaDogadjaja() {
     return (
         <><OrganizatorHeader />
         <div className="d-flex justify-content-center">
-            <table className="text-center">
+            <Table className="text-center">
                 <thead>
                     <tr>
                         <th>Naziv</th>
@@ -51,7 +52,7 @@ export default function ListaDogadjaja() {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </Table>
         </div></>
     );
               

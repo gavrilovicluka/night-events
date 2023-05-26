@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Card, Col, Container, Figure, Form, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import HomePageNavbar from './HomePageNavbar';
@@ -83,68 +83,85 @@ function HomePage() {
     <>
       <HomePageNavbar />
 
-      {/* <!-- Page Content--> */}
-        <div className="container px-4 px-lg-5">
-            {/* <!-- Heading Row--> */}
-            <div className="row gx-4 gx-lg-5 align-items-center my-5">
-                <div className="col-lg-7"><img className="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
-                <div className="col-lg-5">
-                    <h1 className="font-weight-light">Business Name or Tagline</h1>
-                    <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                    <a className="btn btn-primary" href="#!">Call to Action!</a>
-                </div>
-            </div>
-            {/* <!-- Call to Action--> */}
-            <div className="card text-white bg-secondary my-5 py-4 text-center">
-               
-            {/* datum danasnji vracanje i naredni */}
-                <div className="container mb-5">
-              <form method="get" id="searchForm">
-              <div className="row">             
-              <div className="col-6 col-sm-6 col-md-3 mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-              <select id="date" name="date" className="form-control bg-dark text-light" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)}>
-                {dateOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-              </div>
-              <div className="col-6 col-sm-6 col-md-3 mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-              <input type="text" id="place_name " name="place_name" placeholder="Ime kluba..."  className="form-control bg-dark text-light" />
-              </div>
-              <div className="col-6 col-sm-6 col-md-3 mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-              <select id="type_id" name="type_id"  className="form-control bg-dark text-light"><option value="">Sva muzika</option><option value="1">Narodna / Pop / Folk</option><option value="2">Kafanska / Starogradska</option><option value="3">Hip Hop / Rap / Trap / RnB</option><option value="4">House / Electro / Techno</option><option value="11">Pop</option><option value="7">Rock / Punk</option><option value="8">Jazz</option><option value="9">Metal</option><option value="10">Latino</option><option value="undefined">Nedefinisano</option></select>
-              </div>
-              </div>
-              </form>
-              </div>
-            
-            </div>
-            {/* <!-- Content Row--> */}
-            <div className="row gx-4 gx-lg-5">
-              <HomePageOneEvent dogadjaj={new DogadjajType} />
-              <HomePageOneEvent dogadjaj={new DogadjajType} />
-                <div className="col-md-4 mb-5">
-                    <div className="card h-100">
-                        <div className="card-body">
-                            <h2 className="card-title">Card Two</h2>
-                            <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
-                        </div>
-                        <div className="card-footer"><a className="btn btn-primary btn-sm" href="#!">More Info</a></div>
-                    </div>
-                </div>
-                <div className="col-md-4 mb-5">
-                    <div className="card h-100">
-                        <div className="card-body">
-                            <h2 className="card-title">Card Three</h2>
-                            <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                        </div>
-                        <div className="card-footer"><a className="btn btn-primary btn-sm" href="#!">More Info</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <Container className="px-4 px-lg-5">
+      <Row className="gx-4 gx-lg-5 align-items-center my-5">
+        <Col lg={7}>
+          <Figure>
+            <Figure.Image className="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." />
+          </Figure>
+        </Col>
+        <Col lg={5}>
+          <h1 className="font-weight-light">Business Name or Tagline</h1>
+          <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+          <Button className="btn-primary">Call to Action!</Button>
+        </Col>
+      </Row>
+      <Card className="text-white bg-secondary my-5 py-4 text-center">
+        <Container className="mb-5">
+          <Form method="get" id="searchForm">
+            <Row>
+              <Col sm={6} md={3} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
+                <Form.Select id="date" name="date" className="form-control bg-dark text-light" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)}>
+                  {dateOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Col>
+              <Col sm={6} md={3} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
+                <Form.Control type="text" id="place_name" name="place_name" placeholder="Ime kluba..." className="form-control bg-dark text-light" />
+              </Col>
+              <Col sm={6} md={3} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
+                <Form.Select id="type_id" name="type_id" className="form-control bg-dark text-light">
+                  <option value="">Sva muzika</option>
+                  <option value="1">Narodna / Pop / Folk</option>
+                  <option value="2">Kafanska / Starogradska</option>
+                  <option value="3">Hip Hop / Rap / Trap / RnB</option>
+                  <option value="4">House / Electro / Techno</option>
+                  <option value="11">Pop</option>
+                  <option value="7">Rock / Punk</option>
+                  <option value="8">Jazz</option>
+                  <option value="9">Metal</option>
+                  <option value="10">Latino</option>
+                  <option value="undefined">Nedefinisano</option>
+                </Form.Select>
+              </Col>
+            </Row>
+          </Form>
+        </Container>
+      </Card>
+      <Row className="gx-4 gx-lg-5">
+        <HomePageOneEvent dogadjaj={new DogadjajType} />
+        <HomePageOneEvent dogadjaj={new DogadjajType} />
+        <Col md={4} mb={5}>
+          <Card className="h-100">
+            <Card.Body>
+              <Card.Title>Card Two</Card.Title>
+              <Card.Text>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <Button className="btn-primary btn-sm">More Info</Button>
+            </Card.Footer>
+          </Card>
+        </Col>
+        <Col md={4} mb={5}>
+          <Card className="h-100">
+            <Card.Body>
+              <Card.Title>Card Three</Card.Title>
+              <Card.Text>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <Button className="btn-primary btn-sm">More Info</Button>
+            </Card.Footer>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
 
     </>
 
