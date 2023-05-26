@@ -79,11 +79,18 @@ function HomePage() {
             });         
   }
 
+  const scrollToTarget = () => {
+    const targetDiv = document.getElementById('date');
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <HomePageNavbar />
 
-      <Container className="px-4 px-lg-5">
+      <Container className="px-4 px-lg-5" id="datum">
       <Row className="gx-4 gx-lg-5 align-items-center my-5">
         <Col lg={7}>
           <Figure>
@@ -93,7 +100,7 @@ function HomePage() {
         <Col lg={5}>
           <h1 className="font-weight-light">Business Name or Tagline</h1>
           <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-          <Button className="btn-primary">Call to Action!</Button>
+          <Button className="btn-primary"onClick={scrollToTarget}>Pregledaj</Button>
         </Col>
       </Row>
       <Card className="text-white bg-secondary my-5 py-4 text-center">
@@ -134,7 +141,11 @@ function HomePage() {
       <Row className="gx-4 gx-lg-5">
         <HomePageOneEvent dogadjaj={new DogadjajType} />
         <HomePageOneEvent dogadjaj={new DogadjajType} />
-        <Col md={4} mb={5}>
+        <HomePageOneEvent dogadjaj={new DogadjajType} />
+
+        {/* druga kartica default ko sto je bila */}
+
+        {/* <Col md={4} mb={5}>
           <Card className="h-100">
             <Card.Body>
               <Card.Title>Card Two</Card.Title>
@@ -143,11 +154,14 @@ function HomePage() {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <Button className="btn-primary btn-sm">More Info</Button>
+              <Button className="btn-primary btn-sm" href="/DetaljiDogadjaja">More Info</Button>
             </Card.Footer>
           </Card>
-        </Col>
-        <Col md={4} mb={5}>
+        </Col> */}
+
+        {/* treca kartica default ko sto je bila */}
+
+        {/* <Col md={4} mb={5}>
           <Card className="h-100">
             <Card.Body>
               <Card.Title>Card Three</Card.Title>
@@ -159,8 +173,8 @@ function HomePage() {
               <Button className="btn-primary btn-sm">More Info</Button>
             </Card.Footer>
           </Card>
-        </Col>
-      </Row>
+        </Col>*/}
+      </Row> 
     </Container>
 
     </>

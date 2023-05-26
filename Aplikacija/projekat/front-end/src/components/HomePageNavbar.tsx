@@ -9,10 +9,9 @@ export default function HomePageNavbar() {
       <Navbar.Toggle aria-controls="navbarSupportedContent" />
       <Navbar.Collapse id="navbarSupportedContent">
         <Nav className="ms-auto">
-          <Nav.Link href="#!" active>Home</Nav.Link>
           <Nav.Link href="#!">About</Nav.Link>
           <Nav.Link href="#!">Contact</Nav.Link>
-          <Nav.Link href="#!">Services</Nav.Link>
+          <Nav.Link href="#!">Log in</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
