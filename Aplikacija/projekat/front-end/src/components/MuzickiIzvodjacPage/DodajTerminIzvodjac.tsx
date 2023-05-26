@@ -3,6 +3,7 @@ import TerminType from "../../types/TerminType";
 import axios from "axios";
 import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import { ApiConfig } from "../../config/api.config";
+import { Button, Form } from "react-bootstrap";
 
 const DodajTerminForm = () => {
     const [eventDate, setEventDate] = useState({
@@ -33,29 +34,26 @@ function DodajTerminIzvodjac()
 {
   return (
         <><MuzickiIzvodjacHeader />
-        <form>
-          <div className="form-group">
-            <label htmlFor="datum">Datum</label>
-            <input
-              type="date"
-              className="form-control"
-              id="datum"
-              placeholder="Unesite datum"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="idIzvodjaca">ID Izvođača</label>
-            <input
-              type="text"
-              className="form-control"
-              id="idIzvodjaca"
-              placeholder="Unesite ID izvođača"
-              required
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">Dodaj termin</button>
-        </form></>
+        <Form>
+  <Form.Group>
+    <Form.Label>Datum</Form.Label>
+    <Form.Control
+      type="date"
+      placeholder="Unesite datum"
+      required
+    />
+  </Form.Group>
+  <Form.Group>
+    <Form.Label>ID Izvođača</Form.Label>
+    <Form.Control
+      type="text"
+      placeholder="Unesite ID izvođača"
+      required
+    />
+  </Form.Group>
+  <Button type="submit" variant="primary">Dodaj termin</Button>
+</Form>
+        </>
       );
 }
 

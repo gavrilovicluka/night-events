@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import KlubType from "../../types/KlubType";
 import AdministratorHeader from "./AdministratorHeader";
-import { Col, Container } from "react-bootstrap";
+import { Button, Col, Container, Form, Table } from "react-bootstrap";
 import { ApiConfig } from "../../config/api.config";
 
 
@@ -83,52 +83,50 @@ export default function ListaKlubova() {
          
         <Container>
         <Col md= { {span : 6, offset: 6}}></Col>
+        
 
-        <form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
-          <div className="form-group row">
-            <label htmlFor="idOrganizatora" className="col-sm-2 col-form-label">ID organizatora</label>
-            <div className="col-sm-10">
-              <input type="text" className="form-control" id="idOrganizatora" name="idOrganizatora" value={klubData.idOrganizatora} onChange={handleChange} />
-            </div>
-          </div>
-          <div className="form-group row">
-            <label htmlFor="naziv" className="col-sm-2 col-form-label">Naziv kluba</label>
-            <div className="col-sm-10">
-              <input type="text" className="form-control" id="naziv" name="naziv" value={klubData.naziv} onChange={handleChange} />
-            </div>
-          </div>
-          <div className="form-group row">
-            <label htmlFor="lokacija" className="col-sm-2 col-form-label">Lokacija kluba</label>
-            <div className="col-sm-10">
-              <input type="text" className="form-control" id="lokacija" name="lokacija" value={klubData.lokacija} onChange={handleChange} />
-            </div>
-          </div>
-          <div className="form-group row">
-            <label htmlFor="brojStolova" className="col-sm-2 col-form-label">Broj stolova</label>
-            <div className="col-sm-10">
-              <input type="text" className="form-control" id="brojStolova" name="brojStolova" value={klubData.brojStolova} onChange={handleChange} />
-            </div>
-          </div>
-          <div className="form-group row">
-          <label htmlFor="slika" className="col-sm-2 col-form-label">Slika kluba</label>
-          <div className="col-sm-10">
-            <input type="file" className="form-control-file" id="slika" name="slika" onChange={handleImage} />
-          </div>
+            <Form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
+      <Form.Group controlId="idOrganizatora" className="row">
+        <Form.Label column sm={2}>ID organizatora</Form.Label>
+        <Form.Control type="text" name="idOrganizatora" value={klubData.idOrganizatora} onChange={handleChange} className="col-sm-10" />
+      </Form.Group>
+
+      <Form.Group controlId="naziv" className="row">
+        <Form.Label column sm={2}>Naziv kluba</Form.Label>
+        <Form.Control type="text" name="naziv" value={klubData.naziv} onChange={handleChange} className="col-sm-10" />
+      </Form.Group>
+
+      <Form.Group controlId="lokacija" className="row">
+        <Form.Label column sm={2}>Lokacija kluba</Form.Label>
+        <Form.Control type="text" name="lokacija" value={klubData.lokacija} onChange={handleChange} className="col-sm-10" />
+      </Form.Group>
+
+      <Form.Group controlId="brojStolova" className="row">
+        <Form.Label column sm={2}>Broj stolova</Form.Label>
+        <Form.Control type="text" name="brojStolova" value={klubData.brojStolova} onChange={handleChange} className="col-sm-10" />
+      </Form.Group>
+
+      <Form.Group controlId="slika" className="row">
+        <Form.Label column sm={2}>Slika kluba</Form.Label>
+        <Form.Control type="file" name="slika" onChange={handleImage} className="col-sm-10" />
+      </Form.Group>
+
+      <Form.Group className="row">
+        <div className="col-sm-10 offset-sm-2 d-flex justify-content-center">
+          <Button type="submit" className="btn btn-primary">Dodaj klub</Button>
         </div>
-          <div className="form-group row">
-          <div className="col-sm-10 offset-sm-2 d-flex justify-content-center">
-              <button type="submit" className="btn btn-primary" onChange={handleSubmit}>Dodaj klub</button>
-            </div>
-          </div>
-        </form>
+      </Form.Group>
+    </Form>
+
         </Container>
+
          
         <Container>
         <Col md= { {span : 6, offset: 6}}></Col>
 
        <div className="d-flex justify-content-center">
         <h2 style={{ textAlign: 'center' }}>Lista Klubova</h2>
-          <table className="text-center" style={{ marginTop: '40px' }}>
+          <Table className="text-center" style={{ marginTop: '40px' }}>
             <thead>
               <tr>
                 <th>ID</th>
@@ -152,7 +150,7 @@ export default function ListaKlubova() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
           </div>
           </Container>
         

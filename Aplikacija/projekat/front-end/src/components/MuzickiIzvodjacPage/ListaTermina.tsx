@@ -5,6 +5,7 @@ import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import TerminType from "../../types/TerminType";
 import DodajTerminIzvodjac from "./DodajTerminIzvodjac";
 import { ApiConfig } from "../../config/api.config";
+import { Table } from "react-bootstrap";
 
 
 export default function ListaTermina() {
@@ -39,7 +40,7 @@ export default function ListaTermina() {
     return (
         <><MuzickiIzvodjacHeader />
         <div>
-            <table>
+            <Table>
                 <thead>
                     <tr>
                         <th>Termin</th>
@@ -52,7 +53,7 @@ export default function ListaTermina() {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </Table>
         </div></>
     );
 

@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import AdministratorHeader from "./AdministratorHeader";
 import { ApiConfig } from "../../config/api.config";
+import { Table } from "react-bootstrap";
 
 
 
@@ -34,7 +35,34 @@ export default function ListaIzvodjacaAdminPage() {
 
     return (
         <><AdministratorHeader />
-        <div>
+          <div>
+      <Table striped bordered>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Ime izvođača</th>
+            <th>Username</th>
+            <th>Zanr</th>
+            <th>Broj članova</th>
+            <th>Ocena</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {izvodjaci.map((izvodjac, index) => (
+            <tr key={index}>
+              <td>{izvodjac.id}</td>
+              <td>{izvodjac.imeIzvodjaca}</td>
+              <td>{izvodjac.username}</td>
+              <td>{izvodjac.zanr}</td>
+              <td>{izvodjac.brojClanova}</td>
+              <td>{izvodjac.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
+        {/* <div>
             <table>
                 <thead>
                     <tr>
@@ -60,7 +88,8 @@ export default function ListaIzvodjacaAdminPage() {
                     ))}
                 </tbody>
             </table>
-        </div></>
+        </div></> */}
+        </>
     );
               
 }

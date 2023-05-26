@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import AdministratorHeader from "./AdministratorHeader";
 import OrganizatorType from "../../types/OrganizatorType";
 import { ApiConfig } from "../../config/api.config";
+import { Table } from "react-bootstrap";
 
 
 
@@ -35,7 +36,7 @@ export default function ListaOrganizatora() {
     return (
         <><AdministratorHeader />
         <div>
-            <table>
+            <Table striped bordered>
                 <thead>
                     <tr>
                         <th>Ime</th>
@@ -58,7 +59,7 @@ export default function ListaOrganizatora() {
                         </tr>
                     ))}
                 </tbody>
-            </table>
+            </Table>
         </div></>
     );
               
