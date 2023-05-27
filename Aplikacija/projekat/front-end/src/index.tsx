@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import { MainMenu, MainMenuItem } from './components/MainMenu';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { UserRegistrationPage } from './components/UserRegistrationPage';
 import UserLoginPage from './components/UserLoginPage';
 import OrganizatorDashboard from './components/OrganizatorPage/OrganizatorDashboard';
@@ -38,8 +38,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     {/* <MainMenu items = {menuItems}></MainMenu> */}
-    <HashRouter>
+    <Router>
+    
       <Routes>
+     
         <Route path='/' element={ <HomePage/> } /> 
         <Route path='/login' element={ <UserLoginPage/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
@@ -62,8 +64,10 @@ root.render(
 
         <Route path='/AboutStranica' element={ <AboutStranica/> } />
     
+      
       </Routes>
-    </HashRouter>
+      
+    </Router>
   </React.StrictMode>
 );
 

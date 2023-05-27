@@ -92,5 +92,37 @@ public class AdministratorController : ControllerBase
         }
 
     }
+
+     [HttpPut("OdobriNalog/{idIzvodjaca}")]
+    public async Task<ActionResult> OdobriNalog(int idIzvodjaca)
+    {
+        var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+
+        if (izvodjac == null)
+        {
+            return BadRequest("Ne postoji izvodjac");
+        }
+
+        izvodjac.Status = StatusNaloga.Odobren;
+        Context.SaveChanges();
+
+        return Ok();
+    }
+
+    [HttpPut("OdbijNalog/{idIzvodjaca}")]
+    public async Task<ActionResult> OdbijNalog(int idIzvodjaca)
+    {
+        var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+
+        if (izvodjac == null)
+        {
+            return BadRequest("Ne postoji izvodjac");
+        }
+
+        izvodjac.Status = StatusNaloga.Odbijen;
+        Context.SaveChanges();
+
+        return Ok();
+    }
    
 }

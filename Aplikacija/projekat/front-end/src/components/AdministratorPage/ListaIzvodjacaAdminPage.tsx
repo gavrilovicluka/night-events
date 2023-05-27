@@ -3,7 +3,11 @@ import axios, { AxiosResponse } from "axios";
 import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import AdministratorHeader from "./AdministratorHeader";
 import { ApiConfig } from "../../config/api.config";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
+import OcenaMuzickiIzvodjacType from "../../types/OcenaMuzickiIzvodjacType";
+import { StatusNalogaType } from "../../types/StatusNalogaType";
+
+
 
 
 
@@ -11,6 +15,7 @@ export default function ListaIzvodjacaAdminPage() {
 
 
     const [izvodjaci, setIzvodjaci] = useState<Array<MuzickiIzvodjacType>>([]);
+    
 
     useEffect(() => {
         getData();
@@ -33,10 +38,102 @@ export default function ListaIzvodjacaAdminPage() {
                 });
     }
 
+    
+
+    function izracunajProsek(ocene: OcenaMuzickiIzvodjacType[] | null | undefined) {
+      if (!ocene || ocene.length === 0) {
+        return 0; 
+      }
+    
+      var oceneBezNula = ocene
+        .filter(function (ocena) {
+          return ocena.ocena !== 0; // Filtriraj nule iz niza ocena
+        })
+        .map(function (ocena) {
+          return ocena.ocena; // Izvuci vrednosti ocena iz objekata
+        });
+    
+      if (oceneBezNula.length === 0) {
+        return 0; // Ako su sve ocene nule, prosečna ocena je 0
+      }
+    
+      var sum = oceneBezNula.reduce(function (a, b) {
+        if (typeof a === 'number' && typeof b === 'number') {
+          return a + b; // Saberi samo ako su a i b brojevi
+        } else {
+          return (a || 0) + (b || 0); // Ako su a ili b undefined, koristi 0
+        }
+      }, 0); 
+    
+      if (typeof sum !== 'number') {
+        return 0; 
+      }
+    
+    
+      var prosek = sum / oceneBezNula.length;
+      return prosek;
+    }
+
+    function getStatusNaloga(status: StatusNalogaType): string {
+      
+      switch (status) {
+        case 0:
+          return "Odobren";
+        case 1:
+          return "Na čekanju";
+        case 2:
+          return "Odbijen";
+        default:
+          return ""; // Vratiti prazan string za nepoznat status
+      }
+    }
+    
+    const handleOdobri = (index: number) => {
+      // Kreiranje kopije niza izvodjaci radi ažuriranja statusa naloga
+      const updatedIzvodjaci = [...izvodjaci];
+      updatedIzvodjaci[index].status = 0; // Postavljanje statusa na Odobren
+      setIzvodjaci(updatedIzvodjaci);
+      const idIzvodjaca = updatedIzvodjaci[index].id;
+
+    axios
+      .put(
+        ApiConfig.BASE_URL + `/Administrator/OdobriNalog/${idIzvodjaca}`
+      )
+      .then((response) => {
+        console.log(response.data); // Ažuriranje uspešno
+      })
+      .catch((error) => {
+        console.log("Došlo je do greške prilikom slanja zahtjeva:", error);
+      });
+    };
+  
+    const handleOdbij = (index: number) => {
+      // Kreiranje kopije niza izvodjaci radi ažuriranja statusa naloga
+      const updatedIzvodjaci = [...izvodjaci];
+      updatedIzvodjaci[index].status = 2; // Postavljanje statusa na Odbijen
+      setIzvodjaci(updatedIzvodjaci);
+      const idIzvodjaca = updatedIzvodjaci[index].id;
+
+    axios
+      .put(
+        ApiConfig.BASE_URL + `/Administrator/OdbijNalog/${idIzvodjaca}`
+      )
+      .then((response) => {
+        console.log(response.data); // Ažuriranje uspešno
+      })
+      .catch((error) => {
+        console.log("Došlo je do greške prilikom slanja zahtjeva:", error);
+      });
+    };
+    
+
     return (
         <><AdministratorHeader />
-          <div>
-      <Table striped bordered>
+        <div>
+        <div className="d-flex justify-content-center">
+        <div className="col-md-6 col-sm-8 col-xs-10 pt-5">
+        <Table className="table-secondary" striped bordered hover>
+      
         <thead>
           <tr>
             <th>ID</th>
@@ -46,6 +143,7 @@ export default function ListaIzvodjacaAdminPage() {
             <th>Broj članova</th>
             <th>Ocena</th>
             <th>Status</th>
+            <th>Akcija</th>
           </tr>
         </thead>
         <tbody>
@@ -56,39 +154,38 @@ export default function ListaIzvodjacaAdminPage() {
               <td>{izvodjac.username}</td>
               <td>{izvodjac.zanr}</td>
               <td>{izvodjac.brojClanova}</td>
-              <td>{izvodjac.status}</td>
+              <td>{izracunajProsek(izvodjac.ocene)}</td>
+              <td>{izvodjac.status !== undefined ? getStatusNaloga(izvodjac.status) : ""}</td>
+              <td>
+                    {izvodjac.status === 0 ? (
+                      
+                      <Button variant="success" disabled style={{ backgroundColor: "green", marginRight: "10px" }}>{' '}
+                        Odobri
+                      </Button>
+                    ) : (
+                      <Button variant="success" onClick={() => handleOdobri(index)} style={{ backgroundColor: "green", marginRight: "10px" }}>
+                        Odobri
+                      </Button>
+                    )}
+                    
+                    {izvodjac.status === 2 ? (
+                      <Button variant="danger" disabled style={{ backgroundColor: "red" }}>
+                        Odbij
+                      </Button>
+                    ) : (
+                      <Button variant="danger" onClick={() => handleOdbij(index)} style={{ backgroundColor: "red" }}>
+                        Odbij
+                      </Button>
+                    )}
+            </td>
             </tr>
           ))}
         </tbody>
       </Table>
+      </div>
+      </div>
     </div>
-        {/* <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Ime izvodjaca</th>
-                        <th>Username</th>
-                        <th>Zanr</th>
-                        <th>Broj clanova</th>
-                        <th>Ocena</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {izvodjaci.map((izvodjac, index) => (
-                        <tr key={index}>
-                            <td>{izvodjac.id}</td>
-                            <td>{izvodjac.imeIzvodjaca}</td>
-                            <td>{izvodjac.username}</td>
-                            <td>{izvodjac.zanr}</td>
-                            <td>{izvodjac.brojClanova}</td>
-                            <td>{izvodjac.status}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div></> */}
+        
         </>
     );
               
