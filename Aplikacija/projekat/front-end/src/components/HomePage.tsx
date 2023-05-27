@@ -39,6 +39,13 @@ function HomePage() {
     return months[date.getMonth()];
   };
 
+  const scrollToTarget = () => {
+    const targetDiv = document.getElementById('datum');
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 
   return (
     <>
@@ -52,11 +59,13 @@ function HomePage() {
                 <div className="col-lg-5">
                     <h1 className="font-weight-light">Business Name or Tagline</h1>
                     <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                    <a className="btn btn-primary" href="#!">Call to Action!</a>
+                    <button className="btn btn-primary" onClick={scrollToTarget}>Prikaži događaje</button>
+                    {/* <a className="btn btn-primary" href="#datum111">START</a> */}
+
                 </div>
             </div>
             {/* <!-- Call to Action--> */}
-            <div className="card text-white bg-secondary my-5 py-4 text-center">
+            <div className="card text-white bg-secondary my-5 py-4 text-center" id="datum">
                
             {/* datum danasnji vracanje i naredni */}
                 <div className="container mb-5">

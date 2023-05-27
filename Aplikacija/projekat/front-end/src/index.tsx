@@ -21,6 +21,8 @@ import ListaIzvodjacaAdminPage from './components/AdministratorPage/ListaIzvodja
 import ListaTermina from './components/MuzickiIzvodjacPage/ListaTermina';
 import ListaDogadjaja from './components/OrganizatorPage/ListaDogadjaja';
 import DodajDogadjaj from './components/OrganizatorPage/DodajDogadjaj';
+import DetaljiDogadjaja from './components/DetaljiDogadjaja';
+import DogadjajType from './types/DogadjajType';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -54,13 +56,11 @@ root.render(
         <Route path='/administratorDashboard/klubovi' element={ <ListaKlubova/> } />
         <Route path='/administratorDashboard/ogranizatori' element={ <ListaOrganizatora/> } />
         <Route path='/administratorDashboard/muzickiIzvodjaci' element={ <ListaIzvodjacaAdminPage/> } />
+
+        <Route path='/detaljiDogadjaja' element={ <DetaljiDogadjaja dogadjaj={ new DogadjajType}/> } />
     
       </Routes>
     </HashRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
