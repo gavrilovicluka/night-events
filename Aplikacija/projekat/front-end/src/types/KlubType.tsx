@@ -5,6 +5,7 @@ export default class KlubType {
     id?: number;
     naziv?: string;
     lokacija?: string;
+    slikaKluba?: string;
     ocene?: OcenaKlubType[] | null;
     kapacitet?: number;
     idOrganizatora?: number | null;

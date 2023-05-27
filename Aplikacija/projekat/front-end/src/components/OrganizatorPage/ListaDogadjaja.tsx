@@ -48,7 +48,8 @@ export default function ListaDogadjaja() {
                     {dogadjaji.map((dogadjaj, index) => (
                         <tr key={index}>
                             <td>{dogadjaj.naziv}</td>
-                            <td>{dogadjaj.datumIVreme?.toLocaleDateString()}</td>                          
+                            <td>{dogadjaj.datum?.toLocaleDateString()}</td>                          
+                            <td>{dogadjaj.vreme}</td>                          
                         </tr>
                     ))}
                 </tbody>
