@@ -23,6 +23,7 @@ import ListaDogadjaja from './components/OrganizatorPage/ListaDogadjaja';
 import DodajDogadjaj from './components/OrganizatorPage/DodajDogadjaj';
 import DetaljiDogadjaja from './components/DetaljiDogadjaja';
 import DogadjajType from './types/DogadjajType';
+import AboutStranica from './components/AboutStranica';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -58,6 +59,8 @@ root.render(
         <Route path='/administratorDashboard/muzickiIzvodjaci' element={ <ListaIzvodjacaAdminPage/> } />
 
         <Route path='/detaljiDogadjaja' element={ <DetaljiDogadjaja dogadjaj={ new DogadjajType}/> } />
+
+        <Route path='/AboutStranica' element={ <AboutStranica/> } />
     
       </Routes>
     </HashRouter>
