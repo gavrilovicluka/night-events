@@ -198,7 +198,7 @@ function HomePage() {
           </Container>
         </Card>
         <Row className="gx-4 gx-lg-5">
-          <HomePageEventCard dogadjaji={eventsList} />
+          { eventsList.length != 0 ?  <HomePageEventCard dogadjaji={eventsList} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}     
         </Row>
       </Container>
     </>

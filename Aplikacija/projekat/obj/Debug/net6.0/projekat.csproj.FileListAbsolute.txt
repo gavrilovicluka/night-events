@@ -265,3 +265,5 @@ C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nighte
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\tsconfig.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package-lock.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package.json
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll

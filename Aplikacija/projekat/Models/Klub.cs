@@ -18,10 +18,18 @@ public class Klub
     [RegularExpression(@"^[A-Za-z0-9]+[_-' ]+$")]
     public String? Lokacija { get; set; }
 
-    [Required]
-    public int BrojStolova { get; set; }
-
     public String? SlikaKluba { get; set; }
+
+    public String? MapaKluba { get; set; }
+
+    [Required]
+    public int BrojStolovaBS { get; set; }
+
+    [Required]
+    public int BrojStolovaVS { get; set; }
+
+    [Required]
+    public int BrojStolovaS { get; set; }
     
     public List<OcenaKlub>? Ocene { get; set; }
 

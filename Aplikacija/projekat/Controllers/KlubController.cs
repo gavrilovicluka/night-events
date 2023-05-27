@@ -16,9 +16,9 @@ public class KlubController : ControllerBase
     }
 
     [Authorize(Roles = "Admin")]
-    [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{brojStolova}")]
+    [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{brojStolovaBS}/{brojStolovaVS}/{brojStolovaS}")]
     [HttpPost]
-   public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolova, [FromBody] string slikaKluba)
+   public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolovaBS, int brojStolovaVS, int brojStolovaS, [FromBody] SlikeKlubaDTO slike)
     {
         try
         {
@@ -30,13 +30,16 @@ public class KlubController : ControllerBase
 
             var klub = new Klub
             {               
-                Naziv=naziv,
+                Naziv = naziv,
                 Lokacija = lokacija,
-                BrojStolova = brojStolova,
+                BrojStolovaBS = brojStolovaBS,
+                BrojStolovaVS = brojStolovaVS,
+                BrojStolovaS = brojStolovaS,
                 Ocene = null,
                 Organizator = organizator,
                 Dogadjaji = null,
-				SlikaKluba = slikaKluba
+				SlikaKluba = slike.SlikaKluba,
+                MapaKluba = slike.MapaKluba
 
             };
             Context.Klubovi.Add(klub);
@@ -67,11 +70,14 @@ public class KlubController : ControllerBase
                 naziv = m.Naziv,
                 lokacija = m.Lokacija,
                 ocene = m.Ocene,
-                brojStolova = m.BrojStolova,
+                BrojStolovaBS = m.BrojStolovaBS,
+                BrojStolovaVS = m.BrojStolovaVS,
+                BrojStolovaS = m.BrojStolovaS,
                 idOrganizatora = m.Organizator!.ID,
                 usernameOrganizatora = m.Organizator.Username,
-                dogadjaji = m.Dogadjaji
-
+                dogadjaji = m.Dogadjaji,
+                slikaKluba = m.SlikaKluba,
+                mapaKluba = m.MapaKluba
             })
             .ToListAsync();
             return Ok(d);

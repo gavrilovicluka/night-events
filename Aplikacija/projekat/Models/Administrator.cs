@@ -13,10 +13,10 @@ public class Administrator
     public String? Username { get; set; }
 
     [Required]
-    public byte[]? PasswordHash { get; set; }
+    public byte[] PasswordHash { get; set; } = Array.Empty<byte>();
 
     [Required]
-    public byte[]? PasswordSalt { get; set; }
+    public byte[] PasswordSalt { get; set; } = Array.Empty<byte>();
 
     [Required]
     [RegularExpression(@"^([\w.-]+)@([\w-]+)((.(\w){2,3})+)$")]

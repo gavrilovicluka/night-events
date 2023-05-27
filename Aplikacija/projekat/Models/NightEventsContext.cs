@@ -28,6 +28,9 @@ public class NightEventsContext : DbContext
     public DbSet<OcenaMuzickiIzvodjac> OceneIzvodjaca { get; set; }
     
     public DbSet<Sto> Stolovi { get; set; }
+    public DbSet<StoBarski> StoloviBS { get; set; }
+    public DbSet<StoSepare> StoloviS { get; set; }
+    public DbSet<StoVisokoSedenje> StoloviVS { get; set; }
 
 
     public NightEventsContext(DbContextOptions options) : base(options)
@@ -37,6 +40,13 @@ public class NightEventsContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Administrator>(entity =>
+        {
+            entity.Property(e => e.PasswordHash).HasColumnType("longblob");
+            entity.Property(e => e.PasswordSalt).HasColumnType("longblob");
+            entity.Property(e => e.Email).HasColumnType("nvarchar(255)");
+        });
+
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<Organizator>()

@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -11,92 +12,121 @@ namespace projekat.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterDatabase()
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateTable(
                 name: "Administratori",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Username = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    PasswordHash = table.Column<byte[]>(type: "longblob", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "longblob", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(255)", nullable: false),
+                    Ime = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Prezime = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Role = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Administratori", x => x.ID);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Korisnici",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Username = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    PasswordHash = table.Column<byte[]>(type: "longblob", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "longblob", nullable: false),
+                    Email = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Ime = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Prezime = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Role = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Korisnici", x => x.ID);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "MuzickiIzvodjaci",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Zanr = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Username = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    PasswordHash = table.Column<byte[]>(type: "longblob", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "longblob", nullable: false),
+                    Email = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Zanr = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     BrClanova = table.Column<int>(type: "int", nullable: false),
-                    ImeIzvodjaca = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ImeIzvodjaca = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Role = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Status = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MuzickiIzvodjaci", x => x.ID);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Organizatori",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Ime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Prezime = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Fleg = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Username = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    PasswordHash = table.Column<byte[]>(type: "longblob", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "longblob", nullable: false),
+                    Email = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Ime = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Prezime = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Role = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Status = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Organizatori", x => x.ID);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "KomentariIzvodjaci",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Sadrzaj = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Sadrzaj = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     KorisnikID = table.Column<int>(type: "int", nullable: true),
                     MuzickiIzvodjacID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -113,14 +143,15 @@ namespace projekat.Migrations
                         column: x => x.MuzickiIzvodjacID,
                         principalTable: "MuzickiIzvodjaci",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "OceneIzvodjaca",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Ocena = table.Column<int>(type: "int", nullable: false),
                     MuzickiIzvodjacID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -132,16 +163,18 @@ namespace projekat.Migrations
                         column: x => x.MuzickiIzvodjacID,
                         principalTable: "MuzickiIzvodjaci",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "TerminiIzvodjaca",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     MuzickiIzvodjacID = table.Column<int>(type: "int", nullable: false),
-                    Termin = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Termin = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Rezervisan = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -152,16 +185,25 @@ namespace projekat.Migrations
                         principalTable: "MuzickiIzvodjaci",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Klubovi",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false),
-                    Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Lokacija = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    BrojStolova = table.Column<int>(type: "int", nullable: false)
+                    Naziv = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Lokacija = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    SlikaKluba = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    MapaKluba = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    BrojStolovaBS = table.Column<int>(type: "int", nullable: false),
+                    BrojStolovaVS = table.Column<int>(type: "int", nullable: false),
+                    BrojStolovaS = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -172,16 +214,20 @@ namespace projekat.Migrations
                         principalTable: "Organizatori",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Dogadjaji",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DatumIVreme = table.Column<DateTime>(type: "datetime2", nullable: false),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Naziv = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Datum = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    Vreme = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     KlubID = table.Column<int>(type: "int", nullable: true),
                     MuzickiIzvodjacID = table.Column<int>(type: "int", nullable: true),
                     BrojRezervacija = table.Column<int>(type: "int", nullable: false)
@@ -199,14 +245,15 @@ namespace projekat.Migrations
                         column: x => x.MuzickiIzvodjacID,
                         principalTable: "MuzickiIzvodjaci",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "OceneKlubova",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Ocena = table.Column<int>(type: "int", nullable: false),
                     KlubID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -218,14 +265,15 @@ namespace projekat.Migrations
                         column: x => x.KlubID,
                         principalTable: "Klubovi",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Karte",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Cena = table.Column<int>(type: "int", nullable: false),
                     DogadjajID = table.Column<int>(type: "int", nullable: true),
                     KorisnikID = table.Column<int>(type: "int", nullable: true)
@@ -243,15 +291,17 @@ namespace projekat.Migrations
                         column: x => x.KorisnikID,
                         principalTable: "Korisnici",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "KomentariDogadjaji",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Sadrzaj = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Sadrzaj = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     KorisnikID = table.Column<int>(type: "int", nullable: true),
                     DogadjajID = table.Column<int>(type: "int", nullable: true)
                 },
@@ -268,16 +318,20 @@ namespace projekat.Migrations
                         column: x => x.KorisnikID,
                         principalTable: "Korisnici",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Stolovi",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DogadjajID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Status = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DogadjajID = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
@@ -288,14 +342,15 @@ namespace projekat.Migrations
                         principalTable: "Dogadjaji",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Rezervacije",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false),
-                    Datum = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Datum = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     KorisnikID = table.Column<int>(type: "int", nullable: false),
                     DogadjajID = table.Column<int>(type: "int", nullable: false)
                 },
@@ -319,7 +374,8 @@ namespace projekat.Migrations
                         column: x => x.ID,
                         principalTable: "Stolovi",
                         principalColumn: "ID");
-                });
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Dogadjaji_KlubID",

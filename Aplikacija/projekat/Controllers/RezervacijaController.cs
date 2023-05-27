@@ -28,8 +28,9 @@ public class RezervacijaController : ControllerBase
             if(dogadjaj == null)
             {
                 return BadRequest("Ne postoji dati dogadjaj");
-            }           
-            if(dogadjaj.BrojRezervacija == dogadjaj.Klub!.BrojStolova)
+            }    
+            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;       
+            if(dogadjaj.BrojRezervacija == ukupanBrojStolova)
             {
                 return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }

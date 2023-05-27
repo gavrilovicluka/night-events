@@ -46,11 +46,24 @@ public class DogadjajController : ControllerBase
                 Rezervacije = null,
                 Karte = null
             };
-            dogadjaj.Stolovi = new List<Sto>(klub.BrojStolova);
+            int ukupanBrojStolova = klub.BrojStolovaBS + klub.BrojStolovaS + klub.BrojStolovaVS;
+            dogadjaj.Stolovi = new List<Sto>(ukupanBrojStolova);
 
-            for(int i=0; i<klub.BrojStolova; i++)
+            for(int i=0; i<klub.BrojStolovaBS; i++)
             {
-                Sto s = new Sto();
+                StoBarski s = new StoBarski();
+                dogadjaj.Stolovi.Add(s);
+            }
+
+            for(int i=0; i<klub.BrojStolovaS; i++)
+            {
+                StoSepare s = new StoSepare();
+                dogadjaj.Stolovi.Add(s);
+            }
+
+            for(int i=0; i<klub.BrojStolovaVS; i++)
+            {
+                StoVisokoSedenje s = new StoVisokoSedenje();
                 dogadjaj.Stolovi.Add(s);
             }
 

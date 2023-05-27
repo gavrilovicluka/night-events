@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<NightEventsContext> (options => 
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ProjekatCS"));
+    options.UseMySql(builder.Configuration.GetConnectionString("NightEventsCS"), new MySqlServerVersion("8.0.22"));
 });
 
 builder.Services.AddCors(options =>
