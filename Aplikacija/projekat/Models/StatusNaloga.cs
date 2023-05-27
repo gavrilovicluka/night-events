@@ -1,6 +1,6 @@
 public enum StatusNaloga 
 {
-    Odobren,
+    Odobren ,
     NaCekanju,
     Odbijen
 }

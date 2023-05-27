@@ -1,5 +1,5 @@
 export enum StatusNalogaType {
-    Odobren = 'Odobren',
-    NaCekanju = 'NaCekanju',
-    Odbijen = 'Odbijen'
+    Odobren = 0,
+    NaCekanju = 1,
+    Odbijen = 2
 }
