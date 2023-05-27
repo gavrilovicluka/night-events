@@ -1,5 +1,9 @@
+import KlubType from "./KlubType";
+
 export default class DogadjajType {
     id?: number;
     naziv?: string;
-    datumIVreme?: Date;
+    datum?: Date;
+    vreme?: string;
+    klub?: KlubType;
 }
