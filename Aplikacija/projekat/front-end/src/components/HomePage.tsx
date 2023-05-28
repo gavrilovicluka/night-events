@@ -125,35 +125,35 @@ function HomePage() {
     <>
       <HomePageNavbar />
 
-        <Container className="px-4 px-lg-5" style={{ borderRadius: "12px" }}>
-         <Row className="gx-6 gx-lg-10 align-items-center my-5"> 
-  
-        
-        <Carousel className="multi-carousel" style={{ maxWidth: '35rem' }}>
-  <Carousel.Item style={{borderRadius:"12px"}}>
-  
-    <img
-      src="../assets/klub.jpg"
-      alt="slika1"
-      style={{ objectFit: 'cover', height: '350px'}}
-    />
-  </Carousel.Item>
-  <Carousel.Item >
-  
-    <img
-      src="../assets/slikaProbaZaAbout.jpg"
-      alt="slika2"
-      style={{ objectFit: 'cover', height: '350px'}}
-    />
-  </Carousel.Item>
-  <Carousel.Item >
-    <img
-      src="../assets/background.jpg"
-      alt="slika3"
-      style={{ objectFit: 'cover', height: '350px'}}
-    />
-  </Carousel.Item>
-</Carousel> 
+      <Container className="px-4 px-lg-5" style={{ borderRadius: "12px" }}>
+        <Row className="gx-6 gx-lg-10 align-items-center my-5">
+
+
+          <Carousel className="multi-carousel" style={{ maxWidth: '35rem' }} interval={1000}>
+            <Carousel.Item style={{ borderRadius: "12px" }}>
+
+              <img
+                src="../assets/klub.jpg"
+                alt="slika1"
+                style={{ objectFit: 'cover', height: '350px' }}
+              />
+            </Carousel.Item>
+            <Carousel.Item >
+
+              <img
+                src="../assets/slikaProbaZaAbout.jpg"
+                alt="slika2"
+                style={{ objectFit: 'cover', height: '350px' }}
+              />
+            </Carousel.Item>
+            <Carousel.Item >
+              <img
+                src="../assets/background.jpg"
+                alt="slika3"
+                style={{ objectFit: 'cover', height: '350px' }}
+              />
+            </Carousel.Item>
+          </Carousel>
           <Col lg={5}>
             <h1 className="font-weight-light">Business Name or Tagline</h1>
             <p>
@@ -165,79 +165,63 @@ function HomePage() {
             <Button className="btn-primary">Call to Action!</Button>
           </Col>
         </Row></Container>
-        <Card className="text-white bg-secondary my-5 py-4 text-center">
-          <Container>
-            <Form method="get" id="searchForm">
-              <Row>
-                <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-                  <Form.Select
-                    id="date"
-                    name="date"
-                    className="form-control bg-dark text-light"
-                    value={selectedDate}
-                    onChange={(e) => setSelectedDate(e.target.value)}
-                  >
-                    {dateOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </Form.Select>
-                </Col>
-                <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-                  <Form.Control
-                    type="text"
-                    id="place_name"
-                    name="place_name"
-                    placeholder="Ime kluba..."
-                    className="form-control bg-dark text-light"
-                  />
-                </Col>
-                <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-                  <Form.Select
-                    id="type_id"
-                    name="type_id"
-                    className="form-control bg-dark text-light"
-                  >
-                    <option value="">Sva muzika</option>
-                    <option value="1">Narodna / Pop / Folk</option>
-                    <option value="2">Kafanska / Starogradska</option>
-                    <option value="3">Hip Hop / Rap / Trap / RnB</option>
-                    <option value="4">House / Electro / Techno</option>
-                    <option value="11">Pop</option>
-                    <option value="7">Rock / Punk</option>
-                    <option value="8">Jazz</option>
-                    <option value="9">Metal</option>
-                    <option value="10">Latino</option>
-                    <option value="undefined">Nedefinisano</option>
-                  </Form.Select>
-                </Col>
-              </Row>
-            </Form>
-          </Container>
-        </Card>
-        <Row className="gx-4 gx-lg-5">
-          { eventsList.length != 0 ?  <HomePageEventCard dogadjaji={eventsList} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}     
-        </Row>
-    
+      <Card className="text-white bg-secondary my-5 py-4 text-center">
+        <Container>
+          <Form method="get" id="searchForm">
+            <Row>
+              <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
+                <Form.Select
+                  id="date"
+                  name="date"
+                  className="form-control bg-dark text-light"
+                  value={selectedDate}
+                  onChange={(e) => setSelectedDate(e.target.value)}
+                >
+                  {dateOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </Form.Select>
+              </Col>
+              <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
+                <Form.Control
+                  type="text"
+                  id="place_name"
+                  name="place_name"
+                  placeholder="Ime kluba..."
+                  className="form-control bg-dark text-light"
+                />
+              </Col>
+              <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
+                <Form.Select
+                  id="type_id"
+                  name="type_id"
+                  className="form-control bg-dark text-light"
+                >
+                  <option value="">Sva muzika</option>
+                  <option value="1">Narodna / Pop / Folk</option>
+                  <option value="2">Kafanska / Starogradska</option>
+                  <option value="3">Hip Hop / Rap / Trap / RnB</option>
+                  <option value="4">House / Electro / Techno</option>
+                  <option value="11">Pop</option>
+                  <option value="7">Rock / Punk</option>
+                  <option value="8">Jazz</option>
+                  <option value="9">Metal</option>
+                  <option value="10">Latino</option>
+                  <option value="undefined">Nedefinisano</option>
+                </Form.Select>
+              </Col>
+            </Row>
+          </Form>
+        </Container>
+      </Card>
+      <Row className="gx-4 gx-lg-5">
+        {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
+      </Row>
+
     </>
   );
 }
 
 export default HomePage;
-
-// <Col md={4} mb={5}>
-//   <Card className="h-100">
-//     <Card.Body>
-//       <Card.Title>Card Three</Card.Title>
-//       <Card.Text>
-//         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas
-//         ex numquam, maxime minus quam molestias corporis quod, ea minima
-//         accusamus.
-//       </Card.Text>
-//     </Card.Body>
-//     <Card.Footer>
-//       <Button className="btn-primary btn-sm">More Info</Button>
-//     </Card.Footer>
-//   </Card>
-// </Col>;
