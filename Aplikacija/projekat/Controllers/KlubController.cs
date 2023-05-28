@@ -57,7 +57,7 @@ public class KlubController : ControllerBase
     }
 
 
-    [Authorize]
+    //[Authorize]
     [Route("VratiKlubove")]
     [HttpGet]
     public async Task<ActionResult> VratiKlubove()
