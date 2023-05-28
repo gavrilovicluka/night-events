@@ -100,14 +100,14 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "Muzicar")]
-    [Route("PostaviSlobodanTermin/{idIzvodjaca}")]
-    [HttpPut]
-    public async Task<ActionResult> PostaviSlobodanTermin([FromBody] DateTime datum, int idIzvodjaca)
+    //[Authorize(Roles = "Muzicar")]
+    [Route("PostaviSlobodanTermin")]
+    [HttpPost]
+    public async Task<ActionResult> PostaviSlobodanTermin([FromBody] TerminIzvodjacaDTO terminDto)
     {
         try
         {
-            var izvodjac = await Context.MuzickiIzvodjaci.Where(p=>p.ID==idIzvodjaca).FirstOrDefaultAsync();
+            var izvodjac = await Context.MuzickiIzvodjaci.Where(p=>p.ID==terminDto.IdIzvodjaca).FirstOrDefaultAsync();
 
             if(izvodjac == null)
             {
@@ -122,7 +122,7 @@ public class MuzickiIzvodjacController : ControllerBase
             var noviTermin = new TerminiIzvodjaca 
             {
                 MuzickiIzvodjac = izvodjac,
-                Termin = datum
+                Termin = terminDto.Datum
             };
 
             Context.TerminiIzvodjaca.Add(noviTermin);
@@ -271,7 +271,7 @@ public class MuzickiIzvodjacController : ControllerBase
     }
 	
 
-    [Authorize(Roles="Muzicar, Organizator")]
+    //[Authorize(Roles="Muzicar, Organizator")]
     [Route("VratiListuTermina/{idIzvodjaca}")]
     [HttpGet]
     public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)
