@@ -3926,15 +3926,20 @@
   },
   "packageFolders": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\Andriana\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
 =======
     "C:\\Users\\X\\.nuget\\packages\\": {}
 >>>>>>> Pregled-klubova-i-dodavanje
+=======
+    "C:\\Users\\My PC\\.nuget\\packages\\": {}
+>>>>>>> organizator-page-moji-dogadjaji
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
       "projectName": "projekat",
@@ -3948,17 +3953,28 @@
       "packagesPath": "C:\\Users\\X\\.nuget\\packages\\",
       "outputPath": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
 >>>>>>> Pregled-klubova-i-dodavanje
+=======
+      "projectUniqueName": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "projectName": "projekat",
+      "projectPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
+>>>>>>> organizator-page-moji-dogadjaji
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "C:\\Users\\Andriana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
 =======
         "C:\\Users\\X\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> Pregled-klubova-i-dodavanje
+=======
+        "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> organizator-page-moji-dogadjaji
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

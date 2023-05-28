@@ -9,6 +9,7 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = projekat
 build_property.RootNamespace = projekat
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -21,4 +22,11 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat
 >>>>>>> Pregled-klubova-i-dodavanje
+=======
+build_property.ProjectDir = C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat
+>>>>>>> organizator-page-moji-dogadjaji
 build_property._RazorSourceGeneratorDebug = 
