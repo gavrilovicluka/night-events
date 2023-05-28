@@ -87,7 +87,7 @@ public class OrganizatorController : ControllerBase
 
     }
 
-    [Authorize(Roles = "Admin")]
+   //  [Authorize(Roles = "Admin")]
     [Route("VratiOrganizatore")]
     [HttpGet]
     public async Task<ActionResult> VratiOrganizatore()
@@ -98,6 +98,7 @@ public class OrganizatorController : ControllerBase
 
             var d = organizatori.Select(m => new
             {
+                id=m.ID,
                 ime = m.Ime,
                 prezime = m.Prezime,
                 email = m.Email,
@@ -114,5 +115,7 @@ public class OrganizatorController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    
     
 }

@@ -93,33 +93,33 @@ public class AdministratorController : ControllerBase
 
     }
 
-     [HttpPut("OdobriNalog/{idIzvodjaca}")]
-    public async Task<ActionResult> OdobriNalog(int idIzvodjaca)
+     [HttpPut("OdobriNalog/{idOrganizatora}")]
+    public async Task<ActionResult> OdobriNalog(int idOrganizatora)
     {
-        var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+        var organizator = await Context.Organizatori.FindAsync(idOrganizatora);
 
-        if (izvodjac == null)
+        if (organizator == null)
         {
-            return BadRequest("Ne postoji izvodjac");
+            return BadRequest("Ne postoji organizator");
         }
 
-        izvodjac.Status = StatusNaloga.Odobren;
+        organizator.Status = StatusNaloga.Odobren;
         Context.SaveChanges();
 
         return Ok();
     }
 
-    [HttpPut("OdbijNalog/{idIzvodjaca}")]
-    public async Task<ActionResult> OdbijNalog(int idIzvodjaca)
+    [HttpPut("OdbijNalog/{idOrganizatora}")]
+    public async Task<ActionResult> OdbijNalog(int idOrganizatora)
     {
-        var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+        var organizator = await Context.Organizatori.FindAsync(idOrganizatora);
 
-        if (izvodjac == null)
+        if (organizator == null)
         {
-            return BadRequest("Ne postoji izvodjac");
+            return BadRequest("Ne postoji organizator");
         }
 
-        izvodjac.Status = StatusNaloga.Odbijen;
+        organizator.Status = StatusNaloga.Odbijen;
         Context.SaveChanges();
 
         return Ok();
