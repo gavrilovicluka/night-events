@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {
   Button,
   Card,
+  Carousel,
   Col,
   Container,
   Figure,
@@ -124,17 +125,35 @@ function HomePage() {
     <>
       <HomePageNavbar />
 
-      <Container className="px-4 px-lg-5">
-        <Row className="gx-4 gx-lg-5 align-items-center my-5">
-          <Col lg={7}>
-            <Figure>
-              <Figure.Image
-                className="img-fluid rounded mb-4 mb-lg-0"
-                src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-            </Figure>
-          </Col>
+        <Container className="px-4 px-lg-5" style={{ borderRadius: "12px" }}>
+         <Row className="gx-6 gx-lg-10 align-items-center my-5"> 
+  
+        
+        <Carousel className="multi-carousel" style={{ maxWidth: '35rem' }}>
+  <Carousel.Item style={{borderRadius:"12px"}}>
+  
+    <img
+      src="../assets/klub.jpg"
+      alt="slika1"
+      style={{ objectFit: 'cover', height: '350px'}}
+    />
+  </Carousel.Item>
+  <Carousel.Item >
+  
+    <img
+      src="../assets/slikaProbaZaAbout.jpg"
+      alt="slika2"
+      style={{ objectFit: 'cover', height: '350px'}}
+    />
+  </Carousel.Item>
+  <Carousel.Item >
+    <img
+      src="../assets/background.jpg"
+      alt="slika3"
+      style={{ objectFit: 'cover', height: '350px'}}
+    />
+  </Carousel.Item>
+</Carousel> 
           <Col lg={5}>
             <h1 className="font-weight-light">Business Name or Tagline</h1>
             <p>
@@ -145,7 +164,7 @@ function HomePage() {
             </p>
             <Button className="btn-primary">Call to Action!</Button>
           </Col>
-        </Row>
+        </Row></Container>
         <Card className="text-white bg-secondary my-5 py-4 text-center">
           <Container>
             <Form method="get" id="searchForm">
@@ -200,7 +219,7 @@ function HomePage() {
         <Row className="gx-4 gx-lg-5">
           { eventsList.length != 0 ?  <HomePageEventCard dogadjaji={eventsList} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}     
         </Row>
-      </Container>
+    
     </>
   );
 }
