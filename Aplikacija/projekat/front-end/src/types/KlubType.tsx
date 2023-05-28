@@ -7,7 +7,9 @@ export default class KlubType {
     lokacija?: string;
     slikaKluba?: string;
     ocene?: OcenaKlubType[] | null;
-    kapacitet?: number;
+    brojStolovaBS?: number;
+    brojStolovaVS?: number;
+    brojStolovaS?: number;
     idOrganizatora?: number | null;
     usernameOrganizatora?: string | null;
     dogadjaji?: DogadjajType[] | null;

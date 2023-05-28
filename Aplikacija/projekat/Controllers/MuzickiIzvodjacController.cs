@@ -86,7 +86,10 @@ public class MuzickiIzvodjacController : ControllerBase
                 PasswordSalt = PasswordSalt,   
                 Zanr = muzickiIzvodjacDto.Zanr,
                 BrClanova = muzickiIzvodjacDto.BrClanova,
-                ImeIzvodjaca = muzickiIzvodjacDto.ImeIzvodjaca
+                ImeIzvodjaca = muzickiIzvodjacDto.ImeIzvodjaca,
+                Dogadjaji = null,
+                Termini = null,
+                Ocene = null
             };
 
             Context.MuzickiIzvodjaci.Add(muzIzv);

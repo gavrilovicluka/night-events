@@ -16,10 +16,10 @@ public class DogadjajController : ControllerBase
         Context = context;
     }
 
-    [Authorize(Roles = "Organizator")]
-    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}/{datum}")]
+    //[Authorize(Roles = "Organizator")]
+    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}")]
     [HttpPost]
-    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, DateTime datum, [FromBody] String vreme)
+    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, [FromBody] DatumIVremeDTO datumIVreme)
     {
         try
         {
@@ -37,9 +37,9 @@ public class DogadjajController : ControllerBase
 
             var dogadjaj = new Dogadjaj
             {               
-                Naziv=naziv,
-                Datum = datum,
-                Vreme = vreme,
+                Naziv = naziv,
+                Datum = datumIVreme.Datum,
+                Vreme = datumIVreme.Vreme,
                 Klub = klub,
                 MuzickiIzvodjac = izvodjac,
                 KomentariDogadjaj = null,
@@ -78,8 +78,93 @@ public class DogadjajController : ControllerBase
         }
     }
 
+    //[Authorize(Roles = "Organizator")]
+    [Route("DodajDogadjajBezIzvodjaca/{idKluba}/{naziv}")]
+    [HttpPost]
+    public async Task<ActionResult> DodajDogadjaj(int idKluba, String naziv, [FromBody] DatumIVremeDTO datumIVreme)
+    {
+        try
+        {
+            var klub = await Context.Klubovi.FindAsync(idKluba);
+            if(klub == null)
+            {
+                return BadRequest("Klub ne postoji");
+            }
 
-    [Authorize]
+            var dogadjaj = new Dogadjaj
+            {               
+                Naziv = naziv,
+                Datum = datumIVreme.Datum,
+                Vreme = datumIVreme.Vreme,
+                Klub = klub,
+                MuzickiIzvodjac = null,
+                KomentariDogadjaj = null,
+                Rezervacije = null,
+                Karte = null
+            };
+            int ukupanBrojStolova = klub.BrojStolovaBS + klub.BrojStolovaS + klub.BrojStolovaVS;
+            dogadjaj.Stolovi = new List<Sto>(ukupanBrojStolova);
+
+            for(int i=0; i<klub.BrojStolovaBS; i++)
+            {
+                StoBarski s = new StoBarski();
+                dogadjaj.Stolovi.Add(s);
+            }
+
+            for(int i=0; i<klub.BrojStolovaS; i++)
+            {
+                StoSepare s = new StoSepare();
+                dogadjaj.Stolovi.Add(s);
+            }
+
+            for(int i=0; i<klub.BrojStolovaVS; i++)
+            {
+                StoVisokoSedenje s = new StoVisokoSedenje();
+                dogadjaj.Stolovi.Add(s);
+            }
+
+            Context.Dogadjaji.Add(dogadjaj);
+            await Context.SaveChangesAsync();
+
+            return Ok(dogadjaj);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    //[Authorize(Roles = "Organizator")]  
+    [Route("DodeliIzvodjaca/{idDogadjaja}/{idIzvodjaca}")]
+    [HttpPut]
+    public async Task<ActionResult> DodeliIzvodjaca(int idDogadjaja, int idIzvodjaca)
+    {
+        try
+        {
+            var dogadjaj = await Context.Dogadjaji.FindAsync(idDogadjaja);
+            if(dogadjaj == null)
+            {
+                return BadRequest("Dogadjaj ne postoji");
+            }
+
+            var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+            if(izvodjac == null)
+            {
+                return BadRequest("Muzicki izvodjac ne postoji");
+            }
+            dogadjaj.MuzickiIzvodjac = izvodjac;
+            Context.Dogadjaji.Update(dogadjaj);
+            await Context.SaveChangesAsync();
+
+            return Ok(dogadjaj);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    //[Authorize]
     [Route("VratiDogadjajeKluba/{idKluba}")]
     [HttpGet]
     public async Task<ActionResult> VratiDogadjajeKluba(int idKluba)
@@ -99,7 +184,12 @@ public class DogadjajController : ControllerBase
                 id = m.ID,
                 naziv = m.Naziv,
                 nazivKluba = m.Klub!.Naziv,
-                idKluba = m.Klub.ID,               
+                idKluba = m.Klub.ID, 
+                datum = m.Datum,
+                vreme = m.Vreme,
+                brojRezervacija = m.BrojRezervacija,
+                rezervacije = m.Rezervacije,
+                izvodjac = m.MuzickiIzvodjac          
             })
             .ToListAsync();
 
