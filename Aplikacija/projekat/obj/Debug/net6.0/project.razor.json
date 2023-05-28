@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "SerializedFilePath": "c:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
   "FilePath": "c:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+=======
+  "SerializedFilePath": "d:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
+  "FilePath": "d:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+>>>>>>> Pregled-klubova-i-dodavanje
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -13,7 +18,11 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+<<<<<<< HEAD
         "HashCode": -390378019,
+=======
+        "HashCode": -1500251953,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -97,7 +106,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -527663079,
+=======
+        "HashCode": 1928982279,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -182,7 +195,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1627543801,
+=======
+        "HashCode": 193401093,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -215,7 +232,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1926585498,
+=======
+        "HashCode": 1096451297,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -249,7 +270,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 350865856,
+=======
+        "HashCode": 1546207777,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -270,7 +295,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1828902345,
+=======
+        "HashCode": -1166362347,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -292,7 +321,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2050651118,
+=======
+        "HashCode": -1535289731,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -397,7 +430,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 943912292,
+=======
+        "HashCode": 1512570993,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -503,7 +540,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -943482930,
+=======
+        "HashCode": 1792487035,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -536,7 +577,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 492049641,
+=======
+        "HashCode": -1978314947,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -570,7 +615,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1503937575,
+=======
+        "HashCode": -1520643332,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -603,7 +652,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -755436391,
+=======
+        "HashCode": -900456639,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -637,7 +690,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1824518764,
+=======
+        "HashCode": -73584324,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -670,7 +727,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -285318225,
+=======
+        "HashCode": -619099879,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -704,7 +765,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 170176197,
+=======
+        "HashCode": 2076443180,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -725,7 +790,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 688449576,
+=======
+        "HashCode": 2016899824,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -747,7 +816,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -896264234,
+=======
+        "HashCode": -218594906,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -778,7 +851,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1033767769,
+=======
+        "HashCode": 1695307229,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -810,7 +887,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -898800923,
+=======
+        "HashCode": -543105354,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -831,7 +912,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1688550073,
+=======
+        "HashCode": 1962883594,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -853,7 +938,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1985298947,
+=======
+        "HashCode": 285582295,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -928,7 +1017,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -431494953,
+=======
+        "HashCode": 187779170,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1004,7 +1097,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 378922454,
+=======
+        "HashCode": -734001199,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1025,7 +1122,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1929647213,
+=======
+        "HashCode": 1538339202,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1047,7 +1148,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1051634041,
+=======
+        "HashCode": -1778865852,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1089,7 +1194,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1642095473,
+=======
+        "HashCode": 1310564501,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1132,7 +1241,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 379707413,
+=======
+        "HashCode": 657842262,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1174,7 +1287,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1843899844,
+=======
+        "HashCode": -1824963440,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1217,7 +1334,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 518629704,
+=======
+        "HashCode": -1031667032,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1238,7 +1359,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2077285087,
+=======
+        "HashCode": -1470609334,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1260,7 +1385,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 499030571,
+=======
+        "HashCode": 679815421,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1302,7 +1431,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1677459337,
+=======
+        "HashCode": -515082980,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1345,7 +1478,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1150290214,
+=======
+        "HashCode": 1872051618,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1453,7 +1590,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -945761751,
+=======
+        "HashCode": -2055698244,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1562,7 +1703,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1637234293,
+=======
+        "HashCode": -28973390,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1583,7 +1728,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -941558021,
+=======
+        "HashCode": 771674727,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1605,7 +1754,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -951328866,
+=======
+        "HashCode": -1057584772,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1638,7 +1791,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2055983160,
+=======
+        "HashCode": -164031240,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1672,7 +1829,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1033585339,
+=======
+        "HashCode": -1154932117,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1693,7 +1854,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -3507261,
+=======
+        "HashCode": 18938924,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1715,7 +1880,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1695524488,
+=======
+        "HashCode": -1929637260,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -1734,7 +1903,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1432715075,
+=======
+        "HashCode": 799860137,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -1754,7 +1927,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 64439672,
+=======
+        "HashCode": -2053872933,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1859,7 +2036,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 328405540,
+=======
+        "HashCode": -1046240872,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1965,7 +2146,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1038404834,
+=======
+        "HashCode": 1760201829,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1998,7 +2183,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -13910386,
+=======
+        "HashCode": -1737948865,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2032,7 +2221,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2138305404,
+=======
+        "HashCode": -1072634077,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2104,7 +2297,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -303212514,
+=======
+        "HashCode": 1317633810,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2177,7 +2374,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1624243138,
+=======
+        "HashCode": -549675654,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2285,7 +2486,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 788563049,
+=======
+        "HashCode": -339525539,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2394,7 +2599,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1071530253,
+=======
+        "HashCode": 75400449,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2436,7 +2645,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1519510854,
+=======
+        "HashCode": -369296796,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2479,7 +2692,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1626076516,
+=======
+        "HashCode": -158405113,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2576,7 +2793,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 632925549,
+=======
+        "HashCode": -1947494500,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2674,7 +2895,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1479912458,
+=======
+        "HashCode": 833021044,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2738,7 +2963,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 459750611,
+=======
+        "HashCode": -890281285,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2803,7 +3032,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1966876483,
+=======
+        "HashCode": -1427600862,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2911,7 +3144,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1904904844,
+=======
+        "HashCode": 557828333,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3020,7 +3257,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1400932519,
+=======
+        "HashCode": -776838390,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3041,7 +3282,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1714139276,
+=======
+        "HashCode": -1629415240,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3063,7 +3308,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1167886382,
+=======
+        "HashCode": 671819864,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3161,7 +3410,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2113976284,
+=======
+        "HashCode": 384874150,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3260,7 +3513,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1959340401,
+=======
+        "HashCode": -1216287981,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3281,7 +3538,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1444106367,
+=======
+        "HashCode": -1327972920,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3303,7 +3564,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 465718872,
+=======
+        "HashCode": 964522122,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3375,7 +3640,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1426803077,
+=======
+        "HashCode": 1781551218,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3448,7 +3717,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1045733847,
+=======
+        "HashCode": -288985536,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3520,7 +3793,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -425515716,
+=======
+        "HashCode": 1818988541,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3593,7 +3870,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 373633504,
+=======
+        "HashCode": -862020075,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3647,7 +3928,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -462377223,
+=======
+        "HashCode": -896914225,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3702,7 +3987,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1224356224,
+=======
+        "HashCode": 1921235308,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3743,7 +4032,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1344226738,
+=======
+        "HashCode": 852611505,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3785,7 +4078,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1719898785,
+=======
+        "HashCode": 1426816694,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3826,7 +4123,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1315631977,
+=======
+        "HashCode": 371800591,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3868,7 +4169,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -49444988,
+=======
+        "HashCode": -621946368,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3931,7 +4236,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -862553132,
+=======
+        "HashCode": -357847382,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3995,7 +4304,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 61205814,
+=======
+        "HashCode": -1248301981,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4016,7 +4329,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1091623903,
+=======
+        "HashCode": 1932140119,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4038,7 +4355,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 158502426,
+=======
+        "HashCode": -1165789736,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4070,7 +4391,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1439917536,
+=======
+        "HashCode": 60281713,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4103,7 +4428,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 736097357,
+=======
+        "HashCode": 572326668,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4124,7 +4453,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -284658289,
+=======
+        "HashCode": -1923976643,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4146,7 +4479,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1992572683,
+=======
+        "HashCode": 2007393316,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4165,7 +4502,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1343464981,
+=======
+        "HashCode": -1936623931,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4185,7 +4526,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1023777544,
+=======
+        "HashCode": -2111716230,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4217,7 +4562,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 561261494,
+=======
+        "HashCode": 1844423787,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4250,7 +4599,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -805601922,
+=======
+        "HashCode": 40640107,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4271,7 +4624,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -236734924,
+=======
+        "HashCode": 2137519696,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4293,7 +4650,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -736133818,
+=======
+        "HashCode": -1283346509,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4356,7 +4717,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -930870512,
+=======
+        "HashCode": 1528487875,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4420,7 +4785,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2033346599,
+=======
+        "HashCode": -1371924552,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4441,7 +4810,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 379975875,
+=======
+        "HashCode": -1696081333,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4463,7 +4836,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1037847636,
+=======
+        "HashCode": 1053270696,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4496,7 +4873,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1940437964,
+=======
+        "HashCode": 993893932,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4530,7 +4911,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1205434722,
+=======
+        "HashCode": -2060673596,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4652,7 +5037,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1544311288,
+=======
+        "HashCode": 963753213,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4775,7 +5164,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 722209670,
+=======
+        "HashCode": 405452036,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4808,7 +5201,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1123304224,
+=======
+        "HashCode": -515965331,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4842,7 +5239,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2100994652,
+=======
+        "HashCode": 791637750,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4875,7 +5276,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1521337069,
+=======
+        "HashCode": -355462435,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4909,7 +5314,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -310225885,
+=======
+        "HashCode": 1826718253,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4942,7 +5351,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1621319287,
+=======
+        "HashCode": -636697929,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4976,7 +5389,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1114874576,
+=======
+        "HashCode": -1360788012,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onfocus",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5059,7 +5476,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1694990877,
+=======
+        "HashCode": 1006483542,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onblur",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5142,7 +5563,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1475450898,
+=======
+        "HashCode": -415608599,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onfocusin",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5225,7 +5650,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1456549399,
+=======
+        "HashCode": 267988356,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onfocusout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5308,7 +5737,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -819382357,
+=======
+        "HashCode": -1548630999,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onmouseover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5391,7 +5824,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1756975906,
+=======
+        "HashCode": -1831449395,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onmouseout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5474,7 +5911,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1995951558,
+=======
+        "HashCode": 1878612307,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onmousemove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5557,7 +5998,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1440758815,
+=======
+        "HashCode": -460425337,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onmousedown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5640,7 +6085,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2037334816,
+=======
+        "HashCode": -723390994,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onmouseup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5723,7 +6172,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 194795568,
+=======
+        "HashCode": -1740675722,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5806,7 +6259,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 185400800,
+=======
+        "HashCode": -1480397676,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondblclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5889,7 +6346,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1648650337,
+=======
+        "HashCode": 2140654393,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onwheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5972,7 +6433,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -393265353,
+=======
+        "HashCode": -763109466,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onmousewheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6055,7 +6520,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -263570716,
+=======
+        "HashCode": 80362223,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oncontextmenu",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6138,7 +6607,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1613806952,
+=======
+        "HashCode": 1460836997,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondrag",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6221,7 +6694,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1167946196,
+=======
+        "HashCode": -266782384,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondragend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6304,7 +6781,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1440859037,
+=======
+        "HashCode": -1403203832,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondragenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6387,7 +6868,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1718576391,
+=======
+        "HashCode": -2109619695,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondragleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6470,7 +6955,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 763027002,
+=======
+        "HashCode": 218127297,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondragover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6553,7 +7042,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 296327575,
+=======
+        "HashCode": -2037665985,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondragstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6636,7 +7129,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 708578995,
+=======
+        "HashCode": -1664971721,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondrop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6719,7 +7216,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -650054936,
+=======
+        "HashCode": 147664122,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onkeydown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6802,7 +7303,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -869479994,
+=======
+        "HashCode": -615613459,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onkeyup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6885,7 +7390,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2051194773,
+=======
+        "HashCode": -1896599577,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onkeypress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6968,7 +7477,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1175968628,
+=======
+        "HashCode": -1305768617,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7051,7 +7564,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2049956815,
+=======
+        "HashCode": 366045373,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oninput",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7134,7 +7651,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -880350157,
+=======
+        "HashCode": -2017411011,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oninvalid",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7217,7 +7738,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1884562286,
+=======
+        "HashCode": -913139322,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onreset",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7300,7 +7825,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1680333690,
+=======
+        "HashCode": 1974480572,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onselect",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7383,7 +7912,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 408562073,
+=======
+        "HashCode": -468451278,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onselectstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7466,7 +7999,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1392793123,
+=======
+        "HashCode": 1012488531,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onselectionchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7549,7 +8086,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1161311654,
+=======
+        "HashCode": 1388455503,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onsubmit",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7632,7 +8173,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1749091822,
+=======
+        "HashCode": -1792596926,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onbeforecopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7715,7 +8260,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 211933113,
+=======
+        "HashCode": 783760332,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onbeforecut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7798,7 +8347,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1755701044,
+=======
+        "HashCode": -501575715,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onbeforepaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7881,7 +8434,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2034808316,
+=======
+        "HashCode": 1700228106,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oncopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7964,7 +8521,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1663125666,
+=======
+        "HashCode": 1554148942,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oncut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8047,7 +8608,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1246119612,
+=======
+        "HashCode": 353294263,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8130,7 +8695,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -506539073,
+=======
+        "HashCode": -1863463855,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontouchcancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8213,7 +8782,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 386606380,
+=======
+        "HashCode": 831810218,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontouchend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8296,7 +8869,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -3631563,
+=======
+        "HashCode": 95165252,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontouchmove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8379,7 +8956,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 364665584,
+=======
+        "HashCode": -1114455107,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontouchstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8462,7 +9043,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2141843691,
+=======
+        "HashCode": 1088242859,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontouchenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8545,7 +9130,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -895131880,
+=======
+        "HashCode": -30616873,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontouchleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8628,7 +9217,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 993005047,
+=======
+        "HashCode": 1498790471,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ongotpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8711,7 +9304,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2050713033,
+=======
+        "HashCode": 1998196983,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onlostpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8794,7 +9391,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1650332518,
+=======
+        "HashCode": -1378197137,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointercancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8877,7 +9478,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 142152841,
+=======
+        "HashCode": -1141078364,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerdown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8960,7 +9565,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 846016650,
+=======
+        "HashCode": -480233265,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9043,7 +9652,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1147710822,
+=======
+        "HashCode": -866207463,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9126,7 +9739,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1582411123,
+=======
+        "HashCode": -776396904,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointermove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9209,7 +9826,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1059123283,
+=======
+        "HashCode": -1716891931,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9292,7 +9913,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 873061012,
+=======
+        "HashCode": -936020749,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9375,7 +10000,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2132190815,
+=======
+        "HashCode": 811728625,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9458,7 +10087,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1165000575,
+=======
+        "HashCode": -2145227744,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oncanplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9541,7 +10174,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1740256448,
+=======
+        "HashCode": 1873348366,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oncanplaythrough",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9624,7 +10261,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -841271081,
+=======
+        "HashCode": 1285830995,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "oncuechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9707,7 +10348,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -391902885,
+=======
+        "HashCode": -2104862704,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondurationchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9790,7 +10435,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -723900707,
+=======
+        "HashCode": 1042610751,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onemptied",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9873,7 +10522,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -677593173,
+=======
+        "HashCode": 1397222859,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpause",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9956,7 +10609,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -207408373,
+=======
+        "HashCode": 650945144,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10039,7 +10696,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1398037417,
+=======
+        "HashCode": -1715786615,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onplaying",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10122,7 +10783,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1915177253,
+=======
+        "HashCode": -1496765502,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onratechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10205,7 +10870,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1696287744,
+=======
+        "HashCode": 1110249777,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onseeked",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10288,7 +10957,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1646096776,
+=======
+        "HashCode": -450254586,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onseeking",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10371,7 +11044,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1712963567,
+=======
+        "HashCode": -379427742,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onstalled",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10454,7 +11131,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 941256498,
+=======
+        "HashCode": -557415592,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onstop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10537,7 +11218,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -762771890,
+=======
+        "HashCode": -1129958285,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onsuspend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10620,7 +11305,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2071700613,
+=======
+        "HashCode": 1904423605,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontimeupdate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10703,7 +11392,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1596502372,
+=======
+        "HashCode": -215145061,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onvolumechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10786,7 +11479,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2123274319,
+=======
+        "HashCode": 198226135,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onwaiting",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10869,7 +11566,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1615123654,
+=======
+        "HashCode": 1115047956,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onloadstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10952,7 +11653,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -112048861,
+=======
+        "HashCode": -1094026316,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontimeout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11035,7 +11740,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 974691159,
+=======
+        "HashCode": -1751299559,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onabort",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11118,7 +11827,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -606990086,
+=======
+        "HashCode": -246588273,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onload",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11201,7 +11914,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -401230351,
+=======
+        "HashCode": -1949214550,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onloadend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11284,7 +12001,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 23792619,
+=======
+        "HashCode": -1818480327,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onprogress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11367,7 +12088,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 688572715,
+=======
+        "HashCode": -1065967700,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11450,7 +12175,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 665257525,
+=======
+        "HashCode": -694385492,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11533,7 +12262,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1033570327,
+=======
+        "HashCode": 953679590,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onbeforeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11616,7 +12349,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -472348237,
+=======
+        "HashCode": 767984075,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onbeforedeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11699,7 +12436,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -188004994,
+=======
+        "HashCode": -1650513921,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ondeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11782,7 +12523,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 260445182,
+=======
+        "HashCode": -1956855117,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onended",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11865,7 +12610,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -778296971,
+=======
+        "HashCode": 1162956743,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11948,7 +12697,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -34848572,
+=======
+        "HashCode": -1098818026,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12031,7 +12784,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -686817936,
+=======
+        "HashCode": 1842521878,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onloadeddata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12114,7 +12871,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1924535664,
+=======
+        "HashCode": 1397411024,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onloadedmetadata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12197,7 +12958,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 432144036,
+=======
+        "HashCode": -152207477,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12280,7 +13045,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 557233376,
+=======
+        "HashCode": -929560246,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12363,7 +13132,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1318581996,
+=======
+        "HashCode": -1926600459,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onreadystatechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12446,7 +13219,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -781151415,
+=======
+        "HashCode": 1279603241,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "onscroll",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12529,7 +13306,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1761211268,
+=======
+        "HashCode": -1134436100,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.EventHandler",
         "Name": "ontoggle",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12612,7 +13393,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1788597875,
+=======
+        "HashCode": 289526949,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Splat",
         "Name": "Attributes",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12651,7 +13436,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1939591259,
+=======
+        "HashCode": -488461122,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.Razor",
@@ -12968,7 +13757,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 114914553,
+=======
+        "HashCode": 1642686879,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -13167,7 +13960,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -423603501,
+=======
+        "HashCode": -1147014681,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.CacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -13296,7 +14093,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 28467002,
+=======
+        "HashCode": -1430347945,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ComponentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -13353,7 +14154,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1959120842,
+=======
+        "HashCode": 934788989,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.DistributedCacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -13487,7 +14292,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -965908028,
+=======
+        "HashCode": -1219586119,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -13535,7 +14344,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1237773794,
+=======
+        "HashCode": 1887207784,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -13954,7 +14767,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -764372516,
+=======
+        "HashCode": -1634875006,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14058,7 +14875,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1623542476,
+=======
+        "HashCode": 688005495,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14106,7 +14927,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1448621395,
+=======
+        "HashCode": 1118897845,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14178,7 +15003,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1512085027,
+=======
+        "HashCode": 1902269979,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14213,7 +15042,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1196083699,
+=======
+        "HashCode": -1989883032,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14411,7 +15244,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1428534739,
+=======
+        "HashCode": -1765809393,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14441,7 +15278,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1737400544,
+=======
+        "HashCode": 1317266268,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14524,7 +15365,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1605812109,
+=======
+        "HashCode": 2137297649,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PersistComponentStateTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14555,7 +15400,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -180937563,
+=======
+        "HashCode": 553338530,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14710,7 +15559,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -125521886,
+=======
+        "HashCode": -677079741,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14771,7 +15624,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1133124205,
+=======
+        "HashCode": -1343195216,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14815,7 +15672,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 109605672,
+=======
+        "HashCode": 1181039517,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14850,7 +15711,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 968519263,
+=======
+        "HashCode": 1601243453,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14886,7 +15751,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1939711053,
+=======
+        "HashCode": -368681589,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14982,7 +15851,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1256891435,
+=======
+        "HashCode": 6984372,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15104,7 +15977,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 45193495,
+=======
+        "HashCode": -1727510074,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15226,7 +16103,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1675895221,
+=======
+        "HashCode": -1969000989,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15359,7 +16240,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2132722792,
+=======
+        "HashCode": 1973678399,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15492,7 +16377,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -219314853,
+=======
+        "HashCode": -901195527,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15625,7 +16514,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 982346496,
+=======
+        "HashCode": 2005399627,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15758,7 +16651,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -839940284,
+=======
+        "HashCode": 629024169,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15891,7 +16788,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1545510764,
+=======
+        "HashCode": 2032933480,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16024,7 +16925,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 604630429,
+=======
+        "HashCode": 922559759,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16157,7 +17062,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -916865256,
+=======
+        "HashCode": 888648313,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16290,7 +17199,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 744054655,
+=======
+        "HashCode": -1446311600,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16423,7 +17336,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -669305665,
+=======
+        "HashCode": 1145316435,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16556,7 +17473,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 692725870,
+=======
+        "HashCode": -1490967061,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16689,7 +17610,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 794138345,
+=======
+        "HashCode": -357676787,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16822,7 +17747,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1911352978,
+=======
+        "HashCode": -1787052269,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16944,7 +17873,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1661928730,
+=======
+        "HashCode": 1971016531,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17066,7 +17999,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1313840700,
+=======
+        "HashCode": 1682321003,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17153,7 +18090,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1034735024,
+=======
+        "HashCode": 1081311150,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17241,7 +18182,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -2135391908,
+=======
+        "HashCode": -1321950937,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17328,7 +18273,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1983121450,
+=======
+        "HashCode": -1029203691,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17416,7 +18365,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1399915951,
+=======
+        "HashCode": -2019155783,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17503,7 +18456,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -292774136,
+=======
+        "HashCode": 1228763367,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17591,7 +18548,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -97811959,
+=======
+        "HashCode": 1192944495,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17678,7 +18639,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1103218908,
+=======
+        "HashCode": 487479487,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17766,7 +18731,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1706820228,
+=======
+        "HashCode": -1954713853,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17853,7 +18822,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 389006468,
+=======
+        "HashCode": 1537526679,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -17941,7 +18914,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 690932796,
+=======
+        "HashCode": -1724766231,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -18028,7 +19005,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2047371407,
+=======
+        "HashCode": 1876854980,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -18116,7 +19097,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 2001109840,
+=======
+        "HashCode": 1143476054,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -18203,7 +19188,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -671116267,
+=======
+        "HashCode": -1746089163,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -18291,7 +19280,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1979350530,
+=======
+        "HashCode": -1296569684,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Ref",
         "Name": "Ref",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18330,7 +19323,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -400488582,
+=======
+        "HashCode": -549761847,
+>>>>>>> Pregled-klubova-i-dodavanje
         "Kind": "Components.Key",
         "Name": "Key",
         "AssemblyName": "Microsoft.AspNetCore.Components",

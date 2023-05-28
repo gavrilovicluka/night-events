@@ -2,138 +2,252 @@ import { ChangeEvent, useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import KlubType from "../../types/KlubType";
 import AdministratorHeader from "./AdministratorHeader";
-import { Button, Col, Container, Form, Table } from "react-bootstrap";
+import { Button, Col, Container, Form, Modal, Row, Table } from "react-bootstrap";
 import { ApiConfig } from "../../config/api.config";
+import OcenaKlubType from "../../types/OcenaKlubType";
 
 
 
 export default function ListaKlubova() {
 
-    // const ClubForm = () => {
-       const [klubData, setKlubData] = useState({
-          idOrganizatora: '',
-          naziv: '',
-          lokacija: '',
-          brojStolova: ''
-        });
-        const [image, setImage] = useState('');
-		
-      // function handleImage(e:ChangeEvent<HTMLInputElement>) {
-      //   console.log(e.target.files)
-      //   setImage(e.target.files[0])
-      //   }
-      function handleImage(e: ChangeEvent<HTMLInputElement>) {
-        if (e.target.files && e.target.files.length > 0) {
-          const selectedFile = e.target.files[0];
-          const imageUrl = URL.createObjectURL(selectedFile);
-          console.log(imageUrl);
-          setImage(imageUrl);
-        }
-      }
+
+  const [showModal, setShowModal] = useState(false);
+  const [klubData, setKlubData] = useState({
+    idOrganizatora: '',
+    naziv: '',
+    lokacija: '',
+    brojStolovaBS: '',
+    brojStolovaVS: '',
+    brojStolovaS: ''
+  });
+
+  const [imageSlika, setImageSlika] = useState('');
+  const [imageMapa, setImageMapa] = useState('');
+
+  function handleImageSlika(e: ChangeEvent<HTMLInputElement>) {
+    if (e.target.files && e.target.files.length > 0) {
+      const selectedFile = e.target.files[0];
+      const imageUrl = URL.createObjectURL(selectedFile);
+      console.log(imageUrl);
+      setImageSlika(imageUrl);
+    }
+  }
+
+  function handleImageMapa(e: ChangeEvent<HTMLInputElement>) {
+    if (e.target.files && e.target.files.length > 0) {
+      const selectedFile = e.target.files[0];
+      const imageUrl = URL.createObjectURL(selectedFile);
+      console.log(imageUrl);
+      setImageMapa(imageUrl);
+    }
+  }
 
 
-      
-        const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
-           setKlubData({ ...klubData, [e.target.name]: e.target.value });
-         };
-      
-         const handleSubmit = (e:any) => {
-          e.preventDefault();
-          const formData= new FormData()
-     formData.append('image', image);
-          e.preventDefault();
-      
-           axios.post(ApiConfig.BASE_URL + `/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolova}`, formData)
-             .then((response) => {
-               console.log(response.data);
-             })
-             .catch((error) => {
-              console.log(error);
-            });
-        };
 
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setKlubData({ ...klubData, [e.target.name]: e.target.value });
+  };
 
-    const [klubovi, setKlubovi] = useState<Array<KlubType>>([]);
+  const handleCloseModal = () => {
+    setShowModal(false);
+    window.location.reload();
+  };
 
-    useEffect(() => {
-        getData();
-    }, []);
-
-    const getData = () => {
-
-        axios.get(ApiConfig.BASE_URL + "/Klub/VratiKlubove")
-            .then((response: AxiosResponse<KlubType[]>) => {
-                if (response.status === 200) {
-                    const data = response.data;
-                    console.log(data);
-                    setKlubovi(data);
-                  } else {
-                    console.log("Došlo je do greške prilikom dobavljanja podataka.");
-                  }
-                })
-                .catch((error) => {
-                  console.log("Došlo je do greške prilikom slanja zahtjeva:", error);
-                });
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const formData = {
+      slikaKluba: imageSlika,
+      mapaKluba: imageMapa
     }
 
-    return (
-        <>
-        <AdministratorHeader />
+    e.preventDefault();
 
-         
-        <Container>
-        <Col md= { {span : 6, offset: 6}}></Col>
-        
+    axios.post(ApiConfig.BASE_URL + `/Klub/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolovaBS}/${klubData.brojStolovaVS}/${klubData.brojStolovaS}`, formData)
+      .then((response) => {
+        console.log(response.data);
+        setShowModal(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-            <Form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
-      <Form.Group controlId="idOrganizatora" className="row">
-        <Form.Label column sm={2}>ID organizatora</Form.Label>
-        <Form.Control type="text" name="idOrganizatora" value={klubData.idOrganizatora} onChange={handleChange} className="col-sm-10" />
-      </Form.Group>
 
-      <Form.Group controlId="naziv" className="row">
-        <Form.Label column sm={2}>Naziv kluba</Form.Label>
-        <Form.Control type="text" name="naziv" value={klubData.naziv} onChange={handleChange} className="col-sm-10" />
-      </Form.Group>
+  const [klubovi, setKlubovi] = useState<Array<KlubType>>([]);
 
-      <Form.Group controlId="lokacija" className="row">
-        <Form.Label column sm={2}>Lokacija kluba</Form.Label>
-        <Form.Control type="text" name="lokacija" value={klubData.lokacija} onChange={handleChange} className="col-sm-10" />
-      </Form.Group>
+  useEffect(() => {
+    getData();
+  }, []);
 
-      <Form.Group controlId="brojStolova" className="row">
-        <Form.Label column sm={2}>Broj stolova</Form.Label>
-        <Form.Control type="text" name="brojStolova" value={klubData.brojStolova} onChange={handleChange} className="col-sm-10" />
-      </Form.Group>
+  const getData = () => {
 
-      <Form.Group controlId="slika" className="row">
-        <Form.Label column sm={2}>Slika kluba</Form.Label>
-        <Form.Control type="file" name="slika" onChange={handleImage} className="col-sm-10" />
-      </Form.Group>
+    axios.get(ApiConfig.BASE_URL + "/Klub/VratiKlubove")
+      .then((response: AxiosResponse<KlubType[]>) => {
+        if (response.status === 200) {
+          const data = response.data;
+          console.log(data);
+          setKlubovi(data);
+        } else {
+          console.log("Došlo je do greške prilikom dobavljanja podataka.");
+        }
+      })
+      .catch((error) => {
+        console.log("Došlo je do greške prilikom slanja zahteva:", error);
+      });
+  }
 
-      <Form.Group className="row">
-        <div className="col-sm-10 offset-sm-2 d-flex justify-content-center">
-          <Button type="submit" className="btn btn-primary">Dodaj klub</Button>
-        </div>
-      </Form.Group>
-    </Form>
 
-        </Container>
+  function izracunajProsek(ocene: OcenaKlubType[] | null | undefined) {
+    if (!ocene || ocene.length === 0) {
+      return 0; // Ako nema ocena, prosečna ocena je 0
+    }
 
-         
-        <Container>
-        <Col md= { {span : 6, offset: 6}}></Col>
+    var oceneBezNula = ocene
+      .filter(function (ocena) {
+        return ocena.ocena !== 0; // Filtriraj nule iz niza ocena
+      })
+      .map(function (ocena) {
+        return ocena.ocena; // Izvuci vrednosti ocena iz objekata
+      });
 
-       <div className="d-flex justify-content-center">
-        <h2 style={{ textAlign: 'center' }}>Lista Klubova</h2>
-          <Table className="text-center" style={{ marginTop: '40px' }}>
+    if (oceneBezNula.length === 0) {
+      return 0; // Ako su sve ocene nule, prosečna ocena je 0
+    }
+
+    var sum = oceneBezNula.reduce(function (a, b) {
+      if (typeof a === 'number' && typeof b === 'number') {
+        return a + b; // Saberi samo ako su a i b brojevi
+      } else {
+        return (a || 0) + (b || 0); // Ako su a ili b undefined, koristi 0
+      }
+    }, 0); // Inicijalna vrednost za sum je 0
+
+    if (typeof sum !== 'number') {
+      return 0; // Ako sum nije broj, vrati 0
+    }
+
+
+    var prosek = sum / oceneBezNula.length;
+    return prosek;
+  }
+
+
+  return (
+    <>
+      <AdministratorHeader />
+
+      <div style={{ height: '20px' }}></div>
+
+
+      <Container className="d-flex justify-content-center">
+        <Form onSubmit={handleSubmit} style={{ marginBottom: '40px' }}>
+          <Row className="mb-4">
+            <Col sm={6} className="d-flex flex-column justify-content-start">
+              <Form.Group controlId="idOrganizatora" className="row">
+                <Form.Label column sm={4} className="text-end">ID organizatora</Form.Label>
+                <Col sm={8} >
+                  <Form.Control type="text" name="idOrganizatora" value={klubData.idOrganizatora} onChange={handleChange} />
+                </Col>
+              </Form.Group>
+
+              <div style={{ height: '10px' }}></div>
+
+              <Form.Group controlId="naziv" className="row">
+                <Form.Label column sm={4} className="text-end">Naziv kluba</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="text" name="naziv" value={klubData.naziv} onChange={handleChange} />
+                </Col>
+              </Form.Group>
+
+
+              <div style={{ height: '10px' }}></div>
+
+              <Form.Group controlId="lokacija" className="row">
+                <Form.Label column sm={4} className="text-end">Lokacija kluba</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="text" name="lokacija" value={klubData.lokacija} onChange={handleChange} />
+                </Col>
+              </Form.Group>
+
+              <div style={{ height: '10px' }}></div>
+
+              <Form.Group controlId="slikaS" className="row">
+                <Form.Label column sm={4} className="text-end">Slika kluba</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="file" name="slikaS" onChange={handleImageSlika} />
+                </Col>
+              </Form.Group>
+              <div style={{ height: '10px' }}></div>
+            </Col>
+
+
+            <Col sm={6} className="d-flex flex-column justify-content-start">
+              <Form.Group controlId="brojStolovaBS" className="row">
+                <Form.Label column sm={4} className="text-end">Broj stolova (barski)</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="number" name="brojStolovaBS" value={klubData.brojStolovaBS} onChange={handleChange} />
+                </Col>
+              </Form.Group>
+
+              <div style={{ height: '10px' }}></div>
+
+              <Form.Group controlId="brojStolovaVS" className="row">
+                <Form.Label column sm={4} className="text-end">Broj stolova (viseci)</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="number" name="brojStolovaVS" value={klubData.brojStolovaVS} onChange={handleChange} />
+                </Col>
+              </Form.Group>
+
+              <div style={{ height: '10px' }}></div>
+
+              <Form.Group controlId="brojStolovaS" className="row">
+                <Form.Label column sm={4} className="text-end">Broj separea</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="number" name="brojStolovaS" value={klubData.brojStolovaS} onChange={handleChange} />
+                </Col>
+              </Form.Group>
+
+              <div style={{ height: '10px' }}></div>
+
+              <Form.Group controlId="slikaM" className="row">
+                <Form.Label column sm={4} className="text-end">Mapa kluba</Form.Label>
+                <Col sm={8}>
+                  <Form.Control type="file" name="slikaM" onChange={handleImageMapa} />
+                </Col>
+              </Form.Group>
+              <div style={{ height: '10px' }}></div>
+            </Col>
+
+          </Row>
+
+          <Row>
+            <Col className="text-center">
+              <Button type="submit" className="btn btn-primary">Dodaj klub</Button>
+            </Col>
+          </Row>
+        </Form>
+      </Container>
+
+
+
+
+
+
+      <Col md={{ span: 6, offset: 6 }}></Col>
+
+      <div className="d-flex justify-content-center">
+        <div className="col-md-6 col-sm-8 col-xs-10 pt-5">
+          <h2 style={{ textAlign: 'center' }}>Lista Klubova</h2>
+          <Table className="table-secondary" striped bordered hover style={{ marginTop: '40px' }}>
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Naziv</th>
                 <th>Lokacija</th>
                 <th>Ocena</th>
-                <th>Kapacitet</th>
+                <th>Broj b. stolova</th>
+                <th>Broj v. stolova</th>
+                <th>Broj separea</th>
                 <th>ID organizatora</th>
                 <th>Username organizatora</th>
               </tr>
@@ -144,19 +258,37 @@ export default function ListaKlubova() {
                   <td>{klub.id}</td>
                   <td>{klub.naziv}</td>
                   <td>{klub.lokacija}</td>
-                  <td>{klub.kapacitet}</td>
+                  <td>{izracunajProsek(klub.ocene)}</td>
+                  <td>{klub.brojStolovaBS}</td>
+                  <td>{klub.brojStolovaVS}</td>
+                  <td>{klub.brojStolovaS}</td>
                   <td>{klub.idOrganizatora}</td>
                   <td>{klub.usernameOrganizatora}</td>
                 </tr>
               ))}
             </tbody>
           </Table>
-          </div>
-          </Container>
-        
-      </>
+        </div>
+      </div>
 
-       
-    );
-              
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Uspešno dodavanje kluba</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Klub je uspešno dodat.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Zatvori
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+    </>
+
+
+  );
+
 }
