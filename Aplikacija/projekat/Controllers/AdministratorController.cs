@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using System.Text.RegularExpressions;
@@ -93,7 +94,8 @@ public class AdministratorController : ControllerBase
 
     }
 
-     [HttpPut("OdobriNalog/{idOrganizatora}")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    [HttpPut("OdobriNalog/{idOrganizatora}")]
     public async Task<ActionResult> OdobriNalog(int idOrganizatora)
     {
         var organizator = await Context.Organizatori.FindAsync(idOrganizatora);
@@ -109,6 +111,7 @@ public class AdministratorController : ControllerBase
         return Ok();
     }
 
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
     [HttpPut("OdbijNalog/{idOrganizatora}")]
     public async Task<ActionResult> OdbijNalog(int idOrganizatora)
     {

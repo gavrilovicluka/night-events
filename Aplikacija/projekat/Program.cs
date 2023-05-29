@@ -53,33 +53,35 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "NightEvents", Version = "v1" });
+// builder.Services.AddSwaggerGen(c =>
+// {
+//     c.SwaggerDoc("v1", new OpenApiInfo { Title = "NightEvents", Version = "v1" });
 
-    //  var securityScheme = new OpenApiSecurityScheme
-    // {
-    //     Name = "Authorization",
-    //     Type = SecuritySchemeType.ApiKey,
-    //     In = ParameterLocation.Header,
-    //     Description = "Standard Authorization header using the Bearer scheme.",
-    //     Scheme = CookieAuthenticationDefaults.AuthenticationScheme,
-    //     BearerFormat = "cookie",
-    // };
+//     //  var securityScheme = new OpenApiSecurityScheme
+//     // {
+//     //     Name = "Authorization",
+//     //     Type = SecuritySchemeType.ApiKey,
+//     //     In = ParameterLocation.Header,
+//     //     Description = "Standard Authorization header using the Bearer scheme.",
+//     //     Scheme = CookieAuthenticationDefaults.AuthenticationScheme,
+//     //     BearerFormat = "cookie",
+//     // };
 
-    // c.AddSecurityDefinition(CookieAuthenticationDefaults.AuthenticationScheme, securityScheme);
-    // c.AddSecurityRequirement(new OpenApiSecurityRequirement
-    // {
-    //     { securityScheme, Array.Empty<string>() }
-    // });
-});
+//     // c.AddSecurityDefinition(CookieAuthenticationDefaults.AuthenticationScheme, securityScheme);
+//     // c.AddSecurityRequirement(new OpenApiSecurityRequirement
+//     // {
+//     //     { securityScheme, Array.Empty<string>() }
+//     // });
+// });
 
 builder.Services.AddSwaggerGen(options => 
 {
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "NightEvents", Version = "v1" });
+
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey,
+        Type = SecuritySchemeType.Http,  //.ApiKey,
         Scheme = "Bearer",
         BearerFormat = "JWT",
         Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
@@ -101,7 +103,6 @@ builder.Services.AddSwaggerGen(options =>
         }
     }); 
 
-    options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
 
 var configuration = new ConfigurationBuilder()
@@ -109,7 +110,11 @@ var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .Build();
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+builder.Services.AddAuthentication(auth=>
+{
+    auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
                 .AddJwtBearer(options =>
                 {
                     options.RequireHttpsMetadata = false;
@@ -120,20 +125,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
                             .GetBytes(configuration.GetSection("AppSettings:Token").Value!)),
-                        ValidateIssuer = false,
-                        ValidateAudience = false
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidAudience = "https://localhost:7037/",
+                        ValidIssuer = "https://localhost:7037/",
                     };
                 });
 
 builder.Services.AddMvc();
 
-// builder.Services.AddAuthentication(options =>
-// {
-//     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-//     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-// })
-// .AddCookie();
 
 var app = builder.Build();
 

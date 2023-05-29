@@ -16,7 +16,7 @@ public class DogadjajController : ControllerBase
         Context = context;
     }
 
-    //[Authorize(Roles = "Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}")]
     [HttpPost]
     public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, [FromBody] DatumIVremeDTO datumIVreme)
@@ -78,7 +78,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    //[Authorize(Roles = "Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("DodajDogadjajBezIzvodjaca/{idKluba}/{naziv}")]
     [HttpPost]
     public async Task<ActionResult> DodajDogadjaj(int idKluba, String naziv, [FromBody] DatumIVremeDTO datumIVreme)
@@ -134,7 +134,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    //[Authorize(Roles = "Organizator")]  
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("DodeliIzvodjaca/{idDogadjaja}/{idIzvodjaca}")]
     [HttpPut]
     public async Task<ActionResult> DodeliIzvodjaca(int idDogadjaja, int idIzvodjaca)
@@ -164,7 +164,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    //[Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("VratiDogadjajeKluba/{idKluba}")]
     [HttpGet]
     public async Task<ActionResult> VratiDogadjajeKluba(int idKluba)
@@ -206,7 +206,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "Organizator, Admin")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
     [Route("IzbrisiDogadjaj/{id}")]
     [HttpDelete]
     public async Task<ActionResult> IzbrisiDogadjaj(int id)
@@ -251,7 +251,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [Route("VratiDogadjaje")]
     [HttpGet]
     public async Task<ActionResult> VratiDogadjaje()
@@ -277,7 +277,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "Korisnik, Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
     [Route("KomentarisiDogadjaj/{idDogadjaja}/{idKorisnika}")]
     [HttpPut]
     public async Task<ActionResult> KomentarisiDogadjaj([FromBody] string sadrzaj, int idDogadjaja,int idKorisnika)

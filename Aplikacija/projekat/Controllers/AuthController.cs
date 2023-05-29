@@ -243,7 +243,7 @@ public class AuthController : ControllerBase
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , adm.Role),
+            new Claim("role" , adm.Role),
             new Claim(ClaimTypes.NameIdentifier, adm.ID.ToString()),
             new Claim(ClaimTypes.Name, adm.Username)
 
@@ -260,14 +260,14 @@ public class AuthController : ControllerBase
 
         var token = new JwtSecurityToken
         (
-            claims: claims,
+            issuer: "https://localhost:7037/",
+            audience: "https://localhost:7037/",
+            claims: claims.ToArray(),
             expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
+
         );
 
-        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        // var cp = new ClaimsPrincipal(ci);
-        // await HttpContext.SignInAsync(cp);
 
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
@@ -284,7 +284,7 @@ public class AuthController : ControllerBase
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , kor.Role),
+            new Claim("role" , kor.Role),
             new Claim(ClaimTypes.NameIdentifier, kor.ID.ToString()),
             new Claim(ClaimTypes.Name, kor.Username)
         };
@@ -300,14 +300,14 @@ public class AuthController : ControllerBase
 
         var token = new JwtSecurityToken
         (
-            claims: claims,
+            issuer: "https://localhost:7037/",
+            audience: "https://localhost:7037/",
+            claims: claims.ToArray(),
             expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
+
         );
 
-        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        // var cp = new ClaimsPrincipal(ci);
-        // await HttpContext.SignInAsync(cp);
         
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
         return jwt;
@@ -322,7 +322,7 @@ public class AuthController : ControllerBase
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Role , org.Role),
+            new Claim("role" , org.Role),
             new Claim(ClaimTypes.NameIdentifier, org.ID.ToString()),
             new Claim(ClaimTypes.Name, org.Username),
             new Claim("KlubID", (org.Klub != null) ? org.Klub!.ID.ToString() : " "),
@@ -339,14 +339,14 @@ public class AuthController : ControllerBase
 
         var token = new JwtSecurityToken
         (
-            claims: claims,
+            issuer: "https://localhost:7037/",
+            audience: "https://localhost:7037/",
+            claims: claims.ToArray(),
             expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
+
         );
 
-        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        // var cp = new ClaimsPrincipal(ci);
-        // await HttpContext.SignInAsync(cp);
         
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
         return jwt;
@@ -361,7 +361,7 @@ public class AuthController : ControllerBase
 
         List<Claim> claims = new List<Claim>
         {
-            new Claim("roles" , muz.Role),
+            new Claim("role" , muz.Role),
             new Claim(ClaimTypes.NameIdentifier, muz.ID.ToString()),
             new Claim(ClaimTypes.Name, muz.Username)
         };
@@ -377,14 +377,14 @@ public class AuthController : ControllerBase
 
         var token = new JwtSecurityToken
         (
-            claims: claims,
-            expires: DateTime.Now.AddHours(8),
+            issuer: "https://localhost:7037/",
+            audience: "https://localhost:7037/",
+            claims: claims.ToArray(),
+            expires: DateTime.Now.AddHours(2),
             signingCredentials: cred
+
         );
 
-        // var ci = new ClaimsIdentity(claims,CookieAuthenticationDefaults.AuthenticationScheme);
-        // var cp = new ClaimsPrincipal(ci);
-        // await HttpContext.SignInAsync(cp);
         
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 

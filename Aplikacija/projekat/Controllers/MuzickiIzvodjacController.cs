@@ -103,7 +103,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    //[Authorize(Roles = "Muzicar")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
     [Route("PostaviSlobodanTermin")]
     [HttpPost]
     public async Task<ActionResult> PostaviSlobodanTermin([FromBody] TerminIzvodjacaDTO terminDto)
@@ -141,7 +141,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    [Authorize(Roles = "Muzicar")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
     [Route("IzmeniZanr/{idMuz}/{zanr}")]
     [HttpPut]
     public async Task<ActionResult> IzmeniZanr(int idMuz, string zanr)
@@ -175,7 +175,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
 
-    [Authorize(Roles = "Muzicar")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
     [Route("IzmeniBrojClanova/{idMuz}/{brClanova}")]
     [HttpPut]
     public async Task<ActionResult> IzmeniBrojClanova(int idMuz, int brClanova)
@@ -209,7 +209,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
 
-    [Authorize(Roles = "Muzicar")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
     [Route("IzmeniImeIzvodjaca/{idMuz}/{ime}")]
     [HttpPut]
     public async Task<ActionResult> IzmeniImeIzvodjaca(int idMuz, string ime)
@@ -243,7 +243,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
     
-    //[Authorize (Roles = "Admin, Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
     [Route("VratiMuzickeIzvodjace")]
     [HttpGet]
     public async Task<ActionResult> VratiMuzickeIzvodjace()
@@ -274,7 +274,7 @@ public class MuzickiIzvodjacController : ControllerBase
     }
 	
 
-    //[Authorize(Roles="Muzicar, Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar, Organizator")]
     [Route("VratiListuTermina/{idIzvodjaca}")]
     [HttpGet]
     public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)
