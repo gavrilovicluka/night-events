@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "c:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
-  "FilePath": "c:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+  "SerializedFilePath": "d:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
+  "FilePath": "d:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18028,7 +18028,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1151927734,
+=======
+        "HashCode": 1505554900,
+>>>>>>> dev
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -18116,7 +18120,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": 1167627878,
+=======
+        "HashCode": -133028693,
+>>>>>>> dev
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -18203,7 +18211,11 @@
         }
       },
       {
+<<<<<<< HEAD
         "HashCode": -1566861812,
+=======
+        "HashCode": -1484661038,
+>>>>>>> dev
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",

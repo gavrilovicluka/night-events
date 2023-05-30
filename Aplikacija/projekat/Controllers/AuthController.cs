@@ -167,7 +167,7 @@ public class AuthController : ControllerBase
             }
 
             // Provera da li je organizator
-            var org = await Context.Organizatori.Where(p => p.Username == usrDto.Username).FirstOrDefaultAsync();
+            var org = await Context.Organizatori.Where(p => p.Username == usrDto.Username).Include(p => p.Klub).FirstOrDefaultAsync();
             
             if(org != null && org.PasswordHash != null && org.PasswordSalt != null)
             {
@@ -244,7 +244,7 @@ public class AuthController : ControllerBase
         List<Claim> claims = new List<Claim>
         {
             new Claim("role" , adm.Role),
-            new Claim(ClaimTypes.NameIdentifier, adm.ID.ToString()),
+            new Claim("id", adm.ID.ToString()),
             new Claim(ClaimTypes.Name, adm.Username)
 
         };
@@ -285,7 +285,7 @@ public class AuthController : ControllerBase
         List<Claim> claims = new List<Claim>
         {
             new Claim("role" , kor.Role),
-            new Claim(ClaimTypes.NameIdentifier, kor.ID.ToString()),
+            new Claim("id", kor.ID.ToString()),
             new Claim(ClaimTypes.Name, kor.Username)
         };
 
@@ -323,9 +323,9 @@ public class AuthController : ControllerBase
         List<Claim> claims = new List<Claim>
         {
             new Claim("role" , org.Role),
-            new Claim(ClaimTypes.NameIdentifier, org.ID.ToString()),
+            new Claim("id", org.ID.ToString()),
             new Claim(ClaimTypes.Name, org.Username),
-            new Claim("KlubID", (org.Klub != null) ? org.Klub!.ID.ToString() : " "),
+            new Claim("idKluba", (org.Klub != null) ? org.Klub!.ID.ToString() : " ")
         };
 
         var tokenValue = _configuration.GetSection("AppSettings:Token").Value;
@@ -362,7 +362,7 @@ public class AuthController : ControllerBase
         List<Claim> claims = new List<Claim>
         {
             new Claim("role" , muz.Role),
-            new Claim(ClaimTypes.NameIdentifier, muz.ID.ToString()),
+            new Claim("id", muz.ID.ToString()),
             new Claim(ClaimTypes.Name, muz.Username)
         };
 
