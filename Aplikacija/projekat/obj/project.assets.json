@@ -3925,24 +3925,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Andriana\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\X\\.nuget\\packages\\": {}
+>>>>>>> 8bd482b6b556de017bf733aaf61cbdfea51e211f
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
       "projectName": "projekat",
       "projectPath": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
       "packagesPath": "C:\\Users\\Andriana\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
+=======
+      "projectUniqueName": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "projectName": "projekat",
+      "projectPath": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "packagesPath": "C:\\Users\\X\\.nuget\\packages\\",
+      "outputPath": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
+>>>>>>> 8bd482b6b556de017bf733aaf61cbdfea51e211f
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Andriana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\X\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 8bd482b6b556de017bf733aaf61cbdfea51e211f
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

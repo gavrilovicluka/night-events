@@ -21,7 +21,7 @@ export default function OrganizatorHeader() {
     
     const logout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
-        localStorage.removeItem("username");
+        localStorage.removeItem("jwtToken");
         navigate("/login");
     }
     
@@ -44,6 +44,10 @@ export default function OrganizatorHeader() {
             <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
                 <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
                 
+
+                <MDBNavbarItem>
+                    <MDBNavbarLink href={`/organizatorDashboard/mojKlub`}>Moj klub</MDBNavbarLink> { /* {`/organizatorDashboard/${idOrganizatora}/pregledIzvodjaca`} */ }
+                </MDBNavbarItem>
                 <MDBNavbarItem>
                     <MDBNavbarLink href='/organizatorDashboard/mojiDogadjaji'>Moji dogadjaji</MDBNavbarLink> {/* treba da se prosledi i id organizatora iz tokena */}
                 </MDBNavbarItem>

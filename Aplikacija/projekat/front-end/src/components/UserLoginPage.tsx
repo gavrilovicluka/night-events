@@ -1,128 +1,124 @@
-import React from 'react';
-import {Container, Card, Form, Button, Col} from 'react-bootstrap';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faSignInAlt} from '@fortawesome/free-solid-svg-icons';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.js';
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import axios from 'axios';
-import { Navigate} from 'react-router-dom';
-import { ApiConfig } from '../config/api.config';
+import React, { useState } from "react";
+import { Container, Card, Form, Button, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
+import { ApiConfig } from "../config/api.config";
+import jwtDecode from "jwt-decode";
+import { DecodedTokenOrganizator } from "../types/DecodedTokenOrganizator";
 
 interface UserLoginState {
- 
-    username: string;
-    password: string;
-    isLoggedIn: boolean;
+  username: string;
+  password: string;
+  isLoggedIn: boolean;
 
-    // message?: string; 
 }
 
-export default class UserLoginPage extends React.Component {
-    state: UserLoginState;
+const UserLoginPage: React.FC = () => {
+  const [state, setState] = useState<UserLoginState>({
+    username: "",
+    password: "",
+    isLoggedIn: false,
+  });
 
-    constructor(props: Readonly<{}>) {
-        super(props);
+  const navigate = useNavigate();
 
-        this.state = {
-            username: '',
-            password: '',
-            isLoggedIn: false,
+  const formInputChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = event.target;
+    setState((prevState) => ({ ...prevState, [id]: value }));
+  };
+
+  const setLogginState = (isLoggedIn: boolean) => {
+    setState((prevState) => ({ ...prevState, isLoggedIn }));
+  };
+
+  const doLogin = () => {
+    const data = {
+      username: state.username,
+      password: state.password,
+    };
+
+    axios
+      .post(ApiConfig.BASE_URL + "/Auth/PrijaviSe", data)
+      .then((response) => {
+        console.log(response);
+        const token = response.data.token;
+        localStorage.setItem("jwtToken", token);
+        const decodedToken = jwtDecode(token) as DecodedTokenOrganizator;
+        console.log(decodedToken);
+
+        switch (decodedToken.role) {
+          case "Admin":
+            navigate("/administratorDashboard");
+            break;
+          case "Organizator":
+            navigate("/organizatorDashboard");
+            break;
+          case "Muzicar":
+            navigate("/muzickiIzvodjacDashboard");
+            break;
+          default:
+            navigate("/");
+            break;
         }
-    
-    }
 
-    private formInputChanged(event: React.ChangeEvent<HTMLInputElement>) {
-      const newState = Object.assign(this.state, {
-        [ event.target.id]: event.target.value,
+        setLogginState(true);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-      this.setState(newState);
-    }
+  };
 
-    //  private setErrorMessage(message: string)
-    // {
-    //     const newState= Object.assign(this.state,{
-    //         errorMessage: message,
-    //     });
-    //     this.setState(newState);
-    // }
+  if (state.isLoggedIn) {
+    return <Navigate to="/" />;
+  }
 
-    private setLogginState(isLoggedIn: boolean){
-        const newState = Object.assign(this.state, {
-            isLoggedIn: isLoggedIn,
-        });
-        this.setState(newState);
-    }
+  return (
+    <Container>
+      <Col md={{ span: 6, offset: 3 }}>
+        <Card>
+          <Card.Body>
+            <Card.Title>
+              <FontAwesomeIcon icon={faSignInAlt} />
+              Prijava Korisnika
+            </Card.Title>
+            <Card.Text>
+              <Form>
+                <Form.Group>
+                  <Form.Label htmlFor="username">Username:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    id="username"
+                    value={state.username}
+                    onChange={formInputChanged}
+                  />
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label htmlFor="password">Password:</Form.Label>
+                  <Form.Control
+                    type="password"
+                    id="password"
+                    value={state.password}
+                    onChange={formInputChanged}
+                  />
+                </Form.Group>
+                <Form.Group>
+                  <Button variant="primary" onClick={doLogin}>
+                    Log In
+                  </Button>
+                </Form.Group>
+              </Form>
+              <Form />
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Container>
+  );
+};
 
-    private doLogin() 
-    {
-        const data = {
-            username: this.state.username,
-            password: this.state.password,
-
-        };
-
-        axios.post(ApiConfig.BASE_URL + "/Auth/PrijaviSe", data)
-             .then(response => {
-                console.log(response);
-                const token = response.data.token;
-                localStorage.setItem('jwtToken', token);
-                this.setLogginState(true);
-             })
-             .catch(error => {
-                console.log(error);
-             })
-     
-    }
-    
-
-    render() {
-        if(this.state.isLoggedIn === true){
-            return(
-                <Navigate to="/" />
-            );
-        }
-    
-        
-        return (
-            <Container>
-                <Col md= { {span : 6, offset: 3}}>
-                <Card>
-                    <Card.Body>
-                        <Card.Title>
-                            <FontAwesomeIcon icon={ faSignInAlt}/>Prijava Korisnika
-                        </Card.Title>
-                        <Card.Text>
-                            <Form>
-                                <Form.Group>
-                                    <Form.Label htmlFor="username">Username:</Form.Label>
-                                    <Form.Control type="text" id="username"
-                                                    value={ this.state.username}
-                                                    onChange={ event => this.formInputChanged(event as any)}/>
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label htmlFor="password">Password:</Form.Label>
-                                    <Form.Control type="password" id="password" 
-                                                    value={ this.state.password}
-                                                    onChange={ event => this.formInputChanged(event as any)}/>
-                                                    
-                                </Form.Group>
-                                <Form.Group>
-                                    <Button variant="primary"
-                                            onClick={()=> this.doLogin()}>
-                                        Log In
-                                    </Button>
-                                </Form.Group>
-                                </Form>
-                                <Form/>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-
-                </Col>
-            </Container>
-        )
-    }
-}
-
-
+export default UserLoginPage;

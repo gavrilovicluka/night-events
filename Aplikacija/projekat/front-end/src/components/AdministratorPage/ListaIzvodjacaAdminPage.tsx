@@ -132,7 +132,7 @@ export default function ListaIzvodjacaAdminPage() {
       const updatedIzvodjaci = [...izvodjaci];
       const idIzvodjaca = updatedIzvodjaci[index].id;
     
-      axios
+      axios 
         .delete(ApiConfig.BASE_URL + `/Administrator/ObrisiIzvodjaca/${idIzvodjaca}`)
         .then((response) => {
           console.log(response.data);

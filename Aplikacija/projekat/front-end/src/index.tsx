@@ -24,6 +24,8 @@ import DodajDogadjaj from './components/OrganizatorPage/DodajDogadjaj';
 import DetaljiDogadjaja from './components/DetaljiDogadjaja';
 import DogadjajType from './types/DogadjajType';
 import AboutStranica from './components/AboutStranica';
+import MojKlub from './components/OrganizatorPage/MojKlub';
+import LoginRegisterForm from './components/LoginRegisterForm';
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -44,12 +46,14 @@ root.render(
      
         <Route path='/' element={ <HomePage/> } /> 
         <Route path='/login' element={ <UserLoginPage/> } /> 
+        <Route path='/loginRegister' element={ <LoginRegisterForm/> } /> 
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
 
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
         <Route path='/organizatorDashboard/mojiDogadjaji' element={ <ListaDogadjaja /> } /> 
         <Route path='/organizatorDashboard/dodajDogadjaj' element={ <DodajDogadjaj /> } />
         <Route path='/organizatorDashboard/pregledIzvodjaca' element={ <ListaIzvodjaca/> } /> 
+        <Route path='/organizatorDashboard/mojKlub' element={ <MojKlub/> } /> 
 
         <Route path='/muzickiIzvodjacDashboard' element={ <MuzickiIzvodjacDashboard/> } />        
         <Route path='/muzickiIzvodjacDashboard/mojiTermini' element={ <ListaTermina/> } /> 

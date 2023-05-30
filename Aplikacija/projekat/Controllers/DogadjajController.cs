@@ -17,9 +17,9 @@ public class DogadjajController : ControllerBase
     }
 
     [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
-    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}/{naziv}")]
+    [Route("DodajDogadjaj/{idKluba}/{idIzvodjaca}")]
     [HttpPost]
-    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, String naziv, [FromBody] DatumIVremeDTO datumIVreme)
+    public async Task<ActionResult> DodajDogadjaj(int idKluba, int idIzvodjaca, [FromBody] DodajDogadjajDTO dodajDogadjajDto)
     {
         try
         {
@@ -37,9 +37,9 @@ public class DogadjajController : ControllerBase
 
             var dogadjaj = new Dogadjaj
             {               
-                Naziv = naziv,
-                Datum = datumIVreme.Datum,
-                Vreme = datumIVreme.Vreme,
+                Naziv = dodajDogadjajDto.Naziv,
+                Datum = dodajDogadjajDto.Datum,
+                Vreme = dodajDogadjajDto.Vreme,
                 Klub = klub,
                 MuzickiIzvodjac = izvodjac,
                 KomentariDogadjaj = null,
@@ -79,9 +79,9 @@ public class DogadjajController : ControllerBase
     }
 
     [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
-    [Route("DodajDogadjajBezIzvodjaca/{idKluba}/{naziv}")]
+    [Route("DodajDogadjajBezIzvodjaca/{idKluba}")]
     [HttpPost]
-    public async Task<ActionResult> DodajDogadjaj(int idKluba, String naziv, [FromBody] DatumIVremeDTO datumIVreme)
+    public async Task<ActionResult> DodajDogadjaj(int idKluba, [FromBody] DodajDogadjajDTO dodajDogadjajDto)
     {
         try
         {
@@ -93,9 +93,9 @@ public class DogadjajController : ControllerBase
 
             var dogadjaj = new Dogadjaj
             {               
-                Naziv = naziv,
-                Datum = datumIVreme.Datum,
-                Vreme = datumIVreme.Vreme,
+                Naziv = dodajDogadjajDto.Naziv,
+                Datum = dodajDogadjajDto.Datum,
+                Vreme = dodajDogadjajDto.Vreme,
                 Klub = klub,
                 MuzickiIzvodjac = null,
                 KomentariDogadjaj = null,
