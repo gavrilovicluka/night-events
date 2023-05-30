@@ -85,6 +85,32 @@ export default function ListaOrganizatora() {
       };
 
 
+const handleBrisanje = (index: number) => {
+  const confirmed = window.confirm("Da li želite da obrišete organizatora?");
+  if (confirmed) {
+  // Kreiranje kopije niza organizatori radi ažuriranja liste
+  const updatedOrganizatori = [...organizatori];
+  const idOrganizatora = updatedOrganizatori[index].id;
+
+  axios
+    .delete(ApiConfig.BASE_URL + `/Administrator/ObrisiOrganizatora/${idOrganizatora}`)
+    .then((response) => {
+      // Uspesno brisanje, obradite odgovor
+      console.log(response.data);
+
+      // Ažurirajte lokalni niz organizatori ako je potrebno
+      // Na primer, možete ukloniti obrisanog organizatora iz liste
+      updatedOrganizatori.splice(index, 1);
+      setOrganizatori(updatedOrganizatori);
+    })
+    .catch((error) => {
+      // Greška prilikom brisanja, obradite grešku
+      console.log("Došlo je do greške prilikom slanja zahteva:", error);
+  
+    });
+  }
+};
+
     return (
         <><AdministratorHeader />
         <div>
@@ -98,6 +124,8 @@ export default function ListaOrganizatora() {
                         <th>Email</th>
                         <th>KlubID</th>
                         <th>Status</th>
+                        <th>Akcija</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -130,7 +158,12 @@ export default function ListaOrganizatora() {
                       <Button variant="danger" onClick={() => handleOdbij(index)} style={{ backgroundColor: "red" }}>
                         Odbij
                       </Button>
-                    )}
+                    )}</td>
+                    <td>
+                      <Button variant="danger" onClick={() => handleBrisanje(index)} style={{ backgroundColor: "red", marginLeft: "10px" }}>
+                       Obrisi
+                       </Button>
+
             </td>
                         </tr>
                     ))}

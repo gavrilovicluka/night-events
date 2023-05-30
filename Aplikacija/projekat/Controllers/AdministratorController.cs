@@ -127,5 +127,38 @@ public class AdministratorController : ControllerBase
 
         return Ok();
     }
+
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    [HttpDelete("ObrisiOrganizatora/{idOrganizatora}")]
+
+    public async Task<ActionResult> ObrisiOrganizatora(int idOrganizatora) {
+
+     try 
+        { 
+
+         var organizator= await Context.Organizatori.FindAsync(idOrganizatora);
+
+         if(organizator != null)
+    
+          {
+            Context.Organizatori.Remove(organizator);
+            await Context.SaveChangesAsync();
+            return Ok($"ID obrisanog organizatora je: {idOrganizatora}");
+            
+    
+          }
+          return BadRequest("Ne postoji takav organizator");
+          
+
+        }
+
+
+        catch (Exception e)
+
+        {
+          return BadRequest(e.Message);
+        }
+    }
+
    
 }

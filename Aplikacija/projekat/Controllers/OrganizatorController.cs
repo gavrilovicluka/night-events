@@ -87,7 +87,8 @@ public class OrganizatorController : ControllerBase
 
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+   
+   // [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
     [Route("VratiOrganizatore")]
     [HttpGet]
     public async Task<ActionResult> VratiOrganizatore()
@@ -115,7 +116,6 @@ public class OrganizatorController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-
     
     
 }
