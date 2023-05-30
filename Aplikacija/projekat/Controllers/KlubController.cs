@@ -57,7 +57,7 @@ public class KlubController : ControllerBase
     }
 
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
     [Route("VratiKlubove")]
     [HttpGet]
     public async Task<ActionResult> VratiKlubove()
@@ -88,5 +88,60 @@ public class KlubController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Route("VratiKlub/{idKlub}")]
+    [HttpGet]
+    public async Task<ActionResult> VratiKlub(int idKlub)
+    {
+        try
+        {
+            if (idKlub <= 0)
+            {
+                return BadRequest("Ovaj organizator nije zaduzen ni za jedan klub!");
+            }
+
+            var k = await Context.Klubovi.FindAsync(idKlub);
+
+            if(k == null)
+            {
+                return BadRequest("Ne postoji izabrani klub!");
+            }
+
+            return Ok(k);           
+        }
+        catch (Exception e)
+        { 
+            return BadRequest(e.Message);
+        }     
+    }
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Route("IzmeniKlub")]
+    [HttpPut]
+    public async Task<ActionResult> IzmeniKlub([FromBody] IzmeniKlubDTO klubDTO)
+{
+    try
+    {
+        var klub = await Context.Klubovi.FindAsync(klubDTO.ID);
+
+        if (klub == null)
+        {
+            return BadRequest("Ne postoji izabrani klub");
+        }
+
+        klub.Lokacija = klubDTO.Lokacija;
+        klub.BrojStolovaBS = klubDTO.BrojStolovaBS;
+        klub.BrojStolovaS = klubDTO.brojStolovaS;
+        klub.BrojStolovaVS = klubDTO.BrojStolovaVS;
+
+        await Context.SaveChangesAsync();
+        return Ok("Podaci kluba su uspešno izmenjeni!");
+    }
+    catch (Exception e)
+    {
+        return BadRequest(e.Message);
+    }
+}
         
 }
