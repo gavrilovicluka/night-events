@@ -3,11 +3,10 @@ import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import OrganizatorHeader from "./OrganizatorHeader";
 import {  Button, Form, Modal, Table } from "react-bootstrap";
-import jwt from 'jsonwebtoken';
 import DogadjajType from "../../types/DogadjajType";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
-import DodajTerminIzvodjac from "../MuzickiIzvodjacPage/DodajTerminIzvodjac";
 import { ApiConfig } from "../../config/api.config";
+import jwtDecode from "jwt-decode";
 
 
 
@@ -19,23 +18,27 @@ export default function ListaIzvodjaca() {
     const [selectedDogadjaj, setSelectedDogadjaj] = useState<number | null>(null);
     const [selectedIzvodjac, setSelectedIzvodjac] = useState<number | null>(null);
     const [dostupniDogadjaji, setDostupniDogadjaji] = useState<Array<DogadjajType>>([]);
+    const [klubId, setKlubId] = useState<number | null>();
 
-    // const token = localStorage.getItem('jwtToken');
-    // let klubId = '';   
-    // if (token) {
-    //     const decodedToken = jwt.decode(token) as DecodedTokenOrganizator;
-    //     if (decodedToken && decodedToken.idKluba) {
-    //         klubId = decodedToken.idKluba;
-    //     }
-    // }
-    //treba da se stavi u backend da token sadrzi id kluba za organizatora
+    const token = localStorage.getItem('jwtToken'); 
+    if (token) {
+        const decodedToken = jwtDecode(token) as DecodedTokenOrganizator;
+        if (decodedToken && decodedToken.idKluba) {
+            setKlubId(decodedToken.idKluba);
+        }
+    }
 
     useEffect(() => {
         getData();
     }, []);
 
     useEffect(() => {
-        //getDostupniDogadjaji(parseInt(klubId));
+        if(klubId !== null && klubId !== undefined) {
+          getDostupniDogadjaji(klubId);
+        } else {
+          setDostupniDogadjaji([]);
+        }
+        
     }, []);
 
     const getDostupniDogadjaji = async (klubId: number) => {
@@ -92,7 +95,11 @@ export default function ListaIzvodjaca() {
 
     const getData = () => {
 
-        axios.get(ApiConfig.BASE_URL + "/MuzickiIzvodjac/VratiMuzickeIzvodjace")
+        axios.get(ApiConfig.BASE_URL + "/MuzickiIzvodjac/VratiMuzickeIzvodjace", {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
             .then((response: AxiosResponse<MuzickiIzvodjacType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;
