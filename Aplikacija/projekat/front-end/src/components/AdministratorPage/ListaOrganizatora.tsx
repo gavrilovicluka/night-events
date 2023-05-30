@@ -5,6 +5,7 @@ import OrganizatorType from "../../types/OrganizatorType";
 import { ApiConfig } from "../../config/api.config";
 import { Button, Table } from "react-bootstrap";
 import { StatusNalogaType } from "../../types/StatusNalogaType";
+import { MDBTable, MDBTableBody, MDBTableHead } from "mdb-react-ui-kit";
 
 
 
@@ -30,7 +31,7 @@ export default function ListaOrganizatora() {
                   }
                 })
                 .catch((error) => {
-                  console.log("Došlo je do greške prilikom slanja zahtjeva:", error);
+                  console.log("Došlo je do greške prilikom slanja zahteva:", error);
                 });
     }
     function getStatusNaloga(status: StatusNalogaType): string {
@@ -114,8 +115,11 @@ const handleBrisanje = (index: number) => {
     return (
         <><AdministratorHeader />
         <div>
-            <Table striped bordered className="table-white">
-                <thead>
+        <div className="d-flex justify-content-center">
+        <div className="col-md-6 col-sm-8 col-xs-10 pt-5">
+            <Table responsive="md" striped bordered hover className="table-white table-white mt-3 mb-3">
+                 <thead> 
+                
                     <tr>
                         <th>ID</th>
                         <th>Ime</th>
@@ -125,10 +129,11 @@ const handleBrisanje = (index: number) => {
                         <th>KlubID</th>
                         <th>Status</th>
                         <th>Akcija</th>
+                        <th>Brisanje</th>
 
                     </tr>
-                </thead>
-                <tbody>
+                  </thead> 
+                 <tbody>
                     {organizatori.map((organizator, index) => (
                         <tr key={index}>
                             <td>{organizator.id}</td>
@@ -136,7 +141,7 @@ const handleBrisanje = (index: number) => {
                             <td>{organizator.prezime}</td>
                             <td>{organizator.username}</td>
                             <td>{organizator.email}</td>
-                            <td>{organizator.klubId}</td>
+                            <td>{organizator.klubId !== undefined && organizator.klubId > 0 ? organizator.klubId :"Nema"}</td>
                             <td>{organizator.status !== undefined ? getStatusNaloga(organizator.status) : ""}</td>
                             <td>
                     {organizator.status === 0 ? (
@@ -160,7 +165,7 @@ const handleBrisanje = (index: number) => {
                       </Button>
                     )}</td>
                     <td>
-                      <Button variant="danger" onClick={() => handleBrisanje(index)} style={{ backgroundColor: "red", marginLeft: "10px" }}>
+                      <Button variant="danger" onClick={() => handleBrisanje(index)} style={{ backgroundColor: "red", margin: "15px auto"}}>
                        Obrisi
                        </Button>
 
@@ -169,6 +174,10 @@ const handleBrisanje = (index: number) => {
                     ))}
                 </tbody>
             </Table>
+            </div>
+            
+        </div>
+        
         </div></>
     );
               

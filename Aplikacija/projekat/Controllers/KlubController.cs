@@ -15,7 +15,7 @@ public class KlubController : ControllerBase
         Context = context;
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
     [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{brojStolovaBS}/{brojStolovaVS}/{brojStolovaS}")]
     [HttpPost]
    public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolovaBS, int brojStolovaVS, int brojStolovaS, [FromBody] SlikeKlubaDTO slike)
@@ -57,7 +57,7 @@ public class KlubController : ControllerBase
     }
 
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+   // [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
     [Route("VratiKlubove")]
     [HttpGet]
     public async Task<ActionResult> VratiKlubove()
@@ -88,5 +88,7 @@ public class KlubController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    
         
 }

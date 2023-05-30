@@ -5,7 +5,7 @@ import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import TerminType from "../../types/TerminType";
 import DodajTerminIzvodjac from "./DodajTerminIzvodjac";
 import { ApiConfig } from "../../config/api.config";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { compareAsc } from "date-fns";
 
 
@@ -13,6 +13,7 @@ export default function ListaTermina() {
 
 
     const [termini2, setTermini] = useState<Array<TerminType>>([]);
+
 
     useEffect(() => {
         getData();
@@ -39,6 +40,7 @@ export default function ListaTermina() {
     }
 
 
+
     return (
         <><MuzickiIzvodjacHeader />
         <div className="d-flex justify-content-center">
@@ -58,6 +60,10 @@ export default function ListaTermina() {
                         <tr key={index}>
                             <td>{termin.datum && new Date(termin.datum).toLocaleDateString('sr-RS')}</td>
                             <td>{termin.rezervisan === true ? "DA" : "NE"}</td>
+                            <td></td>
+                            <td>
+
+            </td>
                             <td> </td>
                         </tr>                      
                     ))}

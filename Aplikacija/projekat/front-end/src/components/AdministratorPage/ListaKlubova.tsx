@@ -132,6 +132,26 @@ export default function ListaKlubova() {
   }
 
 
+  const handleBrisanje = (index: number) => {
+    const confirmed = window.confirm("Da li želite da obrišete klub?");
+    if (confirmed) {
+    const updatedKlubovi = [...klubovi];
+    const idKluba = updatedKlubovi[index].id;
+  
+    axios
+      .delete(ApiConfig.BASE_URL + `/Administrator/ObrisiKlub/${idKluba}`)
+      .then((response) => {
+        console.log(response.data);
+        updatedKlubovi.splice(index, 1);
+        setKlubovi(updatedKlubovi);
+      })
+      .catch((error) => {
+        console.log("Došlo je do greške prilikom slanja zahteva:", error);
+    
+      });
+    }
+  };
+
   return (
     <>
       <AdministratorHeader />
@@ -238,7 +258,7 @@ export default function ListaKlubova() {
       <div className="d-flex justify-content-center">
         <div className="col-md-6 col-sm-8 col-xs-10 pt-5">
           <h2 style={{ textAlign: 'center' }}>Lista Klubova</h2>
-          <Table className="table-secondary" striped bordered hover style={{ marginTop: '40px' }}>
+          <Table responsive="md" striped bordered hover className="table-white table-white mt-3 mb-3">
             <thead>
               <tr>
                 <th>ID</th>
@@ -250,6 +270,7 @@ export default function ListaKlubova() {
                 <th>Broj separea</th>
                 <th>ID organizatora</th>
                 <th>Username organizatora</th>
+                <th>Brisanje</th>
               </tr>
             </thead>
             <tbody>
@@ -264,6 +285,12 @@ export default function ListaKlubova() {
                   <td>{klub.brojStolovaS}</td>
                   <td>{klub.idOrganizatora}</td>
                   <td>{klub.usernameOrganizatora}</td>
+                  <td>
+                      <Button variant="danger" onClick={() => handleBrisanje(index)} style={{ backgroundColor: "red", margin: "15px auto"}}>
+                       Obrisi
+                       </Button>
+
+            </td>
                 </tr>
               ))}
             </tbody>

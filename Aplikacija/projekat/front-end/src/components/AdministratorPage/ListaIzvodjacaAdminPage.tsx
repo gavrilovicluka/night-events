@@ -126,13 +126,32 @@ export default function ListaIzvodjacaAdminPage() {
       });
     };
     
+    const handleBrisanje = (index: number) => {
+      const confirmed = window.confirm("Da li želite da obrišete izvodjaca?");
+      if (confirmed) {
+      const updatedIzvodjaci = [...izvodjaci];
+      const idIzvodjaca = updatedIzvodjaci[index].id;
+    
+      axios
+        .delete(ApiConfig.BASE_URL + `/Administrator/ObrisiIzvodjaca/${idIzvodjaca}`)
+        .then((response) => {
+          console.log(response.data);
+          updatedIzvodjaci.splice(index, 1);
+          setIzvodjaci(updatedIzvodjaci);
+        })
+        .catch((error) => {
+          console.log("Došlo je do greške prilikom slanja zahteva:", error);
+      
+        });
+      }
+    };
 
     return (
         <><AdministratorHeader />
         <div>
         <div className="d-flex justify-content-center">
         <div className="col-md-6 col-sm-8 col-xs-10 pt-5">
-        <Table className="table-secondary" striped bordered hover>
+        <Table responsive="md" striped bordered hover className="table-white table-white mt-3 mb-3">
       
         <thead>
           <tr>
@@ -144,6 +163,7 @@ export default function ListaIzvodjacaAdminPage() {
             <th>Ocena</th>
             <th>Status</th>
             <th>Akcija</th>
+            <th>Brisanje</th>
           </tr>
         </thead>
         <tbody>
@@ -177,6 +197,12 @@ export default function ListaIzvodjacaAdminPage() {
                         Odbij
                       </Button>
                     )}
+            </td>
+            <td>
+                      <Button variant="danger" onClick={() => handleBrisanje(index)} style={{ backgroundColor: "red", margin: "15px auto"}}>
+                       Obrisi
+                       </Button>
+
             </td>
             </tr>
           ))}

@@ -243,7 +243,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
     
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
     [Route("VratiMuzickeIzvodjace")]
     [HttpGet]
     public async Task<ActionResult> VratiMuzickeIzvodjace()
@@ -296,6 +296,39 @@ public class MuzickiIzvodjacController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
+    // [HttpDelete("ObrisiTermin/{idTermina}")]
+
+    // public async Task<ActionResult> ObrisiTermin(int idTermina) {
+
+    //  try 
+    //     { 
+
+    //      var termin= await Context.TerminiIzvodjaca.FindAsync(idTermina);
+
+    //      if(termin != null)
+    
+    //       {
+    //         Context.TerminiIzvodjaca.Remove(termin);
+    //         await Context.SaveChangesAsync();
+    //         return Ok($"ID obrisanog termina je: {idTermina}");
+            
+    
+    //       }
+    //       return BadRequest("Ne postoji takav termin");
+          
+
+    //     }
+
+
+    //     catch (Exception e)
+
+    //     {
+    //       return BadRequest(e.Message);
+    //     }
+    // }
+
 
    
 }

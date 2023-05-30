@@ -159,6 +159,70 @@ public class AdministratorController : ControllerBase
           return BadRequest(e.Message);
         }
     }
+      
+       //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    [HttpDelete("ObrisiIzvodjaca/{idIzvodjaca}")]
+
+    public async Task<ActionResult> ObrisiIzvodjaca(int idIzvodjaca) {
+
+     try 
+        { 
+
+         var izvodjac= await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+
+         if(izvodjac != null)
+    
+          {
+            Context.MuzickiIzvodjaci.Remove(izvodjac);
+            await Context.SaveChangesAsync();
+            return Ok($"ID obrisanog izvodjaca je: {idIzvodjaca}");
+            
+    
+          }
+          return BadRequest("Ne postoji takav izvodjac");
+          
+
+        }
+
+
+        catch (Exception e)
+
+        {
+          return BadRequest(e.Message);
+        }
+    }
+
+     //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    [HttpDelete("ObrisiKlub/{idKluba}")]
+
+    public async Task<ActionResult> ObrisiKlub(int idKluba) {
+
+     try 
+        { 
+
+         var klub= await Context.Klubovi.FindAsync(idKluba);
+
+         if(klub != null)
+    
+          {
+            Context.Klubovi.Remove(klub);
+            await Context.SaveChangesAsync();
+            return Ok($"ID obrisanog kluba je: {idKluba}");
+            
+    
+          }
+          return BadRequest("Ne postoji takav klub");
+          
+
+        }
+
+
+        catch (Exception e)
+
+        {
+          return BadRequest(e.Message);
+        }
+    }
 
    
 }
