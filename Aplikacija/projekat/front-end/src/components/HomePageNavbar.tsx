@@ -11,7 +11,7 @@ export default function HomePageNavbar() {
         <Nav className="ms-auto">
           <Nav.Link href="/AboutStranica">About</Nav.Link>
           <Nav.Link href="#!">Contact</Nav.Link>
-          <Nav.Link href="#!">Log in</Nav.Link>
+          <Nav.Link href="/login">Log in</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
