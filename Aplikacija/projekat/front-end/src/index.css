@@ -106,3 +106,16 @@
     margin-right: 10px;
   }
   
+
+  .position-relative {
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  

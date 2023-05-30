@@ -24,7 +24,7 @@ import DodajDogadjaj from './components/OrganizatorPage/DodajDogadjaj';
 import DetaljiDogadjaja from './components/DetaljiDogadjaja';
 import DogadjajType from './types/DogadjajType';
 import AboutStranica from './components/AboutStranica';
-import LoginRegisterForm from './components/LoginRegisterForm';
+
 
 const menuItems = [
   new MainMenuItem("Home", "/"),
@@ -45,7 +45,7 @@ root.render(
      
         <Route path='/' element={ <HomePage/> } /> 
         <Route path='/login' element={ <UserLoginPage/> } /> 
-        <Route path='/loginRegister' element={ <LoginRegisterForm/> } /> 
+         
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
 
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 

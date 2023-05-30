@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   MDBContainer,
   MDBTabs,
@@ -9,18 +9,27 @@ import {
   MDBBtn,
   MDBIcon,
   MDBInput,
-  MDBCheckbox
+  MDBCheckbox,
+  MDBCard,
+  MDBValidation,
+  MDBValidationItem,
+  MDBRadio
 }
 from 'mdb-react-ui-kit';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import { X } from 'react-bootstrap-icons';
 
 interface LoginRegisterFormProps {
     onClose: () => void;
   }
 
-function LoginRegisterForm() {
+function LoginRegisterForm({ onClose }: { onClose: () => void }) {
 
-    const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
+
+  
 
   const handleUsernameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setUsername(event.target.value);
@@ -38,165 +47,234 @@ function LoginRegisterForm() {
   };
 
 
-  const [justifyActive, setJustifyActive] = useState('tab1');
+  const [activeTab, setActiveTab] = useState<"tab1" | "tab2">("tab1");
+
+
+
 
   const handleFormClose = () => {
     // Izvršavamo dodatne akcije pre zatvaranja forme ako je potrebno
 
     // Pozivamo onClose funkciju
-    //onClose();
+    onClose();
 
     // Možemo takođe ažurirati stanje onClose funkcije koristeći setOnClose, ako je potrebno
   };
 
   const handleJustifyClick = (value: string) => {
-    if (value === justifyActive) {
+    if (value === activeTab) {
       return;
     }
 
-    setJustifyActive(value);
+    
+
+    if (value === 'tab1') {
+      setActiveTab('tab1');
+    } else if (value === 'tab2') {
+      setActiveTab('tab2');
+    }
   };
 
+  const [selectedRole, setSelectedRole] = useState('korisnik');
+
+  const handleRadioChange = (role:string) => {
+    setSelectedRole(role);
+  };
+
+  
+ 
+
+
   return (
-    // <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+    <>
+    <MDBContainer className=" p-3 my-5 d-flex flex-column w-50">
+      <MDBCard> {/* Obavijanje komponenti s MDBCard */}
+        <MDBTabs pills justify className="mb-3 d-flex flex-row justify-content-between">
+          <MDBTabsItem>
+            <MDBTabsLink onClick={() => handleJustifyClick('tab1')} active={activeTab === 'tab1'}>
+              Login
+            </MDBTabsLink>
+          </MDBTabsItem>
+          <MDBTabsItem>
+            <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={activeTab === 'tab2'}>
+              Register
+            </MDBTabsLink>
+          </MDBTabsItem>
+        </MDBTabs>
+        
 
-    //   <MDBTabs pills justify className='mb-3 d-flex flex-row justify-content-between'>
-    //     <MDBTabsItem>
-    //       <MDBTabsLink onClick={() => handleJustifyClick('tab1')} active={justifyActive === 'tab1'}>
-    //         Login
-    //       </MDBTabsLink>
-    //     </MDBTabsItem>
-    //     <MDBTabsItem>
-    //       <MDBTabsLink onClick={() => handleJustifyClick('tab2')} active={justifyActive === 'tab2'}>
-    //         Register
-    //       </MDBTabsLink>
-    //     </MDBTabsItem>
-    //   </MDBTabs>
+        <MDBTabsContent>
+          <MDBTabsPane show={activeTab === 'tab1'}>
+        <MDBValidation className='row g-3' isValidated>
+        <Row>
+          <Col md={{ span: 6, offset: 3 }} >
+            
 
-    //   <MDBTabsContent>
+              <MDBValidationItem feedback='Unesite username.'invalid>
+                <MDBInput wrapperClass='mb-4 mt-4'  type='username' value={username} onChange={handleUsernameChange} placeholder='Username' id='validationCustom01'
+          required/>
+              </MDBValidationItem>
+          </Col>
+        </Row>   
+          
+        <Row>
+          <Col md={{ span: 6, offset: 3 }} >
+              <MDBValidationItem feedback='Unesite lozinku'invalid>
+                <MDBInput wrapperClass='mb-4' type='password' value={password} onChange={handlePasswordChange} placeholder='Password' id='validationCustom02'
+          required/>
+              </MDBValidationItem>
+              </Col>
+        </Row>
+            </MDBValidation>
+           
 
-    //     <MDBTabsPane show={justifyActive === 'tab1'}>
-
-    //       <div className="text-center mb-3">
-    //         <p>Sign in with:</p>
-
-    //         <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='facebook-f' size="sm"/>
-    //           </MDBBtn>
-
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='twitter' size="sm"/>
-    //           </MDBBtn>
-
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='google' size="sm"/>
-    //           </MDBBtn>
-
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='github' size="sm"/>
-    //           </MDBBtn>
-    //         </div>
-
-    //         <p className="text-center mt-3">or:</p>
-    //       </div>
-
-    //       <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
-    //       <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
-
-    //       <div className="d-flex justify-content-between mx-4 mb-4">
-    //         <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
-    //         <a href="!#">Forgot password?</a>
-    //       </div>
-
-    //       <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
-    //       <p className="text-center">Not a member? <a href="#!">Register</a></p>
-
-    //     </MDBTabsPane>
-
-    //     <MDBTabsPane show={justifyActive === 'tab2'}>
-
-    //       <div className="text-center mb-3">
-    //         <p>Sign un with:</p>
-
-    //         <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='facebook-f' size="sm"/>
-    //           </MDBBtn>
-
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='twitter' size="sm"/>
-    //           </MDBBtn>
-
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='google' size="sm"/>
-    //           </MDBBtn>
-
-    //           <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-    //             <MDBIcon fab icon='github' size="sm"/>
-    //           </MDBBtn>
-    //         </div>
-
-    //         <p className="text-center mt-3">or:</p>
-    //       </div>
-
-    //       <MDBInput wrapperClass='mb-4' label='Name' id='form1' type='text'/>
-    //       <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text'/>
-    //       <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
-    //       <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
-
-    //       <div className='d-flex justify-content-center mb-4'>
-    //         <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='I have read and agree to the terms' />
-    //       </div>
-
-    //       <MDBBtn className="mb-4 w-100">Sign up</MDBBtn>
-
-    //     </MDBTabsPane>
-
-    //   </MDBTabsContent>
-
-    // </MDBContainer>
-
-    <form>
-        <h3>Sign In</h3>
-        <div className="mb-3">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-          />
-        </div>
-        <div className="mb-3">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Enter password"
-          />
-        </div>
-        <div className="mb-3">
-          <div className="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
-            />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
-            </label>
+          <div className="d-flex justify-content-between mx-4 mb-4">
+            <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+            <a href="!#">Forgot password?</a>
           </div>
+
+          <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
+          <p className="text-center">
+              Not a member?{' '}
+              <a href="#!" onClick={() => handleJustifyClick('tab2')}>
+                Register
+              </a>
+          </p>
+            {/* Ostatak koda */}
+            
+          </MDBTabsPane>
+
+          <MDBTabsPane show={activeTab === 'tab2'}>
+            <div className="text-center mb-3">
+              
+              <div className="d-flex justify-content-between mx-auto" style={{ width: '40%' }}>
+               
+                {/* Ostatak koda */}
+              </div>
+            </div>
+          
+        <MDBValidation className='row g-3' isValidated>
+          <Row className="justify-content-center">
+                <Col md={4} className="mb-2">
+                  <MDBValidationItem invalid feedback='' >
+                    <MDBRadio label='Korisnik' required id='validationFormCheck2' name='radio-stacked' checked={selectedRole === 'korisnik'} onChange={() => handleRadioChange('korisnik')} />
+                  </MDBValidationItem>
+                </Col>
+                <Col md={4} className="mb-2">
+                  <MDBValidationItem invalid feedback=''>
+                    <MDBRadio label='Organizator' required id='validationFormCheck3' name='radio-stacked' checked={selectedRole === 'organizator'} onChange={() => handleRadioChange('organizator')}/>
+                  </MDBValidationItem>
+                </Col>
+                <Col md={4} className="mb-2">
+                  <MDBValidationItem invalid feedback=''>
+                    <MDBRadio label='Muzicki izvodjac' required id='validationFormCheck4' name='radio-stacked' checked={selectedRole === 'muzickiIzvodjac'} onChange={() => handleRadioChange('muzickiIzvodjac')}/>
+                  </MDBValidationItem>
+                </Col>
+          </Row>
+          
+          {selectedRole === 'korisnik' || selectedRole === 'organizator' ? (
+            <>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <MDBValidationItem  feedback='Unesite ime.'invalid >
+                <MDBInput wrapperClass='mb-4' id='form1' type='text' placeholder='Name' required  />
+              </MDBValidationItem>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <MDBValidationItem  feedback='Unesite prezime.'invalid >
+                <MDBInput wrapperClass='mb-4' id='form2' type='text' placeholder='Prezime' required  />
+              </MDBValidationItem>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <MDBValidationItem feedback='Unesite username.'invalid >
+                <MDBInput wrapperClass='mb-4' id='form3' type='text' placeholder='Username' required  />
+              </MDBValidationItem>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <MDBValidationItem  feedback='Unesite email.'invalid >
+                <MDBInput wrapperClass='mb-4' id='form4' type='email' placeholder='Email' required  />
+              </MDBValidationItem>
+            </Col>
+          </Row>  
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
+              <MDBValidationItem  feedback='Unesite sifru.'invalid >
+                <MDBInput wrapperClass='mb-4' id='form5' type='password' placeholder='Password' required/>
+              </MDBValidationItem>
+            </Col>
+          </Row>
+          </>
+          
+
+          ) : selectedRole === 'muzickiIzvodjac' ? (
+            <>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  <MDBValidationItem feedback='Unesite ime izvođača.' invalid>
+                    <MDBInput wrapperClass='mb-4' id='form1' type='text' placeholder='Ime izvođača' required />
+                  </MDBValidationItem>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  <MDBValidationItem feedback='Unesite žanr.' invalid>
+                    <MDBInput wrapperClass='mb-4' id='form2' type='text' placeholder='Žanr' required />
+                  </MDBValidationItem>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  <MDBValidationItem feedback='Unesite broj članova.' invalid>
+                    <MDBInput wrapperClass='mb-4' id='form3' type='number' placeholder='Broj članova' required />
+                  </MDBValidationItem>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  <MDBValidationItem feedback='Unesite username.' invalid>
+                    <MDBInput wrapperClass='mb-4' id='form4' type='text' placeholder='Username' required />
+                  </MDBValidationItem>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  <MDBValidationItem feedback='Unesite email.' invalid>
+                    <MDBInput wrapperClass='mb-4' id='form5' type='email' placeholder='Email' required />
+                  </MDBValidationItem>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={{ span: 6, offset: 3 }}>
+                  <MDBValidationItem feedback='Unesite šifru.' invalid>
+                    <MDBInput wrapperClass='mb-4' id='form6' type='password' placeholder='Password' required />
+                  </MDBValidationItem>
+                </Col>
+              </Row>
+            </>
+           ) : null}
+        </MDBValidation>
+
+            {/* Ostatak koda */}
+            <MDBBtn className="mb-4 w-100">Sign up</MDBBtn>
+          </MDBTabsPane>
+        </MDBTabsContent>
+        <div className="position-relative">
+            <Button variant="link" className="close" onClick={handleFormClose}>
+              <X />
+            </Button>
         </div>
-        <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </div>
-        <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
-        </p>
-      </form>
+      </MDBCard>
+
+    </MDBContainer>
+    </>
   );
 }
 
+  
 export default LoginRegisterForm;
