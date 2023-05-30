@@ -104,13 +104,13 @@ public class MuzickiIzvodjacController : ControllerBase
     }
 
     [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
-    [Route("PostaviSlobodanTermin")]
+    [Route("PostaviSlobodanTermin/{idIzvodjaca}")]
     [HttpPost]
-    public async Task<ActionResult> PostaviSlobodanTermin([FromBody] TerminIzvodjacaDTO terminDto)
+    public async Task<ActionResult> PostaviSlobodanTermin(int idIzvodjaca, [FromBody] TerminIzvodjacaDTO terminDto)
     {
         try
         {
-            var izvodjac = await Context.MuzickiIzvodjaci.Where(p=>p.ID==terminDto.IdIzvodjaca).FirstOrDefaultAsync();
+            var izvodjac = await Context.MuzickiIzvodjaci.Where(p=>p.ID==idIzvodjaca).FirstOrDefaultAsync();
 
             if(izvodjac == null)
             {

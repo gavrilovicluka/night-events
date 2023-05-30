@@ -3,6 +3,9 @@ import axios from "axios";
 import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import { ApiConfig } from "../../config/api.config";
 import { Button, Form, Modal } from "react-bootstrap";
+import { DecodedTokenMuzickiIzvodjac } from "../../types/DecodedTokenMuzickiIzvodjac";
+import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
+import jwtDecode from "jwt-decode";
 
 function DodajTerminIzvodjac() {
 
@@ -18,26 +21,51 @@ function DodajTerminIzvodjac() {
 
 
   const data = {
-    idIzvodjaca: idIzvodjaca,
     datum: datum
   }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    try{
-      const response = await axios.post(ApiConfig.BASE_URL + `/MuzickiIzvodjac/PostaviSlobodanTermin`, data);
-     
-      if (response.status === 200) {
-        const data = response.data;
-        setShowModal(true);
-        
+  
+    const token = localStorage.getItem('jwtToken');
+  
+    if (token !== null) {
+      const decodedToken = jwtDecode(token) as DecodedTokenMuzickiIzvodjac | DecodedTokenOrganizator;
+      console.log(decodedToken);
+  
+      if ('id' in decodedToken) {
+        const idMuz = decodedToken.id;
+  
+        try {
+          const today = new Date().toISOString().split('T')[0]; // Danasšnji datum
+  
+          if (datum < today) {
+            alert('Izabrali ste prošli datum!');
+            return; // Prekid funkcije u slučaju izbora prošlog datuma
+          }
+          console.log(datum);
+          const response = await axios.post(ApiConfig.BASE_URL + `/MuzickiIzvodjac/PostaviSlobodanTermin/${idMuz}`, data, {
+            headers: {
+              'Authorization': `Bearer ${token}`
+            }
+          });
+  
+          if (response.status === 200) {
+            const data = response.data;
+            setShowModal(true);
+          } else {
+            // Dodatna logika za obradu neuspešnog odgovora
+          }
+        } catch (error) {
+          console.error('Greška prilikom poziva API funkcije:', error);
+        }
       } else {
-        // Dodatna logika za obradu neuspešnog odgovora
+        console.log("Token nije pridružen muzičkom izvođaču.");
       }
-    }catch (error) {
-      console.error('Greška prilikom poziva API funkcije:', error);
+    } else {
+      console.log("Token organizatora nije pronađen.");
     }
-  }
+  };
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -45,7 +73,15 @@ function DodajTerminIzvodjac() {
   };
 
   const handleDatumChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setDatum(event.target.value);
+    const selectedDate = event.target.value;
+    const today = new Date().toISOString().split('T')[0]; // Danasšnji datum
+  
+    if (selectedDate < today) {
+      alert('Izabrali ste prošli datum!');
+      setDatum(today); // Osvežavanje inputa sa današnjim datumom
+    } else {
+      setDatum(selectedDate);
+    }
   };
 
   const handleIdIzvodjacaChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -68,17 +104,6 @@ function DodajTerminIzvodjac() {
             value={datum}
             onChange={handleDatumChange}
             required />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>ID Izvođača</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Unesite ID izvođača"
-            value={idIzvodjaca}
-            onChange={handleIdIzvodjacaChange}
-            required
-            title="Polje ID izvođača je obavezno."
-          />
         </Form.Group>
         <Button
           type="submit"
@@ -110,3 +135,5 @@ function DodajTerminIzvodjac() {
 }
 
 export default DodajTerminIzvodjac;
+
+
