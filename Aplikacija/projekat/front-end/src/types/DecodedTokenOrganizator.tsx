@@ -1,6 +1,7 @@
 export interface DecodedTokenOrganizator {
-  id : string;  
-  idKluba: string;
-    
+    id: number;
+    idKluba: number;
+    role: string;
+
     // Ostala svojstva tokena
   }

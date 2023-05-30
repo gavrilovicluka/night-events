@@ -24,7 +24,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
     
     const logout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
-        localStorage.removeItem("username");
+        localStorage.removeItem("jwtToken");
         navigate("/login");
     }
     
