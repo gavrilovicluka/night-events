@@ -272,6 +272,38 @@ public class MuzickiIzvodjacController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
+    [Route("VratiSlobodneMuzickeIzvodjaceZaDatum")]
+    [HttpGet]
+    public async Task<ActionResult> VratiSlobodneMuzickeIzvodjaceZaDatum(DateTime datum)
+    {
+        try
+        {
+            var slobodniIzvodjaci = await Context.MuzickiIzvodjaci
+            .Where(m => m.Termini != null && 
+                        m.Termini.FirstOrDefault(t => t.Termin == datum && !t.Rezervisan) != null)
+            .Select(m => new
+            {
+                id = m.ID,
+                username = m.Username,
+                imeIzvodjaca = m.ImeIzvodjaca,
+                zanr = m.Zanr,
+                brojClanova = m.BrClanova,
+                ocene = m.Ocene,
+                termini = m.Termini,
+                dogadjaji = m.Dogadjaji,
+                status = m.Status
+
+            })
+            .ToListAsync();
+            return Ok(slobodniIzvodjaci);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 	
 
     [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar, Organizator")]

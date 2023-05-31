@@ -16,6 +16,7 @@ export default function ListaDogadjaja() {
   const [showForm, setShowForm] = useState(false);
   const [selectedDogadjajId, setSelectedDogadjajId] = useState<number>(0);
   const [selectedDogadjaj, setSelectedDogadjaj] = useState<DogadjajType>();
+  const [selectedDate, setSelectedDate] = useState<Date>();
 
   useEffect(() => {
     getData();
@@ -50,12 +51,13 @@ export default function ListaDogadjaja() {
         });
     }
   };
-  const handleDodeliIzvodjaca = (dogadjajId: number) => {
+  const handleDodeliIzvodjaca = (dogadjajId: number, datum: Date) => {
     setSelectedDogadjajId(dogadjajId);
+    setSelectedDate(datum);
     setShowForm(true);
   };
 
-  const IzborIzvodjacaForma = ({ idDogadjaja }: { idDogadjaja: number }) => {
+  const IzborIzvodjacaForma = ({ idDogadjaja, datum }: { idDogadjaja: number, datum?: Date }) => {
     const [izvodjaci, setIzvodjaci] = useState<Array<MuzickiIzvodjacType>>([]);
     const [selectedIzvodjac, setSelectedIzvodjac] =
       useState<MuzickiIzvodjacType>();
@@ -66,8 +68,11 @@ export default function ListaDogadjaja() {
         if (storedToken) {
           try {
             const response = await axios.get(
-              ApiConfig.BASE_URL + "/MuzickiIzvodjac/VratiMuzickeIzvodjace",
-              {
+              ApiConfig.BASE_URL + "/MuzickiIzvodjac/VratiSlobodneMuzickeIzvodjaceZaDatum", {
+                params: {
+                  datum: selectedDate?.toString().split('T')[0]
+                },
+                
                 headers: {
                   Authorization: `Bearer ${storedToken}`,
                 },
@@ -83,7 +88,7 @@ export default function ListaDogadjaja() {
           }
         }
       };
-
+      
       fetchIzvodjaci();
     }, []);
 
@@ -220,10 +225,11 @@ export default function ListaDogadjaja() {
                         {showForm && selectedDogadjajId === dogadjaj.id ? (
                           <IzborIzvodjacaForma
                             idDogadjaja={selectedDogadjajId}
+                            datum={selectedDate}
                           />
                         ) : (
                           <Button
-                            onClick={() => handleDodeliIzvodjaca(dogadjaj.id!)}
+                            onClick={() => handleDodeliIzvodjaca(dogadjaj.id!, dogadjaj.datum!)}
                           >
                             Dodaj izvođača
                           </Button>
