@@ -53,12 +53,10 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
 
 
   const handleFormClose = () => {
-    // Izvršavamo dodatne akcije pre zatvaranja forme ako je potrebno
-
-    // Pozivamo onClose funkciju
+    
     onClose();
 
-    // Možemo takođe ažurirati stanje onClose funkcije koristeći setOnClose, ako je potrebno
+    
   };
 
   const handleJustifyClick = (value: string) => {
@@ -81,14 +79,28 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
     setSelectedRole(role);
   };
 
-  
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (formRef.current && !formRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
  
 
 
   return (
     <>
-    <MDBContainer className=" p-3 my-5 d-flex flex-column w-50">
-      <MDBCard> {/* Obavijanje komponenti s MDBCard */}
+    <MDBContainer className=" p-3 my-5 d-flex flex-column w-50" ref={formRef}>
+      <MDBCard> 
         <MDBTabs pills justify className="mb-3 d-flex flex-row justify-content-between">
           <MDBTabsItem>
             <MDBTabsLink onClick={() => handleJustifyClick('tab1')} active={activeTab === 'tab1'}>
@@ -264,11 +276,7 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
             <MDBBtn className="mb-4 w-100">Sign up</MDBBtn>
           </MDBTabsPane>
         </MDBTabsContent>
-        <div className="position-relative">
-            <Button variant="link" className="close" onClick={handleFormClose}>
-              <X />
-            </Button>
-        </div>
+        
       </MDBCard>
 
     </MDBContainer>
