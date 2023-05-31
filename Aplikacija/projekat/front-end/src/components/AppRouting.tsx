@@ -22,6 +22,7 @@ import PageNotFound from "./PageNotFound";
 import jwtDecode from "jwt-decode";
 import { DecodedToken } from "../types/DecodedToken";
 import { ReactNode } from "react";
+import MojKlub from "./OrganizatorPage/MojKlub";
 
 let userRole: string | null = null;
 
@@ -57,6 +58,14 @@ function AppRouting() {
           element={
             <OrganizatorElement>
               <OrganizatorDashboard />
+            </OrganizatorElement>
+          }
+        />
+        <Route
+          path="/organizatorDashboard/mojKlub"
+          element={
+            <OrganizatorElement>
+              <MojKlub />
             </OrganizatorElement>
           }
         />

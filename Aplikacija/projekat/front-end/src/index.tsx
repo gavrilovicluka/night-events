@@ -9,13 +9,6 @@ import { MainMenuItem } from './components/MainMenu';
 import { BrowserRouter} from 'react-router-dom';
 import AppRouting from './components/AppRouting';
 
-const menuItems = [
-  new MainMenuItem("Home", "/"),
-  new MainMenuItem("Login", "/login/"),
-  new MainMenuItem("Register", "/register/"),
-
-]
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

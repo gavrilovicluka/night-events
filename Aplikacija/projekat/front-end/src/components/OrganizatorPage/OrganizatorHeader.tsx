@@ -22,7 +22,7 @@ export default function OrganizatorHeader() {
     const logout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
         localStorage.removeItem("jwtToken");
-        navigate("/login");
+        navigate("/");
     }
     
     return (

@@ -3925,19 +3925,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\X\\.nuget\\packages\\": {}
+    "C:\\Users\\My PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "projectUniqueName": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
       "projectName": "projekat",
-      "projectPath": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
-      "packagesPath": "C:\\Users\\X\\.nuget\\packages\\",
-      "outputPath": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
+      "projectPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\X\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
