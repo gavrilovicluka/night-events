@@ -53,10 +53,10 @@ export default function ListaTermina() {
                 </thead>
                 <tbody>
                     {termini2
-                    .sort((a, b) => compareAsc(new Date(a.datum?a.datum:''), new Date(b.datum?b.datum:'')))
+                    .sort((a, b) => compareAsc(new Date(a.termin?a.termin:''), new Date(b.termin?b.termin:'')))
                     .map((termin, index) => (
                         <tr key={index}>
-                            <td>{termin.datum && new Date(termin.datum).toLocaleDateString('sr-RS')}</td>
+                            <td>{termin.termin && new Date(termin.termin).toLocaleDateString('sr-RS')}</td>
                             <td>{termin.rezervisan === true ? "DA" : "NE"}</td>
                             <td> </td>
                         </tr>                      

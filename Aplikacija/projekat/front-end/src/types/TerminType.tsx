@@ -1,7 +1,8 @@
+import MuzickiIzvodjacType from "./MuzickiIzvodjacType";
+
 export default class TerminType {
     id?: number;
-    idMuzIzvodjaca?: number;
-    datum?: Date;
-    vreme?: string;
+    MuzIzvodjaca?: MuzickiIzvodjacType;
+    termin?: Date;
     rezervisan?: boolean;
 }

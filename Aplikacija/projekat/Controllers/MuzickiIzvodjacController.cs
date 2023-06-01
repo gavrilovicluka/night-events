@@ -103,7 +103,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
     [Route("PostaviSlobodanTermin")]
     [HttpPost]
     public async Task<ActionResult> PostaviSlobodanTermin([FromBody] TerminIzvodjacaDTO terminDto)
@@ -129,7 +129,7 @@ public class MuzickiIzvodjacController : ControllerBase
             };
 
             Context.TerminiIzvodjaca.Add(noviTermin);
-            izvodjac.Termini.Add(noviTermin);
+            //izvodjac.Termini.Add(noviTermin);
 
             await Context.SaveChangesAsync();
          
@@ -243,7 +243,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
     
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
     [Route("VratiMuzickeIzvodjace")]
     [HttpGet]
     public async Task<ActionResult> VratiMuzickeIzvodjace()
