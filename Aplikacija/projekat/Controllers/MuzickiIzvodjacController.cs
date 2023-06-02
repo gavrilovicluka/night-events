@@ -103,8 +103,8 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
-    [Route("PostaviSlobodanTermin/{idIzvodjaca}")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
+    [Route("PostaviSlobodanTermin")]
     [HttpPost]
     public async Task<ActionResult> PostaviSlobodanTermin(int idIzvodjaca, [FromBody] TerminIzvodjacaDTO terminDto)
     {
@@ -129,7 +129,7 @@ public class MuzickiIzvodjacController : ControllerBase
             };
 
             Context.TerminiIzvodjaca.Add(noviTermin);
-            izvodjac.Termini.Add(noviTermin);
+            //izvodjac.Termini.Add(noviTermin);
 
             await Context.SaveChangesAsync();
          
@@ -266,6 +266,38 @@ public class MuzickiIzvodjacController : ControllerBase
             })
             .ToListAsync();
             return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
+    [Route("VratiSlobodneMuzickeIzvodjaceZaDatum")]
+    [HttpGet]
+    public async Task<ActionResult> VratiSlobodneMuzickeIzvodjaceZaDatum(DateTime datum)
+    {
+        try
+        {
+            var slobodniIzvodjaci = await Context.MuzickiIzvodjaci
+            .Where(m => m.Termini != null && 
+                        m.Termini.FirstOrDefault(t => t.Termin == datum && !t.Rezervisan) != null)
+            .Select(m => new
+            {
+                id = m.ID,
+                username = m.Username,
+                imeIzvodjaca = m.ImeIzvodjaca,
+                zanr = m.Zanr,
+                brojClanova = m.BrClanova,
+                ocene = m.Ocene,
+                termini = m.Termini,
+                dogadjaji = m.Dogadjaji,
+                status = m.Status
+
+            })
+            .ToListAsync();
+            return Ok(slobodniIzvodjaci);
         }
         catch (Exception e)
         {

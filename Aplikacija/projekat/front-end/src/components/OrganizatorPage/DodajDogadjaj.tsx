@@ -12,7 +12,6 @@ import { string } from "yup";
 
 export default function DodajDogadjaj() {
 
-  // treba da se prosledi id org preko tokena 
 
   const [dogadjajData, setDogadjajData] = useState({
     naziv: '',
@@ -41,12 +40,12 @@ export default function DodajDogadjaj() {
       const data = {
         naziv: dogadjajData.naziv,
         datum: dogadjajData.datum,
-        vreme: dogadjajData.naziv,
+        vreme: dogadjajData.vreme,
       }
 
-      console.log(dogadjajData.datum);
+      //console.log(dogadjajData.datum);
 
-      axios.post(ApiConfig.BASE_URL + `/Dogadjaj/DodajDogadjaj/${klubId}/${idOrg}`, data, {
+      axios.post(ApiConfig.BASE_URL + `/Dogadjaj/DodajDogadjajBezIzvodjaca/${klubId}`, data, {
         headers: {
           'Authorization': `Bearer ${token}`
         }})

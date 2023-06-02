@@ -78,7 +78,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("DodajDogadjajBezIzvodjaca/{idKluba}")]
     [HttpPost]
     public async Task<ActionResult> DodajDogadjaj(int idKluba, [FromBody] DodajDogadjajDTO dodajDogadjajDto)
@@ -147,16 +147,37 @@ public class DogadjajController : ControllerBase
                 return BadRequest("Dogadjaj ne postoji");
             }
 
-            var izvodjac = await Context.MuzickiIzvodjaci.FindAsync(idIzvodjaca);
+            var izvodjac = await Context.MuzickiIzvodjaci
+                    .Include(p => p.Termini)
+                    .Where(p => p.ID == idIzvodjaca)
+                    .FirstOrDefaultAsync();                    
             if(izvodjac == null)
             {
                 return BadRequest("Muzicki izvodjac ne postoji");
             }
-            dogadjaj.MuzickiIzvodjac = izvodjac;
-            Context.Dogadjaji.Update(dogadjaj);
-            await Context.SaveChangesAsync();
 
-            return Ok(dogadjaj);
+            if(izvodjac.Termini != null)
+            {
+                var termin = izvodjac.Termini.Find(t => t.Termin == dogadjaj.Datum && t.Rezervisan == false);
+                if(termin == null)
+                {
+                    return BadRequest(new { ErrorMessage = "Termin ne postoji ili je rezervisan", ErrorCode = 1001 });
+                }
+                termin.Rezervisan = true;
+                dogadjaj.MuzickiIzvodjac = izvodjac;
+
+                Context.Dogadjaji.Update(dogadjaj);
+                Context.TerminiIzvodjaca.Update(termin);
+                await Context.SaveChangesAsync();
+
+                return Ok(new {Dogadjaj = dogadjaj, TerminiIzvodjaca = termin});
+            }
+            else 
+            {
+                return BadRequest("Muzicki izvodjac nema termine");
+            }
+
+            
         }
         catch (Exception e)
         {
@@ -179,6 +200,48 @@ public class DogadjajController : ControllerBase
 
             var d = await Context.Dogadjaji
             .Where(p => p.Klub!.ID == idKluba)
+            .Select(m => new
+            {
+                id = m.ID,
+                naziv = m.Naziv,
+                nazivKluba = m.Klub!.Naziv,
+                idKluba = m.Klub.ID, 
+                datum = m.Datum,
+                vreme = m.Vreme,
+                brojRezervacija = m.BrojRezervacija,
+                rezervacije = m.Rezervacije,
+                izvodjac = m.MuzickiIzvodjac          
+            })
+            .ToListAsync();
+
+            if(d == null)
+            {
+                return BadRequest("Ne postoje dogadjaji za dati klub");
+            }
+
+            return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Route("VratiDogadjajeKlubaBezIzvodjaca/{idKluba}")]
+    [HttpGet]
+    public async Task<ActionResult> VratiDogadjajeKlubaBezIzvodjaca(int idKluba)
+    {
+        try
+        {
+            var klub = await Context.Klubovi.FindAsync(idKluba);
+            if(klub == null)
+            {
+                return BadRequest("Klub ne postoji");
+            }
+
+            var d = await Context.Dogadjaji
+            .Where(p => p.Klub!.ID == idKluba && p.MuzickiIzvodjac == null)
             .Select(m => new
             {
                 id = m.ID,

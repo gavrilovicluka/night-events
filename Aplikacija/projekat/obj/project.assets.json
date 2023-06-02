@@ -3927,6 +3927,7 @@
   "packageFolders": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\Andriana\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
 =======
@@ -3935,10 +3936,14 @@
 =======
     "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
 >>>>>>> login/register-forma
+=======
+    "C:\\Users\\My PC\\.nuget\\packages\\": {}
+>>>>>>> organizator-page
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
@@ -3960,11 +3965,19 @@
       "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Korisnik\\Desktop\\SWE-proj\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
 >>>>>>> login/register-forma
+=======
+      "projectUniqueName": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "projectName": "projekat",
+      "projectPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
+      "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\",
+>>>>>>> organizator-page
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         "C:\\Users\\Andriana\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3975,6 +3988,9 @@
 =======
         "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> login/register-forma
+=======
+        "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> organizator-page
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -11,6 +11,7 @@ build_property.RootNamespace = projekat
 build_property.RootNamespace = projekat
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -30,4 +31,11 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = c:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat
 >>>>>>> login/register-forma
+=======
+build_property.ProjectDir = C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat
+>>>>>>> organizator-page
 build_property._RazorSourceGeneratorDebug = 
