@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import { MainMenuItem } from './components/MainMenu';
 import { BrowserRouter} from 'react-router-dom';
 import AppRouting from './components/AppRouting';
 

@@ -1,17 +1,37 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import OrganizatorHeader from "./OrganizatorHeader";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from "axios";
 import DogadjajType from "../../types/DogadjajType";
 import { ApiConfig } from "../../config/api.config";
-//import jwtDecode from "jwt-decode";
+import jwtDecode from "jwt-decode";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
 import { string } from "yup";
+import { DecodedToken } from "../../types/DecodedToken";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function DodajDogadjaj() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      navigate("/");
+      return;
+    }
+    const token = localStorage.getItem("jwtToken");
+    if (token === null || token === undefined) {
+      navigate("/");
+      return;
+    }
 
+    const decodedToken = jwtDecode(token) as DecodedToken;
+    if (decodedToken.role !== "Organizator") {
+      navigate("/");
+      return;
+    }
+  });
 
   const [dogadjajData, setDogadjajData] = useState({
     naziv: '',
@@ -135,6 +155,3 @@ export default function DodajDogadjaj() {
 
 }
 
-function jwtDecode(token: string): DecodedTokenOrganizator {
-  throw new Error("Function not implemented.");
-}

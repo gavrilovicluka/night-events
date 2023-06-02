@@ -1,16 +1,6 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "SerializedFilePath": "d:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
-  "FilePath": "d:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
-=======
-  "SerializedFilePath": "c:\\Users\\Korisnik\\Desktop\\SWE-proj\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
-  "FilePath": "c:\\Users\\Korisnik\\Desktop\\SWE-proj\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
->>>>>>> login/register-forma
-=======
   "SerializedFilePath": "c:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\obj\\Debug\\net6.0\\project.razor.json",
   "FilePath": "c:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\projekat.csproj",
->>>>>>> organizator-page
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -23,15 +13,7 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 849620154,
-=======
-        "HashCode": 1658492463,
->>>>>>> login/register-forma
-=======
-        "HashCode": 724256468,
->>>>>>> organizator-page
+        "HashCode": 1571087324,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -115,15 +97,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1631090633,
-=======
-        "HashCode": 440655381,
->>>>>>> login/register-forma
-=======
-        "HashCode": -72010652,
->>>>>>> organizator-page
+        "HashCode": -832432379,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -208,15 +182,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 914897735,
-=======
-        "HashCode": 955072688,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2079535400,
->>>>>>> organizator-page
+        "HashCode": -1739450020,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -249,15 +215,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1234890817,
-=======
-        "HashCode": -1232249851,
->>>>>>> login/register-forma
-=======
-        "HashCode": 703569251,
->>>>>>> organizator-page
+        "HashCode": 301830757,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -291,15 +249,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -594408580,
-=======
-        "HashCode": 196416312,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1122129826,
->>>>>>> organizator-page
+        "HashCode": -15747864,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -320,15 +270,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1121122889,
-=======
-        "HashCode": 1167399076,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1037660793,
->>>>>>> organizator-page
+        "HashCode": -1328452251,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -350,15 +292,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 404096468,
-=======
-        "HashCode": 1094818796,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1320819466,
->>>>>>> organizator-page
+        "HashCode": 1054658655,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -463,15 +397,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1691370123,
-=======
-        "HashCode": 337852033,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1896961308,
->>>>>>> organizator-page
+        "HashCode": 2025752231,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -577,15 +503,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1365543604,
-=======
-        "HashCode": 1995652687,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2043034814,
->>>>>>> organizator-page
+        "HashCode": -714039684,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -618,15 +536,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1951599519,
-=======
-        "HashCode": 852686918,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1640444733,
->>>>>>> organizator-page
+        "HashCode": -865905568,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -660,15 +570,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1544381739,
-=======
-        "HashCode": -1539348555,
->>>>>>> login/register-forma
-=======
-        "HashCode": 725763630,
->>>>>>> organizator-page
+        "HashCode": 1288760189,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -701,15 +603,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -525834183,
-=======
-        "HashCode": -591187142,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1081008101,
->>>>>>> organizator-page
+        "HashCode": -1426882787,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.NotAuthorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -743,15 +637,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -593442413,
-=======
-        "HashCode": 932670287,
->>>>>>> login/register-forma
-=======
-        "HashCode": 312316773,
->>>>>>> organizator-page
+        "HashCode": 215634443,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -784,15 +670,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -883370695,
-=======
-        "HashCode": -578424236,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1315651793,
->>>>>>> organizator-page
+        "HashCode": -1067786668,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorized",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -826,15 +704,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1808753288,
-=======
-        "HashCode": 1503701197,
->>>>>>> login/register-forma
-=======
-        "HashCode": 267211582,
->>>>>>> organizator-page
+        "HashCode": -249094408,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -855,15 +725,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1384992138,
-=======
-        "HashCode": -1824936728,
->>>>>>> login/register-forma
-=======
-        "HashCode": 289848306,
->>>>>>> organizator-page
+        "HashCode": 424555523,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeView.Authorizing",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -885,15 +747,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -436445728,
-=======
-        "HashCode": -426521324,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1629273750,
->>>>>>> organizator-page
+        "HashCode": -1194646580,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -924,15 +778,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 105504640,
-=======
-        "HashCode": -229184677,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2014973361,
->>>>>>> organizator-page
+        "HashCode": -2089225403,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -964,15 +810,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 546816942,
-=======
-        "HashCode": -1876784728,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1690082581,
->>>>>>> organizator-page
+        "HashCode": -1501028167,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -993,15 +831,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1827102766,
-=======
-        "HashCode": -753265777,
->>>>>>> login/register-forma
-=======
-        "HashCode": 2094147713,
->>>>>>> organizator-page
+        "HashCode": -451844662,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Authorization.CascadingAuthenticationState.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Authorization",
@@ -1023,15 +853,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 118581249,
-=======
-        "HashCode": 210028583,
->>>>>>> login/register-forma
-=======
-        "HashCode": 658759806,
->>>>>>> organizator-page
+        "HashCode": -69403037,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1106,15 +928,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -22788975,
-=======
-        "HashCode": 198550813,
->>>>>>> login/register-forma
-=======
-        "HashCode": 253688224,
->>>>>>> organizator-page
+        "HashCode": 950885830,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1190,15 +1004,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1641410727,
-=======
-        "HashCode": 1613993085,
->>>>>>> login/register-forma
-=======
-        "HashCode": -441708818,
->>>>>>> organizator-page
+        "HashCode": 392741901,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1219,15 +1025,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 947665165,
-=======
-        "HashCode": 1119420565,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1313160831,
->>>>>>> organizator-page
+        "HashCode": -1298226317,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1249,15 +1047,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -905964382,
-=======
-        "HashCode": 387104824,
->>>>>>> login/register-forma
-=======
-        "HashCode": -7314639,
->>>>>>> organizator-page
+        "HashCode": -720435496,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1299,15 +1089,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 2052649179,
-=======
-        "HashCode": -625871786,
->>>>>>> login/register-forma
-=======
-        "HashCode": 896438699,
->>>>>>> organizator-page
+        "HashCode": -69608085,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1350,15 +1132,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1820201330,
-=======
-        "HashCode": -485750489,
->>>>>>> login/register-forma
-=======
-        "HashCode": -967303276,
->>>>>>> organizator-page
+        "HashCode": 166969645,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1400,15 +1174,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -793480781,
-=======
-        "HashCode": -1188087238,
->>>>>>> login/register-forma
-=======
-        "HashCode": -295246965,
->>>>>>> organizator-page
+        "HashCode": 1901649401,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1451,15 +1217,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 926684273,
-=======
-        "HashCode": -666898289,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2043138824,
->>>>>>> organizator-page
+        "HashCode": -386571737,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1480,15 +1238,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1484235682,
-=======
-        "HashCode": -760775141,
->>>>>>> login/register-forma
-=======
-        "HashCode": -779828857,
->>>>>>> organizator-page
+        "HashCode": 42280427,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1510,15 +1260,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1627571123,
-=======
-        "HashCode": 735554534,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1986058309,
->>>>>>> organizator-page
+        "HashCode": -1369415528,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1560,15 +1302,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 859453272,
-=======
-        "HashCode": 896601433,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1598813829,
->>>>>>> organizator-page
+        "HashCode": 1457864625,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1611,15 +1345,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -877570942,
-=======
-        "HashCode": -1385549612,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1175430407,
->>>>>>> organizator-page
+        "HashCode": 1346577622,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1727,15 +1453,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 65622306,
-=======
-        "HashCode": -58020971,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1957176249,
->>>>>>> organizator-page
+        "HashCode": 1939684728,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1844,15 +1562,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -493994509,
-=======
-        "HashCode": 793800777,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1774995944,
->>>>>>> organizator-page
+        "HashCode": 1748722249,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1873,15 +1583,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -91311781,
-=======
-        "HashCode": 2113527486,
->>>>>>> login/register-forma
-=======
-        "HashCode": 22982843,
->>>>>>> organizator-page
+        "HashCode": 1839359987,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1903,15 +1605,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 124963343,
-=======
-        "HashCode": -644207441,
->>>>>>> login/register-forma
-=======
-        "HashCode": -314077539,
->>>>>>> organizator-page
+        "HashCode": -596194479,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1944,15 +1638,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -776305502,
-=======
-        "HashCode": -1472250377,
->>>>>>> login/register-forma
-=======
-        "HashCode": 727353544,
->>>>>>> organizator-page
+        "HashCode": 1125673773,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1986,15 +1672,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1300206032,
-=======
-        "HashCode": 1112759874,
->>>>>>> login/register-forma
-=======
-        "HashCode": -80342946,
->>>>>>> organizator-page
+        "HashCode": -694428594,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -2015,15 +1693,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 823544040,
-=======
-        "HashCode": -725957676,
->>>>>>> login/register-forma
-=======
-        "HashCode": 451504593,
->>>>>>> organizator-page
+        "HashCode": 1328656952,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -2045,15 +1715,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1737273899,
-=======
-        "HashCode": 1577265389,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1390440150,
->>>>>>> organizator-page
+        "HashCode": -1613128882,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -2072,15 +1734,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -585447322,
-=======
-        "HashCode": -1849603091,
->>>>>>> login/register-forma
-=======
-        "HashCode": 280172895,
->>>>>>> organizator-page
+        "HashCode": -1865635247,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -2100,15 +1754,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1505229026,
-=======
-        "HashCode": -1056815909,
->>>>>>> login/register-forma
-=======
-        "HashCode": 684532046,
->>>>>>> organizator-page
+        "HashCode": -181439061,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2213,15 +1859,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1007834407,
-=======
-        "HashCode": -564918890,
->>>>>>> login/register-forma
-=======
-        "HashCode": 786233569,
->>>>>>> organizator-page
+        "HashCode": -167506638,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2327,15 +1965,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1428639635,
-=======
-        "HashCode": -310593978,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1789712732,
->>>>>>> organizator-page
+        "HashCode": 1523072844,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2368,15 +1998,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 2140243004,
-=======
-        "HashCode": 793179871,
->>>>>>> login/register-forma
-=======
-        "HashCode": -646151116,
->>>>>>> organizator-page
+        "HashCode": -2076512625,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2410,15 +2032,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1679702718,
-=======
-        "HashCode": -608969250,
->>>>>>> login/register-forma
-=======
-        "HashCode": -592834541,
->>>>>>> organizator-page
+        "HashCode": 528160462,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2490,15 +2104,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1209205531,
-=======
-        "HashCode": -649851870,
->>>>>>> login/register-forma
-=======
-        "HashCode": -322089660,
->>>>>>> organizator-page
+        "HashCode": 671781820,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2571,15 +2177,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1544908852,
-=======
-        "HashCode": -1366244148,
->>>>>>> login/register-forma
-=======
-        "HashCode": 430607350,
->>>>>>> organizator-page
+        "HashCode": -2077020416,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2687,15 +2285,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1944958145,
-=======
-        "HashCode": 1694543184,
->>>>>>> login/register-forma
-=======
-        "HashCode": -105111849,
->>>>>>> organizator-page
+        "HashCode": 799902852,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2804,15 +2394,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1306103225,
-=======
-        "HashCode": -1060082843,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1774978934,
->>>>>>> organizator-page
+        "HashCode": -1544709718,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2854,15 +2436,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 739797296,
-=======
-        "HashCode": 1818182558,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2136118091,
->>>>>>> organizator-page
+        "HashCode": 1572323740,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2905,15 +2479,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 774726858,
-=======
-        "HashCode": 494555723,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1867208848,
->>>>>>> organizator-page
+        "HashCode": 2126121394,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3010,15 +2576,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1754820504,
-=======
-        "HashCode": -607779262,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1622621277,
->>>>>>> organizator-page
+        "HashCode": 1511289862,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3116,15 +2674,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -932134498,
-=======
-        "HashCode": -1655488000,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1714942761,
->>>>>>> organizator-page
+        "HashCode": -1038044546,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3188,15 +2738,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -395247852,
-=======
-        "HashCode": -607278818,
->>>>>>> login/register-forma
-=======
-        "HashCode": -495695308,
->>>>>>> organizator-page
+        "HashCode": 977541813,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3261,15 +2803,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -882272099,
-=======
-        "HashCode": -1866078762,
->>>>>>> login/register-forma
-=======
-        "HashCode": -93521794,
->>>>>>> organizator-page
+        "HashCode": -803424815,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3377,15 +2911,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1285146514,
-=======
-        "HashCode": 96551146,
->>>>>>> login/register-forma
-=======
-        "HashCode": -424949658,
->>>>>>> organizator-page
+        "HashCode": -1213796265,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3494,15 +3020,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 819624913,
-=======
-        "HashCode": -1625106467,
->>>>>>> login/register-forma
-=======
-        "HashCode": -525665792,
->>>>>>> organizator-page
+        "HashCode": 138120635,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3523,15 +3041,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1423846071,
-=======
-        "HashCode": 1137901947,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1680157584,
->>>>>>> organizator-page
+        "HashCode": 1663666315,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3553,15 +3063,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -408650817,
-=======
-        "HashCode": 1268033464,
->>>>>>> login/register-forma
-=======
-        "HashCode": -352500962,
->>>>>>> organizator-page
+        "HashCode": 1688642318,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3659,15 +3161,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 454215069,
-=======
-        "HashCode": -1447457823,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1841796760,
->>>>>>> organizator-page
+        "HashCode": 687801425,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3766,15 +3260,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1462138103,
-=======
-        "HashCode": 447709731,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1083715643,
->>>>>>> organizator-page
+        "HashCode": 1369077341,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3795,15 +3281,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1080531258,
-=======
-        "HashCode": 133532712,
->>>>>>> login/register-forma
-=======
-        "HashCode": -16606014,
->>>>>>> organizator-page
+        "HashCode": 975029388,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3825,15 +3303,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -532357933,
-=======
-        "HashCode": -964175128,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1021511357,
->>>>>>> organizator-page
+        "HashCode": 1951505916,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3905,15 +3375,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1109452182,
-=======
-        "HashCode": 1568130914,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1491240260,
->>>>>>> organizator-page
+        "HashCode": 384607200,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3986,15 +3448,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 873647526,
-=======
-        "HashCode": -363309453,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1459440925,
->>>>>>> organizator-page
+        "HashCode": 541186792,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4066,15 +3520,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 612309480,
-=======
-        "HashCode": -758373778,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1010094568,
->>>>>>> organizator-page
+        "HashCode": 1267111189,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4147,15 +3593,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 779338150,
-=======
-        "HashCode": -1283675480,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1427373156,
->>>>>>> organizator-page
+        "HashCode": 1715923577,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4209,15 +3647,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 683023137,
-=======
-        "HashCode": 1980265534,
->>>>>>> login/register-forma
-=======
-        "HashCode": -88431752,
->>>>>>> organizator-page
+        "HashCode": -378753832,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4272,15 +3702,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 68507606,
-=======
-        "HashCode": -1006377472,
->>>>>>> login/register-forma
-=======
-        "HashCode": 727115899,
->>>>>>> organizator-page
+        "HashCode": 1837799052,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4321,15 +3743,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -899917035,
-=======
-        "HashCode": -472112361,
->>>>>>> login/register-forma
-=======
-        "HashCode": 805707430,
->>>>>>> organizator-page
+        "HashCode": 218648074,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4371,15 +3785,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 873228938,
-=======
-        "HashCode": -1341187321,
->>>>>>> login/register-forma
-=======
-        "HashCode": -869233309,
->>>>>>> organizator-page
+        "HashCode": 1772643399,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4420,15 +3826,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 537802246,
-=======
-        "HashCode": 1384717896,
->>>>>>> login/register-forma
-=======
-        "HashCode": 146597961,
->>>>>>> organizator-page
+        "HashCode": 1532367944,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4470,15 +3868,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1973934110,
-=======
-        "HashCode": -995865792,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1983933807,
->>>>>>> organizator-page
+        "HashCode": -753851217,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4541,15 +3931,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 955752207,
-=======
-        "HashCode": -475773318,
->>>>>>> login/register-forma
-=======
-        "HashCode": -735516600,
->>>>>>> organizator-page
+        "HashCode": -2050321926,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4613,15 +3995,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 582250309,
-=======
-        "HashCode": -14481164,
->>>>>>> login/register-forma
-=======
-        "HashCode": 437922023,
->>>>>>> organizator-page
+        "HashCode": -1476242391,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4642,15 +4016,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 107598786,
-=======
-        "HashCode": 1045529830,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1004907908,
->>>>>>> organizator-page
+        "HashCode": -547643667,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4672,15 +4038,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1092716114,
-=======
-        "HashCode": -2016571268,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2097977351,
->>>>>>> organizator-page
+        "HashCode": -437531414,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4712,15 +4070,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1555431237,
-=======
-        "HashCode": -1030803007,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1333719874,
->>>>>>> organizator-page
+        "HashCode": 350829658,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4753,15 +4103,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1834192284,
-=======
-        "HashCode": -510952553,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1247619712,
->>>>>>> organizator-page
+        "HashCode": -1393183786,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4782,15 +4124,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -2077260719,
-=======
-        "HashCode": -1885547213,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1283307521,
->>>>>>> organizator-page
+        "HashCode": 1975338663,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4812,15 +4146,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -248694699,
-=======
-        "HashCode": -1324503542,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1892259941,
->>>>>>> organizator-page
+        "HashCode": 1642632735,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4839,15 +4165,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1014429573,
-=======
-        "HashCode": 741915850,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1721747992,
->>>>>>> organizator-page
+        "HashCode": -967756365,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4867,15 +4185,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 790066368,
-=======
-        "HashCode": -85625257,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1995379152,
->>>>>>> organizator-page
+        "HashCode": 1348191389,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4907,15 +4217,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 809819484,
-=======
-        "HashCode": 738773218,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2111613556,
->>>>>>> organizator-page
+        "HashCode": 1255512885,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4948,15 +4250,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -478169997,
-=======
-        "HashCode": 991559597,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1751964793,
->>>>>>> organizator-page
+        "HashCode": 2118300368,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4977,15 +4271,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -564773930,
-=======
-        "HashCode": 1362896757,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1971749964,
->>>>>>> organizator-page
+        "HashCode": -759054211,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5007,15 +4293,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -558092922,
-=======
-        "HashCode": 1034652222,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1943365404,
->>>>>>> organizator-page
+        "HashCode": 677901901,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5078,15 +4356,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1236359736,
-=======
-        "HashCode": -1537151034,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1917502406,
->>>>>>> organizator-page
+        "HashCode": 1771624945,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5150,15 +4420,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 459631253,
-=======
-        "HashCode": -315938639,
->>>>>>> login/register-forma
-=======
-        "HashCode": -33554905,
->>>>>>> organizator-page
+        "HashCode": -523360365,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5179,15 +4441,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -841143100,
-=======
-        "HashCode": 1170981950,
->>>>>>> login/register-forma
-=======
-        "HashCode": -106342240,
->>>>>>> organizator-page
+        "HashCode": -122254760,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5209,15 +4463,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -2082341368,
-=======
-        "HashCode": 1531167435,
->>>>>>> login/register-forma
-=======
-        "HashCode": 2066770660,
->>>>>>> organizator-page
+        "HashCode": 902937390,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5250,15 +4496,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 85567017,
-=======
-        "HashCode": 329717174,
->>>>>>> login/register-forma
-=======
-        "HashCode": -590508374,
->>>>>>> organizator-page
+        "HashCode": -205525566,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5292,15 +4530,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -545127755,
-=======
-        "HashCode": -547438773,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1146133677,
->>>>>>> organizator-page
+        "HashCode": 190541628,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5422,15 +4652,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -2020077531,
-=======
-        "HashCode": -2031273892,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1630118943,
->>>>>>> organizator-page
+        "HashCode": 1579165603,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5553,15 +4775,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 869528100,
-=======
-        "HashCode": -357712654,
->>>>>>> login/register-forma
-=======
-        "HashCode": -690537352,
->>>>>>> organizator-page
+        "HashCode": -964382581,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5594,15 +4808,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -345117272,
-=======
-        "HashCode": -1133976871,
->>>>>>> login/register-forma
-=======
-        "HashCode": 770507590,
->>>>>>> organizator-page
+        "HashCode": 1608107617,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5636,15 +4842,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1289449508,
-=======
-        "HashCode": -1971535367,
->>>>>>> login/register-forma
-=======
-        "HashCode": 378819776,
->>>>>>> organizator-page
+        "HashCode": -26984141,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5677,15 +4875,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1562276174,
-=======
-        "HashCode": 1932656056,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1593128441,
->>>>>>> organizator-page
+        "HashCode": -1951936406,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5719,15 +4909,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -427402628,
-=======
-        "HashCode": -1969501658,
->>>>>>> login/register-forma
-=======
-        "HashCode": -950778081,
->>>>>>> organizator-page
+        "HashCode": 2103659029,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5760,15 +4942,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 617580503,
-=======
-        "HashCode": -1741192115,
->>>>>>> login/register-forma
-=======
-        "HashCode": 143899368,
->>>>>>> organizator-page
+        "HashCode": -275768596,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -5802,15 +4976,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -469195992,
-=======
-        "HashCode": 1746011645,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1535757142,
->>>>>>> organizator-page
+        "HashCode": -348862447,
         "Kind": "Components.EventHandler",
         "Name": "onfocus",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5893,15 +5059,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1881321789,
-=======
-        "HashCode": -490173548,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1652361520,
->>>>>>> organizator-page
+        "HashCode": 405647241,
         "Kind": "Components.EventHandler",
         "Name": "onblur",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -5984,15 +5142,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -851943272,
-=======
-        "HashCode": 2046904411,
->>>>>>> login/register-forma
-=======
-        "HashCode": -683100847,
->>>>>>> organizator-page
+        "HashCode": -593861594,
         "Kind": "Components.EventHandler",
         "Name": "onfocusin",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6075,15 +5225,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -995029159,
-=======
-        "HashCode": -643885806,
->>>>>>> login/register-forma
-=======
-        "HashCode": -803715011,
->>>>>>> organizator-page
+        "HashCode": 45329601,
         "Kind": "Components.EventHandler",
         "Name": "onfocusout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6166,15 +5308,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 211280869,
-=======
-        "HashCode": -983675798,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1307166049,
->>>>>>> organizator-page
+        "HashCode": 1207762698,
         "Kind": "Components.EventHandler",
         "Name": "onmouseover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6257,15 +5391,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 2049946676,
-=======
-        "HashCode": -1642093934,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1517844716,
->>>>>>> organizator-page
+        "HashCode": 548351725,
         "Kind": "Components.EventHandler",
         "Name": "onmouseout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6348,15 +5474,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1379385633,
-=======
-        "HashCode": -1423292991,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1929110551,
->>>>>>> organizator-page
+        "HashCode": -1242820799,
         "Kind": "Components.EventHandler",
         "Name": "onmousemove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6439,15 +5557,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1488185062,
-=======
-        "HashCode": 580842765,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1168363370,
->>>>>>> organizator-page
+        "HashCode": -1170183355,
         "Kind": "Components.EventHandler",
         "Name": "onmousedown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6530,15 +5640,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1957015744,
-=======
-        "HashCode": -2051738894,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1468491733,
->>>>>>> organizator-page
+        "HashCode": 424391243,
         "Kind": "Components.EventHandler",
         "Name": "onmouseup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6621,15 +5723,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -526564499,
-=======
-        "HashCode": -1271470721,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1013714287,
->>>>>>> organizator-page
+        "HashCode": -1991032400,
         "Kind": "Components.EventHandler",
         "Name": "onclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6712,15 +5806,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -92460223,
-=======
-        "HashCode": -1111771753,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1647293352,
->>>>>>> organizator-page
+        "HashCode": 1369607406,
         "Kind": "Components.EventHandler",
         "Name": "ondblclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6803,15 +5889,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1071185612,
-=======
-        "HashCode": 1103251572,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1626089971,
->>>>>>> organizator-page
+        "HashCode": -1857885718,
         "Kind": "Components.EventHandler",
         "Name": "onwheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6894,15 +5972,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1262888211,
-=======
-        "HashCode": 931297821,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1717231952,
->>>>>>> organizator-page
+        "HashCode": -450614211,
         "Kind": "Components.EventHandler",
         "Name": "onmousewheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -6985,15 +6055,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -392480045,
-=======
-        "HashCode": 266701836,
->>>>>>> login/register-forma
-=======
-        "HashCode": -313574206,
->>>>>>> organizator-page
+        "HashCode": 1368607637,
         "Kind": "Components.EventHandler",
         "Name": "oncontextmenu",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7076,15 +6138,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1009543814,
-=======
-        "HashCode": 2128363362,
->>>>>>> login/register-forma
-=======
-        "HashCode": -616887242,
->>>>>>> organizator-page
+        "HashCode": 1341861374,
         "Kind": "Components.EventHandler",
         "Name": "ondrag",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7167,15 +6221,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1116450039,
-=======
-        "HashCode": 1737257929,
->>>>>>> login/register-forma
-=======
-        "HashCode": 149271769,
->>>>>>> organizator-page
+        "HashCode": -502139146,
         "Kind": "Components.EventHandler",
         "Name": "ondragend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7258,15 +6304,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1335406293,
-=======
-        "HashCode": 1672543467,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1692534973,
->>>>>>> organizator-page
+        "HashCode": 1911015803,
         "Kind": "Components.EventHandler",
         "Name": "ondragenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7349,15 +6387,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 970781512,
-=======
-        "HashCode": -644641984,
->>>>>>> login/register-forma
-=======
-        "HashCode": 167598881,
->>>>>>> organizator-page
+        "HashCode": 119725014,
         "Kind": "Components.EventHandler",
         "Name": "ondragleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7440,15 +6470,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 866815013,
-=======
-        "HashCode": -1999804108,
->>>>>>> login/register-forma
-=======
-        "HashCode": -883596279,
->>>>>>> organizator-page
+        "HashCode": -1934038894,
         "Kind": "Components.EventHandler",
         "Name": "ondragover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7531,15 +6553,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -381427592,
-=======
-        "HashCode": 1302546286,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1131877286,
->>>>>>> organizator-page
+        "HashCode": 418438373,
         "Kind": "Components.EventHandler",
         "Name": "ondragstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7622,15 +6636,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -824691456,
-=======
-        "HashCode": 1215278549,
->>>>>>> login/register-forma
-=======
-        "HashCode": -139111299,
->>>>>>> organizator-page
+        "HashCode": 514526112,
         "Kind": "Components.EventHandler",
         "Name": "ondrop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7713,15 +6719,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -817659637,
-=======
-        "HashCode": -616189370,
->>>>>>> login/register-forma
-=======
-        "HashCode": -742966293,
->>>>>>> organizator-page
+        "HashCode": -1449690512,
         "Kind": "Components.EventHandler",
         "Name": "onkeydown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7804,15 +6802,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -590682612,
-=======
-        "HashCode": -798380380,
->>>>>>> login/register-forma
-=======
-        "HashCode": 304246150,
->>>>>>> organizator-page
+        "HashCode": 638120645,
         "Kind": "Components.EventHandler",
         "Name": "onkeyup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7895,15 +6885,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1540040454,
-=======
-        "HashCode": -1434567230,
->>>>>>> login/register-forma
-=======
-        "HashCode": -259778860,
->>>>>>> organizator-page
+        "HashCode": -1256279073,
         "Kind": "Components.EventHandler",
         "Name": "onkeypress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -7986,15 +6968,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1894171963,
-=======
-        "HashCode": 1106289862,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1031588893,
->>>>>>> organizator-page
+        "HashCode": 638369207,
         "Kind": "Components.EventHandler",
         "Name": "onchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8077,15 +7051,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -911125443,
-=======
-        "HashCode": 2141706930,
->>>>>>> login/register-forma
-=======
-        "HashCode": 261730743,
->>>>>>> organizator-page
+        "HashCode": -1926811456,
         "Kind": "Components.EventHandler",
         "Name": "oninput",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8168,15 +7134,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1740369465,
-=======
-        "HashCode": 210852472,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1000173001,
->>>>>>> organizator-page
+        "HashCode": 1790540622,
         "Kind": "Components.EventHandler",
         "Name": "oninvalid",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8259,15 +7217,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 822829114,
-=======
-        "HashCode": -1002652065,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1539523468,
->>>>>>> organizator-page
+        "HashCode": -1655091799,
         "Kind": "Components.EventHandler",
         "Name": "onreset",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8350,15 +7300,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -118198338,
-=======
-        "HashCode": 1562614594,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1399959824,
->>>>>>> organizator-page
+        "HashCode": 1685588392,
         "Kind": "Components.EventHandler",
         "Name": "onselect",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8441,15 +7383,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 531462792,
-=======
-        "HashCode": 2093824164,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1753194135,
->>>>>>> organizator-page
+        "HashCode": 1962501309,
         "Kind": "Components.EventHandler",
         "Name": "onselectstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8532,15 +7466,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 339324416,
-=======
-        "HashCode": 259631999,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1087586440,
->>>>>>> organizator-page
+        "HashCode": 193688538,
         "Kind": "Components.EventHandler",
         "Name": "onselectionchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8623,15 +7549,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 411894191,
-=======
-        "HashCode": -2128058389,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1064414256,
->>>>>>> organizator-page
+        "HashCode": -1754036230,
         "Kind": "Components.EventHandler",
         "Name": "onsubmit",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8714,15 +7632,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1575736874,
-=======
-        "HashCode": -1363749323,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1675449791,
->>>>>>> organizator-page
+        "HashCode": 533226240,
         "Kind": "Components.EventHandler",
         "Name": "onbeforecopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8805,15 +7715,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -972697551,
-=======
-        "HashCode": -443294996,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1827954515,
->>>>>>> organizator-page
+        "HashCode": 1314708548,
         "Kind": "Components.EventHandler",
         "Name": "onbeforecut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8896,15 +7798,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1099379880,
-=======
-        "HashCode": 1693888817,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1940293053,
->>>>>>> organizator-page
+        "HashCode": 2062532738,
         "Kind": "Components.EventHandler",
         "Name": "onbeforepaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -8987,15 +7881,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 516650060,
-=======
-        "HashCode": -816885107,
->>>>>>> login/register-forma
-=======
-        "HashCode": 867171247,
->>>>>>> organizator-page
+        "HashCode": -891898962,
         "Kind": "Components.EventHandler",
         "Name": "oncopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9078,15 +7964,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -321751876,
-=======
-        "HashCode": -1755677298,
->>>>>>> login/register-forma
-=======
-        "HashCode": 515392193,
->>>>>>> organizator-page
+        "HashCode": -2116178012,
         "Kind": "Components.EventHandler",
         "Name": "oncut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9169,15 +8047,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1320101659,
-=======
-        "HashCode": 190236757,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1092184175,
->>>>>>> organizator-page
+        "HashCode": 1424831780,
         "Kind": "Components.EventHandler",
         "Name": "onpaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9260,15 +8130,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1151249781,
-=======
-        "HashCode": -1565011832,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1854510683,
->>>>>>> organizator-page
+        "HashCode": 2036060461,
         "Kind": "Components.EventHandler",
         "Name": "ontouchcancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9351,15 +8213,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1976549424,
-=======
-        "HashCode": 1167003002,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1167063682,
->>>>>>> organizator-page
+        "HashCode": 1079643290,
         "Kind": "Components.EventHandler",
         "Name": "ontouchend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9442,15 +8296,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1918612724,
-=======
-        "HashCode": 593957409,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1678013485,
->>>>>>> organizator-page
+        "HashCode": 1588874094,
         "Kind": "Components.EventHandler",
         "Name": "ontouchmove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9533,15 +8379,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1674943406,
-=======
-        "HashCode": -1919803352,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1899345344,
->>>>>>> organizator-page
+        "HashCode": 837436310,
         "Kind": "Components.EventHandler",
         "Name": "ontouchstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9624,15 +8462,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 2041703371,
-=======
-        "HashCode": 1676111867,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1025323148,
->>>>>>> organizator-page
+        "HashCode": -999400439,
         "Kind": "Components.EventHandler",
         "Name": "ontouchenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9715,15 +8545,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1739277156,
-=======
-        "HashCode": -205009026,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1913594414,
->>>>>>> organizator-page
+        "HashCode": -951723789,
         "Kind": "Components.EventHandler",
         "Name": "ontouchleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9806,15 +8628,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 594384941,
-=======
-        "HashCode": -2102188277,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1591781621,
->>>>>>> organizator-page
+        "HashCode": 1118527443,
         "Kind": "Components.EventHandler",
         "Name": "ongotpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9897,15 +8711,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1437317153,
-=======
-        "HashCode": -927529370,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1156281403,
->>>>>>> organizator-page
+        "HashCode": 1261627780,
         "Kind": "Components.EventHandler",
         "Name": "onlostpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -9988,15 +8794,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1139511964,
-=======
-        "HashCode": -877223665,
->>>>>>> login/register-forma
-=======
-        "HashCode": 746479503,
->>>>>>> organizator-page
+        "HashCode": 1860860411,
         "Kind": "Components.EventHandler",
         "Name": "onpointercancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10079,15 +8877,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -848864827,
-=======
-        "HashCode": 1846491626,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1106055525,
->>>>>>> organizator-page
+        "HashCode": 951120289,
         "Kind": "Components.EventHandler",
         "Name": "onpointerdown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10170,15 +8960,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1580161576,
-=======
-        "HashCode": 824917505,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1229535176,
->>>>>>> organizator-page
+        "HashCode": 1652761,
         "Kind": "Components.EventHandler",
         "Name": "onpointerenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10261,15 +9043,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1717892200,
-=======
-        "HashCode": -1207657684,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1195282577,
->>>>>>> organizator-page
+        "HashCode": -1521319204,
         "Kind": "Components.EventHandler",
         "Name": "onpointerleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10352,15 +9126,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1625337729,
-=======
-        "HashCode": -1644891288,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1845235036,
->>>>>>> organizator-page
+        "HashCode": -253077414,
         "Kind": "Components.EventHandler",
         "Name": "onpointermove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10443,15 +9209,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1847346793,
-=======
-        "HashCode": 140640164,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1124047746,
->>>>>>> organizator-page
+        "HashCode": 1963528774,
         "Kind": "Components.EventHandler",
         "Name": "onpointerout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10534,15 +9292,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1993023340,
-=======
-        "HashCode": -85550672,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1992126849,
->>>>>>> organizator-page
+        "HashCode": 1002927813,
         "Kind": "Components.EventHandler",
         "Name": "onpointerover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10625,15 +9375,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -468454213,
-=======
-        "HashCode": 1246234961,
->>>>>>> login/register-forma
-=======
-        "HashCode": 378274055,
->>>>>>> organizator-page
+        "HashCode": 362561824,
         "Kind": "Components.EventHandler",
         "Name": "onpointerup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10716,15 +9458,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -771193278,
-=======
-        "HashCode": -515200198,
->>>>>>> login/register-forma
-=======
-        "HashCode": 267313592,
->>>>>>> organizator-page
+        "HashCode": 151511724,
         "Kind": "Components.EventHandler",
         "Name": "oncanplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10807,15 +9541,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1991502634,
-=======
-        "HashCode": -925060478,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1374918967,
->>>>>>> organizator-page
+        "HashCode": 421872137,
         "Kind": "Components.EventHandler",
         "Name": "oncanplaythrough",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10898,15 +9624,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 671409796,
-=======
-        "HashCode": 1023802282,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1730305961,
->>>>>>> organizator-page
+        "HashCode": 557449319,
         "Kind": "Components.EventHandler",
         "Name": "oncuechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -10989,15 +9707,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1515850597,
-=======
-        "HashCode": 150966313,
->>>>>>> login/register-forma
-=======
-        "HashCode": 471630403,
->>>>>>> organizator-page
+        "HashCode": -27416176,
         "Kind": "Components.EventHandler",
         "Name": "ondurationchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11080,15 +9790,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 957883860,
-=======
-        "HashCode": -583003727,
->>>>>>> login/register-forma
-=======
-        "HashCode": 449996221,
->>>>>>> organizator-page
+        "HashCode": 569643067,
         "Kind": "Components.EventHandler",
         "Name": "onemptied",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11171,15 +9873,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1527854885,
-=======
-        "HashCode": 763682306,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2063274986,
->>>>>>> organizator-page
+        "HashCode": -1046896065,
         "Kind": "Components.EventHandler",
         "Name": "onpause",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11262,15 +9956,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 845746919,
-=======
-        "HashCode": 585227337,
->>>>>>> login/register-forma
-=======
-        "HashCode": 174538258,
->>>>>>> organizator-page
+        "HashCode": -1861102686,
         "Kind": "Components.EventHandler",
         "Name": "onplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11353,15 +10039,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1875140506,
-=======
-        "HashCode": -2117583872,
->>>>>>> login/register-forma
-=======
-        "HashCode": 814795480,
->>>>>>> organizator-page
+        "HashCode": -56856964,
         "Kind": "Components.EventHandler",
         "Name": "onplaying",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11444,15 +10122,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1330949314,
-=======
-        "HashCode": 859556432,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1015769340,
->>>>>>> organizator-page
+        "HashCode": -932388099,
         "Kind": "Components.EventHandler",
         "Name": "onratechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11535,15 +10205,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 590560134,
-=======
-        "HashCode": -723064803,
->>>>>>> login/register-forma
-=======
-        "HashCode": -103188597,
->>>>>>> organizator-page
+        "HashCode": 807874134,
         "Kind": "Components.EventHandler",
         "Name": "onseeked",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11626,15 +10288,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 427747242,
-=======
-        "HashCode": 1103710621,
->>>>>>> login/register-forma
-=======
-        "HashCode": 499698755,
->>>>>>> organizator-page
+        "HashCode": -272166407,
         "Kind": "Components.EventHandler",
         "Name": "onseeking",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11717,15 +10371,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1379478520,
-=======
-        "HashCode": 646227002,
->>>>>>> login/register-forma
-=======
-        "HashCode": 451452541,
->>>>>>> organizator-page
+        "HashCode": -1081146306,
         "Kind": "Components.EventHandler",
         "Name": "onstalled",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11808,15 +10454,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1021367606,
-=======
-        "HashCode": 1771299760,
->>>>>>> login/register-forma
-=======
-        "HashCode": -742694409,
->>>>>>> organizator-page
+        "HashCode": -709567228,
         "Kind": "Components.EventHandler",
         "Name": "onstop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11899,15 +10537,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -235049669,
-=======
-        "HashCode": -1953351816,
->>>>>>> login/register-forma
-=======
-        "HashCode": 463463415,
->>>>>>> organizator-page
+        "HashCode": -1942935824,
         "Kind": "Components.EventHandler",
         "Name": "onsuspend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -11990,15 +10620,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1493898571,
-=======
-        "HashCode": 933848940,
->>>>>>> login/register-forma
-=======
-        "HashCode": 144495206,
->>>>>>> organizator-page
+        "HashCode": 791960205,
         "Kind": "Components.EventHandler",
         "Name": "ontimeupdate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12081,15 +10703,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -587425659,
-=======
-        "HashCode": 1904470077,
->>>>>>> login/register-forma
-=======
-        "HashCode": 2049154381,
->>>>>>> organizator-page
+        "HashCode": -363037988,
         "Kind": "Components.EventHandler",
         "Name": "onvolumechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12172,15 +10786,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -623664945,
-=======
-        "HashCode": -1453497582,
->>>>>>> login/register-forma
-=======
-        "HashCode": -58079372,
->>>>>>> organizator-page
+        "HashCode": 586129841,
         "Kind": "Components.EventHandler",
         "Name": "onwaiting",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12263,15 +10869,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1978917053,
-=======
-        "HashCode": -1178255927,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1808037012,
->>>>>>> organizator-page
+        "HashCode": 1584402042,
         "Kind": "Components.EventHandler",
         "Name": "onloadstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12354,15 +10952,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 350125244,
-=======
-        "HashCode": -548269361,
->>>>>>> login/register-forma
-=======
-        "HashCode": -349143965,
->>>>>>> organizator-page
+        "HashCode": -1890710654,
         "Kind": "Components.EventHandler",
         "Name": "ontimeout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12445,15 +11035,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1289471040,
-=======
-        "HashCode": -858427708,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1813670721,
->>>>>>> organizator-page
+        "HashCode": -1170324625,
         "Kind": "Components.EventHandler",
         "Name": "onabort",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12536,15 +11118,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -908729774,
-=======
-        "HashCode": -1212057750,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1616133156,
->>>>>>> organizator-page
+        "HashCode": 863816359,
         "Kind": "Components.EventHandler",
         "Name": "onload",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12627,15 +11201,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -945549525,
-=======
-        "HashCode": -1735606769,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1394031291,
->>>>>>> organizator-page
+        "HashCode": 2127653034,
         "Kind": "Components.EventHandler",
         "Name": "onloadend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12718,15 +11284,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1280378038,
-=======
-        "HashCode": -1024827428,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1253289646,
->>>>>>> organizator-page
+        "HashCode": -1906414268,
         "Kind": "Components.EventHandler",
         "Name": "onprogress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12809,15 +11367,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1317059973,
-=======
-        "HashCode": 846144478,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1474052293,
->>>>>>> organizator-page
+        "HashCode": -914460066,
         "Kind": "Components.EventHandler",
         "Name": "onerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12900,15 +11450,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 464303863,
-=======
-        "HashCode": 1551452551,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1446098226,
->>>>>>> organizator-page
+        "HashCode": 792075122,
         "Kind": "Components.EventHandler",
         "Name": "onactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12991,15 +11533,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -2011632980,
-=======
-        "HashCode": 1363473315,
->>>>>>> login/register-forma
-=======
-        "HashCode": -809710391,
->>>>>>> organizator-page
+        "HashCode": -1992794993,
         "Kind": "Components.EventHandler",
         "Name": "onbeforeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13082,15 +11616,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 953987402,
-=======
-        "HashCode": 1080789805,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1701405611,
->>>>>>> organizator-page
+        "HashCode": -1340243999,
         "Kind": "Components.EventHandler",
         "Name": "onbeforedeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13173,15 +11699,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1060686105,
-=======
-        "HashCode": 400496617,
->>>>>>> login/register-forma
-=======
-        "HashCode": -35769545,
->>>>>>> organizator-page
+        "HashCode": -1707194738,
         "Kind": "Components.EventHandler",
         "Name": "ondeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13264,15 +11782,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 457708454,
-=======
-        "HashCode": -1940679307,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1137795210,
->>>>>>> organizator-page
+        "HashCode": -86030311,
         "Kind": "Components.EventHandler",
         "Name": "onended",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13355,15 +11865,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1185787910,
-=======
-        "HashCode": 720927197,
->>>>>>> login/register-forma
-=======
-        "HashCode": -736300433,
->>>>>>> organizator-page
+        "HashCode": -378045232,
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13446,15 +11948,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1471751193,
-=======
-        "HashCode": 1787461436,
->>>>>>> login/register-forma
-=======
-        "HashCode": 955924873,
->>>>>>> organizator-page
+        "HashCode": -979288705,
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13537,15 +12031,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 989235073,
-=======
-        "HashCode": -300630353,
->>>>>>> login/register-forma
-=======
-        "HashCode": 2018175302,
->>>>>>> organizator-page
+        "HashCode": 2104028584,
         "Kind": "Components.EventHandler",
         "Name": "onloadeddata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13628,15 +12114,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1200861409,
-=======
-        "HashCode": 1539426768,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1238116958,
->>>>>>> organizator-page
+        "HashCode": 1978298894,
         "Kind": "Components.EventHandler",
         "Name": "onloadedmetadata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13719,15 +12197,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1427479429,
-=======
-        "HashCode": -1655038938,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1960884091,
->>>>>>> organizator-page
+        "HashCode": -614799258,
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13810,15 +12280,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 146102838,
-=======
-        "HashCode": -469860635,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1660531545,
->>>>>>> organizator-page
+        "HashCode": 1094896761,
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13901,15 +12363,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -671360764,
-=======
-        "HashCode": -48975422,
->>>>>>> login/register-forma
-=======
-        "HashCode": -549589665,
->>>>>>> organizator-page
+        "HashCode": 747782940,
         "Kind": "Components.EventHandler",
         "Name": "onreadystatechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13992,15 +12446,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1052155485,
-=======
-        "HashCode": 333091744,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1615126453,
->>>>>>> organizator-page
+        "HashCode": 1451792687,
         "Kind": "Components.EventHandler",
         "Name": "onscroll",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14083,15 +12529,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -554687060,
-=======
-        "HashCode": -1202168655,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1416168307,
->>>>>>> organizator-page
+        "HashCode": 1798399253,
         "Kind": "Components.EventHandler",
         "Name": "ontoggle",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14174,15 +12612,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1001587881,
-=======
-        "HashCode": -1793963381,
->>>>>>> login/register-forma
-=======
-        "HashCode": -68333312,
->>>>>>> organizator-page
+        "HashCode": -1371847339,
         "Kind": "Components.Splat",
         "Name": "Attributes",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14221,15 +12651,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 188539474,
-=======
-        "HashCode": -1655976202,
->>>>>>> login/register-forma
-=======
-        "HashCode": -124393308,
->>>>>>> organizator-page
+        "HashCode": -1030610852,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.Razor",
@@ -14546,15 +12968,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 722053624,
-=======
-        "HashCode": -2000680436,
->>>>>>> login/register-forma
-=======
-        "HashCode": 116902246,
->>>>>>> organizator-page
+        "HashCode": -1416497175,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14753,15 +13167,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1642083260,
-=======
-        "HashCode": 1052958788,
->>>>>>> login/register-forma
-=======
-        "HashCode": 116884145,
->>>>>>> organizator-page
+        "HashCode": -1753476796,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.CacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14890,15 +13296,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 379840931,
-=======
-        "HashCode": 561251577,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1887423019,
->>>>>>> organizator-page
+        "HashCode": 1410286018,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ComponentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -14955,15 +13353,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -685404873,
-=======
-        "HashCode": -1000060566,
->>>>>>> login/register-forma
-=======
-        "HashCode": 158130174,
->>>>>>> organizator-page
+        "HashCode": -1590441027,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.DistributedCacheTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15097,15 +13487,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1785978497,
-=======
-        "HashCode": -322477052,
->>>>>>> login/register-forma
-=======
-        "HashCode": 286940402,
->>>>>>> organizator-page
+        "HashCode": 1158517641,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.EnvironmentTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15153,15 +13535,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1731579997,
-=======
-        "HashCode": 1076177130,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1381151854,
->>>>>>> organizator-page
+        "HashCode": -164388196,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormActionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15580,15 +13954,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1840518664,
-=======
-        "HashCode": -1274223003,
->>>>>>> login/register-forma
-=======
-        "HashCode": 505192068,
->>>>>>> organizator-page
+        "HashCode": -1980869994,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15692,15 +14058,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1384587792,
-=======
-        "HashCode": -1765646204,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2090487858,
->>>>>>> organizator-page
+        "HashCode": 316311492,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ImageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15748,15 +14106,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 441911343,
-=======
-        "HashCode": -197673023,
->>>>>>> login/register-forma
-=======
-        "HashCode": -111067873,
->>>>>>> organizator-page
+        "HashCode": 667098174,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15828,15 +14178,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 901606164,
-=======
-        "HashCode": 550720505,
->>>>>>> login/register-forma
-=======
-        "HashCode": 578916383,
->>>>>>> organizator-page
+        "HashCode": 937525308,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LabelTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -15871,15 +14213,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -329070976,
-=======
-        "HashCode": 1189664464,
->>>>>>> login/register-forma
-=======
-        "HashCode": 98063181,
->>>>>>> organizator-page
+        "HashCode": 101122930,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16077,15 +14411,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1277056863,
-=======
-        "HashCode": -1766848089,
->>>>>>> login/register-forma
-=======
-        "HashCode": 840440829,
->>>>>>> organizator-page
+        "HashCode": -760133890,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.OptionTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16115,15 +14441,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1955704137,
-=======
-        "HashCode": -1867163175,
->>>>>>> login/register-forma
-=======
-        "HashCode": -299746831,
->>>>>>> organizator-page
+        "HashCode": 270544608,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16206,15 +14524,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -632452650,
-=======
-        "HashCode": 1528440063,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1755127366,
->>>>>>> organizator-page
+        "HashCode": 1524132858,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.PersistComponentStateTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16245,15 +14555,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -298652944,
-=======
-        "HashCode": 1948147158,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1327603409,
->>>>>>> organizator-page
+        "HashCode": -1707478213,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16408,15 +14710,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 2121723983,
-=======
-        "HashCode": 969455725,
->>>>>>> login/register-forma
-=======
-        "HashCode": -200576060,
->>>>>>> organizator-page
+        "HashCode": 1004278515,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16477,15 +14771,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 712288599,
-=======
-        "HashCode": 640171731,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1804472014,
->>>>>>> organizator-page
+        "HashCode": 32912131,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.TextAreaTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16529,15 +14815,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1000004594,
-=======
-        "HashCode": 1915270667,
->>>>>>> login/register-forma
-=======
-        "HashCode": -264709520,
->>>>>>> organizator-page
+        "HashCode": 1082668972,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16572,15 +14850,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 958453537,
-=======
-        "HashCode": 732697380,
->>>>>>> login/register-forma
-=======
-        "HashCode": 455758153,
->>>>>>> organizator-page
+        "HashCode": -656865257,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper",
         "AssemblyName": "Microsoft.AspNetCore.Mvc.TagHelpers",
@@ -16616,15 +14886,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 90418867,
-=======
-        "HashCode": -797103306,
->>>>>>> login/register-forma
-=======
-        "HashCode": -90013225,
->>>>>>> organizator-page
+        "HashCode": 724242923,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16720,15 +14982,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -320034711,
-=======
-        "HashCode": -1661019619,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1546470235,
->>>>>>> organizator-page
+        "HashCode": 283712724,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16850,15 +15104,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1370446069,
-=======
-        "HashCode": -348469844,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1612404681,
->>>>>>> organizator-page
+        "HashCode": -416421811,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16980,15 +15226,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1629193195,
-=======
-        "HashCode": 652907391,
->>>>>>> login/register-forma
-=======
-        "HashCode": -451092417,
->>>>>>> organizator-page
+        "HashCode": -1700149475,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17121,15 +15359,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 755918600,
-=======
-        "HashCode": 1506862682,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1745843644,
->>>>>>> organizator-page
+        "HashCode": -2068322498,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17262,15 +15492,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 902753563,
-=======
-        "HashCode": 444559047,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1924278641,
->>>>>>> organizator-page
+        "HashCode": 462203678,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17403,15 +15625,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -532163433,
-=======
-        "HashCode": 50767848,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1786517312,
->>>>>>> organizator-page
+        "HashCode": -1319223764,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17544,15 +15758,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 2087785249,
-=======
-        "HashCode": 1563671863,
->>>>>>> login/register-forma
-=======
-        "HashCode": 899560463,
->>>>>>> organizator-page
+        "HashCode": -405157146,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17685,15 +15891,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1650875006,
-=======
-        "HashCode": 1049084377,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1984943638,
->>>>>>> organizator-page
+        "HashCode": -443817720,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17826,15 +16024,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 822048771,
-=======
-        "HashCode": 154687665,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1758972669,
->>>>>>> organizator-page
+        "HashCode": -292642612,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17967,15 +16157,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -198890878,
-=======
-        "HashCode": -1081985608,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1782820676,
->>>>>>> organizator-page
+        "HashCode": 1059220462,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18108,15 +16290,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1990755073,
-=======
-        "HashCode": -30203052,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1747059844,
->>>>>>> organizator-page
+        "HashCode": 565346388,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18249,15 +16423,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 755602652,
-=======
-        "HashCode": 978258268,
->>>>>>> login/register-forma
-=======
-        "HashCode": 675084598,
->>>>>>> organizator-page
+        "HashCode": 509506051,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18390,15 +16556,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 537744289,
-=======
-        "HashCode": 1025883329,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1155361418,
->>>>>>> organizator-page
+        "HashCode": -1065604279,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18531,15 +16689,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 805307650,
-=======
-        "HashCode": -231737896,
->>>>>>> login/register-forma
-=======
-        "HashCode": 2101656216,
->>>>>>> organizator-page
+        "HashCode": 18803198,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18672,15 +16822,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 499889976,
-=======
-        "HashCode": 804988841,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1858507827,
->>>>>>> organizator-page
+        "HashCode": -996016411,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18802,15 +16944,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 81157537,
-=======
-        "HashCode": -501088043,
->>>>>>> login/register-forma
-=======
-        "HashCode": -680275182,
->>>>>>> organizator-page
+        "HashCode": 1192143289,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18932,15 +17066,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1990744014,
-=======
-        "HashCode": -535330026,
->>>>>>> login/register-forma
-=======
-        "HashCode": -299028636,
->>>>>>> organizator-page
+        "HashCode": -1326274855,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19027,15 +17153,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 718743399,
-=======
-        "HashCode": 638100368,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1532815422,
->>>>>>> organizator-page
+        "HashCode": 112733179,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19123,15 +17241,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1093422173,
-=======
-        "HashCode": 1964910815,
->>>>>>> login/register-forma
-=======
-        "HashCode": 501018043,
->>>>>>> organizator-page
+        "HashCode": 419431035,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19218,15 +17328,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1266229525,
-=======
-        "HashCode": 1990834085,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2072022138,
->>>>>>> organizator-page
+        "HashCode": -1445941039,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19314,15 +17416,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 163551595,
-=======
-        "HashCode": 1826728177,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1909097434,
->>>>>>> organizator-page
+        "HashCode": -1289908716,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19409,15 +17503,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -668266083,
-=======
-        "HashCode": -1402674808,
->>>>>>> login/register-forma
-=======
-        "HashCode": 806873334,
->>>>>>> organizator-page
+        "HashCode": 1328077385,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19505,15 +17591,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 644722099,
-=======
-        "HashCode": 164976264,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1409611611,
->>>>>>> organizator-page
+        "HashCode": -417603511,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19600,15 +17678,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 986916439,
-=======
-        "HashCode": -1804612454,
->>>>>>> login/register-forma
-=======
-        "HashCode": -2037398392,
->>>>>>> organizator-page
+        "HashCode": -1360621027,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19696,15 +17766,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1625901878,
-=======
-        "HashCode": -567539065,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1592406864,
->>>>>>> organizator-page
+        "HashCode": -2080055833,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19791,15 +17853,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1417451413,
-=======
-        "HashCode": 2083615329,
->>>>>>> login/register-forma
-=======
-        "HashCode": 68825771,
->>>>>>> organizator-page
+        "HashCode": 1404351333,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19887,15 +17941,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1707110029,
-=======
-        "HashCode": 771234723,
->>>>>>> login/register-forma
-=======
-        "HashCode": 1887278074,
->>>>>>> organizator-page
+        "HashCode": 871660675,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -19982,15 +18028,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1505554900,
-=======
-        "HashCode": 1487223176,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1351664004,
->>>>>>> organizator-page
+        "HashCode": 54126931,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -20078,15 +18116,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -133028693,
-=======
-        "HashCode": -389455749,
->>>>>>> login/register-forma
-=======
-        "HashCode": 746734909,
->>>>>>> organizator-page
+        "HashCode": 594888208,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -20173,15 +18203,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -1484661038,
-=======
-        "HashCode": 1954284558,
->>>>>>> login/register-forma
-=======
-        "HashCode": 474979432,
->>>>>>> organizator-page
+        "HashCode": 808147729,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -20269,15 +18291,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": 1148141672,
-=======
-        "HashCode": 758410253,
->>>>>>> login/register-forma
-=======
-        "HashCode": 224425298,
->>>>>>> organizator-page
+        "HashCode": -642493864,
         "Kind": "Components.Ref",
         "Name": "Ref",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20316,15 +18330,7 @@
         }
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "HashCode": -970285152,
-=======
-        "HashCode": -1993713641,
->>>>>>> login/register-forma
-=======
-        "HashCode": -1769082616,
->>>>>>> organizator-page
+        "HashCode": 753342468,
         "Kind": "Components.Key",
         "Name": "Key",
         "AssemblyName": "Microsoft.AspNetCore.Components",

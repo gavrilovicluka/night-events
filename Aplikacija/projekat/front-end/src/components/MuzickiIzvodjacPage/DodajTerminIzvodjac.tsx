@@ -6,50 +6,77 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { DecodedTokenMuzickiIzvodjac } from "../../types/DecodedTokenMuzickiIzvodjac";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
 import jwtDecode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
+import { DecodedToken } from "../../types/DecodedToken";
 
 function DodajTerminIzvodjac() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      navigate("/");
+      return;
+    }
+    const token = localStorage.getItem("jwtToken");
+    if (token === null || token === undefined) {
+      navigate("/");
+      return;
+    }
 
-  const [datum, setDatum] = useState('');
-  const [idIzvodjaca, setIdIzvodjaca] = useState('');
+    const decodedToken = jwtDecode(token) as DecodedToken;
+    if (decodedToken.role !== "Muzicar") {
+      navigate("/");
+      return;
+    }
+  });
+
+  const [datum, setDatum] = useState("");
+  const [idIzvodjaca, setIdIzvodjaca] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const today = new Date();
-    const formattedDate = today.toLocaleDateString('en-CA');
+    const formattedDate = today.toLocaleDateString("en-CA");
     setDatum(formattedDate);
   }, []);
 
-
   const data = {
-    datum: datum
-  }
+    datum: datum,
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-  
-    const token = localStorage.getItem('jwtToken');
-  
+
+    const token = localStorage.getItem("jwtToken");
+
     if (token !== null) {
-      const decodedToken = jwtDecode(token) as DecodedTokenMuzickiIzvodjac | DecodedTokenOrganizator;
+      const decodedToken = jwtDecode(token) as
+        | DecodedTokenMuzickiIzvodjac
+        | DecodedTokenOrganizator;
       console.log(decodedToken);
-  
-      if ('id' in decodedToken) {
+
+      if ("id" in decodedToken) {
         const idMuz = decodedToken.id;
-  
+
         try {
-          const today = new Date().toISOString().split('T')[0]; // Danasšnji datum
-  
+          const today = new Date().toISOString().split("T")[0]; // Danasšnji datum
+
           if (datum < today) {
-            alert('Izabrali ste prošli datum!');
+            alert("Izabrali ste prošli datum!");
             return; // Prekid funkcije u slučaju izbora prošlog datuma
           }
           console.log(datum);
-          const response = await axios.post(ApiConfig.BASE_URL + `/MuzickiIzvodjac/PostaviSlobodanTermin/${idMuz}`, data, {
-            headers: {
-              'Authorization': `Bearer ${token}`
+          const response = await axios.post(
+            ApiConfig.BASE_URL +
+              `/MuzickiIzvodjac/PostaviSlobodanTermin/${idMuz}`,
+            data,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
             }
-          });
-  
+          );
+
           if (response.status === 200) {
             const data = response.data;
             setShowModal(true);
@@ -57,7 +84,7 @@ function DodajTerminIzvodjac() {
             // Dodatna logika za obradu neuspešnog odgovora
           }
         } catch (error) {
-          console.error('Greška prilikom poziva API funkcije:', error);
+          console.error("Greška prilikom poziva API funkcije:", error);
         }
       } else {
         console.log("Token nije pridružen muzičkom izvođaču.");
@@ -74,10 +101,10 @@ function DodajTerminIzvodjac() {
 
   const handleDatumChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedDate = event.target.value;
-    const today = new Date().toISOString().split('T')[0]; // Danasšnji datum
-  
+    const today = new Date().toISOString().split("T")[0]; // Danasšnji datum
+
     if (selectedDate < today) {
-      alert('Izabrali ste prošli datum!');
+      alert("Izabrali ste prošli datum!");
       setDatum(today); // Osvežavanje inputa sa današnjim datumom
     } else {
       setDatum(selectedDate);
@@ -87,33 +114,29 @@ function DodajTerminIzvodjac() {
   const handleIdIzvodjacaChange = (event: ChangeEvent<HTMLInputElement>) => {
     setIdIzvodjaca(event.target.value);
   };
-    
 
   return (
     <>
       <MuzickiIzvodjacHeader />
 
       <div className="d-flex justify-content-center">
-      <div className="col-md-6">
-      <Form onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Label>Datum</Form.Label>
-          <Form.Control 
-            type="date" 
-            placeholder="Unesite datum" 
-            value={datum}
-            onChange={handleDatumChange}
-            required />
-        </Form.Group>
-        <Button
-          type="submit"
-          variant="primary"
-          className="mt-3"
-        >
-          Dodaj termin
-        </Button>
-      </Form>
-      </div>
+        <div className="col-md-6">
+          <Form onSubmit={handleSubmit}>
+            <Form.Group>
+              <Form.Label>Datum</Form.Label>
+              <Form.Control
+                type="date"
+                placeholder="Unesite datum"
+                value={datum}
+                onChange={handleDatumChange}
+                required
+              />
+            </Form.Group>
+            <Button type="submit" variant="primary" className="mt-3">
+              Dodaj termin
+            </Button>
+          </Form>
+        </div>
       </div>
 
       <Modal show={showModal} onHide={handleCloseModal}>
@@ -131,9 +154,6 @@ function DodajTerminIzvodjac() {
       </Modal>
     </>
   );
-
 }
 
 export default DodajTerminIzvodjac;
-
-

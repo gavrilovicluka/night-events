@@ -8,6 +8,8 @@ import { Button, Form, Modal, Table } from "react-bootstrap";
 import { compareAsc } from "date-fns";
 import jwtDecode from "jwt-decode";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
+import { DecodedToken } from "../../types/DecodedToken";
+import { useNavigate } from "react-router-dom";
 
 export default function ListaDogadjaja() {
   const [dogadjaji, setDogadjaji] = useState<Array<DogadjajType>>([]);
@@ -18,6 +20,26 @@ export default function ListaDogadjaja() {
   const [selectedDogadjaj, setSelectedDogadjaj] = useState<DogadjajType>();
   const [selectedDate, setSelectedDate] = useState<Date>();
 
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      navigate("/");
+      return;
+    }
+    const token = localStorage.getItem("jwtToken");
+    if (token === null || token === undefined) {
+      navigate("/");
+      return;
+    }
+
+    const decodedToken = jwtDecode(token) as DecodedToken;
+    if (decodedToken.role !== "Organizator") {
+      navigate("/");
+      return;
+    }
+  });
+  
   useEffect(() => {
     getData();
   }, []);

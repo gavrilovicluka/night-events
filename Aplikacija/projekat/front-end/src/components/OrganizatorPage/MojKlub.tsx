@@ -8,6 +8,8 @@ import OrganizatorType from "../../types/OrganizatorType";
 import jwtDecode from "jwt-decode";
 import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
 import { Container, Form, Row, Col, Button, Card } from "react-bootstrap";
+import { DecodedToken } from "../../types/DecodedToken";
+import { useNavigate } from "react-router-dom";
 
 
 export default function MojKlub() {
@@ -17,6 +19,27 @@ export default function MojKlub() {
 
   const [isEditing, setIsEditing] = useState(false);
 
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      navigate("/");
+      return;
+    }
+    const token = localStorage.getItem("jwtToken");
+    if (token === null || token === undefined) {
+      navigate("/");
+      return;
+    }
+
+    const decodedToken = jwtDecode(token) as DecodedToken;
+    if (decodedToken.role !== "Organizator") {
+      navigate("/");
+      return;
+    }
+  });
+  
   useEffect(() => {
     getData();
   }, []);

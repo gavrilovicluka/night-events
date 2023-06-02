@@ -1,8 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import HomePage from "./HomePage";
-import { UserRegistrationPage } from "./UserRegistrationPage";
-import UserLoginPage from "./UserLoginPage";
 import OrganizatorDashboard from "./OrganizatorPage/OrganizatorDashboard";
 import ListaIzvodjaca from "./OrganizatorPage/ListaIzvodjaca";
 import MuzickiIzvodjacDashboard from "./MuzickiIzvodjacPage/MuzickiIzvodjacDashboard";
@@ -42,9 +40,9 @@ function AppRouting() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<UserLoginPage />} />
-        <Route path="/loginRegister" element={<LoginRegisterForm />} />
-        <Route path="/register" element={<UserRegistrationPage />} />
+        <Route path="/loginRegister" element={<LoginRegisterForm onClose={function (): void {
+          throw new Error("Function not implemented.");
+        } } />} />
         <Route path="*" element={<PageNotFound />}></Route>
         <Route
           path="/detaljiDogadjaja"

@@ -103,8 +103,8 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
-    [Route("PostaviSlobodanTermin")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
+    [Route("PostaviSlobodanTermin/{idIzvodjaca}")]
     [HttpPost]
     public async Task<ActionResult> PostaviSlobodanTermin(int idIzvodjaca, [FromBody] TerminIzvodjacaDTO terminDto)
     {

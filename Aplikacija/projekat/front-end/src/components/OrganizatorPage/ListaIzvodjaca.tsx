@@ -8,6 +8,8 @@ import { DecodedTokenOrganizator } from "../../types/DecodedTokenOrganizator";
 import { ApiConfig } from "../../config/api.config";
 import jwtDecode from "jwt-decode";
 import TerminType from "../../types/TerminType";
+import { DecodedToken } from "../../types/DecodedToken";
+import { useNavigate } from "react-router-dom";
 
 export default function ListaIzvodjaca() {
   const [izvodjaci, setIzvodjaci] = useState<Array<MuzickiIzvodjacType>>([]);
@@ -22,6 +24,26 @@ export default function ListaIzvodjaca() {
   >([]);
   const [klubId, setKlubId] = useState<number | null>();
   const [token, setToken] = useState<string | null>();
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      navigate("/");
+      return;
+    }
+    const token = localStorage.getItem("jwtToken");
+    if (token === null || token === undefined) {
+      navigate("/");
+      return;
+    }
+
+    const decodedToken = jwtDecode(token) as DecodedToken;
+    if (decodedToken.role !== "Organizator") {
+      navigate("/");
+      return;
+    }
+  });
 
   useEffect(() => {
     const token = localStorage.getItem("jwtToken");

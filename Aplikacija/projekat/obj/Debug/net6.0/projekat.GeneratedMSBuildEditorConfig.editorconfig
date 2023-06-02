@@ -5,37 +5,12 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = projekat
 build_property.RootNamespace = projekat
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat
-=======
-build_property.ProjectDir = D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat
->>>>>>> 8bd482b6b556de017bf733aaf61cbdfea51e211f
-=======
-build_property.ProjectDir = c:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat
->>>>>>> login/register-forma
-=======
 build_property.ProjectDir = C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat
->>>>>>> organizator-page
 build_property._RazorSourceGeneratorDebug = 
