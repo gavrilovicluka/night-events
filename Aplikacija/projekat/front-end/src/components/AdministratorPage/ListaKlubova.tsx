@@ -99,7 +99,7 @@ export default function ListaKlubova() {
 
   function izracunajProsek(ocene: OcenaKlubType[] | null | undefined) {
     if (!ocene || ocene.length === 0) {
-      return 0; // Ako nema ocena, prosečna ocena je 0
+      return 0; 
     }
 
     var oceneBezNula = ocene

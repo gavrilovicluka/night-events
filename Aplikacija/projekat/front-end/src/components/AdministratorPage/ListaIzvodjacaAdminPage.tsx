@@ -11,6 +11,8 @@ import { StatusNalogaType } from "../../types/StatusNalogaType";
 
 
 
+
+
 export default function ListaIzvodjacaAdminPage() {
 
 
@@ -89,9 +91,9 @@ export default function ListaIzvodjacaAdminPage() {
     }
     
     const handleOdobri = (index: number) => {
-      // Kreiranje kopije niza izvodjaci radi ažuriranja statusa naloga
+      
       const updatedIzvodjaci = [...izvodjaci];
-      updatedIzvodjaci[index].status = 0; // Postavljanje statusa na Odobren
+      updatedIzvodjaci[index].status = 0; 
       setIzvodjaci(updatedIzvodjaci);
       const idIzvodjaca = updatedIzvodjaci[index].id;
 
@@ -100,7 +102,7 @@ export default function ListaIzvodjacaAdminPage() {
         ApiConfig.BASE_URL + `/Administrator/OdobriNalog/${idIzvodjaca}`
       )
       .then((response) => {
-        console.log(response.data); // Ažuriranje uspešno
+        console.log(response.data); 
       })
       .catch((error) => {
         console.log("Došlo je do greške prilikom slanja zahtjeva:", error);
@@ -108,9 +110,9 @@ export default function ListaIzvodjacaAdminPage() {
     };
   
     const handleOdbij = (index: number) => {
-      // Kreiranje kopije niza izvodjaci radi ažuriranja statusa naloga
+      
       const updatedIzvodjaci = [...izvodjaci];
-      updatedIzvodjaci[index].status = 2; // Postavljanje statusa na Odbijen
+      updatedIzvodjaci[index].status = 2; 
       setIzvodjaci(updatedIzvodjaci);
       const idIzvodjaca = updatedIzvodjaci[index].id;
 
@@ -147,11 +149,11 @@ export default function ListaIzvodjacaAdminPage() {
     };
 
     return (
-        <><AdministratorHeader />
-        <div>
+        <>
+        <AdministratorHeader />
         <div className="d-flex justify-content-center">
-        <div className="col-md-6 col-sm-8 col-xs-10 pt-5">
-        <Table responsive="md" striped bordered hover className="table-white table-white mt-3 mb-3">
+          <div className="table-responsive">
+            <Table className="table" striped bordered hover>
       
         <thead>
           <tr>
@@ -208,9 +210,8 @@ export default function ListaIzvodjacaAdminPage() {
           ))}
         </tbody>
       </Table>
-      </div>
-      </div>
     </div>
+  </div>
         
         </>
     );

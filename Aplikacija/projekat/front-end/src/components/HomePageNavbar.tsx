@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Button, Modal, Nav, Navbar } from "react-bootstrap";
 import LoginRegisterForm from "./LoginRegisterForm";
 
 export default function HomePageNavbar() {
@@ -13,9 +13,11 @@ export default function HomePageNavbar() {
   const closeLoginForm = () => {
     setShowLoginForm(false);
   };
+
+  
   
   return (
-
+    
     <Navbar bg="dark" expand="lg" variant="dark" className='px-5'>
       <Navbar.Brand href="/">NightEvents</Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarSupportedContent" />
@@ -23,18 +25,16 @@ export default function HomePageNavbar() {
         <Nav className="ms-auto">
           <Nav.Link href="/AboutStranica">About</Nav.Link>
           <Nav.Link href="#!">Contact</Nav.Link>
-          <Nav.Link href="/login">Log in</Nav.Link>
+          <Nav.Link onClick={handleLoginClick}>Log in</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       {showLoginForm && (
-        <div className="dfullscreen-overlay">
-          <div className="dfullscreen-content">
-            <LoginRegisterForm/>
-          </div>
-        </div>
-      )}
+            <div className="overlay">
+              <LoginRegisterForm onClose={closeLoginForm} />
+            </div>
+          )}
     </Navbar>
-
+    
   )
 
 }

@@ -46,7 +46,7 @@ root.render(
      
         <Route path='/' element={ <HomePage/> } /> 
         <Route path='/login' element={ <UserLoginPage/> } /> 
-        <Route path='/loginRegister' element={ <LoginRegisterForm/> } /> 
+         
         <Route path='/register' element={ <UserRegistrationPage/> } /> 
 
         <Route path='/organizatorDashboard' element={ <OrganizatorDashboard/> } /> 
