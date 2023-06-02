@@ -7,23 +7,46 @@ import DodajTerminIzvodjac from "./DodajTerminIzvodjac";
 import { ApiConfig } from "../../config/api.config";
 import { Table } from "react-bootstrap";
 import { compareAsc } from "date-fns";
+import jwtDecode from "jwt-decode";
+import { DecodedTokenMuzickiIzvodjac } from "../../types/DecodedTokenMuzickiIzvodjac";
+import DogadjajType from "../../types/DogadjajType";
 
 
 export default function ListaTermina() {
 
 
     const [termini2, setTermini] = useState<Array<TerminType>>([]);
+    const [token,setToken]= useState<string>();
+    const [idIzvodjaca,setIdIzvodjaca]= useState<number>();
 
     useEffect(() => {
-        getData();
-    }, []);
+        const token = localStorage.getItem("jwtToken");
+        if (token) {
+          const decodedToken = jwtDecode(token) as DecodedTokenMuzickiIzvodjac;
+          setToken(token);
+          setIdIzvodjaca(decodedToken.id);
+          
+        }
+    
+        getData(token, idIzvodjaca);
+      }, [token,idIzvodjaca]);
 
-    // id izvodjaca treba da se izvuce iz tokena
 
-    const getData = () => {
+    
+
+    const getData = (token:string | null | undefined,idIzvodjaca:number | null | undefined) => {
+
+        if(token === null || token === undefined) {
+            console.log("Nevalidan token");
+            return;
+          }
 
         axios
-            .get(ApiConfig.BASE_URL + `/MuzickiIzvodjac/VratiListuTermina/1`)        //${idMuzIzvodjaca}
+            .get(ApiConfig.BASE_URL + `/MuzickiIzvodjac/VratiListuTermina/${idIzvodjaca}`,{
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              })        
             .then((response: AxiosResponse<TerminType[]>) => {
                 if (response.status === 200) {
                     const data = response.data;
@@ -38,6 +61,35 @@ export default function ListaTermina() {
                 });
     }
 
+    const handleObrisiTermin = (idIzvodjaca: number | undefined) => {
+        
+        axios.delete(ApiConfig.BASE_URL + `/MuzickiIzvodjac/IzbrisiTermin/${idIzvodjaca}`)
+          .then((response) => {
+            
+            console.log("Termin uspešno obrisan.", response.data);
+          })
+          .catch((error) => {
+           
+            console.log("Došlo je do greške prilikom brisanja termina:", error);
+          });
+      }
+
+      // const handlePrikaziDogadjaj = (idIzvodjaca: number) =>  {
+      //   const dogadjaj = dogadjaji.find(dog => dog.izvodjac?.id === idIzvodjaca);
+        
+      //   if (dogadjaj) {
+      //     const nazivDogadjaja = dogadjaj.naziv;
+      //     const nazivKluba = dogadjaj.klub?.naziv;
+        
+      //     // Prikazivanje informacija o događaju pomoću alert prozora
+      //     alert(`Naziv događaja: ${nazivDogadjaja}\nNaziv kluba: ${nazivKluba}`);
+      //   } else {
+      //     // Događaj sa datim izvođačem nije pronađen
+      //     alert("Događaj nije pronađen.");
+      //   }
+      // };
+      
+
 
     return (
         <><MuzickiIzvodjacHeader />
@@ -48,7 +100,8 @@ export default function ListaTermina() {
                     <tr>
                         <th>Termin</th>
                         <th>Rezervisan</th>
-                        <th> </th>
+                        <th>Događaj</th>
+                        <th>Obriši termin</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,7 +111,8 @@ export default function ListaTermina() {
                         <tr key={index}>
                             <td>{termin.datum && new Date(termin.datum).toLocaleDateString('sr-RS')}</td>
                             <td>{termin.rezervisan === true ? "DA" : "NE"}</td>
-                            <td> </td>
+                            {/* <td><button className="btn btn-primary" onClick={() => handlePrikaziDogadjaj(idIzvodjaca, dogadjaji)}>Prikaži</button></td> */}
+                            <td><button className="btn btn-danger" onClick={() => handleObrisiTermin(idIzvodjaca)}>Obriši</button></td>
                         </tr>                      
                     ))}
                 </tbody>

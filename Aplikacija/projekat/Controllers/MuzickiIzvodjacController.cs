@@ -297,5 +297,50 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
+    [Route("IzbrisiTermin/{idIzvodjaca}")]
+    [HttpDelete]
+    public async Task<ActionResult> IzbrisiTermin(int idIzvodjaca)
+    {
+        try
+        {
+            // int korisnikId;
+            // bool fleg = int.TryParse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value, out korisnikId);
+
+            // if(!fleg)
+            // {
+            //     return BadRequest("Doslo je do greske");
+            // }
+            
+            var d = await Context.TerminiIzvodjaca.FindAsync(idIzvodjaca);
+
+            if (d == null)
+            {
+                return BadRequest("Izabrani termin ne postoji");
+            }
+
+            // if (User.IsInRole("o") && d.Klub!.Organizator!.ID != korisnikId)
+            // {
+            //     return Forbid(); // Korisnik nije autorizovan za brisanje događaja
+            // }
+            
+
+            if (d != null)
+            {
+                Context.TerminiIzvodjaca.Remove(d);
+                await Context.SaveChangesAsync();
+                return Ok("Uspesno izbrisan termin");
+            }
+            else
+            {
+                return BadRequest("Izabrani termin ne postoji");
+            }
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
    
 }
