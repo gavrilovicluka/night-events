@@ -13,12 +13,24 @@ import {
   MDBRipple,
 } from "mdb-react-ui-kit";
 import { Col, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const HomePageEventCard = ({ dogadjaji }: { dogadjaji: DogadjajType[] }) => {
+export default function HomePageEventCard({ dogadjaji }: { dogadjaji: DogadjajType[] }) {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = (id: number | undefined) => {
+    if(id === undefined) {
+      alert("ID dogadjaja je undefined");
+    }
+    navigate(`/detaljiDogadjaja/${id}`);
+  
+  };
+
   return (
     <>
       {dogadjaji.map((value, index) => (
-        <Col lg={3} md={4} col={6} p={1} className="mb-4">
+        <Col lg={3} md={4} col={6} p={1} className="mb-4" key={index}>
           <MDBCard>
             <MDBRipple
               rippleColor="light"
@@ -42,7 +54,9 @@ const HomePageEventCard = ({ dogadjaji }: { dogadjaji: DogadjajType[] }) => {
               <MDBCardText>
                 Ovde stoje informacije o klubu {value.klub?.naziv} za dogadjaj koji ima naziv {value.naziv}             
               </MDBCardText>
-              <MDBBtn href="#">Pregled dogadjaja</MDBBtn>
+              <div className="text-center">
+              <MDBBtn onClick={() => handleButtonClick(value.id)}>Pregled dogadjaja</MDBBtn>
+              </div>
             </MDBCardBody>
           </MDBCard>
         </Col>
@@ -50,5 +64,3 @@ const HomePageEventCard = ({ dogadjaji }: { dogadjaji: DogadjajType[] }) => {
     </>
   );
 };
-
-export default HomePageEventCard;

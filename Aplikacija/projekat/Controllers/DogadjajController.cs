@@ -185,7 +185,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("VratiDogadjajeKluba/{idKluba}")]
     [HttpGet]
     public async Task<ActionResult> VratiDogadjajeKluba(int idKluba)
@@ -401,6 +401,7 @@ public class DogadjajController : ControllerBase
             .Include(p => p.Klub)
             .Select(m => new
             {
+                id = m.ID,
                 naziv = m.Naziv,
                 datum = m.Datum,
                 vreme = m.Vreme,
@@ -423,6 +424,46 @@ public class DogadjajController : ControllerBase
     }
 
 
-		
+	[Route("VratiDogadjaj/{idDogadjaja}")]
+    [HttpGet]
+    public async Task<ActionResult> VratiDogadjaj(int idDogadjaja)
+    {
+        try
+        {
+            
+
+            var d = await Context.Dogadjaji
+            .Where(p => p.ID == idDogadjaja)
+            .Include(p => p.Klub)
+            .ThenInclude(k => k!.Ocene)
+            .Include(p => p.MuzickiIzvodjac)
+            .Include(p => p.Rezervacije)
+            .Select(m => new
+            {
+                id = m.ID,
+                naziv = m.Naziv,
+                datum = m.Datum,
+                vreme = m.Vreme,
+                izvodjac = m.MuzickiIzvodjac,
+                klub = m.Klub,
+                stolovi = m.Stolovi,
+                rezervacije = m.Rezervacije,
+                brojRezervacija = m.BrojRezervacija
+                
+            })
+            .ToListAsync();
+
+            if(d == null)
+            {
+                return BadRequest("Ne postoji dogadjaj");
+            }
+
+            return Ok(d);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }	
         
 }
