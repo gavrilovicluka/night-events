@@ -1,7 +1,9 @@
 import KlubType from "./KlubType";
 import MuzickiIzvodjacType from "./MuzickiIzvodjacType";
+import OrganizatorType from "./OrganizatorType";
 import RezervacijaType from "./RezervacijaType";
 import StoType from "./StoType";
+
 
 export default class DogadjajType {
     id?: number;
@@ -13,4 +15,7 @@ export default class DogadjajType {
     stolovi?: StoType[];
     rezervacije?: RezervacijaType[];
     brojRezervacija?: number;
+    organizator?: OrganizatorType;
+    
+    
 }

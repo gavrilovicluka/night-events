@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
-import MuzickiIzvodjacType from "../../types/MuzickiIzvodjacType";
 import axios, { AxiosResponse } from "axios";
 import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import TerminType from "../../types/TerminType";
-import DodajTerminIzvodjac from "./DodajTerminIzvodjac";
 import { ApiConfig } from "../../config/api.config";
-import { Button, Table } from "react-bootstrap";
+import { Button, Modal, Table } from "react-bootstrap";
 import { compareAsc } from "date-fns";
 import jwtDecode from "jwt-decode";
 import { DecodedTokenMuzickiIzvodjac } from "../../types/DecodedTokenMuzickiIzvodjac";
-import DogadjajType from "../../types/DogadjajType";
 import { useNavigate } from "react-router-dom";
 import { DecodedToken } from "../../types/DecodedToken";
 
@@ -37,6 +34,7 @@ export default function ListaTermina() {
   const [termini2, setTermini] = useState<Array<TerminType>>([]);
   const [token, setToken] = useState<string>();
   const [idIzvodjaca, setIdIzvodjaca] = useState<number>();
+  const [selectedTermin, setSelectedTermin] = useState<TerminType| null>(null);
 
   useEffect(() => {
     const token = localStorage.getItem("jwtToken");
@@ -73,6 +71,7 @@ export default function ListaTermina() {
           const data = response.data;
           console.log(data);
           setTermini(data);
+          
         } else {
           console.log("Došlo je do greške prilikom dobavljanja podataka.");
         }
@@ -82,33 +81,40 @@ export default function ListaTermina() {
       });
   };
 
-  const handleObrisiTermin = (idIzvodjaca: number | undefined) => {
-    axios
-      .delete(
-        ApiConfig.BASE_URL + `/MuzickiIzvodjac/IzbrisiTermin/${idIzvodjaca}`
+  const handleBrisanje = (index: number) => {
+    const confirmed = window.confirm("Da li želite da obrišete termin?");
+    if (confirmed) {
+      const updatedTermini = [...termini2];
+      const idTermina = updatedTermini[index].id;
+
+      axios
+        .delete(ApiConfig.BASE_URL + `/MuzickiIzvodjac/ObrisiTermin/${idTermina}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       )
-      .then((response) => {
-        console.log("Termin uspešno obrisan.", response.data);
-      })
-      .catch((error) => {
-        console.log("Došlo je do greške prilikom brisanja termina:", error);
-      });
+        .then((response) => {
+          console.log(response.data);
+          updatedTermini.splice(index, 1);
+          setTermini(updatedTermini);
+        })
+        .catch((error) => {
+          console.log("Došlo je do greške prilikom slanja zahteva:", error);
+        });
+    }
   };
 
-  // const handlePrikaziDogadjaj = (idIzvodjaca: number) =>  {
-  //   const dogadjaj = dogadjaji.find(dog => dog.izvodjac?.id === idIzvodjaca);
-
-  //   if (dogadjaj) {
-  //     const nazivDogadjaja = dogadjaj.naziv;
-  //     const nazivKluba = dogadjaj.klub?.naziv;
-
-  //     // Prikazivanje informacija o događaju pomoću alert prozora
-  //     alert(`Naziv događaja: ${nazivDogadjaja}\nNaziv kluba: ${nazivKluba}`);
-  //   } else {
-  //     // Događaj sa datim izvođačem nije pronađen
-  //     alert("Događaj nije pronađen.");
-  //   }
-  // };
+  const handlePrikaziDogadjaj = (termin: TerminType) => {
+    if (termin.rezervisan) {
+      setSelectedTermin(termin);
+      //setSelectedDogadjaj(termin.dogadjaj)
+    }
+    console.log(termin.dogadjaj![0].naziv)
+  };
+ 
+  
 
   return (
     <>
@@ -135,15 +141,35 @@ export default function ListaTermina() {
                 .map((termin, index) => (
                   <tr key={index}>
                     <td>
-                      {termin.termin &&
-                        new Date(termin.termin).toLocaleDateString("sr-RS")}
+                      {termin.termin
+                      ? new Date(termin.termin).toLocaleDateString("sr-RS")
+                      : "N/A"}
                     </td>
                     <td>{termin.rezervisan === true ? "DA" : "NE"}</td>
-                    {/* <td><button className="btn btn-primary" onClick={() => handlePrikaziDogadjaj(idIzvodjaca, dogadjaji)}>Prikaži</button></td> */}
+                    {termin.rezervisan ? (
+                        <td>
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => handlePrikaziDogadjaj(termin)}
+                          >
+                            Prikaži
+                          </button>
+                        </td>
+                      ) : (
+                        <td>
+                          <button
+                            className="btn btn-primary"
+                             disabled
+                          >
+                            Prikaži
+                          </button>
+                        </td>
+                      )}
+
                     <td>
                       <button
                         className="btn btn-danger"
-                        onClick={() => handleObrisiTermin(idIzvodjaca)}
+                        onClick={() => handleBrisanje(index)}
                       >
                         Obriši
                       </button>
@@ -154,6 +180,26 @@ export default function ListaTermina() {
           </Table>
         </div>
       </div>{" "}
+      
+      {selectedTermin?.rezervisan && (
+  <Modal show={true} onHide={() => setSelectedTermin(null)}>
+    <Modal.Header closeButton>
+      <Modal.Title>Informacije o događaju</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <p> <strong>Naziv dogadjaja:</strong> {selectedTermin.dogadjaj![0].naziv}</p>
+      <p> <strong>Naziv kluba:</strong> {selectedTermin.dogadjaj![0].klub?.naziv}</p>
+      <p> <strong>Ime i prezime organizatora:</strong> {selectedTermin.dogadjaj![0].organizator?.ime} {selectedTermin.dogadjaj![0].organizator?.prezime}</p>
+      <p> <strong>Kontakt mejl organizatora:</strong> {selectedTermin.dogadjaj![0].organizator?.email} </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button variant="secondary" onClick={() => setSelectedTermin(null)}>
+        Zatvori
+      </Button>
+    </Modal.Footer>
+  </Modal>
+)}
+
     </>
   );
 }

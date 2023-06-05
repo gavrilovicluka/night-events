@@ -306,22 +306,34 @@ public class MuzickiIzvodjacController : ControllerBase
     }
 	
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar, Organizator")]
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar, Organizator")]
     [Route("VratiListuTermina/{idIzvodjaca}")]
     [HttpGet]
     public async Task<ActionResult> VratiListuTermina(int idIzvodjaca)
     {
         try
         {
-            var d = await Context.TerminiIzvodjaca
-			.Where(p => p.MuzickiIzvodjac!.ID == idIzvodjaca)
+           var termini = await Context.TerminiIzvodjaca
+            .Where(p => p.MuzickiIzvodjac!.ID == idIzvodjaca)
             .Select(m => new
             {
-                datum = m.Termin
-
-            })
+                id = m.ID,
+                termin = m.Termin,
+                rezervisan = m.Rezervisan,
+                dogadjaj = m.MuzickiIzvodjac!.Dogadjaji!
+                        .Where(d => d.Datum == m.Termin)
+                        .Select(d => new
+                        {
+                            id = d.ID,
+                            naziv = d.Naziv,
+                            klub = d.Klub,
+                            organizator = d.Klub!.Organizator
+                        })
+                        .ToList()
+                        })
             .ToListAsync();
-            return Ok(d);
+
+        return Ok(termini);
         }
         catch (Exception e)
         {
@@ -329,37 +341,37 @@ public class MuzickiIzvodjacController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
-    // [HttpDelete("ObrisiTermin/{idTermina}")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Muzicar")]
+    [HttpDelete("ObrisiTermin/{idTermina}")]
 
-    // public async Task<ActionResult> ObrisiTermin(int idTermina) {
+    public async Task<ActionResult> ObrisiTermin(int idTermina) {
 
-    //  try 
-    //     { 
+     try 
+        { 
 
-    //      var termin= await Context.TerminiIzvodjaca.FindAsync(idTermina);
+         var termin= await Context.TerminiIzvodjaca.FindAsync(idTermina);
 
-    //      if(termin != null)
+         if(termin != null)
     
-    //       {
-    //         Context.TerminiIzvodjaca.Remove(termin);
-    //         await Context.SaveChangesAsync();
-    //         return Ok($"ID obrisanog termina je: {idTermina}");
+          {
+            Context.TerminiIzvodjaca.Remove(termin);
+            await Context.SaveChangesAsync();
+            return Ok($"ID obrisanog termina je: {idTermina}");
             
     
-    //       }
-    //       return BadRequest("Ne postoji takav termin");
+          }
+          return BadRequest("Ne postoji takav termin");
           
 
-    //     }
+        }
 
 
-    //     catch (Exception e)
+        catch (Exception e)
 
-    //     {
-    //       return BadRequest(e.Message);
-    //     }
-    // }
+        {
+          return BadRequest(e.Message);
+        }
+    }
 
 
    
