@@ -16,6 +16,8 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios, { AxiosResponse } from "axios";
 import { ApiConfig } from "../config/api.config";
 import StoType from "../types/StoType";
+import jwtDecode from "jwt-decode";
+import { DecodedToken } from "../types/DecodedToken";
 
 function DogadjajPage() {
   const { id } = useParams();
@@ -60,12 +62,10 @@ function DogadjajPage() {
   };
 
   const handleRezervisi = () => {
-    if (isLoggedIn) {
-      //!!!!!!!!!!
+    if (!isLoggedIn) {
       setShow(true);
     } else {
       setShowModalRezervacija(true);
-      //vrsenje rezervacije
     }
   };
 
@@ -76,7 +76,7 @@ function DogadjajPage() {
   const handleStoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedStoId(event.target.value ? parseInt(event.target.value) : null);
 
-    if (event.target.value == null) {
+    if (event.target.value === null) {
       alert("Morate izabrati sto!");
       return;
     }
@@ -84,6 +84,48 @@ function DogadjajPage() {
 
   const confirmRezervisi = () => {
     if (selectedStoId) {
+      //console.log(selectedStoId);       //1 - barski, 2 - visoko sedenje, 3 - separe
+
+      const token = localStorage.getItem("jwtToken");
+      if (token !== null && token !== undefined) {
+        const decodedToken = jwtDecode(token) as DecodedToken;
+        console.log(decodedToken);
+
+        let url = "";
+        switch (selectedStoId) {
+          case 1:
+            url = `/Rezervacija/RezervisiBarskiSto/${dogadjaj?.id}/${decodedToken.id}`;
+            break;
+          case 2:
+            url = `/Rezervacija/RezervisiVisokoSedenje/${dogadjaj?.id}/${decodedToken.id}`;
+            break;
+          case 3:
+            url = `/Rezervacija/RezervisiSepare/${dogadjaj?.id}/${decodedToken.id}`;
+            break;
+          default:
+            alert("Doslo je do greske");
+            break;
+        }
+
+        axios({
+          method: "post",
+          url: ApiConfig.BASE_URL + url,
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((response: AxiosResponse) => {
+            if (response.status === 200) {
+              console.log(response.data);
+            } else {
+              console.log("Došlo je do greške prilikom dobavljanja podataka.");
+            }
+          })
+          .catch((error) => {
+            console.log("Došlo je do greške prilikom slanja zahteva:", error);
+          });
+      }
     }
   };
 
@@ -139,7 +181,7 @@ function DogadjajPage() {
             <div className="bg-secondary rounded p-4">
               <h2>Mapa/Lokacija</h2>
               <div style={{ width: "90%" }}>
-                {/* Ovdje možete dodati komponentu za prikaz mape ili lokacije */}
+                {/* Ovde možete dodati komponentu za prikaz mape ili lokacije */}
               </div>
             </div>
           </Col>
@@ -168,8 +210,13 @@ function DogadjajPage() {
           <Modal.Title>Rezervacija</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <div className="text-center mb-3">
-        <img src={`../../assets/klub.jpg`} alt="Mapa kluba" style={{ width: "100%" }}/>     {/* ${dogadjaj?.klub?.mapaKluba} */} 
+          <div className="text-center mb-3">
+            <img
+              src={`../../assets/klub.jpg`}
+              alt="Mapa kluba"
+              style={{ width: "100%" }}
+            />{" "}
+            {/* ${dogadjaj?.klub?.mapaKluba} */}
           </div>
           <Form.Select
             className="mb-3"
@@ -178,15 +225,15 @@ function DogadjajPage() {
           >
             <option value="">Izaberite sto</option>
             {vrsteStolova.map((vrstaStola) => {
-
               let sviStoloviJedneVrsteRezervisani = false;
+              let stoloviJedneVrste: StoType[] = new Array<StoType>;
               dogadjaj?.stolovi?.forEach((sto) => {
-                if(sto.vrstaStola === vrstaStola.vrsta) {
-                  if(sto.status === 0) {
-                    sviStoloviJedneVrsteRezervisani = true;
-                  }
+                if (sto.vrstaStola === vrstaStola.vrsta) {
+                  stoloviJedneVrste.push(sto);
                 }
-              })
+              });
+              sviStoloviJedneVrsteRezervisani = stoloviJedneVrste.every((sto) => sto.status === 1);
+
 
               return (
                 <option

@@ -317,7 +317,8 @@ public class MuzickiIzvodjacController : ControllerBase
 			.Where(p => p.MuzickiIzvodjac!.ID == idIzvodjaca)
             .Select(m => new
             {
-                datum = m.Termin
+                datum = m.Termin,
+                dogadjaj = m.MuzickiIzvodjac!.Dogadjaji!.Where(d => d.Datum == m.Termin)
 
             })
             .ToListAsync();

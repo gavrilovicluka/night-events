@@ -12,13 +12,16 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub }) => {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const [show, setShow] = useState(false);
 
-  const averageRating = 4.3;
-  //   const averageRating = klub.ocene
-  //     ? klub.ocene.reduce(
-  //         (sum, ocena) => sum + (ocena.ocena ? ocena.ocena : 0),
-  //         0
-  //       ) / klub.ocene.length
-  //     : 0;
+  let averageRating = 0;
+  if(klub && klub?.ocene) {
+    averageRating = klub.ocene
+      ? klub.ocene.reduce(
+          (sum, ocena) => sum + (ocena.ocena ? ocena.ocena : 0),
+          0
+        ) / klub.ocene.length
+      : 0;
+  }
+    
 
   useEffect(() => {
     setRating(averageRating);
@@ -56,12 +59,12 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub }) => {
     <>
       <Row>
         <Col md={4}>
-          <Image src="../../assets/slikaproba.jpg" alt="Naziv kluba" fluid />{" "}
+          <Image src="../../assets/slikaproba.jpg" alt={klub?.naziv} fluid />{" "}
           {/* <Image src={klub.slikaKluba} alt={klub.naziv} fluid /> */}
         </Col>
         <Col md={8}>
-          <h2>Naziv kluba</h2> {/*<h2>{klub.naziv}</h2>*/}
-          <p>Lokacija: lokacija kluba</p> {/* <p>{klub.lokacija}</p> */}
+          <h2>{klub?.naziv}</h2>
+          <p> <strong> Lokacija: </strong> {klub?.lokacija}</p>
           <div>
             {[...Array(5)].map((star, index) => {
               const ratingValue = index + 1;
@@ -87,9 +90,9 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub }) => {
                 </label>
               );
             })}
-
+            <br/>
             <Badge className="bg-light text-dark ml-2">
-              Prosečna ocena: {averageRating} {/* klub.ocena */}
+              Prosečna ocena: {averageRating.toFixed(2)} 
             </Badge>
           </div>
         </Col>

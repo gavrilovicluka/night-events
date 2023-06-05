@@ -63,9 +63,9 @@ public class KorisnikController : ControllerBase
             var k = Context.Korisnici.Where(p => p.Username == korisnikDto.Username).FirstOrDefault();
             if(k != null)
                 return BadRequest("Korisnicko ime je zauzeto!");
-            k = Context.Korisnici.Where(p => p.Email == korisnikDto.Email).FirstOrDefault();
-            if(k != null)
-                return BadRequest("Vec postoji registracija sa unetom email adresom!");
+            // k = Context.Korisnici.Where(p => p.Email == korisnikDto.Email).FirstOrDefault();
+            // if(k != null)
+            //     return BadRequest("Vec postoji registracija sa unetom email adresom!");
     
             AuthController.CreatePasswordHash(korisnikDto.Password, out byte[] PasswordHash, out byte[] PasswordSalt);
                 

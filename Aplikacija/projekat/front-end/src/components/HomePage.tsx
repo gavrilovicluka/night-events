@@ -28,6 +28,7 @@ function HomePage() {
     new Date()
   );
   const [dateOptionsForAPI, setDateOptionsforAPI] = useState<Array<Date>>([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const today = new Date();
@@ -106,7 +107,7 @@ function HomePage() {
       .then((response) => {
         if (response.status === 200) {
           console.log("Dogadjaji su uspesno vraceni.");
-          //console.log(response.data);
+          console.log(response.data);
           setEventsList(response.data);
         }
       })
@@ -192,6 +193,7 @@ function HomePage() {
                   name="place_name"
                   placeholder="Ime kluba..."
                   className="form-control bg-dark text-light"
+                  onChange={(e) => setSearch(e.target.value)}
                 />
               </Col>
               <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
@@ -218,7 +220,9 @@ function HomePage() {
         </Container>
       </Card>
       <Row className="gx-4 gx-lg-5 ps-4 pe-4">
-        {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
+        {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList.filter((item)=> {
+          return search.toLowerCase() === '' ? item : item.klub?.naziv?.toLowerCase().includes(search);
+        })} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
       </Row>
 
     </>
