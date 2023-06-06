@@ -81,31 +81,6 @@ export default function ListaTermina() {
       });
   };
 
-  const handleBrisanje = (index: number) => {
-    const confirmed = window.confirm("Da li želite da obrišete termin?");
-    if (confirmed) {
-      const updatedTermini = [...termini2];
-      const idTermina = updatedTermini[index].id;
-
-      axios
-        .delete(ApiConfig.BASE_URL + `/MuzickiIzvodjac/ObrisiTermin/${idTermina}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
-        .then((response) => {
-          console.log(response.data);
-          updatedTermini.splice(index, 1);
-          setTermini(updatedTermini);
-        })
-        .catch((error) => {
-          console.log("Došlo je do greške prilikom slanja zahteva:", error);
-        });
-    }
-  };
-
   const handlePrikaziDogadjaj = (termin: TerminType) => {
     if (termin.rezervisan) {
       setSelectedTermin(termin);
@@ -127,7 +102,6 @@ export default function ListaTermina() {
                 <th>Termin</th>
                 <th>Rezervisan</th>
                 <th>Događaj</th>
-                <th>Obriši termin</th>
               </tr>
             </thead>
             <tbody>
@@ -164,16 +138,7 @@ export default function ListaTermina() {
                             Prikaži
                           </button>
                         </td>
-                      )}
-
-                    <td>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => handleBrisanje(index)}
-                      >
-                        Obriši
-                      </button>
-                    </td>
+                      )}                    
                   </tr>
                 ))}
             </tbody>
