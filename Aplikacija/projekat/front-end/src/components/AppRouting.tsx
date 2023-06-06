@@ -52,14 +52,14 @@ function AppRouting() {
 
         <Route path="/AboutStranica" element={<AboutStranica />} />
 
-        <Route
+        {/* <Route
           path="/organizatorDashboard"
           element={
             <OrganizatorElement>
               <OrganizatorDashboard />
             </OrganizatorElement>
           }
-        />
+        /> */}
         <Route
           path="/organizatorDashboard/mojKlub"
           element={
@@ -94,14 +94,14 @@ function AppRouting() {
         />
 
 
-        <Route
+        {/* <Route
           path="/muzickiIzvodjacDashboard"
           element={
             <MuzicarElement>
               <MuzickiIzvodjacDashboard />
             </MuzicarElement>
           }
-        />
+        /> */}
         <Route
           path="/muzickiIzvodjacDashboard/mojiTermini"
           element={
@@ -120,14 +120,14 @@ function AppRouting() {
         />
 
 
-        <Route
+        {/* <Route
           path="/administratorDashboard"
           element={
             <AdminElement>
               <AdministratorDashboard />
             </AdminElement>
           }
-        />
+        /> */}
         <Route
           path="/administratorDashboard/klubovi"
           element={

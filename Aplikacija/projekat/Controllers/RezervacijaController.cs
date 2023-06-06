@@ -167,13 +167,14 @@ public class RezervacijaController : ControllerBase
         try
         {
             var d = await Context.Rezervacije
+            .Include(p => p.Korisnik)
+            .Include(p => p.Sto)
             .Where(p => p.Dogadjaj!.ID == idDogadjaja)
             .Select(m => new
             {
-                idRezervacije = m.ID,
+                id = m.ID,
                 sto = m.Sto,
-                idKorisnika = m.Korisnik,
-                usernameKorisnika = m.Korisnik!.Username,
+                korisnik = m.Korisnik,
                 datum = m.Datum
             })
             .ToListAsync();

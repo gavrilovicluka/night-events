@@ -199,6 +199,10 @@ public class DogadjajController : ControllerBase
             }
 
             var d = await Context.Dogadjaji
+            .Include(p => p.Rezervacije)!
+            .ThenInclude(r => r.Korisnik)
+            .Include(p => p.Rezervacije)!
+            .ThenInclude(r => r.Sto)
             .Where(p => p.Klub!.ID == idKluba)
             .Select(m => new
             {
@@ -209,7 +213,13 @@ public class DogadjajController : ControllerBase
                 datum = m.Datum,
                 vreme = m.Vreme,
                 brojRezervacija = m.BrojRezervacija,
-                rezervacije = m.Rezervacije,
+                rezervacije = m.Rezervacije!.Select(r => new
+                {
+                    id = r.ID,
+                    datum = r.Datum,
+                    korisnik = r.Korisnik,
+                    sto = r.Sto
+                }),
                 izvodjac = m.MuzickiIzvodjac          
             })
             .ToListAsync();
@@ -399,13 +409,15 @@ public class DogadjajController : ControllerBase
             var d = await Context.Dogadjaji
             .Where(p => p.Datum == datum)
             .Include(p => p.Klub)
+            .Include(p => p.MuzickiIzvodjac)
             .Select(m => new
             {
                 id = m.ID,
                 naziv = m.Naziv,
                 datum = m.Datum,
                 vreme = m.Vreme,
-                klub = m.Klub
+                klub = m.Klub,
+                izvodjac = m.MuzickiIzvodjac
                 
             })
             .ToListAsync();

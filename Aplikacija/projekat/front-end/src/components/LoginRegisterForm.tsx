@@ -137,13 +137,13 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
 
         switch (decodedToken.role) {
           case "Admin":
-            navigate("/administratorDashboard");
+            navigate("/administratorDashboard/klubovi");
             break;
           case "Organizator":
-            navigate("/organizatorDashboard");
+            navigate("/organizatorDashboard/mojKlub");
             break;
           case "Muzicar":
-            navigate("/muzickiIzvodjacDashboard");
+            navigate("/muzickiIzvodjacDashboard/mojiTermini");
             break;
           default:
             //navigate("/");

@@ -7,7 +7,7 @@ export default class MuzickiIzvodjacType {
     id?: number;
     username?: string;
     imeIzvodjaca?: string;
-    zanr?: number;
+    zanr?: string;
     brojClanova?: number;
     ocene?: OcenaMuzickiIzvodjacType[] | null;
     termini?: TerminType[] | null;

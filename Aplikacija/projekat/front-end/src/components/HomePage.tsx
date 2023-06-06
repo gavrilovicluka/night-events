@@ -29,6 +29,7 @@ function HomePage() {
   );
   const [dateOptionsForAPI, setDateOptionsforAPI] = useState<Array<Date>>([]);
   const [search, setSearch] = useState('');
+  const [searchZanr, setSearchZanr] = useState('');
 
   useEffect(() => {
     const today = new Date();
@@ -97,12 +98,12 @@ function HomePage() {
   const getEventsData = () => {
     //const formattedDate = date.toISOString().split('T')[0];
     const dat = {
-      datum: new Date("2023-05-31").toISOString(),
+      datum: new Date("2023-06-02").toISOString(),
     };
 
     axios
       .get(ApiConfig.BASE_URL + "/Dogadjaj/VratiDogadjajeDatuma", {
-        params: { datum: "2023-05-31" },
+        params: { datum: "2023-06-02" },
       })
       .then((response) => {
         if (response.status === 200) {
@@ -197,23 +198,14 @@ function HomePage() {
                 />
               </Col>
               <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
-                <Form.Select
-                  id="type_id"
-                  name="type_id"
+                <Form.Control
+                  type="text"
+                  id="zanr"
+                  name="zanr"
+                  placeholder="Vrsta muzike..."
                   className="form-control bg-dark text-light"
-                >
-                  <option value="">Sva muzika</option>
-                  <option value="1">Narodna / Pop / Folk</option>
-                  <option value="2">Kafanska / Starogradska</option>
-                  <option value="3">Hip Hop / Rap / Trap / RnB</option>
-                  <option value="4">House / Electro / Techno</option>
-                  <option value="11">Pop</option>
-                  <option value="7">Rock / Punk</option>
-                  <option value="8">Jazz</option>
-                  <option value="9">Metal</option>
-                  <option value="10">Latino</option>
-                  <option value="undefined">Nedefinisano</option>
-                </Form.Select>
+                  onChange={(e) => setSearchZanr(e.target.value)}
+                />
               </Col>
             </Row>
           </Form>
@@ -221,7 +213,7 @@ function HomePage() {
       </Card>
       <Row className="gx-4 gx-lg-5 ps-4 pe-4">
         {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList.filter((item)=> {
-          return search.toLowerCase() === '' ? item : item.klub?.naziv?.toLowerCase().includes(search);
+          return ((search.toLowerCase() === '' ? item : item.klub?.naziv?.toLowerCase().includes(search)) && (searchZanr.toLowerCase() === '' ? item : item.izvodjac?.zanr?.toLowerCase().includes(searchZanr)));
         })} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
       </Row>
 

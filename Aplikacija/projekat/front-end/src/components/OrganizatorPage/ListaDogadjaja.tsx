@@ -204,6 +204,7 @@ export default function ListaDogadjaja() {
   const handlePrikaziRezervacije = (dogadjaj: DogadjajType) => {
     setSelectedDogadjaj(dogadjaj);
     setShowModalRezervacije(true);
+    console.log(dogadjaj.rezervacije);
   };
 
   return (
@@ -299,9 +300,10 @@ export default function ListaDogadjaja() {
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Datum</th>
+                      <th>Datum rezervacije</th>
                       <th>Username korisnika</th>
-                      <th>Sto</th>
+                      <th>Ime i prezime korisnika</th>
+                      <th>Vrsta stola</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -309,10 +311,12 @@ export default function ListaDogadjaja() {
                       <tr key={index}>
                         <td>{rezervacija.id}</td>
                         <td>
-                          {rezervacija.datum?.toLocaleDateString("sr-RS")}
+                        {rezervacija.datum &&
+                      new Date(rezervacija.datum).toLocaleDateString("sr-RS")}
                         </td>
                         <td>{rezervacija.korisnik?.username}</td>
-                        <td>{rezervacija.sto?.id}</td>
+                        <td>{rezervacija.korisnik?.ime} {rezervacija.korisnik?.prezime} </td>
+                        <td>{rezervacija.sto?.vrstaStola}</td>
                       </tr>
                     ))}
                   </tbody>
