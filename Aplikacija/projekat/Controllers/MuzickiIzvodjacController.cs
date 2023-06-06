@@ -330,10 +330,11 @@ public class MuzickiIzvodjacController : ControllerBase
                             organizator = d.Klub!.Organizator
                         })
                         .ToList()
-                        })
+                                      
+            })
             .ToListAsync();
-
-        return Ok(termini);
+          
+            return Ok(termini);
         }
         catch (Exception e)
         {

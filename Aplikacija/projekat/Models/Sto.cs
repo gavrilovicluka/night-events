@@ -16,6 +16,8 @@ public class Sto
 
     public Rezervacija? Rezervacija { get; set; }
 
+    public String? VrstaStola { get; set; }
+
     public Sto()
     {
         Status = StatusStola.Slobodan;

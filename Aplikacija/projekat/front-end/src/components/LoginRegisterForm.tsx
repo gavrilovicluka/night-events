@@ -40,6 +40,7 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
     isLoggedIn: false,
   });
 
+  const [isOpen, setIsOpen] = useState(true);
   const [activeTab, setActiveTab] = useState<"tab1" | "tab2">("tab1");
   const [selectedRole, setSelectedRole] = useState("korisnik");
 
@@ -113,6 +114,10 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
     setState((prevState) => ({ ...prevState, isLoggedIn }));
   };
 
+  const closeComponent = () => {
+    setIsOpen(false);
+  };
+
   const doLogin = () => {
     const data = {
       username: state.usernameLogin,
@@ -141,7 +146,8 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
             navigate("/muzickiIzvodjacDashboard");
             break;
           default:
-            navigate("/");
+            //navigate("/");
+            onClose();
             break;
         }
       })
@@ -218,7 +224,7 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
   };
 
   return (
-    <>
+    <> { isOpen && 
       <MDBContainer className=" p-3 my-5 d-flex flex-column w-50" ref={formRef}>
         <MDBCard>
           <MDBTabs
@@ -285,9 +291,9 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
             <a href="!#">Forgot password?</a>
           </div> */}
 
-              <MDBBtn className="mb-4 w-100" onClick={doLogin}>
+              <Button className="mb-4 w-100" onClick={doLogin}>
                 Sign in
-              </MDBBtn>
+              </Button>
               <p className="text-center">
                 Not a member?{" "}
                 <a href="#!" onClick={() => handleJustifyClick("tab2")}>
@@ -524,13 +530,13 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
                 ) : null}
               </MDBValidation>
 
-              <MDBBtn className="mb-4 w-100" onClick={doRegister}>
+              <Button className="mb-4 w-100" onClick={doRegister}>
                 Sign up
-              </MDBBtn>
+              </Button>
             </MDBTabsPane>
           </MDBTabsContent>
         </MDBCard>
-      </MDBContainer>
+      </MDBContainer> }
 
       {isRegistrationComplete && (
         <Alert

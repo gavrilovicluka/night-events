@@ -28,6 +28,7 @@ function HomePage() {
     new Date()
   );
   const [dateOptionsForAPI, setDateOptionsforAPI] = useState<Array<Date>>([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const today = new Date();
@@ -96,16 +97,17 @@ function HomePage() {
   const getEventsData = () => {
     //const formattedDate = date.toISOString().split('T')[0];
     const dat = {
-      datum: new Date("2023-05-25").toISOString(),
+      datum: new Date("2023-05-31").toISOString(),
     };
 
     axios
       .get(ApiConfig.BASE_URL + "/Dogadjaj/VratiDogadjajeDatuma", {
-        params: { datum: "2023-05-24" },
+        params: { datum: "2023-05-31" },
       })
       .then((response) => {
         if (response.status === 200) {
           console.log("Dogadjaji su uspesno vraceni.");
+          console.log(response.data);
           setEventsList(response.data);
         }
       })
@@ -191,6 +193,7 @@ function HomePage() {
                   name="place_name"
                   placeholder="Ime kluba..."
                   className="form-control bg-dark text-light"
+                  onChange={(e) => setSearch(e.target.value)}
                 />
               </Col>
               <Col sm={12} md={4} className="mt-1 p-1 ps-2 ps-sm-2 ps-md-1">
@@ -216,8 +219,10 @@ function HomePage() {
           </Form>
         </Container>
       </Card>
-      <Row className="gx-4 gx-lg-5">
-        {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
+      <Row className="gx-4 gx-lg-5 ps-4 pe-4">
+        {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList.filter((item)=> {
+          return search.toLowerCase() === '' ? item : item.klub?.naziv?.toLowerCase().includes(search);
+        })} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
       </Row>
 
     </>

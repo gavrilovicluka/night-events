@@ -6,6 +6,7 @@ export default class KlubType {
     naziv?: string;
     lokacija?: string;
     slikaKluba?: string;
+    mapaKluba?: string;
     ocene?: OcenaKlubType[] | null;
     brojStolovaBS?: number;
     brojStolovaVS?: number;

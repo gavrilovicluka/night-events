@@ -21,6 +21,7 @@ import jwtDecode from "jwt-decode";
 import { DecodedToken } from "../types/DecodedToken";
 import { ReactNode } from "react";
 import MojKlub from "./OrganizatorPage/MojKlub";
+import DogadjajPage from "./DogadjajPage";
 
 let userRole: string | null = null;
 
@@ -29,10 +30,10 @@ if (token !== null) {
   const decodedToken = jwtDecode(token) as DecodedToken;
   userRole = decodedToken.role;
   //console.log(decodedToken);
-  console.log(userRole);
+  //console.log(userRole);
 } else {
   console.log("Token not found in localStorage");
-  console.log(userRole);
+  //console.log(userRole);
 }
 
 function AppRouting() {
@@ -45,8 +46,8 @@ function AppRouting() {
         } } />} />
         <Route path="*" element={<PageNotFound />}></Route>
         <Route
-          path="/detaljiDogadjaja"
-          element={<DetaljiDogadjaja dogadjaj={new DogadjajType()} />}
+          path="/detaljiDogadjaja/:id"
+          element={<DogadjajPage />}   
         />
 
         <Route path="/AboutStranica" element={<AboutStranica />} />

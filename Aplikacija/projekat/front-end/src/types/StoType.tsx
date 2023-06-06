@@ -7,4 +7,5 @@ export default class StoType {
     status?: StatusStolaType;
     dogadjaj?: DogadjajType;
     rezervacija?: RezervacijaType;
+    vrstaStola?: string;
 }

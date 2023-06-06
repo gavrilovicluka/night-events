@@ -14,6 +14,7 @@ interface RateProps {
 
 const Rate: React.FC<RateProps> = ({ count, rating, color, onRating }) => {
   const [hoverRating, setHoverRating] = useState(0);
+  const [averageRating, setAverageRating] = useState(rating);
 
   const getColor = (index: number) => {
     if (hoverRating >= index) {

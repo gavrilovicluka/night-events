@@ -98,10 +98,14 @@ public class KlubController : ControllerBase
         {
             if (idKlub <= 0)
             {
-                return BadRequest("Ovaj organizator nije zaduzen ni za jedan klub!");
+                return BadRequest("Nevalidan ID kluba!");
             }
 
-            var k = await Context.Klubovi.FindAsync(idKlub);
+           var k = await Context.Klubovi
+                    .Include(p => p.Ocene!)
+                    .Include(p => p.Organizator!)
+                    .Where(p => p.ID == idKlub)
+                    .FirstOrDefaultAsync();
 
             if(k == null)
             {
@@ -120,28 +124,80 @@ public class KlubController : ControllerBase
     [Route("IzmeniKlub")]
     [HttpPut]
     public async Task<ActionResult> IzmeniKlub([FromBody] IzmeniKlubDTO klubDTO)
-{
-    try
     {
-        var klub = await Context.Klubovi.FindAsync(klubDTO.ID);
-
-        if (klub == null)
+        try
         {
-            return BadRequest("Ne postoji izabrani klub");
+            var klub = await Context.Klubovi.FindAsync(klubDTO.ID);
+
+            if (klub == null)
+            {
+                return BadRequest("Ne postoji izabrani klub");
+            }
+
+            klub.Lokacija = klubDTO.Lokacija;
+            klub.BrojStolovaBS = klubDTO.BrojStolovaBS;
+            klub.BrojStolovaS = klubDTO.brojStolovaS;
+            klub.BrojStolovaVS = klubDTO.BrojStolovaVS;
+
+            await Context.SaveChangesAsync();
+            return Ok("Podaci kluba su uspešno izmenjeni!");
         }
-
-        klub.Lokacija = klubDTO.Lokacija;
-        klub.BrojStolovaBS = klubDTO.BrojStolovaBS;
-        klub.BrojStolovaS = klubDTO.brojStolovaS;
-        klub.BrojStolovaVS = klubDTO.BrojStolovaVS;
-
-        await Context.SaveChangesAsync();
-        return Ok("Podaci kluba su uspešno izmenjeni!");
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
-    catch (Exception e)
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Route("OceniKlub/{idKluba}/{ocena}")]
+    [HttpPost]
+    public async Task<ActionResult> OceniKlub(int idKluba,int ocena)
     {
-        return BadRequest(e.Message);
+        try
+        {
+            if(ocena <= 0 || ocena > 5)
+            {
+                return BadRequest("Nevalidan unos ocene");
+            }
+
+            var klub = await Context.Klubovi
+                    .Include(p => p.Ocene!)
+                    .Where(p => p.ID == idKluba)
+                    .FirstOrDefaultAsync();
+
+            if(klub == null)
+            {
+                return BadRequest("Ne postoji klub");
+            }
+
+            var o = new OcenaKlub
+            {
+                Ocena = ocena
+            };
+
+            if(klub.Ocene == null)
+            {
+                klub.Ocene = new List<OcenaKlub>();             
+            }
+            klub.Ocene.Add(o);
+
+            Context.OceneKlubova.Add(o);
+            await Context.SaveChangesAsync();
+
+            double prosecnaOcena = 0.0;
+            if (klub.Ocene.Count > 0)
+            {
+                double sum = klub.Ocene.Sum(o => o.Ocena);
+                prosecnaOcena =  sum / klub.Ocene.Count;
+            }
+
+            double zaokruzenaOcena = Math.Round(prosecnaOcena, 2);
+            return Ok(zaokruzenaOcena);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
-}
-        
+
 }
