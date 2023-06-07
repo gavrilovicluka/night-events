@@ -43,8 +43,7 @@ public class DogadjajController : ControllerBase
                 Klub = klub,
                 MuzickiIzvodjac = izvodjac,
                 KomentariDogadjaj = null,
-                Rezervacije = null,
-                Karte = null
+                Rezervacije = null
             };
             int ukupanBrojStolova = klub.BrojStolovaBS + klub.BrojStolovaS + klub.BrojStolovaVS;
             dogadjaj.Stolovi = new List<Sto>(ukupanBrojStolova);
@@ -99,8 +98,7 @@ public class DogadjajController : ControllerBase
                 Klub = klub,
                 MuzickiIzvodjac = null,
                 KomentariDogadjaj = null,
-                Rezervacije = null,
-                Karte = null
+                Rezervacije = null
             };
             int ukupanBrojStolova = klub.BrojStolovaBS + klub.BrojStolovaS + klub.BrojStolovaVS;
             dogadjaj.Stolovi = new List<Sto>(ukupanBrojStolova);

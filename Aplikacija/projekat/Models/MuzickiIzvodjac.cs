@@ -33,7 +33,6 @@ public class MuzickiIzvodjac
     [Required]
     [MaxLength(50)]
     public String? ImeIzvodjaca { get; set; } 
-    public List<OcenaMuzickiIzvodjac>? Ocene { get; set; }
 
     public List<TerminiIzvodjaca>? Termini { get; set; }
 

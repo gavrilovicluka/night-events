@@ -88,8 +88,7 @@ public class MuzickiIzvodjacController : ControllerBase
                 BrClanova = muzickiIzvodjacDto.BrClanova,
                 ImeIzvodjaca = muzickiIzvodjacDto.ImeIzvodjaca,
                 Dogadjaji = null,
-                Termini = null,
-                Ocene = null
+                Termini = null
             };
 
             Context.MuzickiIzvodjaci.Add(muzIzv);
@@ -243,7 +242,7 @@ public class MuzickiIzvodjacController : ControllerBase
         }     
     }
     
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin, Organizator")]
     [Route("VratiMuzickeIzvodjace")]
     [HttpGet]
     public async Task<ActionResult> VratiMuzickeIzvodjace()
@@ -258,7 +257,7 @@ public class MuzickiIzvodjacController : ControllerBase
                 imeIzvodjaca = m.ImeIzvodjaca,
                 zanr = m.Zanr,
                 brojClanova = m.BrClanova,
-                ocene = m.Ocene,
+                email = m.Email,
                 termini = m.Termini,
                 dogadjaji = m.Dogadjaji,
                 status = m.Status
@@ -290,7 +289,7 @@ public class MuzickiIzvodjacController : ControllerBase
                 imeIzvodjaca = m.ImeIzvodjaca,
                 zanr = m.Zanr,
                 brojClanova = m.BrClanova,
-                ocene = m.Ocene,
+                email = m.Email,
                 termini = m.Termini,
                 dogadjaji = m.Dogadjaji,
                 status = m.Status

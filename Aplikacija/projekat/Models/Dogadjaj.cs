@@ -30,7 +30,6 @@ public class Dogadjaj
 
     public int BrojRezervacija { get; set; }
 
-    public List<Karta>? Karte { get; set; }
 
     public Dogadjaj()
     {

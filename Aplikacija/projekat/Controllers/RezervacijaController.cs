@@ -300,7 +300,8 @@ public class RezervacijaController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    
+    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
     [Route("RezervisiSepare/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiSepare(int idDogadjaja, int idKorisnika)
@@ -358,32 +359,32 @@ public class RezervacijaController : ControllerBase
             await Context.SaveChangesAsync();
 
            //Slanje mejla o uspesno izvrsenoj rezervaciji
-            using (SmtpClient smtpClient = new SmtpClient())
-            {
-                // Potrebne informacije za slanje e-poste
-                smtpClient.EnableSsl = true;
-                smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential("nightevents2023@gmail.com", "nightEvents2023!");
-                 smtpClient.Host = "smtp.gmail.com";
-                smtpClient.Port = 587;
-                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            // using (SmtpClient smtpClient = new SmtpClient())
+            // {
+            //     // Potrebne informacije za slanje e-poste
+            //     smtpClient.EnableSsl = true;
+            //     smtpClient.UseDefaultCredentials = false;
+            //     smtpClient.Credentials = new NetworkCredential("nightevents2023@gmail.com", "nightEvents2023!");
+            //      smtpClient.Host = "smtp.gmail.com";
+            //     smtpClient.Port = 587;
+            //     smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-                string dogadjajString = dogadjaj.Naziv!; 
-                string brojStolaString = rez.Sto.ID.ToString();
-                string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. ID stola: " + brojStolaString;
+            //     string dogadjajString = dogadjaj.Naziv!; 
+            //     string brojStolaString = rez.Sto.ID.ToString();
+            //     string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. ID stola: " + brojStolaString;
                 
                 
-                using (MailMessage mailMessage = new MailMessage())
-                {
-                    mailMessage.From = new MailAddress("nightevents2023@gmail.com");
-                    mailMessage.To.Add(k.Email!);
-                    mailMessage.Subject = "Uspesna rezervacija mesta";
-                    mailMessage.Body = poruka;
+            //     using (MailMessage mailMessage = new MailMessage())
+            //     {
+            //         mailMessage.From = new MailAddress("nightevents2023@gmail.com");
+            //         mailMessage.To.Add(k.Email!);
+            //         mailMessage.Subject = "Uspesna rezervacija mesta";
+            //         mailMessage.Body = poruka;
 
                    
-                    await smtpClient.SendMailAsync(mailMessage);
-                }
-            }
+            //         await smtpClient.SendMailAsync(mailMessage);
+            //     }
+            // }
             
             return(Ok(rez));
         }
@@ -451,29 +452,29 @@ public class RezervacijaController : ControllerBase
             await Context.SaveChangesAsync();
 
             //Slanje mejla o uspesno izvrsenoj rezervaciji
-            using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
-            {
-                // Potrebne informacije za slanje e-poste
-                smtpClient.EnableSsl = true;
-                smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential("nightevents2023@gmail.com", "nightEvents2023!");
+            // using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
+            // {
+            //     // Potrebne informacije za slanje e-poste
+            //     smtpClient.EnableSsl = true;
+            //     smtpClient.UseDefaultCredentials = false;
+            //     smtpClient.Credentials = new NetworkCredential("nightevents2023@gmail.com", "nightEvents2023!");
 
-                string dogadjajString = dogadjaj.Naziv!; 
-                string brojStolaString = rez.Sto.ID.ToString();
-                string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. ID stola: " + brojStolaString;
+            //     string dogadjajString = dogadjaj.Naziv!; 
+            //     string brojStolaString = rez.Sto.ID.ToString();
+            //     string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. ID stola: " + brojStolaString;
                 
                 
-                using (MailMessage mailMessage = new MailMessage())
-                {
-                    mailMessage.From = new MailAddress("nightevents2023@gmail.com");
-                    mailMessage.To.Add(k.Email!);
-                    mailMessage.Subject = "Uspesna rezervacija mesta";
-                    mailMessage.Body = poruka;
+            //     using (MailMessage mailMessage = new MailMessage())
+            //     {
+            //         mailMessage.From = new MailAddress("nightevents2023@gmail.com");
+            //         mailMessage.To.Add(k.Email!);
+            //         mailMessage.Subject = "Uspesna rezervacija mesta";
+            //         mailMessage.Body = poruka;
 
                    
-                    await smtpClient.SendMailAsync(mailMessage);
-                }
-            }
+            //         await smtpClient.SendMailAsync(mailMessage);
+            //     }
+            // }
             
             return(Ok(rez));
         }

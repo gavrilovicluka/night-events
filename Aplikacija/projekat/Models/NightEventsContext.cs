@@ -8,8 +8,6 @@ public class NightEventsContext : DbContext
 
     public DbSet<Dogadjaj> Dogadjaji { get; set; }  
 
-    public DbSet<Karta> Karte { get; set; }
-
     public DbSet<Klub> Klubovi { get; set; }
 
     public DbSet<KomentarDogadjaj> KomentariDogadjaji { get; set; }
@@ -25,7 +23,6 @@ public class NightEventsContext : DbContext
     public DbSet<Rezervacija> Rezervacije { get; set; }
     public DbSet<TerminiIzvodjaca> TerminiIzvodjaca { get; set; }
     public DbSet<OcenaKlub> OceneKlubova { get; set; }
-    public DbSet<OcenaMuzickiIzvodjac> OceneIzvodjaca { get; set; }
     
     public DbSet<Sto> Stolovi { get; set; }
     public DbSet<StoBarski> StoloviBS { get; set; }

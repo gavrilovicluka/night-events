@@ -38,7 +38,6 @@ public class Korisnik
 
     public List<KomentarIzvodjac>? KomentariIzvodjaci { get; set; }
 
-    public List<Karta>? Karte { get; set; }
 
     public List<Rezervacija>? Rezervacije { get; set; }
 
