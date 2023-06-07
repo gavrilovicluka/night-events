@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Modal, Nav, Navbar } from "react-bootstrap";
 import LoginRegisterForm from "./LoginRegisterForm";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePageNavbar() {
 
   const [showLoginForm, setShowLoginForm] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if(isLoggedIn) {
+      setIsLoggedIn(true);
+    }
+    
+  });
 
   const handleLoginClick = () => {
     setShowLoginForm(true);
@@ -14,7 +26,12 @@ export default function HomePageNavbar() {
     setShowLoginForm(false);
   };
 
-  
+  const handleLogoutClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("isLoggedIn");
+    window.location.reload();
+  };
   
   return (
     
@@ -25,7 +42,8 @@ export default function HomePageNavbar() {
         <Nav className="ms-auto">
           <Nav.Link href="/AboutStranica">O nama</Nav.Link>
           <Nav.Link href="#!">Kontakt</Nav.Link>
-          <Nav.Link onClick={handleLoginClick}>Prijava</Nav.Link>
+          { !isLoggedIn ? <Nav.Link onClick={handleLoginClick}>Prijava</Nav.Link> : <Nav.Link onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleLogoutClick(e) }>Odjavi se</Nav.Link> }
+          
         </Nav>
       </Navbar.Collapse>
       {showLoginForm && (

@@ -96,7 +96,7 @@ function DodajTerminIzvodjac() {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    window.location.reload(); // Osvežavanje stranice nakon zatvaranja moda
+    window.location.reload(); 
   };
 
   const handleDatumChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -105,7 +105,7 @@ function DodajTerminIzvodjac() {
 
     if (selectedDate < today) {
       alert("Izabrali ste prošli datum!");
-      setDatum(today); // Osvežavanje inputa sa današnjim datumom
+      setDatum(today); 
     } else {
       setDatum(selectedDate);
     }

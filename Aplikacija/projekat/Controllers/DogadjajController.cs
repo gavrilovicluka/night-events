@@ -77,7 +77,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("DodajDogadjajBezIzvodjaca/{idKluba}")]
     [HttpPost]
     public async Task<ActionResult> DodajDogadjaj(int idKluba, [FromBody] DodajDogadjajDTO dodajDogadjajDto)
@@ -183,7 +183,7 @@ public class DogadjajController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
     [Route("VratiDogadjajeKluba/{idKluba}")]
     [HttpGet]
     public async Task<ActionResult> VratiDogadjajeKluba(int idKluba)

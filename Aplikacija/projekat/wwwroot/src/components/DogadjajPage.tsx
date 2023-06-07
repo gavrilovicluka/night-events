@@ -98,6 +98,10 @@ function DogadjajPage() {
     setShow(false);
   };
 
+  const handleCloseModalSuccess = () => {
+    setShowModal(false);
+  };
+
   const handleStoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedStoId(event.target.value ? parseInt(event.target.value) : null);
 
@@ -283,7 +287,7 @@ function DogadjajPage() {
         </Modal.Body>
       </Modal>
 
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal show={showModal} onHide={handleCloseModalSuccess}>
         <Modal.Header closeButton>
           <Modal.Title>Uspesno izvrsena rezervacija </Modal.Title>
         </Modal.Header>
@@ -291,7 +295,7 @@ function DogadjajPage() {
           <p>Vasa rezervacija je uspesno izvrsena. Broj rezervacije je {rezervacija?.id}.  </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
+          <Button variant="secondary" onClick={handleCloseModalSuccess}>
             Zatvori
           </Button>
         </Modal.Footer>

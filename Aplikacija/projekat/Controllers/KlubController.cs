@@ -50,7 +50,23 @@ public class KlubController : ControllerBase
 
             await Context.SaveChangesAsync();
 
-            return Ok(klub);
+            var response = new 
+            {
+                id = klub.ID,
+                naziv = klub.Naziv,
+                lokacija = klub.Lokacija,
+                ocene = klub.Ocene,
+                BrojStolovaBS = klub.BrojStolovaBS,
+                BrojStolovaVS = klub.BrojStolovaVS,
+                BrojStolovaS = klub.BrojStolovaS,
+                idOrganizatora = klub.Organizator!.ID,
+                usernameOrganizatora = klub.Organizator.Username,
+                dogadjaji = klub.Dogadjaji,
+                slikaKluba = GetImagebyKlubID(_environment, klub.ID.ToString()),
+                mapaKluba = GetMapbyKlubID(_environment, klub.ID.ToString())
+            };
+
+            return Ok(response);
         }
         catch (Exception e)
         {
@@ -162,7 +178,7 @@ public class KlubController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
     [Route("OceniKlub/{idKluba}/{ocena}")]
     [HttpPost]
     public async Task<ActionResult> OceniKlub(int idKluba,int ocena)

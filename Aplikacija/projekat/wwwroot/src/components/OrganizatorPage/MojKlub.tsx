@@ -59,19 +59,18 @@ export default function MojKlub() {
   }, []);
 
   const getData = () => {
-    // Dobijanje tokena organizatora iz lokalnog skladišta (localStorage ili slično)
     const token = localStorage.getItem("jwtToken");
 
     if (token !== null) {
-      // Dekodiranje tokena kako biste dobili informacije o organizatoru
+
       const decodedToken = jwtDecode(token) as DecodedTokenOrganizator;
       console.log(decodedToken);
 
-      // Dobijanje ID kluba iz dekodiranog tokena
+
       const klubId = decodedToken.idKluba;
       console.log(klubId);
 
-      // Pozivanje API funkcije VratiKlub sa prosleđenim ID-jem kluba
+
       axios
         .get(ApiConfig.BASE_URL + `/Klub/VratiKlub/${klubId}`, {
           headers: {

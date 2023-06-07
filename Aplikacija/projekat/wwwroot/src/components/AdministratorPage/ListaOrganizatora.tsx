@@ -87,7 +87,7 @@ export default function ListaOrganizatora() {
     })
       .then((response) => {
         console.log(response.data); 
-        refreshPage();
+        //refreshPage();
       })
       .catch((error) => {
         console.log("Doslo je do greske prilikom slanja zahteva:", error);
@@ -115,7 +115,7 @@ export default function ListaOrganizatora() {
     })
       .then((response) => {
         console.log(response.data);
-        refreshPage();
+        //refreshPage();
       })
       .catch((error) => {
         console.log("Doslo je do greske prilikom slanja zahteva:", error);
@@ -151,12 +151,12 @@ export default function ListaOrganizatora() {
                 <td>{organizator.prezime}</td>
                 <td>{organizator.username}</td>
                 <td>{organizator.email}</td>
-                <td>{organizator.klubId}</td>
+                <td>{(organizator.klubId && organizator.klubId > 0 ) ? organizator.klubId : "NEMA"}</td>
                 <td>{organizator.status !== undefined ? getStatusNaloga(organizator.status) : ""}</td>
                 <td className="d-flex space-between">
                   {organizator.status === 0 ? (
 
-                    <Button variant="success" disabled style={{ backgroundColor: "green", marginRight: "10px" }} onClick={() => window.location.reload()}>{' '}
+                    <Button variant="success" disabled style={{ backgroundColor: "green", marginRight: "10px" }} /*onClick={() => window.location.reload()}*/>{' '}
                       Odobri
                     </Button>
                   ) : (

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H2LbURoTyYNHKk9P/OM67h+uVBZ81GbBLOLsEesMz1Y=",
+  "Hash": "zyuVC2f9+jk8K/5TOodIJZE+QlV7w8rfifTLV31b5J8=",
   "Source": "projekat",
   "BasePath": "_content/projekat",
   "Mode": "Default",
@@ -1188,23 +1188,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\types\\OcenaKlubType.tsx"
-    },
-    {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OcenaMuzickiIzvodjacType.tsx",
-      "SourceId": "projekat",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
-      "BasePath": "_content/projekat",
-      "RelativePath": "src/types/OcenaMuzickiIzvodjacType.tsx",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\types\\OcenaMuzickiIzvodjacType.tsx"
     },
     {
       "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OrganizatorType.tsx",

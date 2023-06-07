@@ -139,7 +139,7 @@ function HomePage() {
   };
 
   const scrollToTarget = () => {
-    const targetDiv = document.getElementById('date');
+    const targetDiv = document.getElementById('searchForm');
     if (targetDiv) {
       targetDiv.scrollIntoView({ behavior: 'smooth' });
     }
@@ -186,7 +186,7 @@ function HomePage() {
               standard Bootstrap core components. Feel free to use this template
               for any project you want!
             </p>
-            <Button className="btn-primary">Call to Action!</Button>
+            <Button className="btn-primary" onClick={() => {scrollToTarget()}}>Call to Action!</Button>
           </Col>
         </Row></Container>
       <Card className="text-white bg-secondary my-5 py-4 text-center">

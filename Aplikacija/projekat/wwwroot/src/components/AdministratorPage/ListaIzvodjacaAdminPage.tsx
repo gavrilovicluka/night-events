@@ -98,7 +98,8 @@ export default function ListaIzvodjacaAdminPage() {
     })
       .then((response) => {
         console.log(response.data); 
-        refreshPage();
+        //getData(token);
+        //refreshPage();
       })
       .catch((error) => {
         console.log("Doslo je do greske prilikom slanja zahteva:", error);
@@ -126,7 +127,7 @@ export default function ListaIzvodjacaAdminPage() {
     })
       .then((response) => {
         console.log(response.data);
-        refreshPage();
+        //refreshPage();
       })
       .catch((error) => {
         console.log("Doslo je do greske prilikom slanja zahteva:", error);

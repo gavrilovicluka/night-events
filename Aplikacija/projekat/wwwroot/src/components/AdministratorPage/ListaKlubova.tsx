@@ -21,6 +21,7 @@ export default function ListaKlubova() {
   const [selectedFileSlikaKluba, setSelectedFileSlikaKluba] = useState<File | null>(null);
     const [imageUrlSlikaKluba, setImageUrlSlikaKluba] = useState(null);
     const [token, setToken] = useState<string | null>();
+    const [klubovi, setKlubovi] = useState<Array<KlubType>>([]);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -42,6 +43,10 @@ export default function ListaKlubova() {
     }
   });
 
+  useEffect(() => {
+    
+  }, [klubovi]);
+
    useEffect(() => {
     const token = localStorage.getItem("jwtToken");
     if (token) {
@@ -52,6 +57,35 @@ export default function ListaKlubova() {
 
     getData(token);
   }, [token]);
+
+  const getData = (token: string | undefined | null) => {
+    if (token === null || token === undefined) {
+      console.log("Nevalidan token");
+      return;
+    }
+    
+    axios({
+      method: 'get',
+      url: `${ApiConfig.BASE_URL}/Klub/VratiKlubove`,
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response: AxiosResponse<KlubType[]>) => {
+        if (response.status === 200) {
+          const data = response.data;
+          console.log(data);
+          setKlubovi(data);
+        } else {
+          console.log("Došlo je do greške prilikom dobavljanja podataka.");
+        }
+      })
+      .catch((error) => {
+        console.log("Došlo je do greške prilikom slanja zahteva:", error);
+      });
+  };
+
 
   const [showModal, setShowModal] = useState(false);
   const [klubData, setKlubData] = useState({
@@ -100,11 +134,19 @@ export default function ListaKlubova() {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    window.location.reload();
+    setKlubData({
+      idOrganizatora: "",
+      naziv: "",
+      lokacija: "",
+      brojStolovaBS: "",
+      brojStolovaVS: "",
+      brojStolovaS: "",
+    })
+    //window.location.reload();
   };
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault();
+    //e.preventDefault();
     // const formData = {
     //   slikaKluba: imageSlika,
     //   mapaKluba: imageMapa,
@@ -139,6 +181,7 @@ export default function ListaKlubova() {
     })
       .then((response) => {
         console.log(response.data);
+        setKlubovi(prevKlubovi => [...prevKlubovi, response.data]);
         setShowModal(true);
       })
       .catch((error) => {
@@ -146,37 +189,10 @@ export default function ListaKlubova() {
       });
   };
 
-  const [klubovi, setKlubovi] = useState<Array<KlubType>>([]);
 
 
-  const getData = (token: string | undefined | null) => {
-    if (token === null || token === undefined) {
-      console.log("Nevalidan token");
-      return;
-    }
-    
-    axios({
-      method: 'get',
-      url: `${ApiConfig.BASE_URL}/Klub/VratiKlubove`,
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
-        Authorization: `Bearer ${token}`,
-      },
-    })
-      .then((response: AxiosResponse<KlubType[]>) => {
-        if (response.status === 200) {
-          const data = response.data;
-          console.log(data);
-          setKlubovi(data);
-        } else {
-          console.log("Došlo je do greške prilikom dobavljanja podataka.");
-        }
-      })
-      .catch((error) => {
-        console.log("Došlo je do greške prilikom slanja zahteva:", error);
-      });
-  };
 
+  
   function izracunajProsek(ocene: OcenaKlubType[] | null | undefined) {
     if (!ocene || ocene.length === 0) {
       return 0;
@@ -184,26 +200,26 @@ export default function ListaKlubova() {
 
     var oceneBezNula = ocene
       .filter(function (ocena) {
-        return ocena.ocena !== 0; // Filtriraj nule iz niza ocena
+        return ocena.ocena !== 0; 
       })
       .map(function (ocena) {
-        return ocena.ocena; // Izvuci vrednosti ocena iz objekata
+        return ocena.ocena; 
       });
 
     if (oceneBezNula.length === 0) {
-      return 0; // Ako su sve ocene nule, prosečna ocena je 0
+      return 0; 
     }
 
     var sum = oceneBezNula.reduce(function (a, b) {
       if (typeof a === "number" && typeof b === "number") {
-        return a + b; // Saberi samo ako su a i b brojevi
+        return a + b; 
       } else {
-        return (a || 0) + (b || 0); // Ako su a ili b undefined, koristi 0
+        return (a || 0) + (b || 0); 
       }
-    }, 0); // Inicijalna vrednost za sum je 0
+    }, 0); 
 
     if (typeof sum !== "number") {
-      return 0; // Ako sum nije broj, vrati 0
+      return 0; 
     }
 
     var prosek = sum / oceneBezNula.length;

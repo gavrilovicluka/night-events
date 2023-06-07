@@ -40,12 +40,14 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub}) => {
       setRating(value);
       const storedToken = localStorage.getItem("jwtToken");
       if (storedToken) {
-        axios
-          .post(ApiConfig.BASE_URL + `/Klub/OceniKlub/${klub.id}/${value}`, {
-            headers: {
-              Authorization: `Bearer ${storedToken}`,
-            },
-          })
+        axios({
+          method: "post",
+          url: `${ApiConfig.BASE_URL}/Klub/OceniKlub/${klub.id}/${value}`,
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+            Authorization: `Bearer ${storedToken}`,
+          },
+        })
           .then((response) => {
             const averageRating = response.data;
             setRating(averageRating);
