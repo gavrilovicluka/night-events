@@ -3,6 +3,7 @@ import MuzickiIzvodjacHeader from "./MuzickiIzvodjacHeader";
 import { useNavigate } from "react-router-dom";
 import { DecodedToken } from "../../types/DecodedToken";
 import jwtDecode from "jwt-decode";
+import { Layout } from "antd";
 
 export default function MuzickiIzvodjacDashboard() {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ export default function MuzickiIzvodjacDashboard() {
       return;
     }
   });
+  
 
   return <MuzickiIzvodjacHeader />;
 }

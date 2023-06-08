@@ -1232,6 +1232,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\common\noimage.png))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\Klub\1\slika\slikaKluba.png))">
       <SourceType>Package</SourceType>
       <SourceId>projekat</SourceId>
@@ -1248,6 +1249,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\Klub\1\slika\slikaKluba.png))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> footer
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\Klub\3\mapa\mapaKluba.png))">
       <SourceType>Package</SourceType>
       <SourceId>projekat</SourceId>
