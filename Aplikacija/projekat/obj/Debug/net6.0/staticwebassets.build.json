@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zyuVC2f9+jk8K/5TOodIJZE+QlV7w8rfifTLV31b5J8=",
+  "Hash": "DQTNTIvTU9UPBHBEpYsSA2no4d5awKYH16ntwYT8vVI=",
   "Source": "projekat",
   "BasePath": "_content/projekat",
   "Mode": "Default",
@@ -1324,6 +1324,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\common\\noimage.png"
+    },
+    {
+      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png",
+      "SourceId": "projekat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "BasePath": "_content/projekat",
+      "RelativePath": "uploads/Klub/1/slika/slikaKluba.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png"
     },
     {
       "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\mapa\\mapaKluba.png",

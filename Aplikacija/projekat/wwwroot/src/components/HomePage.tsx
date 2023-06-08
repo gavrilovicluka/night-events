@@ -25,8 +25,8 @@ function HomePage() {
     Array<{ value: string; label: string }>
   >([]);
   const [eventsList, setEventsList] = useState<Array<DogadjajType>>([]);
-  const [search, setSearch] = useState('');
-  const [searchZanr, setSearchZanr] = useState('');
+  const [search, setSearch] = useState("");
+  const [searchZanr, setSearchZanr] = useState("");
 
   useEffect(() => {
     const today = new Date();
@@ -46,10 +46,8 @@ function HomePage() {
       options.push({ value: formattedDate, label: displayDate });
     }
 
-
     setDateOptions(options);
     setSelectedDate(options[0].value);
-
   }, []);
 
   const getDayOfWeek = (date: Date) => {
@@ -88,10 +86,10 @@ function HomePage() {
   }, [selectedDate]);
 
   const getEventsData = (datum: string) => {
-    console.log( datum);
+    console.log(datum);
     axios
       .get(ApiConfig.BASE_URL + "/Dogadjaj/VratiDogadjajeDatuma", {
-        params: { datum: /*"2023-05-31" */ datum },
+        params: { datum: /*"2023-05-31"*/ datum },
       })
       .then((response) => {
         if (response.status === 200) {
@@ -107,30 +105,29 @@ function HomePage() {
           //     if(dogadjaj.klub?.naziv) {
           //       localStorage.setItem(dogadjaj.klub?.naziv, response.data);
           //     }
-              
+
           //   })
-            
+
           // })
-          
 
           const imagePromises = response.data.map((dogadjaj: DogadjajType) =>
-          axios
-            .get(ApiConfig.BASE_URL + `/Klub/GetPicture/${dogadjaj.klub?.id}`)
-            .then((response) => {
-              console.log(dogadjaj.klub?.naziv);
-              if (dogadjaj.klub?.naziv) {
-                localStorage.setItem(dogadjaj.klub?.naziv, response.data);
-              }
-            })
-        );
+            axios
+              .get(ApiConfig.BASE_URL + `/Klub/GetPicture/${dogadjaj.klub?.id}`)
+              .then((response) => {
+                console.log(dogadjaj.klub?.naziv);
+                if (dogadjaj.klub?.naziv) {
+                  localStorage.setItem(dogadjaj.klub?.naziv, response.data);
+                }
+              })
+          );
 
-        Promise.all(imagePromises)
-          .then(() => {
-            console.log("Slike klubova su uspesno smestene u local storage.");
-          })
-          .catch((error) => {
-            console.log("Greska pri preuzimanju slika klubova:", error);
-          });
+          Promise.all(imagePromises)
+            .then(() => {
+              console.log("Slike klubova su uspesno smestene u local storage.");
+            })
+            .catch((error) => {
+              console.log("Greska pri preuzimanju slika klubova:", error);
+            });
         }
       })
       .catch((error) => {
@@ -139,9 +136,9 @@ function HomePage() {
   };
 
   const scrollToTarget = () => {
-    const targetDiv = document.getElementById('searchForm');
+    const targetDiv = document.getElementById("searchForm");
     if (targetDiv) {
-      targetDiv.scrollIntoView({ behavior: 'smooth' });
+      targetDiv.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -151,44 +148,56 @@ function HomePage() {
 
       <Container className="px-4 px-lg-5" style={{ borderRadius: "12px" }}>
         <Row className="gx-6 gx-lg-10 align-items-center my-5">
-
-
-          <Carousel className="multi-carousel" style={{ maxWidth: '35rem' }} interval={1000}>
+          <Carousel
+            className="multi-carousel md-5"
+            style={{ maxWidth: "35rem" }}
+            interval={1000}
+          >
             <Carousel.Item style={{ borderRadius: "12px" }}>
-
               <img
                 src="../assets/klub.jpg"
                 alt="slika1"
-                style={{ objectFit: 'cover', height: '350px' }}
+                style={{ objectFit: "cover", height: "350px" }}
               />
             </Carousel.Item>
-            <Carousel.Item >
-
+            <Carousel.Item>
               <img
                 src="../assets/slikaProbaZaAbout.jpg"
                 alt="slika2"
-                style={{ objectFit: 'cover', height: '350px' }}
+                style={{ objectFit: "cover", height: "350px" }}
               />
             </Carousel.Item>
-            <Carousel.Item >
+            <Carousel.Item>
               <img
                 src="../assets/background.jpg"
                 alt="slika3"
-                style={{ objectFit: 'cover', height: '350px' }}
+                style={{ objectFit: "cover", height: "350px" }}
               />
             </Carousel.Item>
           </Carousel>
-          <Col lg={5}>
-            <h1 className="font-weight-light">Business Name or Tagline</h1>
+
+          <Col lg={5} className="bg-secondary rounded p-4 ms-5">
+            <h1 className="font-weight-light">
+              Dobrodošli na sajt NightEvents!
+            </h1>
             <p>
-              This is a template that is great for small businesses. It doesn't
-              have too much fancy flare to it, but it makes a great use of the
-              standard Bootstrap core components. Feel free to use this template
-              for any project you want!
+              NightEvents je aplikacija koja je osmišljena kako bi vam pružila
+              najnovije informacije o noćnim događajima u gradu. Ako ste
+              ljubitelj noćnog života, muzike, umetnosti ili samo tražite nešto
+              novo i uzbudljivo nakon zalaska sunca, NightEvents je
+              vaš idealni saputnik.
             </p>
-            <Button className="btn-primary" onClick={() => {scrollToTarget()}}>Call to Action!</Button>
+            <Button
+              className="btn-primary"
+              onClick={() => {
+                scrollToTarget();
+              }}
+            >
+              Pregledaj događaje!
+            </Button>
           </Col>
-        </Row></Container>
+        </Row>
+      </Container>
       <Card className="text-white bg-secondary my-5 py-4 text-center">
         <Container>
           <Form method="get" id="searchForm">
@@ -233,11 +242,26 @@ function HomePage() {
         </Container>
       </Card>
       <Row className="gx-4 gx-lg-5 ps-5 pe-5">
-        {eventsList.length != 0 ? <HomePageEventCard dogadjaji={eventsList.filter((item)=> {
-          return ((search.toLowerCase() === '' ? item : item.klub?.naziv?.toLowerCase().includes(search)) && (searchZanr.toLowerCase() === '' ? item : item.izvodjac?.zanr?.toLowerCase().includes(searchZanr)));
-        })} /> : <p className="text-center text-white" > Nema dogadjaja za danasnji datum </p>}
+        {eventsList.length != 0 ? (
+          <HomePageEventCard
+            dogadjaji={eventsList.filter((item) => {
+              return (
+                (search.toLowerCase() === ""
+                  ? item
+                  : item.klub?.naziv?.toLowerCase().includes(search)) &&
+                (searchZanr.toLowerCase() === ""
+                  ? item
+                  : item.izvodjac?.zanr?.toLowerCase().includes(searchZanr))
+              );
+            })}
+          />
+        ) : (
+          <p className="text-center text-white">
+            {" "}
+            Nema dogadjaja za danasnji datum{" "}
+          </p>
+        )}
       </Row>
-
     </>
   );
 }

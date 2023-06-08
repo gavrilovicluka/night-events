@@ -212,7 +212,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
     [Route("RezervisiBarskiSto/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiBarskiSto(int idDogadjaja, int idKorisnika)
@@ -245,16 +245,16 @@ public class RezervacijaController : ControllerBase
             }
             sto.Status = StatusStola.Zauzet;
 
-            var provera = await Context.Rezervacije
-                            .Include(a=>a.Korisnik)
-                            .Include(p => p.Dogadjaj)
-                            .Where(b => b.Dogadjaj!.ID == idDogadjaja && b.Korisnik!.ID == idKorisnika)
-                            .FirstOrDefaultAsync();
+            // var provera = await Context.Rezervacije
+            //                 .Include(a=>a.Korisnik)
+            //                 .Include(p => p.Dogadjaj)
+            //                 .Where(b => b.Dogadjaj!.ID == idDogadjaja && b.Korisnik!.ID == idKorisnika)
+            //                 .FirstOrDefaultAsync();
             
-            if(provera != null)
-            {
-                return BadRequest("Rezervacija je vec obavljena");
-            }
+            // if(provera != null)
+            // {
+            //     return BadRequest("Rezervacija je vec obavljena");
+            // }
             
             var rez = new Rezervacija
             {
@@ -301,7 +301,7 @@ public class RezervacijaController : ControllerBase
         }
     }
     
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
     [Route("RezervisiSepare/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiSepare(int idDogadjaja, int idKorisnika)
@@ -394,7 +394,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
     [Route("RezervisiVisokoSedenje/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiVisokoSedenje(int idDogadjaja, int idKorisnika)

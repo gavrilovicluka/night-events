@@ -50,7 +50,7 @@ export default function HomePageEventCard({
     <>
       {dogadjaji.map((value, index) => (
         <Col lg={3} md={4} col={6} p={1} className="mb-4" key={index}>
-          <MDBCard>
+          <MDBCard style={{ height: "600px", position: "relative" }}>
               <MDBCardImage
                 src={klubSlikeMap[value?.klub?.naziv || '']}
                 fluid
@@ -63,7 +63,7 @@ export default function HomePageEventCard({
                   style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
                 ></div>
               </a>
-            <MDBCardBody>
+            <MDBCardBody className="d-flex flex-column justify-content-between">
               <MDBCardTitle className="text-center">{value.naziv}</MDBCardTitle>
               <MDBCardText>
                 <p>

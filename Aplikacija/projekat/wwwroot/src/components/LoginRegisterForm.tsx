@@ -152,6 +152,7 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
         }
       })
       .catch((error) => {
+        alert(error.response.data);
         console.log(error);
       });
   };
@@ -195,6 +196,7 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
         navigate("/loginRegister");
       })
       .catch((error) => {
+        alert(error.response.data);
         console.log(error);
       });
   };
