@@ -275,10 +275,6 @@ C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\ob
 C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\public\manifest.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\tsconfig.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package-lock.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package.json
 C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.exe
 C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.deps.json
 C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.runtimeconfig.json
@@ -458,3 +454,4 @@ D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\
 D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
 >>>>>>> Pregled-klubova-i-dodavanje
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.staticwebassets.runtime.json
+C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.staticwebassets.runtime.json

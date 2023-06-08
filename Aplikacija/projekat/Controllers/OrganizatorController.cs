@@ -20,37 +20,84 @@ public class OrganizatorController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> RegistrujOrganizatora([FromBody] OrganizatorRegistrationDTO organizatorDto){
         
-        if(string.IsNullOrWhiteSpace(organizatorDto.Username) || organizatorDto.Username.Length > 50)
+        if(string.IsNullOrWhiteSpace(organizatorDto.Ime))
         {
-            return BadRequest("Predugacko korisnicko ime!");
+            return BadRequest("Unesite ime!");
         }
+
+       else if(organizatorDto.Ime.Length < 3)
+        {
+            return BadRequest("Ime je previse kratko!");
+        }
+
+       else if(organizatorDto.Ime.Length > 50)
+        {
+            return BadRequest("Ime je previse dugacko!");
+        }
+
+       else if (!Regex.Match(organizatorDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
+        {
+            return BadRequest("Nevalidan unos imena!");
+        }
+
+        // Provera za unos prezimena
+        if( string.IsNullOrWhiteSpace(organizatorDto.Prezime))
+        {
+            return BadRequest("Unesite prezime!");
+        }
+        else if (organizatorDto.Prezime.Length < 3)
+        {
+            return BadRequest("Prezime je previse kratko!");
+        }
+
+        else if(organizatorDto.Prezime.Length > 50)
+        {
+            return BadRequest("Prezime je previse dugacko!");
+        }
+
+        else if (!Regex.Match(organizatorDto.Prezime, "^[A-Z][a-zA-Z]*$").Success)
+        {
+            return BadRequest("Nevalidan unos prezimena!");
+        }
+
+
+        if(string.IsNullOrWhiteSpace(organizatorDto.Username))
+        {
+            return BadRequest("Unesite korisnicko ime!");
+        }
+        else if (organizatorDto.Username.Length > 50)
+        {
+            return BadRequest("Username je previse dugacak!");
+        }
+        else if (!Regex.Match(organizatorDto.Username, @"^[a-zA-Z0-9._@#$% ]+$").Success)
+        {
+            return BadRequest("Nevalidan unos za username!");
+        }
+
+
 
         if(string.IsNullOrWhiteSpace(organizatorDto.Email))
         {
             return BadRequest("Unesi email!");
         }
-
-        if(string.IsNullOrWhiteSpace(organizatorDto.Ime) || organizatorDto.Ime.Length > 50)
+        else if (!Regex.Match(organizatorDto.Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
         {
-            return BadRequest("Nevalidan unos imena!");
+            return BadRequest("Nevalidan unos email!");
         }
 
-        if( string.IsNullOrWhiteSpace(organizatorDto.Prezime) || organizatorDto.Prezime.Length > 50)
-        {
-            return BadRequest("Nevalidan unos prezimena!");
-        }
-
+        
+ 
         if(string.IsNullOrWhiteSpace(organizatorDto.Password))
         {
             return BadRequest("Unesi lozinku!");
         }
 
-        if(organizatorDto.Password.Length > 40)
+        else if(organizatorDto.Password.Length > 40)
         {
             return BadRequest("Predugacka lozinka!");
         }
 
-        if(organizatorDto.Password.Length < 8)
+        else if (organizatorDto.Password.Length < 8)
         {
             return BadRequest("Prekratka lozinka!");
         }

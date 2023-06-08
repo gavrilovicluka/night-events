@@ -21,17 +21,40 @@ public class AdministratorController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> RegistrujAdministratora([FromBody] AdministratorRegistrationDto adminDto)
     {
-        if (string.IsNullOrWhiteSpace(adminDto.Username) || adminDto.Username.Length > 50)
+        if (string.IsNullOrWhiteSpace(adminDto.Username))
         {
-            return BadRequest("Nevalidno korisnicko ime!");
+            return BadRequest("Unesite ime!");
+        }
+         else if(adminDto.Ime.Length < 3)
+        {
+            return BadRequest("Ime je previse kratko!");
         }
 
-        if (string.IsNullOrWhiteSpace(adminDto.Ime) || adminDto.Ime.Length > 20)
+       else if(adminDto.Ime.Length > 50)
+        {
+            return BadRequest("Ime je previse dugacko!");
+        }
+
+       else if (!Regex.Match(adminDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
         {
             return BadRequest("Nevalidan unos imena!");
         }
 
-        if (string.IsNullOrWhiteSpace(adminDto.Prezime) || adminDto.Prezime.Length > 20)
+        if (string.IsNullOrWhiteSpace(adminDto.Prezime))
+        {
+            return BadRequest("Unesite prezime!");
+        }
+        else if (adminDto.Prezime.Length < 3)
+        {
+            return BadRequest("Prezime je previse kratko!");
+        }
+
+        else if(adminDto.Prezime.Length > 50)
+        {
+            return BadRequest("Prezime je previse dugacko!");
+        }
+
+        else if (!Regex.Match(adminDto.Prezime, "^[A-Z][a-zA-Z]*$").Success)
         {
             return BadRequest("Nevalidan unos prezimena!");
         }
@@ -40,9 +63,9 @@ public class AdministratorController : ControllerBase
         {
             return BadRequest("Unesi email!");
         }
-        else if (Regex.IsMatch(adminDto.Email, "^([w.-]+)@([w-]+)((.(w){2,3})+)$"))
+        else if (!Regex.Match(adminDto.Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
         {
-            return BadRequest("Nevalidan email!");
+            return BadRequest("Nevalidan unos email!");
         }
 
         if (string.IsNullOrWhiteSpace(adminDto.Password))

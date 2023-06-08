@@ -1,0 +1,345 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\.env",
+      "PackagePath": "staticwebassets\\.env"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\.gitignore",
+      "PackagePath": "staticwebassets\\.gitignore"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\README.md",
+      "PackagePath": "staticwebassets\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\package-lock.json",
+      "PackagePath": "staticwebassets\\package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\package.json",
+      "PackagePath": "staticwebassets\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\background.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\background.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\bckADMINHomePage.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\bckADMINHomePage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\favicon.ico",
+      "PackagePath": "staticwebassets\\public\\assets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\icon.ico",
+      "PackagePath": "staticwebassets\\public\\assets\\icon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\ikonica.ico",
+      "PackagePath": "staticwebassets\\public\\assets\\ikonica.ico"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\klub.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\klub.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoBeli.png",
+      "PackagePath": "staticwebassets\\public\\assets\\logoBeli.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNE2png.png",
+      "PackagePath": "staticwebassets\\public\\assets\\logoNE2png.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpng.png",
+      "PackagePath": "staticwebassets\\public\\assets\\logoNEpng.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpozadina.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\logoNEpozadina.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpozadina2.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\logoNEpozadina2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaProbaZaAbout.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\slikaProbaZaAbout.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaproba.JPG",
+      "PackagePath": "staticwebassets\\public\\assets\\slikaproba.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaproba1.jpg",
+      "PackagePath": "staticwebassets\\public\\assets\\slikaproba1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\css\\styles.css",
+      "PackagePath": "staticwebassets\\public\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\favicon.ico",
+      "PackagePath": "staticwebassets\\public\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\index.html",
+      "PackagePath": "staticwebassets\\public\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\index2.html",
+      "PackagePath": "staticwebassets\\public\\index2.html"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\public\\js\\scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\manifest.json",
+      "PackagePath": "staticwebassets\\public\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\robots.txt",
+      "PackagePath": "staticwebassets\\public\\robots.txt"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AboutStranica.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AboutStranica.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\AdministratorDashboard.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AdministratorPage\\AdministratorDashboard.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\AdministratorHeader.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AdministratorPage\\AdministratorHeader.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaIzvodjacaAdminPage.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AdministratorPage\\ListaIzvodjacaAdminPage.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaKlubova.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AdministratorPage\\ListaKlubova.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaOrganizatora.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AdministratorPage\\ListaOrganizatora.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AppRouting.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\AppRouting.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\ContactStranica.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\ContactStranica.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DetaljiDogadjaja.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\DetaljiDogadjaja.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DogadjajPage.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\DogadjajPage.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePage.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\HomePage.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePageEventCard.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\HomePageEventCard.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePageNavbar.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\HomePageNavbar.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\KlubInfo.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\KlubInfo.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\LoginRegisterForm.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\LoginRegisterForm.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\DodajTerminIzvodjac.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\MuzickiIzvodjacPage\\DodajTerminIzvodjac.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\ListaTermina.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\MuzickiIzvodjacPage\\ListaTermina.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacDashboard.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacDashboard.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacHeader.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacHeader.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\DodajDogadjaj.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\OrganizatorPage\\DodajDogadjaj.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\ListaDogadjaja.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\OrganizatorPage\\ListaDogadjaja.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\ListaIzvodjaca.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\OrganizatorPage\\ListaIzvodjaca.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\MojKlub.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\OrganizatorPage\\MojKlub.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\OrganizatorDashboard.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\OrganizatorPage\\OrganizatorDashboard.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\OrganizatorHeader.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\OrganizatorPage\\OrganizatorHeader.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\PageNotFound.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\PageNotFound.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\RatingFunkcija.tsx",
+      "PackagePath": "staticwebassets\\src\\components\\RatingFunkcija.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\config\\api.config.tsx",
+      "PackagePath": "staticwebassets\\src\\config\\api.config.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\dtos\\User\\user.registration.dto.tsx",
+      "PackagePath": "staticwebassets\\src\\dtos\\User\\user.registration.dto.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\index.css",
+      "PackagePath": "staticwebassets\\src\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\index.tsx",
+      "PackagePath": "staticwebassets\\src\\index.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\logo.svg",
+      "PackagePath": "staticwebassets\\src\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\react-app-env.d.ts",
+      "PackagePath": "staticwebassets\\src\\react-app-env.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\reportWebVitals.ts",
+      "PackagePath": "staticwebassets\\src\\reportWebVitals.ts"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\setupTests.ts",
+      "PackagePath": "staticwebassets\\src\\setupTests.ts"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedToken.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\DecodedToken.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedTokenMuzickiIzvodjac.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\DecodedTokenMuzickiIzvodjac.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedTokenOrganizator.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\DecodedTokenOrganizator.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DogadjajType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\DogadjajType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\KlubType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\KlubType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\KorisnikType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\KorisnikType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\MuzickiIzvodjacType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\MuzickiIzvodjacType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OcenaKlubType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\OcenaKlubType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OrganizatorType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\OrganizatorType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\RezervacijaType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\RezervacijaType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StatusNalogaType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\StatusNalogaType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StatusStolaType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\StatusStolaType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StoType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\StoType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\TerminType.tsx",
+      "PackagePath": "staticwebassets\\src\\types\\TerminType.tsx"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\tsconfig.json",
+      "PackagePath": "staticwebassets\\tsconfig.json"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png",
+      "PackagePath": "staticwebassets\\uploads\\Klub\\1\\slika\\slikaKluba.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\mapa\\mapaKluba.png",
+      "PackagePath": "staticwebassets\\uploads\\Klub\\3\\mapa\\mapaKluba.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\slika\\slikaKluba.png",
+      "PackagePath": "staticwebassets\\uploads\\Klub\\3\\slika\\slikaKluba.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\common\\noimage.png",
+      "PackagePath": "staticwebassets\\uploads\\common\\noimage.png"
+    },
+    {
+      "Id": "C:\\Users\\Andriana\\Desktop\\projekatSI\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\yarn.lock",
+      "PackagePath": "staticwebassets\\yarn.lock"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.projekat.props",
+      "PackagePath": "build\\projekat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.projekat.props",
+      "PackagePath": "buildMultiTargeting\\projekat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.projekat.props",
+      "PackagePath": "buildTransitive\\projekat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.projekat.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

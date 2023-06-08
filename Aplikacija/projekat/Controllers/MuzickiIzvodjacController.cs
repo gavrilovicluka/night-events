@@ -22,49 +22,85 @@ public class MuzickiIzvodjacController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> RegistrujMuzickogIzvodjaca([FromBody] MuzickiIzvodjacRegistrationDto muzickiIzvodjacDto)
     {
-        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Username) || muzickiIzvodjacDto.Username.Length > 50)
+        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.ImeIzvodjaca))
         {
-            return BadRequest("Nevalidno korisnicko ime!");
+            return BadRequest("Unesite ime!");
         }
 
-        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Email))
+       else if(muzickiIzvodjacDto.ImeIzvodjaca.Length < 3)
         {
-            return BadRequest("Unesi email!");
-        }
-        else if (Regex.IsMatch(muzickiIzvodjacDto.Email, "^([w.-]+)@([w-]+)((.(w){2,3})+)$"))
-        {
-            return BadRequest("Nevalidan email!");
+            return BadRequest("Ime je previse kratko!");
         }
 
-        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Zanr) || muzickiIzvodjacDto.Zanr.Length > 30)
+       else if(muzickiIzvodjacDto.ImeIzvodjaca.Length > 50)
         {
-            return BadRequest("Nevalidan unos zanra!");
+            return BadRequest("Ime je previse dugacko!");
         }
 
-        if(muzickiIzvodjacDto.BrClanova <= 0)
+       else if (!Regex.Match(muzickiIzvodjacDto.ImeIzvodjaca, "^[A-Z][a-zA-Z]*$").Success)
+        {
+            return BadRequest("Nevalidan unos imena!");
+        }
+          
+        
+
+        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Zanr))
+        {
+            return BadRequest("Unesite zanr!");
+        }
+        else if(muzickiIzvodjacDto.Zanr.Length > 30)
+        {
+            return BadRequest("Predugacak zanr!");
+        }
+
+         if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.BrClanova.ToString()))
+        {
+            return BadRequest("Unesite broj clanova!");
+        }
+        else if (muzickiIzvodjacDto.BrClanova <= 0)
         {
             return BadRequest("Nevalidan unos broja clanova!");
         }
 
-        if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.ImeIzvodjaca) || muzickiIzvodjacDto.ImeIzvodjaca.Length > 50)
+         if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Username))
+            {
+                return BadRequest("Unesite korisnicko ime!");
+            }
+            else if (muzickiIzvodjacDto.Username.Length > 50)
+            {
+                return BadRequest("Username je previse dugacak!");
+            }
+            else if (!Regex.Match(muzickiIzvodjacDto.Username, @"^[a-zA-Z0-9._@#$% ]+$").Success)
+            {
+                return BadRequest("Nevalidan unos za username!");
+            }
+
+         if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Email))
         {
-            return BadRequest("Nevalidan unos imena izvodjaca!");
+            return BadRequest("Unesi email!");
+        }
+        else if (!Regex.Match(muzickiIzvodjacDto.Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
+        {
+            return BadRequest("Nevalidan unos email!");
         }
 
+        
+ 
         if(string.IsNullOrWhiteSpace(muzickiIzvodjacDto.Password))
         {
             return BadRequest("Unesi lozinku!");
         }
 
-        if(muzickiIzvodjacDto.Password.Length > 40)
+        else if(muzickiIzvodjacDto.Password.Length > 40)
         {
             return BadRequest("Predugacka lozinka!");
         }
 
-        if(muzickiIzvodjacDto.Password.Length < 8)
+        else if (muzickiIzvodjacDto.Password.Length < 8)
         {
             return BadRequest("Prekratka lozinka!");
         }
+
        
         try
         {

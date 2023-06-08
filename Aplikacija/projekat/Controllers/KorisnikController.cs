@@ -20,65 +20,84 @@ public class KorisnikController : ControllerBase
     {
 
         // Provera unosa imena
-        if(string.IsNullOrWhiteSpace(korisnikDto.Ime) || korisnikDto.Ime.Length < 3 || korisnikDto.Ime.Length > 50)
+        if(string.IsNullOrWhiteSpace(korisnikDto.Ime))
         {
             return BadRequest("Unesite ime!");
         }
 
-        if(korisnikDto.Ime.Length < 3)
+       else if(korisnikDto.Ime.Length < 3)
         {
             return BadRequest("Ime je previse kratko!");
         }
 
-        if(korisnikDto.Ime.Length > 50)
+       else if(korisnikDto.Ime.Length > 50)
         {
             return BadRequest("Ime je previse dugacko!");
         }
 
-        if (!Regex.Match(korisnikDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
+       else if (!Regex.Match(korisnikDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
         {
             return BadRequest("Nevalidan unos imena!");
         }
 
         // Provera za unos prezimena
-        if( string.IsNullOrWhiteSpace(korisnikDto.Prezime) || korisnikDto.Prezime.Length > 50)
+        if( string.IsNullOrWhiteSpace(korisnikDto.Prezime))
+        {
+            return BadRequest("Unesite prezime!");
+        }
+        else if (korisnikDto.Prezime.Length < 3)
+        {
+            return BadRequest("Prezime je previse kratko!");
+        }
+
+        else if(korisnikDto.Prezime.Length > 50)
+        {
+            return BadRequest("Prezime je previse dugacko!");
+        }
+
+        else if (!Regex.Match(korisnikDto.Prezime, "^[A-Z][a-zA-Z]*$").Success)
         {
             return BadRequest("Nevalidan unos prezimena!");
         }
 
 
-        if(string.IsNullOrWhiteSpace(korisnikDto.Username) || korisnikDto.Username.Length > 50)
+        if(string.IsNullOrWhiteSpace(korisnikDto.Username))
         {
-            return BadRequest("Predugacko korisnicko ime!");
+            return BadRequest("Unesite korisnicko ime!");
+        }
+        else if (korisnikDto.Username.Length > 50)
+        {
+            return BadRequest("Username je previse dugacak!");
+        }
+        else if (!Regex.Match(korisnikDto.Username, @"^[a-zA-Z0-9._@#$% ]+$").Success)
+        {
+            return BadRequest("Nevalidan unos za username!");
         }
 
-        
 
-
-        /*else if (Regex.IsMatch(korisnikDto.Username, "^[a-zA-Z0-9]+([._]?[a-zA-Z0-9])$"))
-        {
-            return BadRequest("Nevalidan unos!");
-        }*/
 
         if(string.IsNullOrWhiteSpace(korisnikDto.Email))
         {
             return BadRequest("Unesi email!");
         }
+        else if (!Regex.Match(korisnikDto.Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success)
+        {
+            return BadRequest("Nevalidan unos email!");
+        }
 
         
-
-        
+ 
         if(string.IsNullOrWhiteSpace(korisnikDto.Password))
         {
             return BadRequest("Unesi lozinku!");
         }
 
-        if(korisnikDto.Password.Length > 40)
+        else if(korisnikDto.Password.Length > 40)
         {
             return BadRequest("Predugacka lozinka!");
         }
 
-        if(korisnikDto.Password.Length < 8)
+        else if (korisnikDto.Password.Length < 8)
         {
             return BadRequest("Prekratka lozinka!");
         }
