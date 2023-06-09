@@ -11,7 +11,7 @@ import DogadjajType from "../types/DogadjajType";
 import HomePageNavbar from "./HomePageNavbar";
 import KlubInfo from "./KlubInfo";
 import KlubType from "../types/KlubType";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios, { AxiosResponse } from "axios";
 import { ApiConfig } from "../config/api.config";
@@ -19,6 +19,10 @@ import StoType from "../types/StoType";
 import jwtDecode from "jwt-decode";
 import { DecodedToken } from "../types/DecodedToken";
 import RezervacijaType from "../types/RezervacijaType";
+import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import 'mapbox-gl/dist/mapbox-gl.css'; 
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGpvbGxlZSIsImEiOiJjbGlhazVpbDQwNGk0M2xtbDg4bWhyMmRkIn0.ttjjCvdpCQq7STgYTSFvDA'
 
 function DogadjajPage() {
   const { id } = useParams();
@@ -31,12 +35,34 @@ function DogadjajPage() {
   const [showModal, setShowModal] = useState(false);
   const [rezervacija, setRezervacija] = useState<RezervacijaType>();
 
+  const mapContainer = useRef(null);
+    const map = useRef<mapboxgl.Map | null>(null);
+    const [lng, setLng] = useState(21.89541836422051);
+    const [lat, setLat] = useState(43.32141888298649);
+    const [zoom, setZoom] = useState(14);
+
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const vrsteStolova = [
     { vrsta: "Barski sto", id: 1 },
     { vrsta: "Visoko sedenje", id: 2 },
     { vrsta: "Separe", id: 3 },
   ];
+
+  useEffect(() => {
+    if (map.current || !dogadjaj || !dogadjaj.klub?.latitude || !dogadjaj.klub?.longitude || !mapContainer.current) return; // initialize map only once
+    if (!mapContainer.current) return;
+    map.current = new mapboxgl.Map({
+    container: mapContainer.current,
+    style: 'mapbox://styles/mapbox/streets-v12?attribution=false&copy=false',
+    center: [lng, lat],
+    zoom: zoom
+    });
+
+    const marker = new mapboxgl.Marker();
+    marker.setLngLat({lat: dogadjaj.klub?.latitude, lng: dogadjaj.klub?.longitude}).addTo(map.current);
+
+    },[dogadjaj, map, mapContainer]);
+
 
   useEffect(() => {
     getData(id);
@@ -173,7 +199,7 @@ function DogadjajPage() {
           <Col md={6} className="mb-4">
             <div
               className="bg-secondary rounded p-4"
-              style={{ height: "300px" }}
+              style={{ height: "350px" }}
             >
               <KlubInfo klub={dogadjaj?.klub as KlubType} />
             </div>
@@ -181,7 +207,7 @@ function DogadjajPage() {
           <Col md={6} className="mb-4">
             <div
               className="bg-secondary rounded p-4"
-              style={{ height: "300px" }}
+              style={{ height: "350px"}}
             >
               <h2 className="text-center">{dogadjaj?.naziv}</h2>
               <p>
@@ -212,10 +238,14 @@ function DogadjajPage() {
         </Row>
         <Row className="mb-4">
           <Col>
-            <div className="bg-secondary rounded p-4">
-              <h2>Mapa/Lokacija</h2>
+            <div className="bg-secondary rounded p-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              
               <div style={{ width: "90%" }}>
-                {/* Ovde možete dodati komponentu za prikaz mape ili lokacije */}
+                
+              { (dogadjaj?.klub?.latitude && dogadjaj.klub.longitude) ? <div ref={mapContainer} className="map-container" /> : <h2 className="text-center">Lokacija</h2>}
+             
+
+
               </div>
             </div>
           </Col>

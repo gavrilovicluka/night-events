@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { ApiConfig } from "../../config/api.config";
 import DogadjajType from "../../types/DogadjajType";
 import OrganizatorHeader from "./OrganizatorHeader";
@@ -19,6 +19,11 @@ import {
 } from "react-bootstrap";
 import { DecodedToken } from "../../types/DecodedToken";
 import { useNavigate } from "react-router-dom";
+import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import mbxGeocoding from "@mapbox/mapbox-sdk/services/geocoding";
+import "mapbox-gl/dist/mapbox-gl.css";
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiZGpvbGxlZSIsImEiOiJjbGlhazVpbDQwNGk0M2xtbDg4bWhyMmRkIn0.ttjjCvdpCQq7STgYTSFvDA";
 
 export default function MojKlub() {
   const [selectedKlub, setselectedKlub] = useState<KlubType>();
@@ -33,6 +38,87 @@ export default function MojKlub() {
   const [imageSlika, setImageSlika] = useState("");
   const [imageMapa, setImageMapa] = useState("");
   const [showModal, setShowModal] = useState(false);
+
+  const geocodingClient = mbxGeocoding({
+    accessToken:
+      "pk.eyJ1IjoiZGpvbGxlZSIsImEiOiJjbGlhazVpbDQwNGk0M2xtbDg4bWhyMmRkIn0.ttjjCvdpCQq7STgYTSFvDA",
+  });
+  const mapContainer = useRef<HTMLDivElement>(null);
+  const map = useRef<mapboxgl.Map | null>(null);
+  const [lng, setLng] = useState(21.89541836422051);
+  const [lat, setLat] = useState(43.32141888298649);
+  const [zoom, setZoom] = useState(13);
+  const [address, setAddress] = useState("");
+
+  const [x, setX] = useState(0.0);
+  const [y, setY] = useState(0.0);
+
+  // useEffect(() => {
+  //   if (!map.current) return; // wait for map to initialize
+
+  //   const handleMove = () => {
+  //     if (!map.current) return;
+
+  //     const center = map.current.getCenter();
+  //     const zoom = map.current.getZoom();
+
+  //     setLng(parseFloat(center.lng.toFixed(4)));
+  //     setLat(parseFloat(center.lat.toFixed(4)));
+  //     setZoom(parseFloat(zoom.toFixed(2)));
+  //   };
+
+  //   map.current.on('move', handleMove);
+
+  //   return () => {
+  //     if (map.current) {
+  //       map.current.off('move', handleMove);
+  //     }
+  //   };
+  // }, []);
+
+  const getAddressFromCoordinates = (lngLat: { lng: number; lat: number }) => {
+    geocodingClient
+      .reverseGeocode({
+        query: [lngLat.lng, lngLat.lat],
+        types: ["address"],
+      })
+      .send()
+      .then((response: any) => {
+        const match = response.body;
+        if (match && match.features.length > 0) {
+          const { place_name } = match.features[0];
+          setAddress(place_name);
+        }
+      })
+      .catch((error: any) => {
+        console.error("Error:", error);
+      });
+  };
+
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    if (!mapContainer.current) return;
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current ?? undefined,
+      style: "mapbox://styles/mapbox/streets-v12?attribution=false&copy=false",
+      center: [lng, lat],
+      zoom: zoom,
+      pitchWithRotate: false,
+    });
+    const marker = new mapboxgl.Marker();
+
+    map.current.on("click", (event) => {
+      var coordinates = event.lngLat;
+      //console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat);
+      marker.setLngLat(coordinates);
+      if (map.current && !map.current.getLayer("marker")) {
+        marker.addTo(map.current);
+      }
+      setLng(coordinates.lng);
+      setLat(coordinates.lat);
+      getAddressFromCoordinates(event.lngLat);
+    });
+  });
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -62,14 +148,11 @@ export default function MojKlub() {
     const token = localStorage.getItem("jwtToken");
 
     if (token !== null) {
-
       const decodedToken = jwtDecode(token) as DecodedTokenOrganizator;
       console.log(decodedToken);
 
-
       const klubId = decodedToken.idKluba;
       console.log(klubId);
-
 
       axios
         .get(ApiConfig.BASE_URL + `/Klub/VratiKlub/${klubId}`, {
@@ -181,12 +264,14 @@ export default function MojKlub() {
 
     const updatedKlub = {
       ...selectedKlub,
-      lokacija: selectedKlub?.lokacija,
+      lokacija: address,
       brojStolovaBS: selectedKlub?.brojStolovaBS,
       brojStolovaVS: selectedKlub?.brojStolovaVS,
       brojStolovaS: selectedKlub?.brojStolovaS,
       slikaKluba: imageUrlSlikaKluba,
       mapaKluba: imageUrlMapaKluba,
+      longitude: lng,
+      latitude: lat,
     };
 
     if (token !== null) {
@@ -260,7 +345,7 @@ export default function MojKlub() {
   return (
     <>
       <OrganizatorHeader />
-      <Container className="pt-3">
+      <Container className="pt-3 pb-3" style={{ width: "500px" }}>
         {selectedKlub && (
           <Row>
             <Col>
@@ -281,9 +366,11 @@ export default function MojKlub() {
                   />
                 </div>
                 <Card.Body>
-                  <Card.Title className="text-center">{selectedKlub.naziv}</Card.Title>
+                  <Card.Title className="text-center">
+                    {selectedKlub.naziv}
+                  </Card.Title>
                   <Form>
-                    <Form.Group controlId="lokacija" className="pb-3">
+                    {/* <Form.Group controlId="lokacija" className="pb-3">
                       <Form.Label>Lokacija</Form.Label>
                       <Form.Control
                         type="text"
@@ -296,7 +383,7 @@ export default function MojKlub() {
                           })
                         }
                       />
-                    </Form.Group>
+                    </Form.Group> */}
                     <Form.Group controlId="brojStolovaBS" className="pb-3">
                       <Form.Label>Broj barskih stolova - BS</Form.Label>
                       <Form.Control
@@ -359,7 +446,27 @@ export default function MojKlub() {
                         />
                       </Col>
                     </Form.Group>
+
+                    <Form.Group controlId="adresa" className="pb-3">
+                      <Form.Label>Adresa</Form.Label>
+                      <Col>
+                        <Form.Control
+                          type="text"
+                          autoComplete="off"
+                          onChange={(e) => setAddress(e.target.value)}
+                          value={address}
+                          readOnly={!isEditing}
+                          required
+                          aria-describedby="uidnote"
+                          placeholder={`Tretnuna adresa je ${selectedKlub.lokacija}`}
+                        />
+                      </Col>
+                    </Form.Group>
+
+                    <div ref={mapContainer} className="map-container" />
+
                     <Button
+                      className="mt-2"
                       variant="primary"
                       onClick={
                         isEditing ? handleSaveChanges : handleButtonClick

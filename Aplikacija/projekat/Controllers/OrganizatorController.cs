@@ -18,30 +18,31 @@ public class OrganizatorController : ControllerBase
 
     [Route("RegistrujOrganizatora")]
     [HttpPost]
-    public async Task<ActionResult> RegistrujOrganizatora([FromBody] OrganizatorRegistrationDTO organizatorDto){
-        
-        if(string.IsNullOrWhiteSpace(organizatorDto.Ime))
+    public async Task<ActionResult> RegistrujOrganizatora([FromBody] OrganizatorRegistrationDTO organizatorDto)
+    {
+
+        if (string.IsNullOrWhiteSpace(organizatorDto.Ime))
         {
             return BadRequest("Unesite ime!");
         }
 
-       else if(organizatorDto.Ime.Length < 3)
+        else if (organizatorDto.Ime.Length < 3)
         {
             return BadRequest("Ime je previse kratko!");
         }
 
-       else if(organizatorDto.Ime.Length > 50)
+        else if (organizatorDto.Ime.Length > 50)
         {
             return BadRequest("Ime je previse dugacko!");
         }
 
-       else if (!Regex.Match(organizatorDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
+        else if (!Regex.Match(organizatorDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
         {
             return BadRequest("Nevalidan unos imena!");
         }
 
         // Provera za unos prezimena
-        if( string.IsNullOrWhiteSpace(organizatorDto.Prezime))
+        if (string.IsNullOrWhiteSpace(organizatorDto.Prezime))
         {
             return BadRequest("Unesite prezime!");
         }
@@ -50,7 +51,7 @@ public class OrganizatorController : ControllerBase
             return BadRequest("Prezime je previse kratko!");
         }
 
-        else if(organizatorDto.Prezime.Length > 50)
+        else if (organizatorDto.Prezime.Length > 50)
         {
             return BadRequest("Prezime je previse dugacko!");
         }
@@ -61,7 +62,7 @@ public class OrganizatorController : ControllerBase
         }
 
 
-        if(string.IsNullOrWhiteSpace(organizatorDto.Username))
+        if (string.IsNullOrWhiteSpace(organizatorDto.Username))
         {
             return BadRequest("Unesite korisnicko ime!");
         }
@@ -76,7 +77,7 @@ public class OrganizatorController : ControllerBase
 
 
 
-        if(string.IsNullOrWhiteSpace(organizatorDto.Email))
+        if (string.IsNullOrWhiteSpace(organizatorDto.Email))
         {
             return BadRequest("Unesi email!");
         }
@@ -85,14 +86,14 @@ public class OrganizatorController : ControllerBase
             return BadRequest("Nevalidan unos email!");
         }
 
-        
- 
-        if(string.IsNullOrWhiteSpace(organizatorDto.Password))
+
+
+        if (string.IsNullOrWhiteSpace(organizatorDto.Password))
         {
             return BadRequest("Unesi lozinku!");
         }
 
-        else if(organizatorDto.Password.Length > 40)
+        else if (organizatorDto.Password.Length > 40)
         {
             return BadRequest("Predugacka lozinka!");
         }
@@ -105,15 +106,16 @@ public class OrganizatorController : ControllerBase
         try
         {
             var k = Context.Organizatori.Where(p => p.Username == organizatorDto.Username).FirstOrDefault();
-            if(k != null)
+            if (k != null)
                 return BadRequest("Korisnicko ime je zauzeto!");
             k = Context.Organizatori.Where(p => p.Email == organizatorDto.Email).FirstOrDefault();
-            if(k != null)
+            if (k != null)
                 return BadRequest("Vec postoji registracija sa unetom email adresom!");
-    
+
             AuthController.CreatePasswordHash(organizatorDto.Password, out byte[] PasswordHash, out byte[] PasswordSalt);
-                
-            Organizator org = new Organizator{
+
+            Organizator org = new Organizator
+            {
                 Ime = organizatorDto.Ime,
                 Prezime = organizatorDto.Prezime,
                 Email = organizatorDto.Email,
@@ -123,9 +125,9 @@ public class OrganizatorController : ControllerBase
             };
             Context.Organizatori.Add(org);
             await Context.SaveChangesAsync();
-            return Ok(org); 
+            return Ok(org);
 
-                
+
         }
         catch (Exception e)
         {
@@ -134,7 +136,7 @@ public class OrganizatorController : ControllerBase
 
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
     [Route("VratiOrganizatore")]
     [HttpGet]
     public async Task<ActionResult> VratiOrganizatore()
@@ -145,15 +147,15 @@ public class OrganizatorController : ControllerBase
 
             var d = organizatori.Select(m => new
             {
-                id=m.ID,
+                id = m.ID,
                 ime = m.Ime,
                 prezime = m.Prezime,
                 email = m.Email,
                 username = m.Username,
-                klubId= m.Klub != null ? m.Klub.ID : -1,
+                klubId = m.Klub != null ? m.Klub.ID : -1,
                 status = m.Status
             });
-            
+
 
             return Ok(d);
         }
@@ -162,6 +164,6 @@ public class OrganizatorController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-    
-    
+
+
 }

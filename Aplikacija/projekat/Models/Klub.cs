@@ -17,6 +17,8 @@ public class Klub
     [MaxLength(50)]
     [RegularExpression(@"^[A-Za-z0-9]+[_-' ]+$")]
     public String? Lokacija { get; set; }
+    public double Longitude { get; set; }
+    public double Latitude { get; set; }
 
     public String? SlikaKluba { get; set; }
 

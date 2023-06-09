@@ -146,7 +146,7 @@ function HomePage() {
     <>
       <HomePageNavbar />
 
-      <Container className="px-4 px-lg-5" style={{ borderRadius: "12px" }}>
+      <Container className="px-4 px-lg-5 d-md-block d-lg-block" style={{ borderRadius: "12px" }}>
         <Row className="gx-6 gx-lg-10 align-items-center my-5">
           <Carousel
             className="multi-carousel md-5"
@@ -176,7 +176,7 @@ function HomePage() {
             </Carousel.Item>
           </Carousel>
 
-          <Col lg={5} className="bg-secondary rounded p-4 ms-5">
+          <Col lg={5} className="bg-secondary rounded p-4 ms-md-5 d-md-block d-lg-block">
             <h1 className="font-weight-light">
               Dobrodošli na sajt NightEvents!
             </h1>

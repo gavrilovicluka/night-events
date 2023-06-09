@@ -127,7 +127,7 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
     axios
       .post(ApiConfig.BASE_URL + "/Auth/PrijaviSe", data)
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
         const token = response.data.token;
         localStorage.setItem("jwtToken", token);
         // const decodedToken = jwtDecode(token) as DecodedToken;

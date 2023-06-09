@@ -20,7 +20,7 @@ public class KlubController : ControllerBase
     [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
     [Route("DodajKlub/{idOrganizatora}/{naziv}/{lokacija}/{brojStolovaBS}/{brojStolovaVS}/{brojStolovaS}")]
     [HttpPost]
-   public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, String lokacija, int brojStolovaBS, int brojStolovaVS, int brojStolovaS/*, [FromBody] SlikeKlubaDTO slike*/)
+   public async Task<ActionResult> DodajKlub(int idOrganizatora, String naziv, int brojStolovaBS, int brojStolovaVS, int brojStolovaS/*, [FromBody] SlikeKlubaDTO slike*/)
     {
         try
         {
@@ -33,7 +33,7 @@ public class KlubController : ControllerBase
             var klub = new Klub
             {      
                 Naziv = naziv,
-                Lokacija = lokacija,
+                //Lokacija = lokacija,
                 BrojStolovaBS = brojStolovaBS,
                 BrojStolovaVS = brojStolovaVS,
                 BrojStolovaS = brojStolovaS,
@@ -154,6 +154,8 @@ public class KlubController : ControllerBase
             }
 
             klub.Lokacija = klubDTO.Lokacija;
+            klub.Longitude = klubDTO.Longitude;
+            klub.Latitude = klubDTO.Latitude;
             klub.BrojStolovaBS = klubDTO.BrojStolovaBS;
             klub.BrojStolovaS = klubDTO.brojStolovaS;
             klub.BrojStolovaVS = klubDTO.BrojStolovaVS;

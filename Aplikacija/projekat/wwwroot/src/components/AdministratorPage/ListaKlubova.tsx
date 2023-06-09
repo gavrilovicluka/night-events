@@ -91,7 +91,7 @@ export default function ListaKlubova() {
   const [klubData, setKlubData] = useState({
     idOrganizatora: "",
     naziv: "",
-    lokacija: "",
+    //lokacija: "",
     brojStolovaBS: "",
     brojStolovaVS: "",
     brojStolovaS: "",
@@ -137,7 +137,7 @@ export default function ListaKlubova() {
     setKlubData({
       idOrganizatora: "",
       naziv: "",
-      lokacija: "",
+      //lokacija: "",
       brojStolovaBS: "",
       brojStolovaVS: "",
       brojStolovaS: "",
@@ -172,7 +172,7 @@ export default function ListaKlubova() {
 
     axios({
       method: 'post',
-      url: `${ApiConfig.BASE_URL}/Klub/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.lokacija}/${klubData.brojStolovaBS}/${klubData.brojStolovaVS}/${klubData.brojStolovaS}`,
+      url: `${ApiConfig.BASE_URL}/Klub/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.brojStolovaBS}/${klubData.brojStolovaVS}/${klubData.brojStolovaS}`,
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
         Authorization: `Bearer ${token}`,
@@ -287,7 +287,7 @@ export default function ListaKlubova() {
 
               <div style={{ height: "10px" }}></div>
 
-              <Form.Group controlId="lokacija" className="row">
+              {/* <Form.Group controlId="lokacija" className="row">
                 <Form.Label column sm={4} className="text-end">
                   Lokacija kluba
                 </Form.Label>
@@ -301,7 +301,7 @@ export default function ListaKlubova() {
                 </Col>
               </Form.Group>
 
-              <div style={{ height: "10px" }}></div>
+              <div style={{ height: "10px" }}></div> */}
 
              
             </Col>

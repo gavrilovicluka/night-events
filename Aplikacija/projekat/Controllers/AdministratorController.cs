@@ -25,17 +25,17 @@ public class AdministratorController : ControllerBase
         {
             return BadRequest("Unesite ime!");
         }
-         else if(adminDto.Ime.Length < 3)
+        else if (adminDto.Ime.Length < 3)
         {
             return BadRequest("Ime je previse kratko!");
         }
 
-       else if(adminDto.Ime.Length > 50)
+        else if (adminDto.Ime.Length > 50)
         {
             return BadRequest("Ime je previse dugacko!");
         }
 
-       else if (!Regex.Match(adminDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
+        else if (!Regex.Match(adminDto.Ime, "^[A-Z][a-zA-Z]*$").Success)
         {
             return BadRequest("Nevalidan unos imena!");
         }
@@ -49,7 +49,7 @@ public class AdministratorController : ControllerBase
             return BadRequest("Prezime je previse kratko!");
         }
 
-        else if(adminDto.Prezime.Length > 50)
+        else if (adminDto.Prezime.Length > 50)
         {
             return BadRequest("Prezime je previse dugacko!");
         }
@@ -251,7 +251,7 @@ public class AdministratorController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Admin")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
     [HttpDelete("ObrisiKlub/{idKluba}")]
     public async Task<ActionResult> ObrisiKlub(int idKluba)
     {

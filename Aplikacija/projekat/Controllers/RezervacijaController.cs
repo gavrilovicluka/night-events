@@ -17,57 +17,57 @@ public class RezervacijaController : ControllerBase
         Context = context;
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Korisnik")]
     [Route("RezervisiMesto{idDogadjaja}/{idKorisnika}/{idStola}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiMesto(int idDogadjaja, int idKorisnika, int idStola)
     {
         try
         {
-            var dogadjaj = await Context.Dogadjaji.Include(p=>p.Klub).Where(p=>p.ID==idDogadjaja).FirstOrDefaultAsync();
-            if(dogadjaj == null)
+            var dogadjaj = await Context.Dogadjaji.Include(p => p.Klub).Where(p => p.ID == idDogadjaja).FirstOrDefaultAsync();
+            if (dogadjaj == null)
             {
                 return BadRequest("Ne postoji dati dogadjaj");
-            }    
-            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;       
-            if(dogadjaj.BrojRezervacija == ukupanBrojStolova)
+            }
+            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;
+            if (dogadjaj.BrojRezervacija == ukupanBrojStolova)
             {
                 return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }
 
             var k = await Context.Korisnici.FindAsync(idKorisnika);
-            if(k == null) 
+            if (k == null)
             {
                 return BadRequest("Ne postoji korisnik");
             }
 
             var sto = await Context.Stolovi.FindAsync(idStola);
-            if(sto == null) 
+            if (sto == null)
             {
                 return BadRequest("Ne postoji sto");
             }
-            else if(sto.Status == StatusStola.Zauzet)
+            else if (sto.Status == StatusStola.Zauzet)
             {
                 return BadRequest("Izabrani sto je zauzet");
             }
 
             var provera = await Context.Rezervacije
-                            .Include(a=>a.Korisnik)
+                            .Include(a => a.Korisnik)
                             .Include(p => p.Dogadjaj)
                             .Where(b => b.Dogadjaj!.ID == idDogadjaja && b.Korisnik!.ID == idKorisnika)
                             .FirstOrDefaultAsync();
-            
-            if(provera != null)
+
+            if (provera != null)
             {
                 return BadRequest("Rezervacija je vec obavljena");
             }
-            
+
             var rez = new Rezervacija
             {
                 Sto = sto,
                 Korisnik = k,
-                Dogadjaj = dogadjaj,  
-                Datum = DateTime.Now             
+                Dogadjaj = dogadjaj,
+                Datum = DateTime.Now
             };
             rez.Dogadjaj.BrojRezervacija++;
 
@@ -84,8 +84,8 @@ public class RezervacijaController : ControllerBase
             //     string dogadjajString = dogadjaj.Naziv!; 
             //     string brojStolaString = brojStola.ToString();
             //     string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. Broj stola: " + brojStolaString;
-                
-                
+
+
             //     using (MailMessage mailMessage = new MailMessage())
             //     {
             //         mailMessage.From = new MailAddress("nightevents@gmail.com");
@@ -93,20 +93,20 @@ public class RezervacijaController : ControllerBase
             //         mailMessage.Subject = "Uspesna rezervacija mesta";
             //         mailMessage.Body = poruka;
 
-                   
+
             //         await smtpClient.SendMailAsync(mailMessage);
             //     }
             // }
-            
-            return(Ok(rez));
+
+            return (Ok(rez));
         }
         catch (Exception e)
-        { 
+        {
             return BadRequest(e.Message);
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik, Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Korisnik, Organizator")]
     [Route("VratiRezervaciju/{idRezervacije}")]
     [HttpGet]
     public async Task<ActionResult> VratiRezervaciju(int idRezervacije)
@@ -132,16 +132,17 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator, Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Organizator, Korisnik")]
     [Route("IzbrisiRezervaciju/{idRez}")]
     [HttpDelete]
-    public async Task<ActionResult> IzbrisiRezervacija(int idRez){
+    public async Task<ActionResult> IzbrisiRezervacija(int idRez)
+    {
         try
         {
             var r = await Context.Rezervacije
                     .Where(p => p.ID == idRez)
                     .FirstOrDefaultAsync();
-       
+
             if (r != null)
             {
                 Context.Rezervacije.Remove(r);
@@ -159,7 +160,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Organizator")]
     [Route("VratiRezervacijeZaDogadjaj/{idDogadjaja}")]
     [HttpGet]
     public async Task<ActionResult> VratiRezervacije(int idDogadjaja)
@@ -186,7 +187,7 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    //[Authorize(AuthenticationSchemes = "Bearer", Roles  = "Organizator")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Organizator")]
     [Route("VratiRezervacijeKorisnika/{idKorisnika}")]
     [HttpGet]
     public async Task<ActionResult> VratiRezervacijeKorisnika(int idKorisnika)
@@ -212,26 +213,26 @@ public class RezervacijaController : ControllerBase
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Korisnik")]
     [Route("RezervisiBarskiSto/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiBarskiSto(int idDogadjaja, int idKorisnika)
     {
         try
         {
-            var dogadjaj = await Context.Dogadjaji.Include(p=>p.Klub).Where(p=>p.ID==idDogadjaja).FirstOrDefaultAsync();
-            if(dogadjaj == null)
+            var dogadjaj = await Context.Dogadjaji.Include(p => p.Klub).Where(p => p.ID == idDogadjaja).FirstOrDefaultAsync();
+            if (dogadjaj == null)
             {
                 return BadRequest("Ne postoji dati dogadjaj");
-            }    
-            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;       
-            if(dogadjaj.BrojRezervacija == ukupanBrojStolova)
+            }
+            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;
+            if (dogadjaj.BrojRezervacija == ukupanBrojStolova)
             {
                 return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }
 
             var k = await Context.Korisnici.FindAsync(idKorisnika);
-            if(k == null) 
+            if (k == null)
             {
                 return BadRequest("Ne postoji korisnik");
             }
@@ -239,7 +240,7 @@ public class RezervacijaController : ControllerBase
             var sto = await Context.StoloviBS
                             .Where(s => s.Dogadjaj!.ID == idDogadjaja && s.VrstaStola == "Barski sto" && s.Status == StatusStola.Slobodan)
                             .FirstOrDefaultAsync();
-            if(sto == null) 
+            if (sto == null)
             {
                 return BadRequest("Ne postoji sto");
             }
@@ -250,18 +251,18 @@ public class RezervacijaController : ControllerBase
             //                 .Include(p => p.Dogadjaj)
             //                 .Where(b => b.Dogadjaj!.ID == idDogadjaja && b.Korisnik!.ID == idKorisnika)
             //                 .FirstOrDefaultAsync();
-            
+
             // if(provera != null)
             // {
             //     return BadRequest("Rezervacija je vec obavljena");
             // }
-            
+
             var rez = new Rezervacija
             {
                 Sto = sto,
                 Korisnik = k,
-                Dogadjaj = dogadjaj,  
-                Datum = DateTime.Now             
+                Dogadjaj = dogadjaj,
+                Datum = DateTime.Now
             };
             rez.Dogadjaj.BrojRezervacija++;
 
@@ -279,8 +280,8 @@ public class RezervacijaController : ControllerBase
             //     string dogadjajString = dogadjaj.Naziv!; 
             //     string brojStolaString = brojStola.ToString();
             //     string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. Broj stola: " + brojStolaString;
-                
-                
+
+
             //     using (MailMessage mailMessage = new MailMessage())
             //     {
             //         mailMessage.From = new MailAddress("nightevents@gmail.com");
@@ -288,39 +289,39 @@ public class RezervacijaController : ControllerBase
             //         mailMessage.Subject = "Uspesna rezervacija mesta";
             //         mailMessage.Body = poruka;
 
-                   
+
             //         await smtpClient.SendMailAsync(mailMessage);
             //     }
             // }
-            
-            return(Ok(rez));
+
+            return (Ok(rez));
         }
         catch (Exception e)
-        { 
+        {
             return BadRequest(e.Message);
         }
     }
-    
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Korisnik")]
     [Route("RezervisiSepare/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiSepare(int idDogadjaja, int idKorisnika)
     {
         try
         {
-            var dogadjaj = await Context.Dogadjaji.Include(p=>p.Klub).Where(p=>p.ID==idDogadjaja).FirstOrDefaultAsync();
-            if(dogadjaj == null)
+            var dogadjaj = await Context.Dogadjaji.Include(p => p.Klub).Where(p => p.ID == idDogadjaja).FirstOrDefaultAsync();
+            if (dogadjaj == null)
             {
                 return BadRequest("Ne postoji dati dogadjaj");
-            }    
-            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;       
-            if(dogadjaj.BrojRezervacija == ukupanBrojStolova)
+            }
+            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;
+            if (dogadjaj.BrojRezervacija == ukupanBrojStolova)
             {
                 return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }
 
             var k = await Context.Korisnici.FindAsync(idKorisnika);
-            if(k == null) 
+            if (k == null)
             {
                 return BadRequest("Ne postoji korisnik");
             }
@@ -328,7 +329,7 @@ public class RezervacijaController : ControllerBase
             var sto = await Context.StoloviS
                             .Where(s => s.Dogadjaj!.ID == idDogadjaja && s.VrstaStola == "Separe" && s.Status == StatusStola.Slobodan)
                             .FirstOrDefaultAsync();
-            if(sto == null) 
+            if (sto == null)
             {
                 return BadRequest("Ne postoji sto");
             }
@@ -339,18 +340,18 @@ public class RezervacijaController : ControllerBase
             //                 .Include(p => p.Dogadjaj)
             //                 .Where(b => b.Dogadjaj!.ID == idDogadjaja && b.Korisnik!.ID == idKorisnika)
             //                 .FirstOrDefaultAsync();
-            
+
             // if(provera != null)
             // {
             //     return BadRequest("Rezervacija je vec obavljena");
             // }
-            
+
             var rez = new Rezervacija
             {
                 Sto = sto,
                 Korisnik = k,
-                Dogadjaj = dogadjaj,  
-                Datum = DateTime.Now             
+                Dogadjaj = dogadjaj,
+                Datum = DateTime.Now
             };
             rez.Dogadjaj.BrojRezervacija++;
 
@@ -358,7 +359,7 @@ public class RezervacijaController : ControllerBase
             Context.StoloviS.Update(sto);
             await Context.SaveChangesAsync();
 
-           //Slanje mejla o uspesno izvrsenoj rezervaciji
+            //Slanje mejla o uspesno izvrsenoj rezervaciji
             // using (SmtpClient smtpClient = new SmtpClient())
             // {
             //     // Potrebne informacije za slanje e-poste
@@ -372,8 +373,8 @@ public class RezervacijaController : ControllerBase
             //     string dogadjajString = dogadjaj.Naziv!; 
             //     string brojStolaString = rez.Sto.ID.ToString();
             //     string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. ID stola: " + brojStolaString;
-                
-                
+
+
             //     using (MailMessage mailMessage = new MailMessage())
             //     {
             //         mailMessage.From = new MailAddress("nightevents2023@gmail.com");
@@ -381,39 +382,39 @@ public class RezervacijaController : ControllerBase
             //         mailMessage.Subject = "Uspesna rezervacija mesta";
             //         mailMessage.Body = poruka;
 
-                   
+
             //         await smtpClient.SendMailAsync(mailMessage);
             //     }
             // }
-            
-            return(Ok(rez));
+
+            return (Ok(rez));
         }
         catch (Exception e)
-        { 
+        {
             return BadRequest(e.Message);
         }
     }
 
-    [Authorize(AuthenticationSchemes = "Bearer", Roles  = "Korisnik")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Korisnik")]
     [Route("RezervisiVisokoSedenje/{idDogadjaja}/{idKorisnika}")]
     [HttpPost]
     public async Task<ActionResult> RezervisiVisokoSedenje(int idDogadjaja, int idKorisnika)
     {
         try
         {
-            var dogadjaj = await Context.Dogadjaji.Include(p=>p.Klub).Where(p=>p.ID==idDogadjaja).FirstOrDefaultAsync();
-            if(dogadjaj == null)
+            var dogadjaj = await Context.Dogadjaji.Include(p => p.Klub).Where(p => p.ID == idDogadjaja).FirstOrDefaultAsync();
+            if (dogadjaj == null)
             {
                 return BadRequest("Ne postoji dati dogadjaj");
-            }    
-            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;       
-            if(dogadjaj.BrojRezervacija == ukupanBrojStolova)
+            }
+            int ukupanBrojStolova = dogadjaj.Klub!.BrojStolovaBS + dogadjaj.Klub!.BrojStolovaS + dogadjaj.Klub!.BrojStolovaVS;
+            if (dogadjaj.BrojRezervacija == ukupanBrojStolova)
             {
                 return BadRequest("Nema slobodnih mesta za dati dogadjaj");
             }
 
             var k = await Context.Korisnici.FindAsync(idKorisnika);
-            if(k == null) 
+            if (k == null)
             {
                 return BadRequest("Ne postoji korisnik");
             }
@@ -421,7 +422,7 @@ public class RezervacijaController : ControllerBase
             var sto = await Context.StoloviVS
                             .Where(s => s.Dogadjaj!.ID == idDogadjaja && s.VrstaStola == "Visoko sedenje" && s.Status == StatusStola.Slobodan)
                             .FirstOrDefaultAsync();
-            if(sto == null) 
+            if (sto == null)
             {
                 return BadRequest("Ne postoji sto");
             }
@@ -432,18 +433,18 @@ public class RezervacijaController : ControllerBase
             //                 .Include(p => p.Dogadjaj)
             //                 .Where(b => b.Dogadjaj!.ID == idDogadjaja && b.Korisnik!.ID == idKorisnika)
             //                 .FirstOrDefaultAsync();
-            
+
             // if(provera != null)
             // {
             //     return BadRequest("Rezervacija je vec obavljena");
             // }
-            
+
             var rez = new Rezervacija
             {
                 Sto = sto,
                 Korisnik = k,
-                Dogadjaj = dogadjaj,  
-                Datum = DateTime.Now             
+                Dogadjaj = dogadjaj,
+                Datum = DateTime.Now
             };
             rez.Dogadjaj.BrojRezervacija++;
 
@@ -462,8 +463,8 @@ public class RezervacijaController : ControllerBase
             //     string dogadjajString = dogadjaj.Naziv!; 
             //     string brojStolaString = rez.Sto.ID.ToString();
             //     string poruka = "Vasa rezervacija stola za dogadjaj " + dogadjajString + " je uspesno obavljena. ID stola: " + brojStolaString;
-                
-                
+
+
             //     using (MailMessage mailMessage = new MailMessage())
             //     {
             //         mailMessage.From = new MailAddress("nightevents2023@gmail.com");
@@ -471,17 +472,17 @@ public class RezervacijaController : ControllerBase
             //         mailMessage.Subject = "Uspesna rezervacija mesta";
             //         mailMessage.Body = poruka;
 
-                   
+
             //         await smtpClient.SendMailAsync(mailMessage);
             //     }
             // }
-            
-            return(Ok(rez));
+
+            return (Ok(rez));
         }
         catch (Exception e)
-        { 
+        {
             return BadRequest(e.Message);
         }
     }
-        
+
 }

@@ -38,7 +38,7 @@ public class AuthController : ControllerBase
     {
         try
         {
-            if(User?.Identity?.IsAuthenticated == true)
+            if (User?.Identity?.IsAuthenticated == true)
             {
                 var userInfos = new List<object>();
 
@@ -62,10 +62,10 @@ public class AuthController : ControllerBase
                 return BadRequest();
             }
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
-        }           
+        }
     }
 
     [Authorize]
@@ -74,65 +74,55 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> LogOut()
     {
         await HttpContext.SignOutAsync();
-        return Ok(); //RedirectToPage("/index");
+        return Ok();
     }
 
     [Route("PrijaviSe")]
     [HttpPost]
-    public async Task<ActionResult> PrijaviSe([FromBody] UserLoginDTO usrDto) 
+    public async Task<ActionResult> PrijaviSe([FromBody] UserLoginDTO usrDto)
     {
-        if(string.IsNullOrWhiteSpace(usrDto.Username) || usrDto.Username.Length > 50)
+        if (string.IsNullOrWhiteSpace(usrDto.Username) || usrDto.Username.Length > 50)
         {
             return BadRequest("Predugacko korisnicko ime!");
         }
 
-        if(usrDto.Username == "-" && usrDto.Password == "-")
+        if (usrDto.Username == "-" && usrDto.Password == "-")
         {
             return BadRequest("Unesite korisnicko ime i lozinku.");
         }
 
-        if(usrDto.Username == "-")
+        if (usrDto.Username == "-")
         {
             return BadRequest("Unesite korisnicko ime.");
         }
 
-        if(usrDto.Password == "-")
+        if (usrDto.Password == "-")
         {
             return BadRequest("Unesite lozinku.");
         }
 
-        if(string.IsNullOrWhiteSpace(usrDto.Password))
+        if (string.IsNullOrWhiteSpace(usrDto.Password))
         {
             return BadRequest("Unesite lozinku!");
-        }
-
-        if(usrDto.Password.Length > 40)
-        {
-            return BadRequest("Predugacka lozinka!");
-        }
-
-        if(usrDto.Password.Length < 8)
-        {
-            return BadRequest("Prekratka lozinka!");
         }
 
         try
         {
             // Provera da li je administrator
             var adm = await Context.Administratori.Where(p => p.Username == usrDto.Username).FirstOrDefaultAsync();
-            
-            if(adm != null && adm.PasswordHash != null && adm.PasswordSalt != null)
+
+            if (adm != null && adm.PasswordHash != null && adm.PasswordSalt != null)
             {
-                if(!VerifyPasswordHash(usrDto.Password, adm.PasswordHash, adm.PasswordSalt))
+                if (!VerifyPasswordHash(usrDto.Password, adm.PasswordHash, adm.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
                 var token1 = CreateTokenAdmin(adm);
 
-                if(token1 == null)
+                if (token1 == null)
                 {
                     return BadRequest("Neuspesno generisanje tokena");
                 }
-                    
+
                 return Ok(new
                 {
                     token = token1,
@@ -144,19 +134,19 @@ public class AuthController : ControllerBase
 
             // Provera da li je korisnik
             var kor = await Context.Korisnici.Where(p => p.Username == usrDto.Username).FirstOrDefaultAsync();
-            
-            if(kor != null && kor.PasswordHash != null && kor.PasswordSalt != null)
+
+            if (kor != null && kor.PasswordHash != null && kor.PasswordSalt != null)
             {
-                if(!VerifyPasswordHash(usrDto.Password, kor.PasswordHash, kor.PasswordSalt))
+                if (!VerifyPasswordHash(usrDto.Password, kor.PasswordHash, kor.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
                 var token2 = CreateTokenKorisnik(kor);
 
-                if(token2 == null)
+                if (token2 == null)
                 {
                     return BadRequest("Neuspesno generisanje tokena");
                 }
-                    
+
                 return Ok(new
                 {
                     token = token2,
@@ -168,24 +158,24 @@ public class AuthController : ControllerBase
 
             // Provera da li je organizator
             var org = await Context.Organizatori.Where(p => p.Username == usrDto.Username).Include(p => p.Klub).FirstOrDefaultAsync();
-            
-            if(org != null && org.PasswordHash != null && org.PasswordSalt != null)
+
+            if (org != null && org.PasswordHash != null && org.PasswordSalt != null)
             {
-                if(!VerifyPasswordHash(usrDto.Password, org.PasswordHash, org.PasswordSalt))
+                if (!VerifyPasswordHash(usrDto.Password, org.PasswordHash, org.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
-                // if(org.Status == StatusNaloga.NaCekanju)
-                //     return BadRequest("Nalog ceka na odobrenje administratora");
-                // else if(org.Status == StatusNaloga.Odbijen)
-                //     return BadRequest("Nalog je odbijen od strane administratora");
+                if (org.Status == StatusNaloga.NaCekanju)
+                    return BadRequest("Nalog ceka na odobrenje administratora");
+                else if (org.Status == StatusNaloga.Odbijen)
+                    return BadRequest("Nalog je odbijen od strane administratora");
 
                 var token3 = CreateTokenOrganizator(org);
 
-                if(token3 == null)
+                if (token3 == null)
                 {
                     return BadRequest("Neuspesno generisanje tokena");
                 }
-                    
+
                 return Ok(new
                 {
                     token = token3,
@@ -197,24 +187,24 @@ public class AuthController : ControllerBase
 
             // Provera da li je muzicki izvodjac
             var muz = await Context.MuzickiIzvodjaci.Where(p => p.Username == usrDto.Username).FirstOrDefaultAsync();
-            
-            if(muz != null && muz.PasswordHash != null && muz.PasswordSalt != null)
+
+            if (muz != null && muz.PasswordHash != null && muz.PasswordSalt != null)
             {
-                if(!VerifyPasswordHash(usrDto.Password, muz.PasswordHash, muz.PasswordSalt))
+                if (!VerifyPasswordHash(usrDto.Password, muz.PasswordHash, muz.PasswordSalt))
                     return BadRequest("Pogresna sifra");
 
-                // if(muz.Status == StatusNaloga.NaCekanju)
-                //     return BadRequest("Nalog ceka na odobrenje administratora");
-                // else if(muz.Status == StatusNaloga.Odbijen)
-                //     return BadRequest("Nalog je odbijen od strane administratora");
+                if (muz.Status == StatusNaloga.NaCekanju)
+                    return BadRequest("Nalog ceka na odobrenje administratora");
+                else if (muz.Status == StatusNaloga.Odbijen)
+                    return BadRequest("Nalog je odbijen od strane administratora");
 
                 var token4 = CreateTokenMuzIzvodjac(muz);
 
-                if(token4 == null)
+                if (token4 == null)
                 {
                     return BadRequest("Neuspesno generisanje tokena");
                 }
-                    
+
                 return Ok(new
                 {
                     token = token4,
@@ -263,7 +253,7 @@ public class AuthController : ControllerBase
             issuer: "https://localhost:7037/",
             audience: "https://localhost:7037/",
             claims: claims.ToArray(),
-            expires: DateTime.Now.AddHours(2),
+            expires: DateTime.Now.AddHours(8),
             signingCredentials: cred
 
         );
@@ -272,7 +262,7 @@ public class AuthController : ControllerBase
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
         return jwt;
-   
+
     }
 
     private string CreateTokenKorisnik(Korisnik kor)
@@ -303,12 +293,12 @@ public class AuthController : ControllerBase
             issuer: "https://localhost:7037/",
             audience: "https://localhost:7037/",
             claims: claims.ToArray(),
-            expires: DateTime.Now.AddHours(2),
+            expires: DateTime.Now.AddHours(8),
             signingCredentials: cred
 
         );
 
-        
+
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
         return jwt;
     }
@@ -342,12 +332,12 @@ public class AuthController : ControllerBase
             issuer: "https://localhost:7037/",
             audience: "https://localhost:7037/",
             claims: claims.ToArray(),
-            expires: DateTime.Now.AddHours(2),
+            expires: DateTime.Now.AddHours(8),
             signingCredentials: cred
 
         );
 
-        
+
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
         return jwt;
     }
@@ -380,12 +370,12 @@ public class AuthController : ControllerBase
             issuer: "https://localhost:7037/",
             audience: "https://localhost:7037/",
             claims: claims.ToArray(),
-            expires: DateTime.Now.AddHours(2),
+            expires: DateTime.Now.AddHours(8),
             signingCredentials: cred
 
         );
 
-        
+
         var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
 
@@ -393,7 +383,7 @@ public class AuthController : ControllerBase
 
     }
 
-    private bool VerifyPasswordHash(string password, byte[] passwordHash,  byte[] passwordSalt)
+    private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
     {
         using (var hmac = new HMACSHA512(passwordSalt))
         {
@@ -410,5 +400,5 @@ public class AuthController : ControllerBase
             PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(Password));
         }
     }
-  
+
 }

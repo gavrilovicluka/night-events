@@ -1,12 +1,6 @@
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.AssemblyReference.cache
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfoInputs.cache
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfo.cs
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CoreCompileInputs.cache
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.json
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.staticwebassets.runtime.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.exe
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.deps.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.runtimeconfig.json
@@ -15,6 +9,7 @@ C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nighte
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Humanizer.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -44,6 +39,11 @@ C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nighte
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Scrutor.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -71,6 +71,13 @@ C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nighte
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.AssemblyReference.cache
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfoInputs.cache
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfo.cs
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CoreCompileInputs.cache
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\scopedcss\bundle\projekat.styles.css
@@ -80,378 +87,3 @@ C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nighte
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.pdb
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
 C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\refint\projekat.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.pdb
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.Development.json
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.json
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.exe
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.deps.json
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.runtimeconfig.json
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.pdb
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Core.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Identity.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Humanizer.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.OpenApi.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Mono.TextTemplating.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.CodeDom.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Drawing.Common.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Memory.Data.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Runtime.Caching.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Permissions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Json.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Windows.Extensions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.AssemblyReference.cache
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.GeneratedMSBuildEditorConfig.editorconfig
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfoInputs.cache
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfo.cs
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CoreCompileInputs.cache
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cs
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.build.json
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.development.json
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\scopedcss\bundle\projekat.styles.css
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CopyComplete
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
-D:\FAKS\treca\softversko\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Scrutor.dll
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.AssemblyReference.cache
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfoInputs.cache
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfo.cs
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CoreCompileInputs.cache
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\refint\projekat.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.pdb
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.exe
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.deps.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.runtimeconfig.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.pdb
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Core.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Identity.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Humanizer.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Mono.TextTemplating.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Scrutor.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.CodeDom.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Drawing.Common.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Memory.Data.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Runtime.Caching.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Permissions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Json.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Windows.Extensions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.projekat.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.build.projekat.props
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.projekat.props
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.projekat.props
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\scopedcss\bundle\projekat.styles.css
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CopyComplete
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\MySqlConnector.dll
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\MySqlConnector.dll
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
-<<<<<<< HEAD
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.AssemblyReference.cache
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfoInputs.cache
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfo.cs
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CoreCompileInputs.cache
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.exe
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.deps.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.runtimeconfig.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.pdb
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Core.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Identity.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Humanizer.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Mono.TextTemplating.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\MySqlConnector.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Scrutor.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.CodeDom.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Drawing.Common.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Memory.Data.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Runtime.Caching.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Permissions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Json.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Windows.Extensions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.projekat.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.build.projekat.props
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.projekat.props
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.projekat.props
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\scopedcss\bundle\projekat.styles.css
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CopyComplete
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\refint\projekat.dll
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.pdb
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
-=======
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.Development.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\appsettings.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\public\manifest.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\tsconfig.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package-lock.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\front-end\package.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.exe
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.deps.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.runtimeconfig.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.pdb
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Core.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Azure.Identity.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Humanizer.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.OpenApi.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Mono.TextTemplating.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\MySqlConnector.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Scrutor.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.CodeDom.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Drawing.Common.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Memory.Data.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Runtime.Caching.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Security.Permissions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Text.Json.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\System.Windows.Extensions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.AssemblyReference.cache
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.GeneratedMSBuildEditorConfig.editorconfig
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfoInputs.cache
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.AssemblyInfo.cs
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CoreCompileInputs.cache
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cs
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.MvcApplicationPartsAssemblyInfo.cache
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.build.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\staticwebassets.development.json
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\scopedcss\bundle\projekat.styles.css
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.csproj.CopyComplete
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\refint\projekat.dll
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.pdb
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\projekat.genruntimeconfig.cache
-D:\FAKS\treca\softversko\swe\si.23.52.nightevents\Aplikacija\projekat\obj\Debug\net6.0\ref\projekat.dll
->>>>>>> Pregled-klubova-i-dodavanje
-C:\Users\My PC\Desktop\Elfak\VI semestar\Softversko inzenjerstvo\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.staticwebassets.runtime.json
-<<<<<<< HEAD
-C:\Users\Andriana\Desktop\projekatSI\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.staticwebassets.runtime.json
-=======
-C:\Users\Korisnik\Desktop\SWE-proj\si.23.52.nightevents\Aplikacija\projekat\bin\Debug\net6.0\projekat.staticwebassets.runtime.json
->>>>>>> footer
