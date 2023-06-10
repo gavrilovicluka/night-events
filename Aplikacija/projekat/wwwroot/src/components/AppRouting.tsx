@@ -15,6 +15,7 @@ import DodajDogadjaj from "./OrganizatorPage/DodajDogadjaj";
 import DetaljiDogadjaja from "./DetaljiDogadjaja";
 import AboutStranica from "./AboutStranica";
 import LoginRegisterForm from "./LoginRegisterForm";
+import ContactStranica from "./ContactStranica"
 import DogadjajType from "../types/DogadjajType";
 import PageNotFound from "./PageNotFound";
 import jwtDecode from "jwt-decode";
@@ -51,6 +52,7 @@ function AppRouting() {
         />
 
         <Route path="/AboutStranica" element={<AboutStranica />} />
+        <Route path="/ContactStranica" element={<ContactStranica />} />
 
         {/* <Route
           path="/organizatorDashboard"

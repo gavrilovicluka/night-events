@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DQTNTIvTU9UPBHBEpYsSA2no4d5awKYH16ntwYT8vVI=",
+  "Hash": "ubFrM8fmKOm43UrSqnivMd3CYfcnhQRxq8SZnzksO+s=",
   "Source": "projekat",
   "BasePath": "_content/projekat",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "projekat\\wwwroot",
       "Source": "projekat",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\.env",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\.env",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": ".env",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\.env"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\.gitignore",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\.gitignore",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": ".gitignore",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\.gitignore"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\package-lock.json",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\package-lock.json",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "package-lock.json",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\package-lock.json"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\package.json",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\package.json",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "package.json",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\package.json"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\background.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\background.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/background.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\background.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\bckADMINHomePage.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\bckADMINHomePage.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/bckADMINHomePage.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\bckADMINHomePage.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\favicon.ico",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\favicon.ico",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/favicon.ico",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\icon.ico",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\icon.ico",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/icon.ico",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\icon.ico"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\ikonica.ico",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\ikonica.ico",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/ikonica.ico",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\ikonica.ico"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\klub.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\klub.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/klub.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\klub.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoBeli.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoBeli.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/logoBeli.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\logoBeli.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNE2png.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNE2png.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/logoNE2png.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\logoNE2png.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpng.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpng.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/logoNEpng.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\logoNEpng.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpozadina.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpozadina.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/logoNEpozadina.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\logoNEpozadina.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpozadina2.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\logoNEpozadina2.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/logoNEpozadina2.jpg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\logoNEpozadina2.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaproba.JPG",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaproba.JPG",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/slikaproba.JPG",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\slikaproba.JPG"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaproba1.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaproba1.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/slikaproba1.jpg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\slikaproba1.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaProbaZaAbout.jpg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\assets\\slikaProbaZaAbout.jpg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/assets/slikaProbaZaAbout.jpg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\public\\assets\\slikaProbaZaAbout.jpg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\css\\styles.css",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\css\\styles.css",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/css/styles.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\public\\css\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\favicon.ico",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\favicon.ico",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/favicon.ico",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\public\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\index.html",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\index.html",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/index.html",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\public\\index.html"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\index2.html",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\index2.html",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/index2.html",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\public\\index2.html"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\js\\scripts.js",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\js\\scripts.js",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/js/scripts.js",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\public\\js\\scripts.js"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\manifest.json",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\manifest.json",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/manifest.json",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\public\\manifest.json"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\robots.txt",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\public\\robots.txt",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "public/robots.txt",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\public\\robots.txt"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\README.md",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\README.md",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "README.md",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\README.md"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AboutStranica.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AboutStranica.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AboutStranica.tsx",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AboutStranica.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\AdministratorDashboard.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\AdministratorDashboard.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AdministratorPage/AdministratorDashboard.tsx",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AdministratorPage\\AdministratorDashboard.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\AdministratorHeader.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\AdministratorHeader.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AdministratorPage/AdministratorHeader.tsx",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AdministratorPage\\AdministratorHeader.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaIzvodjacaAdminPage.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaIzvodjacaAdminPage.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AdministratorPage/ListaIzvodjacaAdminPage.tsx",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AdministratorPage\\ListaIzvodjacaAdminPage.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaKlubova.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaKlubova.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AdministratorPage/ListaKlubova.tsx",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AdministratorPage\\ListaKlubova.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaOrganizatora.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AdministratorPage\\ListaOrganizatora.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AdministratorPage/ListaOrganizatora.tsx",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AdministratorPage\\ListaOrganizatora.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AppRouting.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\AppRouting.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/AppRouting.tsx",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\AppRouting.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\ContactStranica.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\ContactStranica.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/ContactStranica.tsx",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\ContactStranica.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DetaljiDogadjaja.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DetaljiDogadjaja.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/DetaljiDogadjaja.tsx",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\DetaljiDogadjaja.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DogadjajPage.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DogadjajPage.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/DogadjajPage.tsx",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\DogadjajPage.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePage.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePage.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/HomePage.tsx",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\HomePage.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePageEventCard.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePageEventCard.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/HomePageEventCard.tsx",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\HomePageEventCard.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePageNavbar.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\HomePageNavbar.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/HomePageNavbar.tsx",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\HomePageNavbar.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\KlubInfo.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\KlubInfo.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/KlubInfo.tsx",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\KlubInfo.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\LoginRegisterForm.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\LoginRegisterForm.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/LoginRegisterForm.tsx",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\LoginRegisterForm.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\DodajTerminIzvodjac.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\DodajTerminIzvodjac.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/MuzickiIzvodjacPage/DodajTerminIzvodjac.tsx",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\MuzickiIzvodjacPage\\DodajTerminIzvodjac.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\ListaTermina.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\ListaTermina.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/MuzickiIzvodjacPage/ListaTermina.tsx",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\MuzickiIzvodjacPage\\ListaTermina.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacDashboard.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacDashboard.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/MuzickiIzvodjacPage/MuzickiIzvodjacDashboard.tsx",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacDashboard.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacHeader.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacHeader.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/MuzickiIzvodjacPage/MuzickiIzvodjacHeader.tsx",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\MuzickiIzvodjacPage\\MuzickiIzvodjacHeader.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\DodajDogadjaj.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\DodajDogadjaj.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/OrganizatorPage/DodajDogadjaj.tsx",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\OrganizatorPage\\DodajDogadjaj.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\ListaDogadjaja.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\ListaDogadjaja.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/OrganizatorPage/ListaDogadjaja.tsx",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\OrganizatorPage\\ListaDogadjaja.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\ListaIzvodjaca.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\ListaIzvodjaca.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/OrganizatorPage/ListaIzvodjaca.tsx",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\OrganizatorPage\\ListaIzvodjaca.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\MojKlub.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\MojKlub.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/OrganizatorPage/MojKlub.tsx",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\OrganizatorPage\\MojKlub.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\OrganizatorDashboard.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\OrganizatorDashboard.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/OrganizatorPage/OrganizatorDashboard.tsx",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\OrganizatorPage\\OrganizatorDashboard.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\OrganizatorHeader.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\OrganizatorPage\\OrganizatorHeader.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/OrganizatorPage/OrganizatorHeader.tsx",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\OrganizatorPage\\OrganizatorHeader.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\PageNotFound.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\PageNotFound.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/PageNotFound.tsx",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\PageNotFound.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\RatingFunkcija.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\RatingFunkcija.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/components/RatingFunkcija.tsx",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\RatingFunkcija.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\config\\api.config.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\config\\api.config.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/config/api.config.tsx",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\src\\config\\api.config.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\dtos\\User\\user.registration.dto.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\dtos\\User\\user.registration.dto.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/dtos/User/user.registration.dto.tsx",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\src\\dtos\\User\\user.registration.dto.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\index.css",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\index.css",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/index.css",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\src\\index.css"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\index.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\index.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/index.tsx",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\src\\index.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\logo.svg",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\logo.svg",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/logo.svg",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\src\\logo.svg"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\react-app-env.d.ts",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\react-app-env.d.ts",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/react-app-env.d.ts",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\src\\react-app-env.d.ts"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\reportWebVitals.ts",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\reportWebVitals.ts",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/reportWebVitals.ts",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\src\\reportWebVitals.ts"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\setupTests.ts",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\setupTests.ts",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/setupTests.ts",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\src\\setupTests.ts"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedToken.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedToken.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/DecodedToken.tsx",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\DecodedToken.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedTokenMuzickiIzvodjac.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedTokenMuzickiIzvodjac.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/DecodedTokenMuzickiIzvodjac.tsx",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\DecodedTokenMuzickiIzvodjac.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedTokenOrganizator.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DecodedTokenOrganizator.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/DecodedTokenOrganizator.tsx",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\DecodedTokenOrganizator.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DogadjajType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\DogadjajType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/DogadjajType.tsx",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\DogadjajType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\KlubType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\KlubType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/KlubType.tsx",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\KlubType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\KorisnikType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\KorisnikType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/KorisnikType.tsx",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\KorisnikType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\MuzickiIzvodjacType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\MuzickiIzvodjacType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/MuzickiIzvodjacType.tsx",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\MuzickiIzvodjacType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OcenaKlubType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OcenaKlubType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/OcenaKlubType.tsx",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\OcenaKlubType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OrganizatorType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\OrganizatorType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/OrganizatorType.tsx",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\OrganizatorType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\RezervacijaType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\RezervacijaType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/RezervacijaType.tsx",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\RezervacijaType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StatusNalogaType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StatusNalogaType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/StatusNalogaType.tsx",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\StatusNalogaType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StatusStolaType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StatusStolaType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/StatusStolaType.tsx",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\StatusStolaType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StoType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\StoType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/StoType.tsx",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\StoType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\TerminType.tsx",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\types\\TerminType.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "src/types/TerminType.tsx",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\src\\types\\TerminType.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\tsconfig.json",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\tsconfig.json",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "tsconfig.json",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\tsconfig.json"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\common\\noimage.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\common\\noimage.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "uploads/common/noimage.png",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\common\\noimage.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "uploads/Klub/1/slika/slikaKluba.png",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\mapa\\mapaKluba.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\mapa\\mapaKluba.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "uploads/Klub/3/mapa/mapaKluba.png",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\Klub\\3\\mapa\\mapaKluba.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\slika\\slikaKluba.png",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\slika\\slikaKluba.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "uploads/Klub/3/slika/slikaKluba.png",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\Klub\\3\\slika\\slikaKluba.png"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\yarn.lock",
+      "Identity": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\yarn.lock",
       "SourceId": "projekat",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "ContentRoot": "D:\\FAKS\\treca\\softversko\\swe\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
       "BasePath": "_content/projekat",
       "RelativePath": "yarn.lock",
       "AssetKind": "All",

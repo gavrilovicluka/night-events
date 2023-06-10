@@ -41,7 +41,7 @@ export default function HomePageNavbar() {
       <Navbar.Collapse id="navbarSupportedContent">
         <Nav className="ms-auto">
           <Nav.Link href="/AboutStranica">O nama</Nav.Link>
-          <Nav.Link href="#!">Kontakt</Nav.Link>
+          <Nav.Link href="/ContactStranica">Kontakt</Nav.Link>
           { !isLoggedIn ? <Nav.Link onClick={handleLoginClick}>Prijava</Nav.Link> : <Nav.Link onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleLogoutClick(e) }>Odjavi se</Nav.Link> }
           
         </Nav>

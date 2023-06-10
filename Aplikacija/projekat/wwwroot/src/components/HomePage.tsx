@@ -17,7 +17,6 @@ import axios from "axios";
 import { ApiConfig } from "../config/api.config";
 import { format } from "date-fns";
 import HomePageEventCard from "./HomePageEventCard";
-import { string } from "yup";
 
 function HomePage() {
   const [selectedDate, setSelectedDate] = useState("");
@@ -169,7 +168,7 @@ function HomePage() {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                src="../assets/background.jpg"
+                src="../assets/logoNEpozadina2.jpg"
                 alt="slika3"
                 style={{ objectFit: "cover", height: "350px" }}
               />

@@ -193,7 +193,8 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
         console.log(response);
         // registrationComplete();
         setRegistrationComplete(true);
-        navigate("/loginRegister");
+        navigate("/");
+        onClose();
       })
       .catch((error) => {
         alert(error.response.data);
