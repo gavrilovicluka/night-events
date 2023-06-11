@@ -24,8 +24,6 @@ public class Dogadjaj
 
     public List<Sto>? Stolovi { get; set; }    
 
-    public List<KomentarDogadjaj>? KomentariDogadjaj { get; set; }
-
     public List<Rezervacija>? Rezervacije { get; set; }
 
     public int BrojRezervacija { get; set; }

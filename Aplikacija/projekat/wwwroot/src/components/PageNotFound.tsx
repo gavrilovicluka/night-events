@@ -10,14 +10,21 @@ export default function PageNotFound() {
   };
 
   return (
-   <> <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-    <Container className="flex-grow-1 d-flex justify-content-center align-items-center">
-      <div className="text-center bg-secondary text-light rounded p-4">
-        <h1>Page Not Found</h1>
-        <Button variant="primary" onClick={handleButtonClick}>Go Back</Button>
+    <>
+      {" "}
+      <div
+        className="bg-image"
+        style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      >
+        <Container className="flex-grow-1 d-flex justify-content-center align-items-center">
+          <div className="text-center bg-secondary text-light rounded p-4">
+            <h1>Stranica nije pronađena</h1>
+            <Button variant="primary" onClick={handleButtonClick}>
+              Nazad
+            </Button>
+          </div>
+        </Container>
       </div>
-    </Container>
-  </div>
-   </>
+    </>
   );
 }

@@ -96,19 +96,6 @@ function HomePage() {
           console.log(response.data);
           setEventsList(response.data);
 
-          // eventsList.forEach((dogadjaj) => {
-
-          //   axios.get(ApiConfig.BASE_URL + `/Klub/GetPicture/${dogadjaj.klub?.id}`)
-          //   .then((response) => {
-          //     console.log(dogadjaj.klub?.naziv);
-          //     if(dogadjaj.klub?.naziv) {
-          //       localStorage.setItem(dogadjaj.klub?.naziv, response.data);
-          //     }
-
-          //   })
-
-          // })
-
           const imagePromises = response.data.map((dogadjaj: DogadjajType) =>
             axios
               .get(ApiConfig.BASE_URL + `/Klub/GetPicture/${dogadjaj.klub?.id}`)
@@ -143,10 +130,11 @@ function HomePage() {
 
   return (
     <>
+    {/* <Container className="bg-image"> */}
       <HomePageNavbar />
-
+      <div className="bg-image">
       <Container className="px-4 px-lg-5 d-md-block d-lg-block" style={{ borderRadius: "12px" }}>
-        <Row className="gx-6 gx-lg-10 align-items-center my-5">
+        <Row className="gx-6 gx-lg-10 align-items-center justify-content-center" style={{ paddingTop: "40px" }}>
           <Carousel
             className="multi-carousel md-5"
             style={{ maxWidth: "35rem" }}
@@ -261,6 +249,8 @@ function HomePage() {
           </p>
         )}
       </Row>
+      </div>
+      {/* </Container> */}
     </>
   );
 }

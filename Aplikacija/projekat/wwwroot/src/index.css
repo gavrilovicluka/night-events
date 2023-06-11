@@ -152,5 +152,12 @@
     width: auto;
   }
 
+  .bg-image {
+    background-image: url("../public/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
   
   

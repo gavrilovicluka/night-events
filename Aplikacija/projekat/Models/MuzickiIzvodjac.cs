@@ -42,8 +42,6 @@ public class MuzickiIzvodjac
     [JsonIgnore]
     public List<Dogadjaj>? Dogadjaji { get; set; }
 
-    public List<KomentarIzvodjac>? KomentariIzvodjac { get; set; }
-
     public MuzickiIzvodjac()
     {
         Role = "Muzicar";

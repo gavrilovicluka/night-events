@@ -10,10 +10,6 @@ public class NightEventsContext : DbContext
 
     public DbSet<Klub> Klubovi { get; set; }
 
-    public DbSet<KomentarDogadjaj> KomentariDogadjaji { get; set; }
-
-    public DbSet<KomentarIzvodjac> KomentariIzvodjaci { get; set; }
-
     public DbSet<Korisnik> Korisnici { get; set; }  
 
     public DbSet<MuzickiIzvodjac> MuzickiIzvodjaci { get; set; }    

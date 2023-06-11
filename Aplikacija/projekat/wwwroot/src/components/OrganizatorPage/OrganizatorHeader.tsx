@@ -23,7 +23,7 @@ export default function OrganizatorHeader() {
         e.preventDefault();
         localStorage.removeItem("jwtToken");
         localStorage.removeItem("isLoggedIn");
-        navigate("/");
+        navigate("/");       
     }
     
     return (
@@ -47,22 +47,22 @@ export default function OrganizatorHeader() {
                 
 
                 <MDBNavbarItem>
-                    <MDBNavbarLink href={`/organizatorDashboard/mojKlub`}>Moj klub</MDBNavbarLink> { /* {`/organizatorDashboard/${idOrganizatora}/pregledIzvodjaca`} */ }
+                    <MDBNavbarLink href={`/organizatorDashboard/mojKlub`}>Moj klub</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='/organizatorDashboard/mojiDogadjaji'>Moji dogadjaji</MDBNavbarLink> {/* treba da se prosledi i id organizatora iz tokena */}
+                    <MDBNavbarLink href='/organizatorDashboard/mojiDogadjaji'>Moji dogadjaji</MDBNavbarLink> 
                 </MDBNavbarItem>
                 <MDBNavbarItem>
                     <MDBNavbarLink href='/organizatorDashboard/dodajDogadjaj'>Dodaj dogadjaj</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href={`/organizatorDashboard/pregledIzvodjaca`}>Pregled izvodjaca</MDBNavbarLink> { /* {`/organizatorDashboard/${idOrganizatora}/pregledIzvodjaca`} */ }
+                    <MDBNavbarLink href={`/organizatorDashboard/pregledIzvodjaca`}>Pregled izvodjaca</MDBNavbarLink>
                 </MDBNavbarItem>
 
                 </MDBNavbarNav>
                     <MDBNavbarNav className='justify-content-end'>
                         <MDBNavbarItem>
-                            <MDBNavbarLink href='/login' onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Logout</MDBNavbarLink>
+                            <MDBNavbarLink onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Odjavi se</MDBNavbarLink>
                     </MDBNavbarItem>
                 </MDBNavbarNav>
             </MDBCollapse>

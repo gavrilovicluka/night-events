@@ -130,25 +130,24 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
         console.log(response.data);
         const token = response.data.token;
         localStorage.setItem("jwtToken", token);
-        // const decodedToken = jwtDecode(token) as DecodedToken;
-        // console.log(decodedToken);
+        const decodedToken = jwtDecode(token) as DecodedToken;
+        console.log(decodedToken);
+        console.log(response.data.role);
         setLogginState(true);
-        localStorage.setItem('isLoggedIn','true');
+        localStorage.setItem("isLoggedIn", "true");
 
-        switch (response.data.role) {
-          case "Admin":
-            navigate("/administratorDashboard/klubovi");
-            break;
-          case "Organizator":
-            navigate("/organizatorDashboard/mojKlub");
-            break;
-          case "Muzicar":
-            navigate("/muzickiIzvodjacDashboard/mojiTermini");
-            break;
-          default:
-            //navigate("/");
-            onClose();
-            break;
+        if (response.data.role === "Admin") {
+          navigate("/administratorDashboard/klubovi");
+          return;
+        } else if (response.data.role === "Organizator") {
+          navigate("/organizatorDashboard/mojKlub");
+          return;
+        } else if (response.data.role === "Muzicar") {
+          navigate("/muzickiIzvodjacDashboard/mojiTermini");
+          return;
+        } else {
+          onClose();
+          return;
         }
       })
       .catch((error) => {
@@ -227,322 +226,336 @@ function LoginRegisterForm({ onClose }: { onClose: () => void }) {
   };
 
   return (
-    <> { isOpen && 
-      <MDBContainer className=" p-3 my-5 d-flex flex-column w-50" ref={formRef}>
-        <MDBCard>
-          <MDBTabs
-            pills
-            justify
-            className="mb-3 d-flex flex-row justify-content-between p-3"
-          >
-            <MDBTabsItem>
-              <MDBTabsLink
-                onClick={() => handleJustifyClick("tab1")}
-                active={activeTab === "tab1"}
-                style={{ border: "1px solid #1E90FF" }}
-              >
-                Login
-              </MDBTabsLink>
-            </MDBTabsItem>
-            <MDBTabsItem>
-              <MDBTabsLink
-                onClick={() => handleJustifyClick("tab2")}
-                active={activeTab === "tab2"}
-                style={{ border: "1px solid #1E90FF" }}
-              >
-                Register
-              </MDBTabsLink>
-            </MDBTabsItem>
-          </MDBTabs>
+    <>
+      {" "}
+      {isOpen && (
+        <MDBContainer
+          className=" p-3 my-5 d-flex flex-column w-50"
+          ref={formRef}
+        >
+          <MDBCard>
+            <MDBTabs
+              pills
+              justify
+              className="mb-3 d-flex flex-row justify-content-between p-3"
+            >
+              <MDBTabsItem>
+                <MDBTabsLink
+                  onClick={() => handleJustifyClick("tab1")}
+                  active={activeTab === "tab1"}
+                  style={{ border: "1px solid #1E90FF" }}
+                >
+                  Login
+                </MDBTabsLink>
+              </MDBTabsItem>
+              <MDBTabsItem>
+                <MDBTabsLink
+                  onClick={() => handleJustifyClick("tab2")}
+                  active={activeTab === "tab2"}
+                  style={{ border: "1px solid #1E90FF" }}
+                >
+                  Register
+                </MDBTabsLink>
+              </MDBTabsItem>
+            </MDBTabs>
 
-          <MDBTabsContent>
-            <MDBTabsPane show={activeTab === "tab1"}>
-              <MDBValidation className="row g-3" isValidated>
-                <Row>
-                  <Col md={{ span: 6, offset: 3 }}>
-                    <MDBValidationItem feedback="Unesite username." invalid>
-                      <MDBInput
-                        wrapperClass="mb-4 mt-4"
-                        type="username"
-                        value={state.usernameLogin}
-                        onChange={loginFormInputChanged}
-                        placeholder="Username"
-                        id="usernameLogin"
-                        required
-                      />
-                    </MDBValidationItem>
-                  </Col>
-                </Row>
+            <MDBTabsContent>
+              <MDBTabsPane show={activeTab === "tab1"}>
+                <MDBValidation className="row g-3" isValidated>
+                  <Row>
+                    <Col md={{ span: 6, offset: 3 }}>
+                      <MDBValidationItem feedback="Unesite username." invalid>
+                        <MDBInput
+                          wrapperClass="mb-4 mt-4"
+                          type="username"
+                          value={state.usernameLogin}
+                          onChange={loginFormInputChanged}
+                          placeholder="Username"
+                          id="usernameLogin"
+                          required
+                        />
+                      </MDBValidationItem>
+                    </Col>
+                  </Row>
 
-                <Row>
-                  <Col md={{ span: 6, offset: 3 }}>
-                    <MDBValidationItem feedback="Unesite lozinku" invalid>
-                      <MDBInput
-                        wrapperClass="mb-4"
-                        type="password"
-                        value={state.passwordLogin}
-                        onChange={loginFormInputChanged}
-                        placeholder="Password"
-                        id="passwordLogin"
-                        required
-                      />
-                    </MDBValidationItem>
-                  </Col>
-                </Row>
-              </MDBValidation>
+                  <Row>
+                    <Col md={{ span: 6, offset: 3 }}>
+                      <MDBValidationItem feedback="Unesite lozinku" invalid>
+                        <MDBInput
+                          wrapperClass="mb-4"
+                          type="password"
+                          value={state.passwordLogin}
+                          onChange={loginFormInputChanged}
+                          placeholder="Password"
+                          id="passwordLogin"
+                          required
+                        />
+                      </MDBValidationItem>
+                    </Col>
+                  </Row>
+                </MDBValidation>
 
-              {/* <div className="d-flex justify-content-between mx-4 mb-4">
+                {/* <div className="d-flex justify-content-between mx-4 mb-4">
             <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
             <a href="!#">Forgot password?</a>
           </div> */}
 
-              <Button className="px-3 mb-4 w-100" onClick={doLogin}>
-                Sign in
-              </Button>
-              <p className="text-center">
-                Not a member?{" "}
-                <a href="#!" onClick={() => handleJustifyClick("tab2")}>
-                  Register
-                </a>
-              </p>
-            </MDBTabsPane>
+                <Button className="px-3 mb-4 w-100" onClick={doLogin}>
+                  Sign in
+                </Button>
+                <p className="text-center">
+                  Not a member?{" "}
+                  <a href="#!" onClick={() => handleJustifyClick("tab2")}>
+                    Register
+                  </a>
+                </p>
+              </MDBTabsPane>
 
-            <MDBTabsPane show={activeTab === "tab2"}>
-              <div className="text-center mb-3">
-                <div
-                  className="d-flex justify-content-between mx-auto"
-                  style={{ width: "40%" }}
-                ></div>
-              </div>
+              <MDBTabsPane show={activeTab === "tab2"}>
+                <div className="text-center mb-3">
+                  <div
+                    className="d-flex justify-content-between mx-auto"
+                    style={{ width: "40%" }}
+                  ></div>
+                </div>
 
-              <MDBValidation className="row g-3" isValidated>
-                <Row className="d-flex justify-content-evenly">
-                  <Col md={4} className="mb-2 ps-5">
-                    <MDBValidationItem invalid feedback="">
-                      <MDBRadio
-                        label="Korisnik"
-                        required
-                        id="validationFormCheck2"
-                        name="radio-stacked"
-                        checked={selectedRole === "korisnik"}
-                        onChange={() => handleRadioChange("korisnik")}
-                      />
-                    </MDBValidationItem>
-                  </Col>
-                  <Col md={4} className="mb-2">
-                    <MDBValidationItem invalid feedback="">
-                      <MDBRadio
-                        label="Organizator"
-                        required
-                        id="validationFormCheck3"
-                        name="radio-stacked"
-                        checked={selectedRole === "organizator"}
-                        onChange={() => handleRadioChange("organizator")}
-                      />
-                    </MDBValidationItem>
-                  </Col>
-                  <Col md={4} className="mb-2 pe-3">
-                    <MDBValidationItem invalid feedback="">
-                      <MDBRadio
-                        label="Muzicki izvodjac"
-                        required
-                        id="validationFormCheck4"
-                        name="radio-stacked"
-                        checked={selectedRole === "muzickiIzvodjac"}
-                        onChange={() => handleRadioChange("muzickiIzvodjac")}
-                      />
-                    </MDBValidationItem>
-                  </Col>
-                </Row>
+                <MDBValidation className="row g-3" isValidated>
+                  <Row className="d-flex justify-content-evenly">
+                    <Col md={4} className="mb-2 ps-5">
+                      <MDBValidationItem invalid feedback="">
+                        <MDBRadio
+                          label="Korisnik"
+                          required
+                          id="validationFormCheck2"
+                          name="radio-stacked"
+                          checked={selectedRole === "korisnik"}
+                          onChange={() => handleRadioChange("korisnik")}
+                        />
+                      </MDBValidationItem>
+                    </Col>
+                    <Col md={4} className="mb-2">
+                      <MDBValidationItem invalid feedback="">
+                        <MDBRadio
+                          label="Organizator"
+                          required
+                          id="validationFormCheck3"
+                          name="radio-stacked"
+                          checked={selectedRole === "organizator"}
+                          onChange={() => handleRadioChange("organizator")}
+                        />
+                      </MDBValidationItem>
+                    </Col>
+                    <Col md={4} className="mb-2 pe-3">
+                      <MDBValidationItem invalid feedback="">
+                        <MDBRadio
+                          label="Muzicki izvodjac"
+                          required
+                          id="validationFormCheck4"
+                          name="radio-stacked"
+                          checked={selectedRole === "muzickiIzvodjac"}
+                          onChange={() => handleRadioChange("muzickiIzvodjac")}
+                        />
+                      </MDBValidationItem>
+                    </Col>
+                  </Row>
 
-                {selectedRole === "korisnik" ||
-                selectedRole === "organizator" ? (
-                  <>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite ime." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="ime"
-                            type="text"
-                            placeholder="Name"
-                            required
-                            onChange={
-                              userAndOrganizerRegistrationFormInputChanged
-                            }
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite prezime." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="prezime"
-                            type="text"
-                            placeholder="Prezime"
-                            required
-                            onChange={
-                              userAndOrganizerRegistrationFormInputChanged
-                            }
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite username." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="username"
-                            type="text"
-                            placeholder="Username"
-                            required
-                            onChange={
-                              userAndOrganizerRegistrationFormInputChanged
-                            }
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite email." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="email"
-                            type="email"
-                            placeholder="Email"
-                            required
-                            onChange={
-                              userAndOrganizerRegistrationFormInputChanged
-                            }
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite sifru." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="password"
-                            type="password"
-                            placeholder="Password"
-                            required
-                            onChange={
-                              userAndOrganizerRegistrationFormInputChanged
-                            }
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                  </>
-                ) : selectedRole === "muzickiIzvodjac" ? (
-                  <>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem
-                          feedback="Unesite ime izvođača."
-                          invalid
-                        >
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="imeIzvodjaca"
-                            type="text"
-                            placeholder="Ime izvođača"
-                            required
-                            onChange={musicianRegistrationFormInputChanged}
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite žanr." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="zanr"
-                            type="text"
-                            placeholder="Žanr"
-                            required
-                            onChange={musicianRegistrationFormInputChanged}
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem
-                          feedback="Unesite broj članova."
-                          invalid
-                        >
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="brClanova"
-                            type="number"
-                            placeholder="Broj članova"
-                            required
-                            onChange={musicianRegistrationFormInputChanged}
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite username." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="username"
-                            type="text"
-                            placeholder="Username"
-                            required
-                            onChange={musicianRegistrationFormInputChanged}
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite email." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="email"
-                            type="email"
-                            placeholder="Email"
-                            required
-                            onChange={musicianRegistrationFormInputChanged}
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={{ span: 6, offset: 3 }}>
-                        <MDBValidationItem feedback="Unesite šifru." invalid>
-                          <MDBInput
-                            wrapperClass="mb-4"
-                            id="password"
-                            type="password"
-                            placeholder="Password"
-                            required
-                            onChange={musicianRegistrationFormInputChanged}
-                          />
-                        </MDBValidationItem>
-                      </Col>
-                    </Row>
-                  </>
-                ) : null}
-              </MDBValidation>
+                  {selectedRole === "korisnik" ||
+                  selectedRole === "organizator" ? (
+                    <>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem feedback="Unesite ime." invalid>
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="ime"
+                              type="text"
+                              placeholder="Name"
+                              required
+                              onChange={
+                                userAndOrganizerRegistrationFormInputChanged
+                              }
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem
+                            feedback="Unesite prezime."
+                            invalid
+                          >
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="prezime"
+                              type="text"
+                              placeholder="Prezime"
+                              required
+                              onChange={
+                                userAndOrganizerRegistrationFormInputChanged
+                              }
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem
+                            feedback="Unesite username."
+                            invalid
+                          >
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="username"
+                              type="text"
+                              placeholder="Username"
+                              required
+                              onChange={
+                                userAndOrganizerRegistrationFormInputChanged
+                              }
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem feedback="Unesite email." invalid>
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="email"
+                              type="email"
+                              placeholder="Email"
+                              required
+                              onChange={
+                                userAndOrganizerRegistrationFormInputChanged
+                              }
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem feedback="Unesite sifru." invalid>
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="password"
+                              type="password"
+                              placeholder="Password"
+                              required
+                              onChange={
+                                userAndOrganizerRegistrationFormInputChanged
+                              }
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                    </>
+                  ) : selectedRole === "muzickiIzvodjac" ? (
+                    <>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem
+                            feedback="Unesite ime izvođača."
+                            invalid
+                          >
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="imeIzvodjaca"
+                              type="text"
+                              placeholder="Ime izvođača"
+                              required
+                              onChange={musicianRegistrationFormInputChanged}
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem feedback="Unesite žanr." invalid>
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="zanr"
+                              type="text"
+                              placeholder="Žanr"
+                              required
+                              onChange={musicianRegistrationFormInputChanged}
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem
+                            feedback="Unesite broj članova."
+                            invalid
+                          >
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="brClanova"
+                              type="number"
+                              placeholder="Broj članova"
+                              required
+                              onChange={musicianRegistrationFormInputChanged}
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem
+                            feedback="Unesite username."
+                            invalid
+                          >
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="username"
+                              type="text"
+                              placeholder="Username"
+                              required
+                              onChange={musicianRegistrationFormInputChanged}
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem feedback="Unesite email." invalid>
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="email"
+                              type="email"
+                              placeholder="Email"
+                              required
+                              onChange={musicianRegistrationFormInputChanged}
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={{ span: 6, offset: 3 }}>
+                          <MDBValidationItem feedback="Unesite šifru." invalid>
+                            <MDBInput
+                              wrapperClass="mb-4"
+                              id="password"
+                              type="password"
+                              placeholder="Password"
+                              required
+                              onChange={musicianRegistrationFormInputChanged}
+                            />
+                          </MDBValidationItem>
+                        </Col>
+                      </Row>
+                    </>
+                  ) : null}
+                </MDBValidation>
 
-              <Button className="mb-4 w-100" onClick={doRegister}>
-                Sign up
-              </Button>
-            </MDBTabsPane>
-          </MDBTabsContent>
-        </MDBCard>
-      </MDBContainer> }
-
+                <Button className="mb-4 w-100" onClick={doRegister}>
+                  Sign up
+                </Button>
+              </MDBTabsPane>
+            </MDBTabsContent>
+          </MDBCard>
+        </MDBContainer>
+      )}
       {isRegistrationComplete && (
         <Alert
           variant="success"

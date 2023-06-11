@@ -21,7 +21,7 @@ public class AdministratorController : ControllerBase
     [HttpPost]
     public async Task<ActionResult> RegistrujAdministratora([FromBody] AdministratorRegistrationDto adminDto)
     {
-        if (string.IsNullOrWhiteSpace(adminDto.Username))
+        if (string.IsNullOrWhiteSpace(adminDto.Ime))
         {
             return BadRequest("Unesite ime!");
         }

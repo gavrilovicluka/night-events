@@ -51,7 +51,7 @@ export default function MuzickiIzvodjacHeader() {
                 </MDBNavbarNav>
                     <MDBNavbarNav className='justify-content-end'>
                         <MDBNavbarItem>
-                            <MDBNavbarLink href='/login' onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Logout</MDBNavbarLink>
+                            <MDBNavbarLink onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Odjavi se</MDBNavbarLink>
                     </MDBNavbarItem>
                 </MDBNavbarNav>
             </MDBCollapse>

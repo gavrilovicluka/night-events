@@ -14,7 +14,7 @@ public class Klub
     public String? Naziv { get; set; }
 
     [Required]
-    [MaxLength(50)]
+    [MaxLength(100)]
     [RegularExpression(@"^[A-Za-z0-9]+[_-' ]+$")]
     public String? Lokacija { get; set; }
     public double Longitude { get; set; }

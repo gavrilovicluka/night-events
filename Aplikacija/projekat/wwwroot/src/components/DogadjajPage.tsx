@@ -19,10 +19,11 @@ import StoType from "../types/StoType";
 import jwtDecode from "jwt-decode";
 import { DecodedToken } from "../types/DecodedToken";
 import RezervacijaType from "../types/RezervacijaType";
-import mapboxgl from 'mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
-import 'mapbox-gl/dist/mapbox-gl.css'; 
+import mapboxgl from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import "mapbox-gl/dist/mapbox-gl.css";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGpvbGxlZSIsImEiOiJjbGlhazVpbDQwNGk0M2xtbDg4bWhyMmRkIn0.ttjjCvdpCQq7STgYTSFvDA'
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiZGpvbGxlZSIsImEiOiJjbGlhazVpbDQwNGk0M2xtbDg4bWhyMmRkIn0.ttjjCvdpCQq7STgYTSFvDA";
 
 function DogadjajPage() {
   const { id } = useParams();
@@ -36,10 +37,10 @@ function DogadjajPage() {
   const [rezervacija, setRezervacija] = useState<RezervacijaType>();
 
   const mapContainer = useRef(null);
-    const map = useRef<mapboxgl.Map | null>(null);
-    const [lng, setLng] = useState(21.89541836422051);
-    const [lat, setLat] = useState(43.32141888298649);
-    const [zoom, setZoom] = useState(14);
+  const map = useRef<mapboxgl.Map | null>(null);
+  const [lng, setLng] = useState(21.89541836422051);
+  const [lat, setLat] = useState(43.32141888298649);
+  const [zoom, setZoom] = useState(14);
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const vrsteStolova = [
@@ -49,20 +50,30 @@ function DogadjajPage() {
   ];
 
   useEffect(() => {
-    if (map.current || !dogadjaj || !dogadjaj.klub?.latitude || !dogadjaj.klub?.longitude || !mapContainer.current) return; // initialize map only once
+    if (
+      map.current ||
+      !dogadjaj ||
+      !dogadjaj.klub?.latitude ||
+      !dogadjaj.klub?.longitude ||
+      !mapContainer.current
+    )
+      return; // initialize map only once
     if (!mapContainer.current) return;
     map.current = new mapboxgl.Map({
-    container: mapContainer.current,
-    style: 'mapbox://styles/mapbox/streets-v12?attribution=false&copy=false',
-    center: [lng, lat],
-    zoom: zoom
+      container: mapContainer.current,
+      style: "mapbox://styles/mapbox/streets-v12?attribution=false&copy=false",
+      center: [lng, lat],
+      zoom: zoom,
     });
 
     const marker = new mapboxgl.Marker();
-    marker.setLngLat({lat: dogadjaj.klub?.latitude, lng: dogadjaj.klub?.longitude}).addTo(map.current);
-
-    },[dogadjaj, map, mapContainer]);
-
+    marker
+      .setLngLat({
+        lat: dogadjaj.klub?.latitude,
+        lng: dogadjaj.klub?.longitude,
+      })
+      .addTo(map.current);
+  }, [dogadjaj, map, mapContainer]);
 
   useEffect(() => {
     getData(id);
@@ -83,7 +94,6 @@ function DogadjajPage() {
           console.log(data);
           setDogadjaj(data[0]);
           getMap(data[0].klub?.id ? data[0].klub?.id : 0);
-          
         } else {
           console.log("Došlo je do greške prilikom dobavljanja podataka.");
         }
@@ -126,6 +136,7 @@ function DogadjajPage() {
 
   const handleCloseModalSuccess = () => {
     setShowModal(false);
+    window.location.reload();
   };
 
   const handleStoChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -194,63 +205,71 @@ function DogadjajPage() {
     <>
       {" "}
       <HomePageNavbar />
-      <Container>
-        <Row className="mt-4">
-          <Col md={6} className="mb-4">
-            <div
-              className="bg-secondary rounded p-4"
-              style={{ height: "350px" }}
-            >
-              <KlubInfo klub={dogadjaj?.klub as KlubType} />
-            </div>
-          </Col>
-          <Col md={6} className="mb-4">
-            <div
-              className="bg-secondary rounded p-4"
-              style={{ height: "350px"}}
-            >
-              <h2 className="text-center">{dogadjaj?.naziv}</h2>
-              <p>
-                <strong> Datum: </strong>{" "}
-                {dogadjaj?.datum &&
-                  new Date(dogadjaj?.datum).toLocaleDateString("sr-RS")}
-              </p>
-              <p>
-                <strong> Vreme: </strong> {dogadjaj?.vreme}
-              </p>
-              <p>
-                <strong> Muzički izvođač: </strong>{" "}
-                {dogadjaj?.izvodjac?.imeIzvodjaca}
-              </p>
-              <p>
-                <strong> Žanr: </strong> {dogadjaj?.izvodjac?.zanr}
-              </p>
-              <Button
-                className="btn btn-primary"
-                onClick={() => {
-                  handleRezervisi();
+      <div className="bg-image">
+        <Container>
+          <Row className="pt-4">
+            <Col md={6} className="mb-4">
+              <div
+                className="bg-secondary rounded p-4"
+                style={{ height: "350px" }}
+              >
+                <KlubInfo klub={dogadjaj?.klub as KlubType} />
+              </div>
+            </Col>
+            <Col md={6} className="mb-4">
+              <div
+                className="bg-secondary rounded p-4"
+                style={{ height: "350px" }}
+              >
+                <h2 className="text-center">{dogadjaj?.naziv}</h2>
+                <p>
+                  <strong> Datum: </strong>{" "}
+                  {dogadjaj?.datum &&
+                    new Date(dogadjaj?.datum).toLocaleDateString("sr-RS")}
+                </p>
+                <p>
+                  <strong> Vreme: </strong> {dogadjaj?.vreme}
+                </p>
+                <p>
+                  <strong> Muzički izvođač: </strong>{" "}
+                  {dogadjaj?.izvodjac?.imeIzvodjaca}
+                </p>
+                <p>
+                  <strong> Žanr: </strong> {dogadjaj?.izvodjac?.zanr}
+                </p>
+                <Button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    handleRezervisi();
+                  }}
+                >
+                  Rezerviši
+                </Button>
+              </div>
+            </Col>
+          </Row>
+          <Row className="pb-4">
+            <Col>
+              <div
+                className="bg-secondary rounded p-4"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                Rezerviši
-              </Button>
-            </div>
-          </Col>
-        </Row>
-        <Row className="mb-4">
-          <Col>
-            <div className="bg-secondary rounded p-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-              
-              <div style={{ width: "90%" }}>
-                
-              { (dogadjaj?.klub?.latitude && dogadjaj.klub.longitude) ? <div ref={mapContainer} className="map-container" /> : <h2 className="text-center">Lokacija</h2>}
-             
-
-
+                <div style={{ width: "90%" }}>
+                  {dogadjaj?.klub?.latitude && dogadjaj.klub.longitude ? (
+                    <div ref={mapContainer} className="map-container" />
+                  ) : (
+                    <h2 className="text-center">Lokacija</h2>
+                  )}
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       <Modal show={show} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Ne mozete izvrsiti rezervaciju</Modal.Title>
@@ -275,11 +294,7 @@ function DogadjajPage() {
         </Modal.Header>
         <Modal.Body>
           <div className="text-center mb-3">
-            <img
-              src={imageMapa} 
-              alt="Mapa kluba"
-              style={{ width: "100%" }}
-            />{" "}
+            <img src={imageMapa} alt="Mapa kluba" style={{ width: "100%" }} />{" "}
           </div>
           <Form.Select
             className="mb-3"
@@ -289,14 +304,15 @@ function DogadjajPage() {
             <option value="">Izaberite sto</option>
             {vrsteStolova.map((vrstaStola) => {
               let sviStoloviJedneVrsteRezervisani = false;
-              let stoloviJedneVrste: StoType[] = new Array<StoType>;
+              let stoloviJedneVrste: StoType[] = new Array<StoType>();
               dogadjaj?.stolovi?.forEach((sto) => {
                 if (sto.vrstaStola === vrstaStola.vrsta) {
                   stoloviJedneVrste.push(sto);
                 }
               });
-              sviStoloviJedneVrsteRezervisani = stoloviJedneVrste.every((sto) => sto.status === 1);
-
+              sviStoloviJedneVrsteRezervisani = stoloviJedneVrste.every(
+                (sto) => sto.status === 1
+              );
 
               return (
                 <option
@@ -316,13 +332,15 @@ function DogadjajPage() {
           </div>
         </Modal.Body>
       </Modal>
-
       <Modal show={showModal} onHide={handleCloseModalSuccess}>
         <Modal.Header closeButton>
           <Modal.Title>Uspesno izvrsena rezervacija </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Vasa rezervacija je uspesno izvrsena. Broj rezervacije je {rezervacija?.id}.  </p>
+          <p>
+            Vasa rezervacija je uspesno izvrsena. Broj rezervacije je{" "}
+            {rezervacija?.id}.{" "}
+          </p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModalSuccess}>

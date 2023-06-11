@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 
 import HomePage from "./HomePage";
 import OrganizatorDashboard from "./OrganizatorPage/OrganizatorDashboard";
@@ -12,47 +12,157 @@ import ListaIzvodjacaAdminPage from "./AdministratorPage/ListaIzvodjacaAdminPage
 import ListaTermina from "./MuzickiIzvodjacPage/ListaTermina";
 import ListaDogadjaja from "./OrganizatorPage/ListaDogadjaja";
 import DodajDogadjaj from "./OrganizatorPage/DodajDogadjaj";
-import DetaljiDogadjaja from "./DetaljiDogadjaja";
 import AboutStranica from "./AboutStranica";
 import LoginRegisterForm from "./LoginRegisterForm";
-import ContactStranica from "./ContactStranica"
+import ContactStranica from "./ContactStranica";
 import DogadjajType from "../types/DogadjajType";
 import PageNotFound from "./PageNotFound";
 import jwtDecode from "jwt-decode";
 import { DecodedToken } from "../types/DecodedToken";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import MojKlub from "./OrganizatorPage/MojKlub";
 import DogadjajPage from "./DogadjajPage";
 
-let userRole: string | null = null;
-
-const token = localStorage.getItem("jwtToken");
-if (token !== null) {
-  const decodedToken = jwtDecode(token) as DecodedToken;
-  userRole = decodedToken.role;
-  //console.log(decodedToken);
-  //console.log(userRole);
-} else {
-  console.log("Token not found in localStorage");
-  //console.log(userRole);
-}
-
 function AppRouting() {
+  let userRole: string | null = null;
+
+  const AdminElement = ({ children }: { children: ReactNode }) => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      const decodedToken = jwtDecode(token) as DecodedToken;
+      userRole = decodedToken.role;
+    } else {
+      console.log("Token not found in localStorage");
+      userRole = null;
+    }
+
+    if (userRole === "Admin") {
+      return <>{children}</>;
+    } else if (userRole === "Organizator") {
+      return <Navigate to={"/organizatorDashboard/mojKlub"} />;
+    } else if (userRole === "Muzicar") {
+      return <Navigate to={"/muzickiIzvodjacDashboard/mojiTermini"} />;
+    } else {
+      return <Navigate to={"/"} />;
+    }
+  };
+
+  const OrganizatorElement = ({ children }: { children: ReactNode }) => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      const decodedToken = jwtDecode(token) as DecodedToken;
+      userRole = decodedToken.role;
+    } else {
+      console.log("Token not found in localStorage");
+      userRole = null;
+    }
+
+    if (userRole === "Organizator") {
+      return <>{children}</>;
+    } else if (userRole === "Admin") {
+      return <Navigate to={"/administratorDashboard/klubovi"} />;
+    } else if (userRole === "Muzicar") {
+      return <Navigate to={"/muzickiIzvodjacDashboard/mojiTermini"} />;
+    } else {
+      return <Navigate to={"/"} />;
+    }
+  };
+
+  const MuzicarElement = ({ children }: { children: ReactNode }) => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      const decodedToken = jwtDecode(token) as DecodedToken;
+      userRole = decodedToken.role;
+    } else {
+      console.log("Token not found in localStorage");
+      userRole = null;
+    }
+
+    if (userRole === "Muzicar") {
+      return <>{children}</>;
+    } else if (userRole === "Admin") {
+      return <Navigate to={"/administratorDashboard/klubovi"} />;
+    } else if (userRole === "Organizator") {
+      return <Navigate to={"/organizatorDashboard/mojKlub"} />;
+    } else {
+      return <Navigate to={"/"} />;
+    }
+  };
+
+  const KorisnikElement = ({ children }: { children: ReactNode }) => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      const decodedToken = jwtDecode(token) as DecodedToken;
+      userRole = decodedToken.role;
+    } else {
+      console.log("Token not found in localStorage");
+      userRole = null;
+    }
+    console.log(userRole);
+    if (userRole === "Korisnik" || userRole === null) {
+      return <>{children}</>;
+    } else if (userRole === "Admin") {
+      return <Navigate to={"/administratorDashboard/klubovi"} />;
+    } else if (userRole === "Organizator") {
+      return <Navigate to={"/organizatorDashboard/mojKlub"} />;
+    } else if (userRole === "Muzicar") {
+      return <Navigate to={"/muzickiIzvodjacDashboard/mojiTermini"} />;
+    } else {
+      return <Navigate to={"/"} />;
+    }
+  };
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/loginRegister" element={<LoginRegisterForm onClose={function (): void {
-          throw new Error("Function not implemented.");
-        } } />} />
+        <Route
+          path="/"
+          element={
+            <KorisnikElement>
+              {" "}
+              <HomePage />{" "}
+            </KorisnikElement>
+          }
+        />
+        <Route
+          path="/loginRegister"
+          element={
+            <LoginRegisterForm
+              onClose={function (): void {
+                throw new Error("Function not implemented.");
+              }}
+            />
+          }
+        />
         <Route path="*" element={<PageNotFound />}></Route>
         <Route
           path="/detaljiDogadjaja/:id"
-          element={<DogadjajPage />}   
+          element={
+            <KorisnikElement>
+              {" "}
+              <DogadjajPage />{" "}
+            </KorisnikElement>
+          }
         />
 
-        <Route path="/AboutStranica" element={<AboutStranica />} />
-        <Route path="/ContactStranica" element={<ContactStranica />} />
+        <Route
+          path="/AboutStranica"
+          element={
+            <KorisnikElement>
+              {" "}
+              <AboutStranica />{" "}
+            </KorisnikElement>
+          }
+        />
+        <Route
+          path="/ContactStranica"
+          element={
+            <KorisnikElement>
+              {" "}
+              <ContactStranica />{" "}
+            </KorisnikElement>
+          }
+        />
 
         {/* <Route
           path="/organizatorDashboard"
@@ -95,7 +205,6 @@ function AppRouting() {
           }
         />
 
-
         {/* <Route
           path="/muzickiIzvodjacDashboard"
           element={
@@ -120,7 +229,6 @@ function AppRouting() {
             </MuzicarElement>
           }
         /> */}
-
 
         {/* <Route
           path="/administratorDashboard"
@@ -154,42 +262,9 @@ function AppRouting() {
             </AdminElement>
           }
         />
-        
       </Routes>
     </>
   );
 }
-
-const AdminElement = ({ children }: { children: ReactNode }) => {
-  if (userRole === "Admin") {
-    return <>{children}</>;
-  } else {
-    return <Navigate to={"/"} />;
-  }
-};
-
-const OrganizatorElement = ({ children }: { children: ReactNode }) => {
-  if (userRole === "Organizator") {
-    return <>{children}</>;
-  } else {
-    return <Navigate to={"/"} />;
-  }
-};
-
-const MuzicarElement = ({ children }: { children: ReactNode }) => {
-  if (userRole === "Muzicar") {
-    return <>{children}</>;
-  } else {
-    return <Navigate to={"/"} />;
-  }
-};
-
-const KorisnikElement = ({ children }: { children: ReactNode }) => {
-  if (userRole === "Korisnik") {
-    return <>{children}</>;
-  } else {
-    return <Navigate to={"/"} />;
-  }
-};
 
 export default AppRouting;

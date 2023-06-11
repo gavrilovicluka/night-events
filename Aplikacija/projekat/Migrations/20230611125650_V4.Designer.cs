@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Models;
 
@@ -10,9 +11,11 @@ using Models;
 namespace projekat.Migrations
 {
     [DbContext(typeof(NightEventsContext))]
-    partial class NightEventsContextModelSnapshot : ModelSnapshot
+    [Migration("20230611125650_V4")]
+    partial class V4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

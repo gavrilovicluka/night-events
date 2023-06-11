@@ -34,10 +34,6 @@ public class Korisnik
 
     public String Role { get; set; }
 
-    public List<KomentarDogadjaj>? KomentariDogadjaji { get; set; }
-
-    public List<KomentarIzvodjac>? KomentariIzvodjaci { get; set; }
-
 
     public List<Rezervacija>? Rezervacije { get; set; }
 

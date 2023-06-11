@@ -63,7 +63,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
                 </MDBNavbarNav>
                     <MDBNavbarNav className='justify-content-end'>
                         <MDBNavbarItem>
-                            <MDBNavbarLink href='/login' onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Logout</MDBNavbarLink>
+                            <MDBNavbarLink onClick={ (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => logout(e) }>Odjavi se</MDBNavbarLink>
                     </MDBNavbarItem>
                 </MDBNavbarNav>
             </MDBCollapse>

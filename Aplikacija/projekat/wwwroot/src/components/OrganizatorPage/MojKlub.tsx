@@ -345,7 +345,7 @@ export default function MojKlub() {
   return (
     <>
       <OrganizatorHeader />
-      <Container className="pt-3 pb-3" style={{ width: "500px" }}>
+      <Container className="pt-3 pb-3" style={{ width: "600px" }}>
         {selectedKlub && (
           <Row>
             <Col>
