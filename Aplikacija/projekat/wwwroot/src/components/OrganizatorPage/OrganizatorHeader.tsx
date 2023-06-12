@@ -50,13 +50,13 @@ export default function OrganizatorHeader() {
                     <MDBNavbarLink href={`/organizatorDashboard/mojKlub`}>Moj klub</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='/organizatorDashboard/mojiDogadjaji'>Moji dogadjaji</MDBNavbarLink> 
+                    <MDBNavbarLink href='/organizatorDashboard/mojiDogadjaji'>Moji događaji</MDBNavbarLink> 
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href='/organizatorDashboard/dodajDogadjaj'>Dodaj dogadjaj</MDBNavbarLink>
+                    <MDBNavbarLink href='/organizatorDashboard/dodajDogadjaj'>Dodaj događaj</MDBNavbarLink>
                 </MDBNavbarItem>
                 <MDBNavbarItem>
-                    <MDBNavbarLink href={`/organizatorDashboard/pregledIzvodjaca`}>Pregled izvodjaca</MDBNavbarLink>
+                    <MDBNavbarLink href={`/organizatorDashboard/pregledIzvodjaca`}>Pregled izvođaca</MDBNavbarLink>
                 </MDBNavbarItem>
 
                 </MDBNavbarNav>

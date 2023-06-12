@@ -348,6 +348,7 @@ function DogadjajPage() {
           </Button>
         </Modal.Footer>
       </Modal>
+      
     </>
   );
 }

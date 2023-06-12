@@ -10,6 +10,7 @@ import jwtDecode from "jwt-decode";
 import TerminType from "../../types/TerminType";
 import { DecodedToken } from "../../types/DecodedToken";
 import { useNavigate } from "react-router-dom";
+import { StatusNalogaType } from "../../types/StatusNalogaType";
 
 export default function ListaIzvodjaca() {
   const [izvodjaci, setIzvodjaci] = useState<Array<MuzickiIzvodjacType>>([]);
@@ -268,7 +269,9 @@ export default function ListaIzvodjaca() {
             </tr>
           </thead>
           <tbody>
-            {izvodjaci.map((izvodjac, index) => (
+            {izvodjaci
+            .filter( izv=> izv.status === StatusNalogaType.Odobren)
+            .map((izvodjac, index) => (
               <tr key={index}>
                 <td>{izvodjac.imeIzvodjaca}</td>
                 <td>{izvodjac.zanr}</td>

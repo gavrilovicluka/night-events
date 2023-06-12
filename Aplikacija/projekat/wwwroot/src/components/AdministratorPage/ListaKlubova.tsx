@@ -18,10 +18,11 @@ import { DecodedToken } from "../../types/DecodedToken";
 import { useNavigate } from "react-router-dom";
 
 export default function ListaKlubova() {
-  const [selectedFileSlikaKluba, setSelectedFileSlikaKluba] = useState<File | null>(null);
-    const [imageUrlSlikaKluba, setImageUrlSlikaKluba] = useState(null);
-    const [token, setToken] = useState<string | null>();
-    const [klubovi, setKlubovi] = useState<Array<KlubType>>([]);
+  const [selectedFileSlikaKluba, setSelectedFileSlikaKluba] =
+    useState<File | null>(null);
+  const [imageUrlSlikaKluba, setImageUrlSlikaKluba] = useState(null);
+  const [token, setToken] = useState<string | null>();
+  const [klubovi, setKlubovi] = useState<Array<KlubType>>([]);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -43,16 +44,13 @@ export default function ListaKlubova() {
     }
   });
 
-  useEffect(() => {
-    
-  }, [klubovi]);
+  useEffect(() => {}, [klubovi]);
 
-   useEffect(() => {
+  useEffect(() => {
     const token = localStorage.getItem("jwtToken");
     if (token) {
       const decodedToken = jwtDecode(token) as DecodedToken;
       setToken(token);
-      
     }
 
     getData(token);
@@ -63,12 +61,12 @@ export default function ListaKlubova() {
       console.log("Nevalidan token");
       return;
     }
-    
+
     axios({
-      method: 'get',
+      method: "get",
       url: `${ApiConfig.BASE_URL}/Klub/VratiKlubove`,
       headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
+        "Content-Type": "application/json; charset=UTF-8",
         Authorization: `Bearer ${token}`,
       },
     })
@@ -86,7 +84,6 @@ export default function ListaKlubova() {
       });
   };
 
-
   const [showModal, setShowModal] = useState(false);
   const [klubData, setKlubData] = useState({
     idOrganizatora: "",
@@ -101,15 +98,15 @@ export default function ListaKlubova() {
   const [imageMapa, setImageMapa] = useState("");
 
   function handleImageSlika(e: ChangeEvent<HTMLInputElement>) {
-    console.log('handleImageSlika called');
+    console.log("handleImageSlika called");
     if (e.target.files && e.target.files.length > 0) {
       const selectedFile = e.target.files[0];
       // const imageUrl = URL.createObjectURL(selectedFile);
       // console.log(imageUrl);
       setSelectedFileSlikaKluba(e.target.files[0]);
       const formData = new FormData();
-    formData.append('file', selectedFile);
-    console.log(formData);
+      formData.append("file", selectedFile);
+      console.log(formData);
     }
   }
 
@@ -141,7 +138,7 @@ export default function ListaKlubova() {
       brojStolovaBS: "",
       brojStolovaVS: "",
       brojStolovaS: "",
-    })
+    });
     //window.location.reload();
   };
 
@@ -169,19 +166,18 @@ export default function ListaKlubova() {
     //   mapaKluba: " ",
     // };
 
-
     axios({
-      method: 'post',
+      method: "post",
       url: `${ApiConfig.BASE_URL}/Klub/DodajKlub/${klubData.idOrganizatora}/${klubData.naziv}/${klubData.brojStolovaBS}/${klubData.brojStolovaVS}/${klubData.brojStolovaS}`,
       headers: {
-        'Content-Type': 'application/json; charset=UTF-8',
+        "Content-Type": "application/json; charset=UTF-8",
         Authorization: `Bearer ${token}`,
       },
       //data: data,
     })
       .then((response) => {
         console.log(response.data);
-        setKlubovi(prevKlubovi => [...prevKlubovi, response.data]);
+        setKlubovi((prevKlubovi) => [...prevKlubovi, response.data]);
         setShowModal(true);
       })
       .catch((error) => {
@@ -189,10 +185,6 @@ export default function ListaKlubova() {
       });
   };
 
-
-
-
-  
   function izracunajProsek(ocene: OcenaKlubType[] | null | undefined) {
     if (!ocene || ocene.length === 0) {
       return 0;
@@ -200,26 +192,26 @@ export default function ListaKlubova() {
 
     var oceneBezNula = ocene
       .filter(function (ocena) {
-        return ocena.ocena !== 0; 
+        return ocena.ocena !== 0;
       })
       .map(function (ocena) {
-        return ocena.ocena; 
+        return ocena.ocena;
       });
 
     if (oceneBezNula.length === 0) {
-      return 0; 
+      return 0;
     }
 
     var sum = oceneBezNula.reduce(function (a, b) {
       if (typeof a === "number" && typeof b === "number") {
-        return a + b; 
+        return a + b;
       } else {
-        return (a || 0) + (b || 0); 
+        return (a || 0) + (b || 0);
       }
-    }, 0); 
+    }, 0);
 
     if (typeof sum !== "number") {
-      return 0; 
+      return 0;
     }
 
     var prosek = sum / oceneBezNula.length;
@@ -254,7 +246,11 @@ export default function ListaKlubova() {
       <Container className="d-flex justify-content-center">
         <Form onSubmit={handleSubmit} style={{ marginBottom: "40px" }}>
           <Row className="mb-4">
-            <Col md={6} sm={6} className="d-flex flex-column justify-content-start" >
+            <Col
+              md={6}
+              sm={6}
+              className="d-flex flex-column justify-content-start"
+            >
               <Form.Group controlId="idOrganizatora" className="row">
                 <Form.Label column sm={4} className="text-end">
                   ID organizatora
@@ -302,11 +298,13 @@ export default function ListaKlubova() {
               </Form.Group>
 
               <div style={{ height: "10px" }}></div> */}
-
-             
             </Col>
 
-            <Col md={6} sm={6} className="d-flex flex-column justify-content-start">
+            <Col
+              md={6}
+              sm={6}
+              className="d-flex flex-column justify-content-start"
+            >
               <Form.Group controlId="brojStolovaBS" className="row">
                 <Form.Label column sm={4} className="text-end">
                   Broj stolova (barski)
@@ -325,7 +323,7 @@ export default function ListaKlubova() {
 
               <Form.Group controlId="brojStolovaVS" className="row">
                 <Form.Label column sm={4} className="text-end">
-                  Broj stolova (viseci)
+                  Broj stolova (VS)
                 </Form.Label>
                 <Col sm={8}>
                   <Form.Control
@@ -351,7 +349,7 @@ export default function ListaKlubova() {
                     onChange={handleChange}
                   />
                 </Col>
-              </Form.Group>            
+              </Form.Group>
               <div style={{ height: "10px" }}></div>
             </Col>
           </Row>
@@ -366,46 +364,45 @@ export default function ListaKlubova() {
         </Form>
       </Container>
 
-     <div className="text-center">
-     <h2>Lista Klubova</h2>
-     </div>
+      <div className="text-center">
+        <h2>Lista Klubova</h2>
+      </div>
 
-        <div className="table-responsive d-flex justify-content-center">
-          
-          <Table
-            responsive="md"
-            striped
-            bordered
-            hover
-            className="text-center table-white table-white mt-3 mb-3"
-          >
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Naziv</th>
-                <th>Lokacija</th>
-                <th>Ocena</th>
-                <th>Broj b. stolova</th>
-                <th>Broj v. stolova</th>
-                <th>Broj separea</th>
-                <th>ID organizatora</th>
-                <th>Username organizatora</th>
-                {/* <th>Brisanje</th> */}
-              </tr>
-            </thead>
-            <tbody>
-              {klubovi.map((klub, index) => (
-                <tr key={index}>
-                  <td>{klub.id}</td>
-                  <td>{klub.naziv}</td>
-                  <td>{klub.lokacija}</td>
-                  <td>{izracunajProsek(klub.ocene).toFixed(2)}</td>
-                  <td>{klub.brojStolovaBS}</td>
-                  <td>{klub.brojStolovaVS}</td>
-                  <td>{klub.brojStolovaS}</td>
-                  <td>{klub.idOrganizatora}</td>
-                  <td>{klub.usernameOrganizatora}</td>
-                  {/* <td>
+      <div className="table-responsive d-flex justify-content-center">
+        <Table
+          responsive="md"
+          striped
+          bordered
+          hover
+          className="text-center table-white table-white mt-3 mb-3"
+        >
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Naziv</th>
+              <th>Lokacija</th>
+              <th>Ocena</th>
+              <th>Broj b. stolova</th>
+              <th>Broj v. stolova</th>
+              <th>Broj separea</th>
+              <th>ID organizatora</th>
+              <th>Username organizatora</th>
+              {/* <th>Brisanje</th> */}
+            </tr>
+          </thead>
+          <tbody>
+            {klubovi.map((klub, index) => (
+              <tr key={index}>
+                <td>{klub.id}</td>
+                <td>{klub.naziv}</td>
+                <td>{klub.lokacija}</td>
+                <td>{izracunajProsek(klub.ocene).toFixed(2)}</td>
+                <td>{klub.brojStolovaBS}</td>
+                <td>{klub.brojStolovaVS}</td>
+                <td>{klub.brojStolovaS}</td>
+                <td>{klub.idOrganizatora}</td>
+                <td>{klub.usernameOrganizatora}</td>
+                {/* <td>
                     <Button
                       variant="danger"
                       onClick={() => handleBrisanje(index)}
@@ -414,11 +411,11 @@ export default function ListaKlubova() {
                       Obrisi
                     </Button>
                   </td> */}
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DQTNTIvTU9UPBHBEpYsSA2no4d5awKYH16ntwYT8vVI=",
+  "Hash": "ycs8HjyeKeE6QPfo73epbqLi48HPiwFk/elN8ITI3Cc=",
   "Source": "projekat",
   "BasePath": "_content/projekat",
   "Mode": "Default",
@@ -595,23 +595,6 @@
       "OriginalItemSpec": "wwwroot\\src\\components\\ContactStranica.tsx"
     },
     {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DetaljiDogadjaja.tsx",
-      "SourceId": "projekat",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
-      "BasePath": "_content/projekat",
-      "RelativePath": "src/components/DetaljiDogadjaja.tsx",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\components\\DetaljiDogadjaja.tsx"
-    },
-    {
       "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\DogadjajPage.tsx",
       "SourceId": "projekat",
       "SourceType": "Discovered",
@@ -899,23 +882,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\components\\PageNotFound.tsx"
-    },
-    {
-      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\components\\RatingFunkcija.tsx",
-      "SourceId": "projekat",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
-      "BasePath": "_content/projekat",
-      "RelativePath": "src/components/RatingFunkcija.tsx",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\src\\components\\RatingFunkcija.tsx"
     },
     {
       "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\src\\config\\api.config.tsx",
@@ -1343,6 +1309,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\Klub\\1\\slika\\slikaKluba.png"
     },
     {
+      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\2\\slika\\slikaKluba.png",
+      "SourceId": "projekat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "BasePath": "_content/projekat",
+      "RelativePath": "uploads/Klub/2/slika/slikaKluba.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Klub\\2\\slika\\slikaKluba.png"
+    },
+    {
       "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\3\\mapa\\mapaKluba.png",
       "SourceId": "projekat",
       "SourceType": "Discovered",
@@ -1375,6 +1358,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\Klub\\3\\slika\\slikaKluba.png"
+    },
+    {
+      "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\uploads\\Klub\\4\\slika\\slikaKluba.png",
+      "SourceId": "projekat",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\",
+      "BasePath": "_content/projekat",
+      "RelativePath": "uploads/Klub/4/slika/slikaKluba.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Klub\\4\\slika\\slikaKluba.png"
     },
     {
       "Identity": "C:\\Users\\My PC\\Desktop\\Elfak\\VI semestar\\Softversko inzenjerstvo\\si.23.52.nightevents\\Aplikacija\\projekat\\wwwroot\\yarn.lock",

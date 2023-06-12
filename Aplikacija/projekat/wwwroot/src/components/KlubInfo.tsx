@@ -12,6 +12,7 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub}) => {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const [show, setShow] = useState(false);
   const [imageSlikaKluba, setImageSlikaKluba] = useState("");
+  const [showModalOcena, setShowModalOcena] = useState(false);
 
   let averageRating = 0;
   if(klub && klub?.ocene) {
@@ -51,7 +52,7 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub}) => {
           .then((response) => {
             const averageRating = response.data;
             setRating(averageRating);
-            window.location.reload();
+            setShowModalOcena(true);
           })
           .catch((error) => {
             console.error("Greška pri ocenjivanju kluba:", error);
@@ -64,6 +65,11 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub}) => {
 
   const handleCloseModal = () => {
     setShow(false);
+  };
+
+  const handleCloseModalOcena = () => {
+    setShowModalOcena(false);
+    window.location.reload();
   };
 
   return (
@@ -120,6 +126,21 @@ const KlubInfo: React.FC<{ klub: KlubType }> = ({ klub}) => {
           </Button>
         </Modal.Footer>
       </Modal>{" "}
+      <Modal show={showModalOcena} onHide={handleCloseModalOcena}>
+        <Modal.Header closeButton>
+          <Modal.Title>Uspesno davanje ocene </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Vasa ocena je uspesno dodata.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModalOcena}>
+            Zatvori
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };

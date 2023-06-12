@@ -455,7 +455,7 @@ export default function MojKlub() {
                           autoComplete="off"
                           onChange={(e) => setAddress(e.target.value)}
                           value={address}
-                          readOnly={!isEditing}
+                          disabled
                           required
                           aria-describedby="uidnote"
                           placeholder={`Tretnuna adresa je ${selectedKlub.lokacija}`}
